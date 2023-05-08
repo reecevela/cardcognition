@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageminWebp = require('imagemin-webp');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
   entry: './src/index.js',
@@ -38,7 +40,24 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        test: /\.(png|jpe?g)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[name].[ext].webp',
+            },
+          },
+          {
+            loader: 'sharp-loader',
+            options: {
+              format: 'webp',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(gif|svg)$/i,
         loader: 'file-loader',
         options: {
           name: 'images/[name].[ext]',
@@ -52,6 +71,13 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: './styles.css',
+    }),
+    new ImageminWebpackPlugin({
+      plugins: [
+        ImageminWebp({
+          quality: 75,
+        }),
+      ],
     }),
   ],
   output: {
