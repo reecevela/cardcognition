@@ -20,9 +20,12 @@ commanders = [card['name'] for card in full_query['data']]
 formatted_commanders = []
 for commander in commanders:
     first_name = commander.split(' // ')[0]  # Keep only the first part when there are two names separated by ' // '
-    formatted_name = first_name.lower().replace(' ', '-').replace("\"", "").replace("'", "").replace(",", "").replace(".", "")
+    # Not sure why this next check is necessary, but it is
+    if first_name.startswith('A-'):
+        first_name = first_name[2:]
+    formatted_name = first_name.lower().replace(' ', '-').replace("\"", "").replace("'", "").replace(",", "").replace(".", "").replace('\u200B', "")
     formatted_commanders.append(formatted_name)
-    
+
 # Write the formatted Commander names to a text file
 with open('commanders.txt', 'w') as f:
     f.write('\n'.join(formatted_commanders))
