@@ -52,6 +52,8 @@ def scrape_commander_data(commander_name: str):
     url = f'https://edhrec.com/commanders/{commander_name.replace(" ", "-").lower()}'
     driver.get(url)
 
+    print(f"Scraping {commander_name}...")
+
     time.sleep(5)
 
     # Scrape the card data
@@ -67,14 +69,16 @@ def scrape_commander_data(commander_name: str):
     commander_id = cur.fetchone()[0]
     conn.commit()
 
+    # Start the card timer
+    start_time = time.time()
+
+    card_list = []
     for card_element in card_elements[1:]:
         card_name_element = card_element.find_element(By.XPATH, './/span[contains(@class, "Card_name")]')
         card_name = card_name_element.text
         percentage_info_element = card_element.find_element(By.XPATH, './/div[contains(@class, "CardLabel_label")]')
         percentage_info = percentage_info_element.text
 
-        print(card_name)
-        print(percentage_info)
         # Extract the numbers from the percentage info string
         inclusion_rate, total_decks, synergy = map(int, re.findall(r'(\d+)%\s+of\s+(\d+)\s+decks\s*\n?\s*([\+\-]\d+)%', percentage_info)[0])
 
@@ -82,19 +86,34 @@ def scrape_commander_data(commander_name: str):
         base_inclusion_rate = inclusion_rate - synergy
 
         # Calculate the synergy score
-        synergy_score = inclusion_rate / base_inclusion_rate if base_inclusion_rate != 0 else 100
+        synergy_score = round(inclusion_rate / base_inclusion_rate if base_inclusion_rate != 0 else inclusion_rate, 2)
 
-        print(card_name)
-        print(f"Inclusion rate: {inclusion_rate}")
-        print(f"Total decks: {total_decks}")
-        print(f"Synergy score: {synergy_score}")
+        card_object = {
+            "commander_id": commander_id,
+            "card_name": card_name,
+            "percentage": inclusion_rate,
+            "num_decks": total_decks,
+            "synergy_score": synergy_score
+        }
 
-        # Save the card data in the database
-        cur.execute("""
-        INSERT INTO edhrec_cards (commander_id, card_name, percentage, num_decks, synergy_score)
-        VALUES (%s, %s, %s, %s, %s)
-        """, (commander_id, card_name, inclusion_rate, total_decks, synergy_score))
-        conn.commit()
+        card_list.append(card_object)
+
+    # Print the time it took to scrape the cards
+    print(f"Scraped {len(card_list)} cards in {time.time() - start_time} seconds")
+
+    # Reset the card timer
+    start_time = time.time()
+
+    # Save the card data in the database
+    cur.executemany("""
+    INSERT INTO edhrec_cards (commander_id, card_name, percentage, num_decks, synergy_score)
+    VALUES (%(commander_id)s, %(card_name)s, %(percentage)s, %(num_decks)s, %(synergy_score)s)
+    """, card_list)
+
+    conn.commit()
+
+    # Print the time it took to save the cards
+    print(f"Saved {len(card_list)} cards in {time.time() - start_time} seconds")
 
     # Close the WebDriver
     driver.quit()
@@ -111,11 +130,13 @@ def get_highest_synergy_score(commander_name: str):
     result = cur.fetchone()
     return result
 
-# Example usage
-commander = "korvold-fae-cursed-king"
-scrape_commander_data(commander)
-highest_synergy = get_highest_synergy_score(commander)
-print(f"Highest synergy card for {commander}: {highest_synergy}")
-# Close the database connection
-cur.close()
-conn.close()
+
+if __name__ == "__main__":
+    # Scrape the commander data
+    with open('commanders.txt', 'r') as f:
+        commanders = f.readlines()
+    for commander in commanders:
+        scrape_commander_data(commander)
+    # Close the database connection
+    cur.close()
+    conn.close()
