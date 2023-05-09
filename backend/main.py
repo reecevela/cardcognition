@@ -131,8 +131,6 @@ def get_highest_synergy_score(commander_name: str):
     result = cur.fetchone()
     return result
 
-from multiprocessing import Pool
-
 def scrape_commanders(commanders):
     for commander in commanders:
         try:

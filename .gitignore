@@ -1,5 +1,8 @@
+# Frontend
 node_modules
 package-lock.json
+
+# Backend
 __pycache__
 env
 .env
