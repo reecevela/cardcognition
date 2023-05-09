@@ -11,6 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import re
 from multiprocessing import Pool
+import random
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
@@ -55,7 +56,8 @@ def scrape_commander_data(commander_name: str):
 
     print(f"Scraping {commander_name}...")
 
-    time.sleep(5)
+    # Randomly delay 5-7 seconds to allow the page to load
+    time.sleep(5 + 2 * random.random())
 
     # Scrape the card data
     card_elements = driver.find_elements(By.XPATH, '//div[contains(@class, "Card_container")]')
