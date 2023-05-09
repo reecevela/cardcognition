@@ -788,7 +788,7 @@ kess-dissident-mage
 kestia-the-cultivator
 kethek-crucible-goliath
 kethis-the-hidden-hand
-khï¿½rn-the-betrayer
+khârn-the-betrayer
 khorvath-brightflame
 kianne-dean-of-substance
 kibo-uktabi-prince
@@ -891,7 +891,7 @@ lieutenant-kirtar
 light-paws-emperors-voice
 lila-hospitality-hostess
 liliana-heretical-healer
-lim-dï¿½l-the-necromancer
+lim-dûl-the-necromancer
 linden-the-steadfast-queen
 linessa-zephyr-mage
 lin-sivvi-defiant-hero
@@ -960,7 +960,7 @@ marisi-breaker-of-the-coil
 mari-the-killing-quill
 marneus-calgar
 marrow-gnawer
-mï¿½rton-stromgald
+márton-stromgald
 marwyn-the-nurturer
 mary-okill
 masako-the-humorless
@@ -1252,7 +1252,7 @@ ranar-the-ever-watchful
 rankle-and-torbran
 rankle-master-of-pranks
 raphael-fiendish-savior
-rasaad-monk-of-selï¿½ne
+rasaad-monk-of-selûne
 rasaad-yn-bashir
 rashida-scalebane
 rashka-the-slayer
@@ -1648,7 +1648,7 @@ trynn-champion-of-freedom
 tsabo-tavoc
 tuknir-deathlock
 tuktuk-the-explorer
-tura-kennerï¿½d-skyknight
+tura-kennerüd-skyknight
 tusk-and-whiskers
 tuvasa-the-sunlit
 tuya-bearclaw

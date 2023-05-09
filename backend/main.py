@@ -10,6 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import re
+from multiprocessing import Pool
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
@@ -130,13 +131,33 @@ def get_highest_synergy_score(commander_name: str):
     result = cur.fetchone()
     return result
 
+from multiprocessing import Pool
+
+def scrape_commanders(commanders):
+    for commander in commanders:
+        try:
+            scrape_commander_data(commander.strip())
+        except Exception as e:
+            print(e)
+
+def chunks(lst, n):
+    """Yield successive n-sized chunks from lst."""
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
 
 if __name__ == "__main__":
     # Scrape the commander data
     with open('commanders.txt', 'r') as f:
         commanders = f.readlines()
-    for commander in commanders:
-        scrape_commander_data(commander)
+
+    # Divide the commanders into 4 chunks
+    commander_chunks = list(chunks(commanders, len(commanders) // 4))
+
+    # Create a Process Pool
+    with Pool(processes=4) as pool:
+        # Use the pool to map the scrape_commanders function to each chunk of commanders
+        pool.map(scrape_commanders, commander_chunks)
+
     # Close the database connection
     cur.close()
     conn.close()
