@@ -1,5 +1,7 @@
 # cardcognition
 
+View work-in-progress homepage: https://reecevela.github.io/cardcognition
+
 ## Introduction:
 
 Cardcognition is an ongoing project that aims to provide insights into the world of Magic: The Gathering (MTG) with a focus on the Commander format. The tool scrapes card data from popular MTG websites such as EDHREC and analyzes this data to gain insights into card synergies, deck compositions, and card performance in various decks. 
