@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 
 export default function useAutocomplete(query) {
     const [suggestions, setSuggestions] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         const fetchSuggestions = async () => {
+            setIsLoading(true);
             if (query.length >= 2) {
                 const response = await fetch(
                     `https://api.scryfall.com/cards/search?q=${encodeURIComponent(
@@ -12,14 +14,19 @@ export default function useAutocomplete(query) {
                     )}&unique=cards&order=name&dir=asc`
                 );
                 const data = await response.json();
-                setSuggestions(data.data.map((card) => card.name));
+                if (data.data) {
+                    setSuggestions(data.data.map((card) => card.name));
+                } else {
+                    setSuggestions([]);
+                }
             } else {
                 setSuggestions([]);
             }
+            setIsLoading(false);
         };
 
         fetchSuggestions();
     }, [query]);
 
-    return suggestions;
+    return {suggestions, isLoading};
 }
