@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/cardcognition/static/css/main.e2b18acd.css",
+    "main.js": "/cardcognition/static/js/main.f8b8d5cc.js",
+    "static/media/ai2.png": "/cardcognition/static/media/ai2.03224a7ebb1829fedab3.png",
+    "static/media/ai6.png": "/cardcognition/static/media/ai6.6dbc6cb3eff27d2b6889.png",
+    "static/media/ai4.png": "/cardcognition/static/media/ai4.654d44b607b33230af3d.png",
+    "static/media/ai1.png": "/cardcognition/static/media/ai1.932e812a8173a0249fd5.png",
+    "static/media/ai5.png": "/cardcognition/static/media/ai5.3740a4c77d7646b2a558.png",
+    "static/media/ai3.png": "/cardcognition/static/media/ai3.016d5525ea7467727921.png",
+    "index.html": "/cardcognition/index.html",
+    "main.e2b18acd.css.map": "/cardcognition/static/css/main.e2b18acd.css.map",
+    "main.f8b8d5cc.js.map": "/cardcognition/static/js/main.f8b8d5cc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2b18acd.css",
+    "static/js/main.f8b8d5cc.js"
+  ]
+}
