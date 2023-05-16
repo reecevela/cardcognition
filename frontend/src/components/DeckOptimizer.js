@@ -7,7 +7,7 @@ function DeckOptimizer() {
     const [decklist, setDecklist] = useState("");
     const [isDropdownVisible, setDropdownVisibility] = useState(false);
 
-    const suggestions = useAutocomplete(commander);
+    const { suggestions, isLoading } = useAutocomplete(commander);
 
     const commanderRef = useRef();
 
@@ -26,12 +26,21 @@ function DeckOptimizer() {
         setDropdownVisibility(false);
     };
 
+    const handleFormatChange = (e) => {
+        setFormat(e.target.value);
+        if (e.target.value === "commander") {
+            commanderRef.current.style.display = "none";
+        } else {
+            commanderRef.current.style.display = "block";
+        }
+    };
+
     return (
         <section className="optimizer">
             <h2>Deck Optimizer</h2>
             <div className="deck-entry">
                 <form onSubmit={handleSubmit}>
-                    <select name="format" id="format" value={format} onChange={(e) => setFormat(e.target.value)}>
+                    <select name="format" id="format" value={format} onChange={handleFormatChange}>
                         <option value="commander">Commander</option>
                         <option value="modern">Modern</option>
                         <option value="legacy">Legacy</option>
@@ -39,13 +48,19 @@ function DeckOptimizer() {
                     <label htmlFor="commander">Commander:</label>
                     <div className="autocomplete">
                         <input type="text" name="commander" id="commander" value={commander} onChange={handleCommanderChange} ref={commanderRef} />
-                        {isDropdownVisible && (
+                        {isDropdownVisible && !isLoading && (
                             <div className="autocomplete-dropdown">
-                                {suggestions.map((suggestion, index) => (
-                                    <div key={index} onClick={() => handleSuggestionClick(suggestion)}>
-                                        {suggestion}
-                                    </div>
-                                ))}
+                                {
+                                    suggestions.length === 0 ? (
+                                        <div>No suggestions</div>
+                                    ) : (
+                                        suggestions.map((suggestion, index) => (
+                                            <div key={index} onClick={() => handleSuggestionClick(suggestion)}>
+                                                {suggestion}
+                                            </div>
+                                        ))
+                                    )
+                                }
                             </div>
                         )}
                     </div>
