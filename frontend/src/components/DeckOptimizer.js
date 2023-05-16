@@ -29,9 +29,9 @@ function DeckOptimizer() {
     const handleFormatChange = (e) => {
         setFormat(e.target.value);
         if (e.target.value === "commander") {
-            commanderRef.current.style.display = "none";
-        } else {
             commanderRef.current.style.display = "block";
+        } else {
+            commanderRef.current.style.display = "none";
         }
     };
 
@@ -40,6 +40,7 @@ function DeckOptimizer() {
             <h2>Deck Optimizer</h2>
             <div className="deck-entry">
                 <form onSubmit={handleSubmit}>
+                    <label htmlFor="format">Format:</label>
                     <select name="format" id="format" value={format} onChange={handleFormatChange}>
                         <option value="commander">Commander</option>
                         <option value="modern">Modern</option>
