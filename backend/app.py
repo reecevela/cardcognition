@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from urllib.parse import urlparse
+from pathlib import Path
 import psycopg2
 import os
 from dotenv import load_dotenv
