@@ -34,7 +34,7 @@ function HeroSection() {
         <section className="hero" style={{ backgroundImage }}>
             <div className="left">
                 <h1>Card Cognition</h1>
-                <p>Our AI tools will analyze your deck and provide you with recommendations on how to make it more competitive. Simply upload your deck list and we will do the rest!</p>
+                <p>Upload some or all of your deck. Instantly get suggestions on what to add or remove. Make better decks and have fun winning more games!</p>
             </div>
             <div className="right">
                 <a href="#" className="cta">Optimize your deck</a>

@@ -43,8 +43,8 @@ function DeckOptimizer() {
                     <label htmlFor="format">Format:</label>
                     <select name="format" id="format" value={format} onChange={handleFormatChange}>
                         <option value="commander">Commander</option>
-                        <option value="modern">Modern</option>
-                        <option value="legacy">Legacy</option>
+                        <option value="modern">Modern (Currently Unsupported)</option>
+                        <option value="legacy">Legacy (Currently Unsupported)</option>
                     </select>
                     <label htmlFor="commander">Commander:</label>
                     <div className="autocomplete">

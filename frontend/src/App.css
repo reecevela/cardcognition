@@ -71,6 +71,8 @@ nav ul li a {
   align-items: center;
   padding: 4em 2em;
   min-height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hero h1 {
