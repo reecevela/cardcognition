@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import useAutocomplete from './useAutocomplete';
+import useSuggestions from './useSuggestions';
 
 function DeckOptimizer() {
     const [format, setFormat] = useState("commander");
@@ -8,12 +9,13 @@ function DeckOptimizer() {
     const [isDropdownVisible, setDropdownVisibility] = useState(false);
 
     const { suggestions, isLoading } = useAutocomplete(commander);
+    const { suggestions: cardSuggestions, fetchSuggestions } = useSuggestions(commander, 100);
 
     const commanderRef = useRef();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(format, commander, decklist);
+        await fetchSuggestions();
     };
 
     const handleCommanderChange = (e) => {
@@ -69,6 +71,19 @@ function DeckOptimizer() {
                     <textarea name="decklist" id="decklist" cols="30" rows="10" placeholder="Lightning Bolt" value={decklist} onChange={(e) => setDecklist(e.target.value)}></textarea>
                     <input type="submit" value="Generate" />
                 </form>
+            </div>
+            <div className="card-suggestions">
+                <h2>Recommended Cards</h2>
+                {
+                    cardSuggestions
+                    .filter(([card]) => !decklist.toLowerCase().split('\n').includes(card.toLowerCase())) // Exclude cards already in decklist
+                    .slice(0, 3) // Take top 3
+                    .map(([card, score], index) => (
+                        <div key={index}>
+                            <p>{card} - Score: {score}</p>
+                        </div>
+                    ))
+                }
             </div>
         </section>
     );
