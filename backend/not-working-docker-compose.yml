@@ -12,15 +12,25 @@ services:
 
   web:
     build: .
-    command: flask run --host=0.0.0.0
+    command: /wait-for-postgres.sh db:5432 -- gunicorn -b 0.0.0.0:8000 app:app
     volumes:
       - .:/code
     ports:
-      - 5000:5000
+      - 8000:8000
     depends_on:
       - db
     env_file:
       - .env
+
+  nginx:
+    build:
+      context: ./nginx
+    volumes:
+      - ./nginx/wait-for-web.sh:/wait-for-web.sh
+    ports:
+      - 8080:80
+    depends_on:
+      - web
 
 volumes:
   postgres_data:
