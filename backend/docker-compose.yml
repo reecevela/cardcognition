@@ -12,15 +12,23 @@ services:
 
   web:
     build: .
-    command: python app.py
+    command: /wait-for-it.sh db:5432 -- gunicorn -b 0.0.0.0:8000 app:app
     volumes:
       - .:/code
     ports:
-      - 5000:5000
+      - 8000:8000
     depends_on:
       - db
     env_file:
       - .env
 
+  nginx:
+    build:
+      context: ./nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web
+      
 volumes:
   postgres_data:
