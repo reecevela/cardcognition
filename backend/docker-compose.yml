@@ -12,7 +12,7 @@ services:
 
   web:
     build: .
-    command: /wait-for-it.sh db:5432 -- gunicorn -b 0.0.0.0:8000 app:app
+    command: /wait-for-postgres.sh db:5432 -- gunicorn -b 0.0.0.0:8000 app:app
     volumes:
       - .:/code
     ports:
@@ -25,6 +25,8 @@ services:
   nginx:
     build:
       context: ./nginx
+    volumes:
+      - ./nginx/wait-for-web.sh:/wait-for-web.sh
     ports:
       - 8080:80
     depends_on:
