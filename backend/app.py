@@ -5,26 +5,41 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 app = Flask(__name__)
 
 # Database Configuration
-url = urlparse(os.environ['DATABASE_URL'])
+db_config = {
+    'name': os.getenv('DB_NAME'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
+    'host': os.getenv('DB_HOST'),
+    'port': os.getenv('DB_PORT')
+}
+
+for key in db_config:
+    print(key, db_config[key])
+
+# Connect to the database
 conn = psycopg2.connect(
-    database=url.path[1:],
-    user=url.username,
-    password=url.password,
-    host=url.hostname,
-    port=url.port
+    dbname=db_config['name'],
+    user=db_config['user'],
+    password=db_config['password'],
+    host=db_config['host'],
+    port=db_config['port']
 )
 cur = conn.cursor()
 
 @app.route('/api/<commander_name>/suggestions/<count>', methods=['GET'])
 def get_suggestions(commander_name, count):
     # Get the suggestions for the commander
-    COUNT_LIMIT = 100
+    if type(count) != int:
+        return jsonify({"error": "Count must be an integer."}), 400
+    
+    if int(count) > 100:
+        count = 100
     cur.execute("""
     SELECT c.card_name, c.synergy_score
     FROM edhrec_cards c
@@ -32,11 +47,36 @@ def get_suggestions(commander_name, count):
     WHERE cmd.name = %s
     ORDER BY c.synergy_score DESC
     LIMIT %s
-    """, (commander_name, COUNT_LIMIT))
+    """, (commander_name, count))
     suggestions = cur.fetchall()
     if not suggestions:
         return jsonify({"error": "No suggestions found for this commander."}), 404
-    return jsonify({"suggestions": suggestions}), 200
+    return jsonify({"suggestions": suggestions, "count": count}), 200
+
+@app.route('/api/<commander_name>/suggestions/range/<start>/<end>', methods=['GET'])
+def get_suggestions_range(commander_name, start, end):
+    # Get the suggestions for the commander
+    if type(start) != int or type(end) != int:
+        return jsonify({"error": "Start and end must be integers."}), 400
+
+    if int(start) < 0:
+        start = 0
+    if int(end) > start + 100:
+        end = start + 100
+
+    cur.execute("""
+    SELECT c.card_name, c.synergy_score
+    FROM edhrec_cards c
+    JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
+    WHERE cmd.name = %s
+    ORDER BY c.synergy_score DESC
+    LIMIT %s
+    OFFSET %s
+    """, (commander_name, end, start))
+    suggestions = cur.fetchall()
+    if not suggestions:
+        return jsonify({"error": "No suggestions found for this commander."}), 404
+    return jsonify({"suggestions": suggestions, "start": start, "end": end}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
