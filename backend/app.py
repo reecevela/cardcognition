@@ -19,9 +19,6 @@ db_config = {
     'port': os.getenv('DB_PORT')
 }
 
-for key in db_config:
-    print(key, db_config[key])
-
 # Connect to the database
 conn = psycopg2.connect(
     dbname=db_config['name'],
@@ -35,7 +32,9 @@ cur = conn.cursor()
 @app.route('/api/<commander_name>/suggestions/<count>', methods=['GET'])
 def get_suggestions(commander_name, count):
     # Get the suggestions for the commander
-    if type(count) != int:
+    try:
+        int(count)
+    except ValueError:
         return jsonify({"error": "Count must be an integer."}), 400
     
     if int(count) > 100:
@@ -56,7 +55,10 @@ def get_suggestions(commander_name, count):
 @app.route('/api/<commander_name>/suggestions/range/<start>/<end>', methods=['GET'])
 def get_suggestions_range(commander_name, start, end):
     # Get the suggestions for the commander
-    if type(start) != int or type(end) != int:
+    try:
+        int(start)
+        int(end)
+    except ValueError:
         return jsonify({"error": "Start and end must be integers."}), 400
 
     if int(start) < 0:
