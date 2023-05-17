@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./db.dump:/docker-entrypoint-initdb.d/db.dump
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+
+  web:
+    build: .
+    command: python app.py
+    volumes:
+      - .:/code
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+volumes:
+  postgres_data:
