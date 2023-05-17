@@ -9,7 +9,9 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
-    command: postgres -D /var/lib/postgresql/data
+    # command: postgres -D /var/lib/postgresql/data
+    # This command allows running postgres in background
+    # So that you can import the dump file if needed
 
   web:
     build: .
