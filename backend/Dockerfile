@@ -1,15 +1,18 @@
-FROM python:3.8-slim-buster
+FROM python:3.8
 
-# set work directory
+# Set the working directory in the container
 WORKDIR /app
 
-ADD . /app
-
+# Copy the requirements.txt and install the python dependencies
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 5000
+# Copy the entire app
+COPY . .
 
-COPY wait-for-postgres.sh /wait-for-postgres.sh
-RUN chmod +x /wait-for-postgres.sh
+# Add and give permissions to the script that will wait for the database
+ADD wait-for-it.sh /wait-for-it.sh
+RUN chmod +x /wait-for-it.sh
 
-CMD /wait-for-postgres.sh db:5432 -- gunicorn -b 0.0.0.0:8000 app:app
+# Run the script before starting the app
+CMD /wait-for-it.sh db:5432 -- gunicorn -b 0.0.0.0:8000 app:app
