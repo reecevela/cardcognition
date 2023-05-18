@@ -1,0 +1,5 @@
+mkdir -p ./data/nginx/self-signed
+openssl req -x509 -nodes -newkey rsa:2048 -days 365 \
+    -keyout ./data/nginx/self-signed/selfsigned.key \
+    -out ./data/nginx/self-signed/selfsigned.crt \
+    -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=www.example.com"
