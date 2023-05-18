@@ -14,7 +14,6 @@ services:
   nginx:
     depends_on:
       - web
-      - certbot
     build:
       context: ./nginx
       dockerfile: Dockerfile
@@ -31,6 +30,8 @@ services:
 
   certbot:
     image: certbot/certbot
+    depends_on:
+      - nginx
     volumes:
       - ./public:/var/www/html
       - certbot-etc:/etc/letsencrypt
