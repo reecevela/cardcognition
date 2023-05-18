@@ -1,4 +1,6 @@
 #!/bin/bash
 set -e
 
-pg_restore -U postgres -d commander_db /docker-entrypoint-initdb.d/db.dump
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+    \i /db.dump
+EOSQL
