@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile
     image: nginx
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./certs:/etc/nginx/certs
     ports:
       - 80:80
