@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 from urllib.parse import urlparse
 from pathlib import Path
 import psycopg2
@@ -9,6 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": ["https://reecevela.github.io"]}})
 
 # Database Configuration
 db_config = {
