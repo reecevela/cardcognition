@@ -12,6 +12,9 @@ services:
       - mynet
   
   nginx:
+    depends_on:
+      - web
+      - certbot
     build:
       context: ./nginx
       dockerfile: Dockerfile
