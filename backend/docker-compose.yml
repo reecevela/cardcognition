@@ -14,14 +14,14 @@ services:
   nginx:
     build: ./nginx
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - web
     networks:
       - mynet
   
   db:
-    image: "postgres:13"
+    image: "postgres:15"
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
