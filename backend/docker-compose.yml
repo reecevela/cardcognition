@@ -29,18 +29,18 @@ services:
       - mynet
     command: /bin/sh -c "while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g 'daemon off;'"
 
-    certbot:
-      image: certbot/certbot
-      depends_on:
-        - nginx
-      volumes:
-        - ./public:/var/www/html
-        - certbot-etc:/etc/letsencrypt
-        - certbot-var:/var/lib/letsencrypt
-        - ./certbot_script.sh:/app/certbot_script.sh
-      entrypoint: sh /app/certbot_script.sh
-      networks:
-        - mynet
+  certbot:
+    image: certbot/certbot
+    depends_on:
+      - nginx
+    volumes:
+      - ./public:/var/www/html
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - ./certbot_script.sh:/app/certbot_script.sh
+    entrypoint: sh /app/certbot_script.sh
+    networks:
+      - mynet
 
   db:
     image: "postgres:15"
