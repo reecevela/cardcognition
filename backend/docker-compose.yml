@@ -29,7 +29,6 @@ services:
     networks:
       - mynet
 
-
   db:
     image: "postgres:15"
     environment:
@@ -42,10 +41,6 @@ services:
       - ./db.dump:/db.dump
     networks:
       - mynet
-
-    # command: postgres -D /var/lib/postgresql/data
-    # This command allows running postgres in background
-    # So that you can import the dump file if needed
 
 networks:
   mynet:
