@@ -5,7 +5,7 @@ export default function useSuggestions(commanderName, count = 100) {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const BASE_URL = "http://67.205.156.19:5000/";
+    const BASE_URL = "https://cardcognition.com/";
 
     const formatCommanderName = (name) => {
         let formattedName = name.split(' // ')[0];
