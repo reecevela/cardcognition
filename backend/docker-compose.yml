@@ -29,7 +29,7 @@ services:
     command: 
       - chmod +x init-db.sh    
     volumes:
-      - dbdata:/var/lib/postgresql/data
+      - db-data:/var/lib/postgresql/data
       - ./db.dump:/docker-entrypoint-initdb.d/db.dump
       - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
     networks:
