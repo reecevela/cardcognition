@@ -12,8 +12,6 @@ services:
       - mynet
   
   nginx:
-    image: nginx:latest
-    nginx:
     build:
       context: ./nginx
       dockerfile: Dockerfile
