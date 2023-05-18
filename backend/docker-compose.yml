@@ -15,9 +15,7 @@ services:
     depends_on:
       - web
     build:
-      context: 
-        - ./nginx
-        - .
+      context: ./nginx
       dockerfile: Dockerfile
     image: nginx
     volumes:
