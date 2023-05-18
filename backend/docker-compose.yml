@@ -10,7 +10,7 @@ services:
       - .:/app
     networks:
       - mynet
-  
+
   nginx:
     depends_on:
       - web
@@ -21,6 +21,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./certs:/etc/nginx/certs
+    command: sh -c 'sh generate-certs.sh && nginx -g "daemon off;"'
     ports:
       - 80:80
       - 443:443
