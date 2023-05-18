@@ -11,13 +11,15 @@ services:
     networks:
       - mynet
   
-  volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - certbot-etc:/etc/letsencrypt
-      - certbot-var:/var/lib/letsencrypt
-    ports:
-      - 8080:80
-      - 443:443
+  nginx:
+    image: nginx:latest
+    volumes:
+        - ./nginx.conf:/etc/nginx/conf.d/default.conf
+        - certbot-etc:/etc/letsencrypt
+        - certbot-var:/var/lib/letsencrypt
+      ports:
+        - 8080:80
+        - 443:443
 
   certbot:
     image: certbot/certbot
@@ -48,3 +50,5 @@ networks:
 
 volumes:
   db-data:
+  certbot-etc:
+  certbot-var:
