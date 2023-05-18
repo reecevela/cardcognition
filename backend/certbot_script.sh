@@ -1,4 +1,4 @@
-while ! nc -z nginx 80; do   
+while ! nc -z backend_nginx_1 80; do   
   echo "nginx is unavailable - sleeping"
   sleep 1
 done
