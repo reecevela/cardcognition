@@ -20,6 +20,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./public:/var/www/html
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
     ports:
@@ -31,6 +32,7 @@ services:
   certbot:
     image: certbot/certbot
     volumes:
+      - ./public:/var/www/html
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
     command: certonly --webroot --webroot-path=/var/www/html --email reecevela@outlook.com --agree-tos --no-eff-email --force-renewal -d cardcognition.com -d www.cardcognition.com
