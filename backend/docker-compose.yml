@@ -22,6 +22,8 @@ services:
     ports:
       - 80:80
       - 443:443
+    networks:
+      - mynet
 
   certbot:
     image: certbot/certbot
@@ -29,7 +31,9 @@ services:
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
     command: certonly --webroot --webroot-path=/var/www/html --email reecevela@outlook.com --agree-tos --no-eff-email --force-renewal -d cardcognition.com -d www.cardcognition.com
-  
+    networks:
+      - mynet
+
   db:
     image: "postgres:15"
     environment:
