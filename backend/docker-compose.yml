@@ -25,9 +25,7 @@ services:
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - POSTGRES_DB=${DB_NAME}
-    command: 
-      - chmod +x init-db.sh    
+      - POSTGRES_DB=${DB_NAME}  
     volumes:
       - db-data:/var/lib/postgresql/data
       - ./db.dump:/docker-entrypoint-initdb.d/db.dump
