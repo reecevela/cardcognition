@@ -15,7 +15,9 @@ services:
     depends_on:
       - web
     build:
-      context: ./nginx
+      context: 
+        - ./nginx
+        - .
       dockerfile: Dockerfile
     image: nginx
     volumes:
@@ -27,6 +29,7 @@ services:
       - 443:443
     networks:
       - mynet
+
 
   db:
     image: "postgres:15"
