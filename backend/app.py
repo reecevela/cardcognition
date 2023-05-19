@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": ["https://reecevela.github.io"]}})
+CORS(app, resources={r"/api/*": {"origins": ["https://reecevela.github.io", "https://cardognition.com"]}})
 
 # Database Configuration
 db_config = {
@@ -31,7 +31,7 @@ conn = psycopg2.connect(
 )
 cur = conn.cursor()
 
-@app.route('/api/<commander_name>/suggestions/<count>', methods=['GET'])
+@app.route('/<commander_name>/suggestions/<count>', methods=['GET'])
 def get_suggestions(commander_name, count):
     # Get the suggestions for the commander
     try:
@@ -54,7 +54,7 @@ def get_suggestions(commander_name, count):
         return jsonify({"error": "No suggestions found for this commander."}), 404
     return jsonify({"suggestions": suggestions, "count": count}), 200
 
-@app.route('/api/<commander_name>/suggestions/range/<start>/<end>', methods=['GET'])
+@app.route('/<commander_name>/suggestions/range/<start>/<end>', methods=['GET'])
 def get_suggestions_range(commander_name, start, end):
     # Get the suggestions for the commander
     try:
