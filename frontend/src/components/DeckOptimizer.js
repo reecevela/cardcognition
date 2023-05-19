@@ -25,11 +25,6 @@ function DeckOptimizer() {
         setDropdownVisibility(true);
     };
 
-    const handleSuggestionClick = (suggestion) => {
-        setCommander(suggestion);
-        setDropdownVisibility(false);
-    };
-
     const handleFormatChange = (e) => {
         setFormat(e.target.value);
         if (e.target.value === "commander") {
@@ -50,8 +45,8 @@ function DeckOptimizer() {
                         <option value="modern">Modern (Currently Unsupported)</option>
                         <option value="legacy">Legacy (Currently Unsupported)</option>
                     </select>
+                    <label htmlFor="commander">Commander:</label>
                     <div className="autocomplete">
-                        <label htmlFor="commander">Commander:</label>
                         <input list="commanders" name="commander" id="commander" value={commander} onChange={handleCommanderChange} ref={commanderRef} />
                         <datalist id="commanders">
                             {suggestions.map((suggestion, index) => (
