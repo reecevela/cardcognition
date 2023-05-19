@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 
 export default function useSuggestions(commanderName, count = 100) {
     const [suggestions, setSuggestions] = useState([]);
@@ -17,7 +17,7 @@ export default function useSuggestions(commanderName, count = 100) {
         return formattedName;
     };
 
-    const fetchSuggestions = async () => {
+    const fetchSuggestions = useCallback(async () => {
         setIsLoading(true);
         try {
             const response = await fetch(`${BASE_URL}/${formatCommanderName(commanderName)}/suggestions/${count}`);
@@ -28,10 +28,6 @@ export default function useSuggestions(commanderName, count = 100) {
         } finally {
             setIsLoading(false);
         }
-    };
-    
-    useEffect(() => {
-        fetchSuggestions();
     }, [commanderName, count]);
 
     return { suggestions, isLoading, error, fetchSuggestions };

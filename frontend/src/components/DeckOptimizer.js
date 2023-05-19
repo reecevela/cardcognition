@@ -48,7 +48,6 @@ function DeckOptimizer() {
                         <option value="modern">Modern (Currently Unsupported)</option>
                         <option value="legacy">Legacy (Currently Unsupported)</option>
                     </select>
-                    <label htmlFor="commander">Commander:</label>
                     <div className="autocomplete">
                         <label htmlFor="commander">Commander:</label>
                         <input list="commanders" name="commander" id="commander" value={commander} onChange={handleCommanderChange} ref={commanderRef} />
