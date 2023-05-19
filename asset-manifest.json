@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.6959e763.css",
-    "main.js": "/static/js/main.0f471db2.js",
-    "static/media/ai2.png": "/static/media/ai2.03224a7ebb1829fedab3.png",
-    "static/media/ai6.png": "/static/media/ai6.6dbc6cb3eff27d2b6889.png",
-    "static/media/ai4.png": "/static/media/ai4.654d44b607b33230af3d.png",
-    "static/media/ai1.png": "/static/media/ai1.932e812a8173a0249fd5.png",
-    "static/media/ai5.png": "/static/media/ai5.3740a4c77d7646b2a558.png",
-    "static/media/ai3.png": "/static/media/ai3.016d5525ea7467727921.png",
-    "index.html": "/index.html",
-    "main.6959e763.css.map": "/static/css/main.6959e763.css.map",
-    "main.0f471db2.js.map": "/static/js/main.0f471db2.js.map"
+    "main.css": "/cardcognition.com/static/css/main.6959e763.css",
+    "main.js": "/cardcognition.com/static/js/main.00da84a0.js",
+    "static/media/ai2.png": "/cardcognition.com/static/media/ai2.03224a7ebb1829fedab3.png",
+    "static/media/ai6.png": "/cardcognition.com/static/media/ai6.6dbc6cb3eff27d2b6889.png",
+    "static/media/ai4.png": "/cardcognition.com/static/media/ai4.654d44b607b33230af3d.png",
+    "static/media/ai1.png": "/cardcognition.com/static/media/ai1.932e812a8173a0249fd5.png",
+    "static/media/ai5.png": "/cardcognition.com/static/media/ai5.3740a4c77d7646b2a558.png",
+    "static/media/ai3.png": "/cardcognition.com/static/media/ai3.016d5525ea7467727921.png",
+    "index.html": "/cardcognition.com/index.html",
+    "main.6959e763.css.map": "/cardcognition.com/static/css/main.6959e763.css.map",
+    "main.00da84a0.js.map": "/cardcognition.com/static/js/main.00da84a0.js.map"
   },
   "entrypoints": [
     "static/css/main.6959e763.css",
-    "static/js/main.0f471db2.js"
+    "static/js/main.00da84a0.js"
   ]
 }
