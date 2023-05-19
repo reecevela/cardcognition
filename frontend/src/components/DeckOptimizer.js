@@ -50,22 +50,13 @@ function DeckOptimizer() {
                     </select>
                     <label htmlFor="commander">Commander:</label>
                     <div className="autocomplete">
-                        <input type="text" name="commander" id="commander" value={commander} onChange={handleCommanderChange} ref={commanderRef} />
-                        {isDropdownVisible && !isLoading && (
-                            <div className="autocomplete-dropdown">
-                                {
-                                    suggestions.length === 0 ? (
-                                        <div>No suggestions</div>
-                                    ) : (
-                                        suggestions.map((suggestion, index) => (
-                                            <div key={index} onClick={() => handleSuggestionClick(suggestion)}>
-                                                {suggestion}
-                                            </div>
-                                        ))
-                                    )
-                                }
-                            </div>
-                        )}
+                        <label htmlFor="commander">Commander:</label>
+                        <input list="commanders" name="commander" id="commander" value={commander} onChange={handleCommanderChange} ref={commanderRef} />
+                        <datalist id="commanders">
+                            {suggestions.map((suggestion, index) => (
+                                <option value={suggestion} key={index} />
+                            ))}
+                        </datalist>
                     </div>
                     <label htmlFor="decklist">Enter your deck list:</label>
                     <textarea name="decklist" id="decklist" cols="30" rows="10" placeholder="Lightning Bolt" value={decklist} onChange={(e) => setDecklist(e.target.value)}></textarea>
