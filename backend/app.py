@@ -19,6 +19,7 @@ CORS(app, resources={r"/*": {"origins": [
     "http://api.cardcognition.com",
     "https://www.api.cardcognition.com",
     "http://www.api.cardcognition.com",
+    "localhost:3000",
 ]}})
 
 # Database Configuration
