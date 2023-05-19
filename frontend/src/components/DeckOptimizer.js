@@ -15,7 +15,9 @@ function DeckOptimizer() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await fetchSuggestions();
+        if (commander !== "") {
+            await fetchSuggestions();
+        }
     };
 
     const handleCommanderChange = (e) => {
