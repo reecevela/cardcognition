@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": ["https://reecevela.github.io", "https://cardognition.com"]}})
+CORS(app, resources={r"/api/*": {"origins": ["http://cardcognition.com", "https://reecevela.github.io", "https://cardognition.com"]}})
 
 # Database Configuration
 db_config = {
