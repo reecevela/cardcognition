@@ -1,0 +1,2 @@
+# In cardcognition/backend directory
+pg_dump -U postgres commander_db > db.dump
