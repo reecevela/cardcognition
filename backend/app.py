@@ -52,7 +52,7 @@ def get_suggestions(commander_name, count):
     if int(count) > 100:
         count = 100
     cur.execute("""
-    SELECT c.card_name, c.synergy_score
+    SELECT c.card_name, c.synergy_score, c.scryfal_id
     FROM edhrec_cards c
     JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
     WHERE cmd.name = %s
@@ -79,7 +79,7 @@ def get_suggestions_range(commander_name, start, end):
         end = start + 100
 
     cur.execute("""
-    SELECT c.card_name, c.synergy_score
+    SELECT c.card_name, c.synergy_score, c.scryfal_id
     FROM edhrec_cards c
     JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
     WHERE cmd.name = %s
