@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 from urllib.parse import urlparse
 from pathlib import Path
 import psycopg2
@@ -9,6 +10,17 @@ BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": [
+    "https://cardcognition.com", 
+    "http://cardcognition.com", 
+    "https://www.cardcognition.com", 
+    "http://www.cardcognition.com",
+    "https://api.cardcognition.com",
+    "http://api.cardcognition.com",
+    "https://www.api.cardcognition.com",
+    "http://www.api.cardcognition.com",
+    "http://localhost:3000",
+]}})
 
 # Database Configuration
 db_config = {
@@ -29,7 +41,7 @@ conn = psycopg2.connect(
 )
 cur = conn.cursor()
 
-@app.route('/api/<commander_name>/suggestions/<count>', methods=['GET'])
+@app.route('/<commander_name>/suggestions/<count>', methods=['GET'])
 def get_suggestions(commander_name, count):
     # Get the suggestions for the commander
     try:
@@ -52,7 +64,7 @@ def get_suggestions(commander_name, count):
         return jsonify({"error": "No suggestions found for this commander."}), 404
     return jsonify({"suggestions": suggestions, "count": count}), 200
 
-@app.route('/api/<commander_name>/suggestions/range/<start>/<end>', methods=['GET'])
+@app.route('/<commander_name>/suggestions/range/<start>/<end>', methods=['GET'])
 def get_suggestions_range(commander_name, start, end):
     # Get the suggestions for the commander
     try:
