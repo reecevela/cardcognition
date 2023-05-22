@@ -157,6 +157,10 @@ nav ul li a {
   flex-direction: column;
 }
 
+.optimizer #commander {
+  width: clamp(220px, 90%, 600px);
+}
+
 .optimizer label {
   margin-bottom: 0.5em;
   font-weight: bold;
@@ -187,13 +191,18 @@ nav ul li a {
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .card {
-  max-width: 240px;
+  max-width: 300px;
   margin-bottom: 2em;
   padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .card > p {
