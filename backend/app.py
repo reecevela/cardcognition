@@ -59,7 +59,8 @@ def get_suggestions(commander_name, count):
     ORDER BY c.synergy_score DESC
     LIMIT %s
     """, (commander_name, count))
-    suggestions = cur.fetchall()
+    data = cur.fetchall()
+    suggestions = [{'name': name, 'score': score, 'scryfall_id': scryfall_id} for name, score, scryfall_id in data]
     if not suggestions:
         return jsonify({"error": "No suggestions found for this commander."}), 404
     return jsonify({"suggestions": suggestions, "count": count}), 200
@@ -87,7 +88,8 @@ def get_suggestions_range(commander_name, start, end):
     LIMIT %s
     OFFSET %s
     """, (commander_name, end, start))
-    suggestions = cur.fetchall()
+    data = cur.fetchall()
+    suggestions = [{'name': name, 'score': score, 'scryfall_id': scryfall_id} for name, score, scryfall_id in data]
     if not suggestions:
         return jsonify({"error": "No suggestions found for this commander."}), 404
     return jsonify({"suggestions": suggestions, "start": start, "end": end}), 200
