@@ -1,0 +1,15 @@
+These are just some notes for my personal use for things that go wrong frequently.
+If anyone else forks this, feel free to add your own notes.
+
+Docker issues:
+1. Do the shell scripts have execute permissions? (chmod +x {filename}.sh)
+
+Database issues:
+1. Did you dos2unix the db.dump file? ON THE SERVER AS WELL AS LOCALLY
+1.1 Does the db.dump from git pull have the dos2unix applied to it? 
+    - Added line in load_db script to take care of this with each docker-compose up
+2. Did you docker-compose down, or docker-compose down -v?
+
+Flask issues:
+1. Is the virtual environment set up correctly? (source env/bin/activate or .\env\Scripts\activate)
+2. Did you pip install -r the requirements.txt file?
