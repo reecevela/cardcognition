@@ -37,7 +37,7 @@ services:
       - POSTGRES_DB=${DB_NAME}
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./load-db.sh:/docker-entrypoint-initdb.d/load_db.sh
+      - ./load_db.sh:/docker-entrypoint-initdb.d/load_db.sh
       - ./db.dump:/db.dump
     networks:
       - mynet
