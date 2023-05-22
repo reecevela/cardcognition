@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
-import useAutocomplete from './useAutocomplete';
-import useSuggestions from './useSuggestions';
+import React, { useState, useRef, useEffect } from 'react';
+import useAutocomplete from '../hooks/useAutocomplete';
+import useSuggestions from '../hooks/useSuggestions';
+import Card from './Card';
 
 function DeckOptimizer() {
     const [format, setFormat] = useState("commander");
@@ -61,16 +62,15 @@ function DeckOptimizer() {
             </div>
             <div className="card-suggestions">
                 <h2>Recommended Cards</h2>
-                {
-                    cardSuggestions
-                    .filter(([card]) => !decklist.toLowerCase().split('\n').includes(card.toLowerCase())) // Exclude cards already in decklist
-                    .slice(0, 3) // Take top 3
-                    .map(([card, score], index) => (
-                        <div key={index}>
-                            <p>{card} - Score: {score}</p>
-                        </div>
-                    ))
-                }
+                <div className="card-list">
+                    {cardSuggestions
+                        .filter(([name]) => !decklist.toLowerCase().split('\n').includes(name.toLowerCase())) // Exclude cards already in decklist
+                        .slice(0, 10)
+                        .map(([card, score, scryfall_id], index) => (
+                            <Card key={index} name={card} score={score} scryfall_id={scryfall_id} />
+                        ))
+                    }
+                </div>
             </div>
         </section>
     );

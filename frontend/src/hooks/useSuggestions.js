@@ -22,13 +22,19 @@ export default function useSuggestions(commanderName, count = 100) {
         try {
             const response = await fetch(`${BASE_URL}/${formatCommanderName(commanderName)}/suggestions/${count}`);
             const data = await response.json();
-            setSuggestions(data.suggestions);
+    
+            const suggestionsData = data.suggestions.map(({name, score, scryfall_id}) => {
+                return [name, score, scryfall_id];
+            });
+    
+            setSuggestions(suggestionsData);
         } catch (error) {
             setError(error.message);
         } finally {
             setIsLoading(false);
         }
     }, [commanderName, count]);
+    
 
     return { suggestions, isLoading, error, fetchSuggestions };
 }

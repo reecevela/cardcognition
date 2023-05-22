@@ -70,7 +70,7 @@ nav ul li a {
   justify-content: space-between;
   align-items: center;
   padding: 4em 2em;
-  min-height: 70vh;
+  min-height: 40vh;
   display: flex;
   flex-wrap: wrap;
 }
@@ -146,10 +146,10 @@ nav ul li a {
   padding: 2em;
   margin-top: 2em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  max-width: 800px;
 }
 
 .optimizer h2 {
-  margin-bottom: 2em;
   font-size: 2em;
 }
 
@@ -181,4 +181,20 @@ nav ul li a {
 
 .optimizer input[type="submit"]:hover {
   background-color: #333333;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  max-width: 240px;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.card > p {
+  margin-bottom: 0.5em;
 }
