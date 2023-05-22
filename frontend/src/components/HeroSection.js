@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import AIImage1 from '../images/ai1.png';
-import AIImage2 from '../images/ai2.png';
-import AIImage3 from '../images/ai3.png';
-import AIImage4 from '../images/ai4.png';
-import AIImage5 from '../images/ai5.png';
-import AIImage6 from '../images/ai6.png';
+import AIImage1 from '../images/ai1.webp';
+import AIImage2 from '../images/ai2.webp';
+import AIImage3 from '../images/ai3.webp';
+import AIImage4 from '../images/ai4.webp';
+import AIImage5 from '../images/ai5.webp';
+import AIImage6 from '../images/ai6.webp';
 
 const images = [
     AIImage1,
