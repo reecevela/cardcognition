@@ -1,6 +1,6 @@
 # cardcognition
 
-View work-in-progress homepage: https://reecevela.github.io/cardcognition
+View work-in-progress homepage: https://cardcognition.com
 
 ## Introduction:
 
