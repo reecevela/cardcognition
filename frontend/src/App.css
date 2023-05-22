@@ -146,7 +146,6 @@ nav ul li a {
   padding: 2em;
   margin-top: 2em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  max-width: 800px;
 }
 
 .optimizer h2 {
@@ -156,6 +155,7 @@ nav ul li a {
 .optimizer form {
   display: flex;
   flex-direction: column;
+  max-width: 800px;
 }
 
 .optimizer label {
