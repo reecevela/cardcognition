@@ -155,7 +155,6 @@ nav ul li a {
 .optimizer form {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
 }
 
 .optimizer label {
@@ -164,6 +163,7 @@ nav ul li a {
 }
 
 .optimizer input, .optimizer textarea, .optimizer select {
+  max-width: 800px;
   margin-bottom: 1em;
   padding: 0.5em;
   font-size: 1em;
@@ -172,6 +172,7 @@ nav ul li a {
 }
 
 .optimizer input[type="submit"] {
+  max-width: 800px;
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
