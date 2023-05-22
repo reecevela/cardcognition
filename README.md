@@ -1,6 +1,6 @@
 # cardcognition
 
-View work-in-progress homepage: https://cardcognition.com
+View Live: https://cardcognition.com
 
 ## Introduction:
 
