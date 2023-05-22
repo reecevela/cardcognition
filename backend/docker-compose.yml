@@ -4,7 +4,7 @@ services:
   web:
     build: .
     command: gunicorn -b 0.0.0.0:8000 app:app
-    onfailure: restart
+    restart: always
     depends_on:
       - db
     volumes:
@@ -18,7 +18,7 @@ services:
     build:
       context: ./nginx
       dockerfile: Dockerfile
-    onfailure: restart
+    restart: always
     image: nginx
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
@@ -33,7 +33,7 @@ services:
 
   db:
     image: "postgres:15"
-    onfailure: restart
+    restart: always
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
