@@ -19,7 +19,7 @@ Cards that you already have in your deck are not included in the suggestion. In 
 - Run the calculations, and query Scryfall again to get each synergy-card's unique Scryfall ID, saving each relation in a Postgres Database
 
 2. Cloud-Deployed Containerized Backend Architecture: The backend resides on a DigitalOcean server. Here's some cool stuff about it:
-- It exposes API endpoints at [https://api.cardcognition.com/{commander-name}/suggestions/{count}](https://api.cardcognition.com/urza-lord-high-artificer/suggestions/30) & [/suggestions/range/{start}/{end}](https://api.cardcognition.com/urza-lord-high-artificer/suggestions/range/10/25)
+- It exposes API endpoints at [https://api.cardcognition.com/{commander-name}/suggestions/{count}](https://api.cardcognition.com/urza-lord-high-artificer/suggestions/30) (you can click that link to test it out)
 - Initializing each microservice (Web app, gunicorn, nginx, db, db_volume) is orchestrated via Docker Compose, making it very easy to update and deploy
 - The nginx service generates a self-signed certificate each time it starts, which is why the app can be served over HTTPS
 - Figuring out CORS, error handling, database connections, and getting it all to run in a Docker network was definitely a learning experience lol
