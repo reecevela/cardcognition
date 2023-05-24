@@ -37,8 +37,8 @@ function DeckOptimizer() {
 
     return (
         <section className="optimizer">
-            <h2>Deck Optimizer</h2>
             <div className="deck-entry">
+                <h2>Deck Optimizer</h2>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="format">Format:</label>
                     <select name="format" id="format" value={format} onChange={handleFormatChange}>
@@ -55,20 +55,24 @@ function DeckOptimizer() {
                             ))}
                         </datalist>
                     </div>
-                    <label htmlFor="decklist">Enter your deck list:</label>
+                    <label htmlFor="decklist">Enter your deck list: (Optional)</label>
                     <textarea name="decklist" id="decklist" cols="30" rows="10" placeholder="Lightning Bolt" value={decklist} onChange={(e) => setDecklist(e.target.value)}></textarea>
                     <input type="submit" value="Generate" />
                 </form>
             </div>
             <div className="card-suggestions">
-                <h2>Recommended Cards</h2>
                 <div className="card-list">
                     {cardSuggestions
                         .filter(([name]) => !decklist.toLowerCase().split('\n').includes(name.toLowerCase())) // Exclude cards already in decklist
-                        .slice(0, 10)
+                        .slice(0, 12)
                         .map(([card, score, scryfall_id], index) => (
                             <Card key={index} name={card} score={score} scryfall_id={scryfall_id} />
                         ))
+                    }
+                    {
+                        (cardSuggestions.length === 0 && !isLoading) && (
+                            <Card name="No Suggestions to Display" score={0} scryfall_id="aaafb9bc-7cea-4624-a227-595544fa42b0" />
+                        )
                     }
                 </div>
             </div>
