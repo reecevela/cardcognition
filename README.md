@@ -4,24 +4,35 @@ View Live: https://cardcognition.com
 
 ## Introduction:
 
-Cardcognition is an ongoing project that aims to provide insights into the world of Magic: The Gathering (MTG) with a focus on the Commander format. The tool scrapes card data from popular MTG websites such as EDHREC and analyzes this data to gain insights into card synergies, deck compositions, and card performance in various decks. 
+Cardcognition is a way to find the best cards to add to your Magic: The Gathering Commander deck. You enter your commander, then you can optionally add some cards from your deck. As soon as you click generate, the most synergistic cards for your deck are shown for you. Each card's synergy score is calculated using the following formula:
 
-Though still a work in progress, Cardcognition has the potential to become an invaluable resource for both casual and competitive MTG players looking to optimize their Commander decks and enhance their understanding of the game.
+"How many times more frequently is {selected card} included in a deck helmed by {specific commander}, compared to that card's rate of inclusion in commander decks of the exact same color identity?"
 
-## Features:
+Cards that you already have in your deck are not included in the suggestion. In total, there are over half a million commander-card-score entries!
 
-1. Automated data collection: Cardcognition uses web scraping techniques to gather card data from various MTG websites, ensuring the most up-to-date information is utilized for analysis.
-   
-2. In-depth card analysis: By calculating synergy scores, inclusion rates, and base inclusion rates for each card, Cardcognition provides insights into how well cards perform in specific decks and with particular Commanders.
+## How it works:
 
-3. Database integration: Cardcognition leverages PostgreSQL to store and manage the scraped data, allowing for efficient querying and retrieval of information when needed.
+1. Automated Data Collection/Cleaning: In the backend/app_extras folder, there's a collection of Python scripts that do the following:
+- Query the Scryfall API to get a list of every legal commander in existence
+- Format all the names and save them in a text file. Ex. "Sephara, Sky's Blade" => "sephara-skys-blade"
+- Use the formatted names to go to each commander's EDHREC url, then scrape all of the frequency data for each card on the page
+- Run the calculations, and query Scryfall again to get each synergy-card's unique Scryfall ID, saving each relation in a Postgres Database
+
+2. Cloud-Deployed Containerized Backend Architecture: The backend resides on a DigitalOcean server. Here's some cool stuff about it:
+- It exposes API endpoints at https://api.cardcognition.com/<commander-name>/suggestions/<count> & /suggestions/range/<start>/<end>
+- Initializing each microservice (Web app, gunicorn, nginx, db, db_volume) is orchestrated via Docker Compose, making it very easy to update and deploy
+- The nginx service generates a self-signed certificate each time it starts, which is why the app can be served over HTTPS
+- Figuring out CORS, error handling, database connections, and getting it all to run in a Docker network was definitely a learning experience lol
+
+3. React Frontend: The frontend isn't too complex at this point, but it handles client-side tasks such as:
+- Fetches data from the backend, and image data by going through: scryfall_id from backend > image_uri from api.scryfall/id > .png from scryfall.io endpoint
+- Uses a custom hook for the Commander AutoComplete feature, that only queries for commanders
+- I had a bunch of issues with displaying the card suggestions, but the best implementation I've found is by using custom <Card /> components I made
 
 ## Future improvements and potential features:
 
-1. Improved data accuracy: As the project progresses, additional data cleaning and processing techniques will be implemented to ensure the highest level of data accuracy.
+1. Machine Learning: I already know how I'm going to approach this, but I just haven't had time yet. For each commander's cards, I'm going to use the Bag-of-Words technique with the synergy score as a positive reinforcement to create a model for what kinds of cards are synergistic with each commander. Users would be able to get scores for each card in their deck, and even new cards the moment they're released without any playtest data.
 
-2. User interface: In the future, Cardcognition could feature an intuitive and user-friendly web interface, allowing users to easily access card data and perform custom analyses.
+2. User interface: In the future, Cardcognition will have a more complex userface with more features, such as user accounts and being able to save your decks. I'd also want to gamify it to get people to use it more, whether it's through points or a leaderboard for usage. Probably even a way to share your suggestions with Twitter.
 
-3. Additional data sources: Cardcognition may integrate data from other MTG websites and sources to provide even more comprehensive insights.
-
-4. Deck-building assistance: Cardcognition could potentially offer deck-building suggestions and recommendations based on user preferences and specific Commander strategies.
+3. Monetization: Through affiliate marketing with TCGPlayer (Clicking "Buy" on the card suggestions and receiving a commission), advertising, Patreon, however. I just want this to make more money than it costs to host it on DigitalOcean. Just a sidenote here, this is closed-source and I (Reece Vela) own it fully, just in case.
