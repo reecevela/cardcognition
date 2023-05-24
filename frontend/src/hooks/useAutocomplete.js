@@ -23,7 +23,7 @@ export default function useAutocomplete(query) {
             setSuggestions([]);
         }
         setIsLoading(false);
-    }, 300), []); // debounce time is 300ms
+    }, 100), []); // debounce time is 100ms
 
     useEffect(() => {
         fetchSuggestions(query);

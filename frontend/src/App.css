@@ -158,7 +158,7 @@ nav ul li a {
 }
 
 .optimizer #commander {
-  width: clamp(220px, 90%, 600px);
+  width: clamp(220px, 90%, 800px);
 }
 
 .optimizer label {
@@ -167,7 +167,6 @@ nav ul li a {
 }
 
 .optimizer input, .optimizer textarea, .optimizer select {
-  max-width: 800px;
   margin-bottom: 1em;
   padding: 0.5em;
   font-size: 1em;
@@ -176,7 +175,6 @@ nav ul li a {
 }
 
 .optimizer input[type="submit"] {
-  max-width: 800px;
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
@@ -191,7 +189,7 @@ nav ul li a {
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .card {
@@ -207,4 +205,11 @@ nav ul li a {
 
 .card > p {
   margin-bottom: 0.5em;
+}
+
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2em;
+  text-align: center;
 }
