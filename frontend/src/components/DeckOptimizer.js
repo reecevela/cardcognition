@@ -7,7 +7,6 @@ function DeckOptimizer() {
     const [format, setFormat] = useState("commander");
     const [commander, setCommander] = useState("");
     const [decklist, setDecklist] = useState("");
-    const [isDropdownVisible, setDropdownVisibility] = useState(false);
 
     const { suggestions, isLoading } = useAutocomplete(commander);
     const { suggestions: cardSuggestions, fetchSuggestions } = useSuggestions(commander, 100);
@@ -21,9 +20,28 @@ function DeckOptimizer() {
         }
     };
 
+    const handleCommanderInputBlur = async (e) => {
+        // Set the commander to the most likely suggestion
+        const commanderSuggestions = suggestions.filter(
+            (suggestion) => suggestion.toLowerCase().startsWith(commander.toLowerCase())
+        );
+    
+        let finalCommander = commander;
+    
+        if (commanderSuggestions.length > 0) {
+            finalCommander = commanderSuggestions[0];
+        } else if (suggestions.length > 0) {
+            finalCommander = suggestions[0];
+        }
+    
+        setCommander(finalCommander);
+        // Fetch suggestions for the most likely suggestion
+        await fetchSuggestions(finalCommander);
+    };
+    
+    
     const handleCommanderChange = (e) => {
         setCommander(e.target.value);
-        setDropdownVisibility(true);
     };
 
     const handleFormatChange = (e) => {
@@ -48,7 +66,16 @@ function DeckOptimizer() {
                     </select>
                     <label htmlFor="commander">Commander:</label>
                     <div className="autocomplete">
-                        <input list="commanders" name="commander" id="commander" value={commander} onChange={handleCommanderChange} ref={commanderRef} />
+                        <input 
+                            list="commanders" 
+                            name="commander" 
+                            id="commander" 
+                            value={commander} 
+                            onChange={handleCommanderChange} 
+                            ref={commanderRef} 
+                            onBlur={handleCommanderInputBlur} 
+                            onKeyDown={(e) => { if (e.keyCode === 13) handleCommanderInputBlur(e); }}
+                        />
                         <datalist id="commanders">
                             {suggestions.map((suggestion, index) => (
                                 <option value={suggestion} key={index} />

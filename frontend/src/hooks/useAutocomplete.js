@@ -7,10 +7,10 @@ export default function useAutocomplete(query) {
 
     const fetchSuggestions = useCallback(debounce(async (query) => {
         setIsLoading(true);
-        if (query.length >= 2) {
+        if (query.length >= 1) {
             const response = await fetch(
                 `https://api.scryfall.com/cards/search?q=${encodeURIComponent(
-                `(${query}) (t:creature t:legendary or t:planeswalker)`
+                `(${query}) (is:commander game:paper -is:digital)`
                 )}&unique=cards&order=name&dir=asc`
             );
             const data = await response.json();
@@ -23,7 +23,7 @@ export default function useAutocomplete(query) {
             setSuggestions([]);
         }
         setIsLoading(false);
-    }, 100), []); // debounce time is 100ms
+    }, 50), []); // debounce time is 50ms
 
     useEffect(() => {
         fetchSuggestions(query);
