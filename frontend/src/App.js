@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import DeckOptimizer from './components/DeckOptimizer';
 import DevDocs from './components/DevDocs';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
             </>
           )} />
           <Route path="/docs" element={<DevDocs />} />
+          <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </BrowserRouter>
       <Footer />
