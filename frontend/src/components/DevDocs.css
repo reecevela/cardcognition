@@ -1,0 +1,58 @@
+.api-docs {
+    margin: 2em 0;
+}
+
+.api-docs header {
+    background-color: #ffffff;
+    padding: 2em;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.api-docs header li {
+    margin-left: 2em;
+}
+
+.api-docs header p {
+    margin-bottom: 1em;
+}
+
+.api-docs header p:last-child {
+    margin-bottom: 0;
+}
+
+.api-docs section {
+    background-color: #ffffff;
+    padding: 2em;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.api-docs section h3 {
+    margin-bottom: 1em;
+}
+
+.api-docs section table {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.api-docs section table th,
+.api-docs section table td {
+    padding: 1em;
+    border: 1px solid #e5e5e5;
+    text-align: left;
+}
+
+.api-docs section table th {
+    background-color: #f2f2f2;
+}
+
+.api-docs section pre {
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    padding: 1em;
+}
+
+.api-docs section code {
+    font-family: monospace;
+}
