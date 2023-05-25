@@ -1,11 +1,12 @@
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 function Navbar() {
     return (
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Optimize</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/docs">Developers</Link></li>
             </ul>
         </nav>
     );

@@ -5,6 +5,7 @@ import AIImage3 from '../images/ai3.webp';
 import AIImage4 from '../images/ai4.webp';
 import AIImage5 from '../images/ai5.webp';
 import AIImage6 from '../images/ai6.webp';
+import { Link } from 'react-router-dom';
 
 const images = [
     AIImage1,
@@ -37,7 +38,7 @@ function HeroSection() {
                 <p>Upload some or all of your deck. Instantly get suggestions on what to add or remove. Make better decks and have fun winning more games!</p>
             </div>
             <div className="right">
-                <a href="#" className="cta">Optimize your deck</a>
+                <Link to="/" className="cta">Optimize your deck</Link>
             </div>
         </section>
     );

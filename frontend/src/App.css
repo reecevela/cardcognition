@@ -17,10 +17,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-p {
-  margin-bottom: 1.6em;
-}
-
 a {
   color: #000000;
   text-decoration: none;
@@ -41,9 +37,10 @@ img {
 nav {
   background: #ffffff;
   padding: 1em;
-  position: sticky;
+  position: sticky; 
   top: 0;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 nav ul {
@@ -84,6 +81,7 @@ nav ul li a {
   margin-top: 1em;
   font-size: 1.2em;
   line-height: 1.6;
+  margin-bottom: 1.6em;
 }
 
 .hero .cta {
@@ -205,6 +203,12 @@ nav ul li a {
 
 .card > p {
   margin-bottom: 0.5em;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .card a {
