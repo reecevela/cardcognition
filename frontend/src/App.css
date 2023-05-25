@@ -207,9 +207,22 @@ nav ul li a {
   margin-bottom: 0.5em;
 }
 
+.card a {
+  color: #0835DB;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: #35D599;
+}
+
 .footer {
   background-color: #000000;
   color: #ffffff;
   padding: 2em;
   text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
