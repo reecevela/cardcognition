@@ -2,11 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import useAutocomplete from '../hooks/useAutocomplete';
 import useSuggestions from '../hooks/useSuggestions';
 import Card from './Card';
+import { set } from 'lodash';
 
 function DeckOptimizer() {
     const [format, setFormat] = useState("commander");
     const [commander, setCommander] = useState("");
     const [decklist, setDecklist] = useState("");
+    const [cardCount, setCardCount] = useState(12);
 
     const { suggestions, isLoading } = useAutocomplete(commander);
     const { suggestions: cardSuggestions, fetchSuggestions } = useSuggestions(commander, 100);
@@ -16,6 +18,7 @@ function DeckOptimizer() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (commander !== "") {
+            setCardCount(12);
             await fetchSuggestions();
         }
     };
@@ -35,13 +38,19 @@ function DeckOptimizer() {
         }
     
         setCommander(finalCommander);
+        setCardCount(12);
         // Fetch suggestions for the most likely suggestion
         await fetchSuggestions(finalCommander);
+    };
+
+    const loadMore = () => {
+        setCardCount(cardCount + 12);
     };
     
     
     const handleCommanderChange = (e) => {
         setCommander(e.target.value);
+        setCardCount(12);
     };
 
     const handleFormatChange = (e) => {
@@ -91,17 +100,22 @@ function DeckOptimizer() {
                 <div className="card-list">
                     {cardSuggestions
                         .filter(([name]) => !decklist.toLowerCase().split('\n').includes(name.toLowerCase())) // Exclude cards already in decklist
-                        .slice(0, 12)
+                        .slice(0, cardCount)
                         .map(([card, score, scryfall_id], index) => (
                             <Card key={index} name={card} score={score} scryfall_id={scryfall_id} />
                         ))
                     }
                     {
                         (cardSuggestions.length === 0 && !isLoading) && (
-                            <Card name="No Suggestions to Display" score={0} scryfall_id="aaafb9bc-7cea-4624-a227-595544fa42b0" />
+                            <p>No suggestions to display.</p>
                         )
                     }
                 </div>
+            </div>
+            <div className='load-more'>
+                {cardSuggestions.length > 0 && !isLoading && cardSuggestions.length > cardCount && (
+                    <button onClick={loadMore}>Load More</button>
+                )}
             </div>
         </section>
     );
