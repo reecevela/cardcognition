@@ -220,6 +220,26 @@ nav ul li a {
   color: #35D599;
 }
 
+.load-more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.load-more button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1em 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.load-more button:hover {
+  background-color: #333333;
+}
+
 .footer {
   background-color: #000000;
   color: #ffffff;
