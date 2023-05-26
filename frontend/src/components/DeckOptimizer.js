@@ -2,18 +2,26 @@ import React, { useState, useRef, useEffect } from 'react';
 import useAutocomplete from '../hooks/useAutocomplete';
 import useSuggestions from '../hooks/useSuggestions';
 import Card from './Card';
-import { set } from 'lodash';
 
 function DeckOptimizer() {
     const [format, setFormat] = useState("commander");
     const [commander, setCommander] = useState("");
     const [decklist, setDecklist] = useState("");
     const [cardCount, setCardCount] = useState(12);
+    const [normalizedDecklist, setNormalizedDecklist] = useState("");
 
     const { suggestions, isLoading } = useAutocomplete(commander);
     const { suggestions: cardSuggestions, fetchSuggestions } = useSuggestions(commander, 100);
 
     const commanderRef = useRef();
+
+    const normalizeCardName = name => name.replace(/[^a-z0-9]/g, '');
+    const normalizeDecklist = list => list.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    useEffect(() => {
+        const normalizedList = normalizeDecklist(decklist);
+        setNormalizedDecklist(normalizedList);
+    }, [decklist, normalizeDecklist]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -99,15 +107,15 @@ function DeckOptimizer() {
             <div className="card-suggestions">
                 <div className="card-list">
                     {cardSuggestions
-                        .filter(([name]) => !decklist.toLowerCase().split('\n').includes(name.toLowerCase())) // Exclude cards already in decklist
+                        .filter(([name]) => !normalizedDecklist.includes(normalizeCardName(name.toLowerCase()))) // Exclude cards already in decklist
                         .slice(0, cardCount)
                         .map(([card, score, scryfall_id], index) => (
                             <Card key={index} name={card} score={score} scryfall_id={scryfall_id} />
                         ))
                     }
                     {
-                        (cardSuggestions.length === 0 && !isLoading) && (
-                            <p>No suggestions to display.</p>
+                        cardSuggestions.length === 0 && (
+                            <p>No suggestions found.</p>
                         )
                     }
                 </div>
