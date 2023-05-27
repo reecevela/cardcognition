@@ -41,14 +41,34 @@ conn = psycopg2.connect(
 )
 cur = conn.cursor()
 
+@app.route('/dbinfo', methods=['GET'])
+def get_db_info():
+    cur.execute("""
+        SELECT 
+            AVG(c.synergy_score) as avg_synergy_score,
+            (SELECT AVG(avg_synergy_score)
+            FROM (
+                SELECT AVG(c.synergy_score) as avg_synergy_score
+                FROM edhrec_cards c
+                GROUP BY c.commander_id
+            ) AS commander_avg_synergies) as avg_commander_synergy_score,
+        COUNT(DISTINCT cmd.id) as commander_count,
+        COUNT(*) as card_commander_pairs_count,
+        COUNT(DISTINCT c.card_name) as unique_card_count
+        FROM edhrec_cards c
+        JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
+    """)
+    data = cur.fetchone()
+    avg_synergy_score, avg_commander_synergy_score, commander_count, card_commander_pairs_count, unique_card_count = data
+    return jsonify({"avg_synergy_score": avg_synergy_score, "avg_commander_synergy_score": avg_commander_synergy_score, "commander_count": commander_count, "card_commander_pairs_count": card_commander_pairs_count, "unique_card_count": unique_card_count}), 200
+
+
 @app.route('/<commander_name>/info', methods=['GET'])
 def get_commander_info(commander_name):
-    # Make sure the commander name only has lowercase letters and hyphens
-    if not commander_name.islower() or not commander_name.replace('-', '').isalpha():
-        return jsonify({"error": "Commander name must be all lowercase letters and hyphens."}), 400
-
     cur.execute("""
-        SELECT cmd.name, cmd.scryfall_id
+        SELECT cmd.name, cmd.scryfall_id,
+        (SELECT AVG(c.synergy_score) FROM edhrec_cards c WHERE c.commander_id = cmd.id) as avg_synergy_score,
+        (SELECT COUNT(*) FROM edhrec_cards c WHERE c.commander_id = cmd.id) as card_count
         FROM edhrec_commanders cmd
         WHERE cmd.name = %s
     """, (commander_name,))
@@ -56,8 +76,30 @@ def get_commander_info(commander_name):
     data = cur.fetchone()
     if not data:
         return jsonify({"error": "Commander not found."}), 404
-    name, scryfall_id = data
-    return jsonify({"name": name, "scryfall_id": scryfall_id}), 200
+    name, scryfall_id, avg_synergy_score, card_count = data
+
+    cur.execute("""
+        SELECT cmd2.name, cmd2.scryfall_id, COUNT(DISTINCT c2.card_name), COUNT(DISTINCT c2.card_name) * 100.0 / %s as overlap_percentage
+        FROM edhrec_cards c1
+        JOIN edhrec_commanders cmd1 ON c1.commander_id = cmd1.id
+        JOIN edhrec_cards c2 ON c1.card_name = c2.card_name
+        JOIN edhrec_commanders cmd2 ON c2.commander_id = cmd2.id
+        WHERE cmd1.name = %s AND cmd1.id != cmd2.id
+        GROUP BY cmd2.name, cmd2.scryfall_id
+        ORDER BY overlap_percentage DESC
+        LIMIT 5
+    """, (card_count, commander_name))
+
+
+    similar_commanders = [{"name": name, "scryfall_id": scryfall_id, "overlap_count": overlap_count, "overlap_percentage": overlap_percentage} for name, scryfall_id, overlap_count, overlap_percentage in cur.fetchall()]
+
+    return jsonify({
+        "name": name,
+        "scryfall_id": scryfall_id,
+        "avg_synergy_score": avg_synergy_score,
+        "card_count": card_count,
+        "similar_commanders": similar_commanders
+    }), 200
 
 
 @app.route('/<commander_name>/suggestions/<count>', methods=['GET'])
