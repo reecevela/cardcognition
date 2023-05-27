@@ -41,14 +41,35 @@ conn = psycopg2.connect(
 )
 cur = conn.cursor()
 
+@app.route('/<commander_name>/info', methods=['GET'])
+def get_commander_info(commander_name):
+    # Make sure the commander name only has lowercase letters and hyphens
+    if not commander_name.islower() or not commander_name.replace('-', '').isalpha():
+        return jsonify({"error": "Commander name must be all lowercase letters and hyphens."}), 400
+
+    cur.execute("""
+        SELECT cmd.name, cmd.scryfall_id
+        FROM edhrec_commanders cmd
+        WHERE cmd.name = %s
+    """, (commander_name))
+
+    data = cur.fetchone()
+    if not data:
+        return jsonify({"error": "Commander not found."}), 404
+    name, scryfall_id = data
+    return jsonify({"name": name, "scryfall_id": scryfall_id}), 200
+
+
 @app.route('/<commander_name>/suggestions/<count>', methods=['GET'])
 def get_suggestions(commander_name, count):
     # Get the suggestions for the commander
     try:
         int(count)
     except ValueError:
-        return jsonify({"error": "Count must be an integer."}), 400
-    
+        # Probably using range, so count would look like "range/100/200"
+        # Redirect to range endpoint
+        return get_suggestions_range(commander_name, count.split('/')[1], count.split('/')[2])
+
     if int(count) > 100:
         count = 100
 
