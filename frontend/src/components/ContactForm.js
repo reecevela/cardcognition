@@ -5,7 +5,7 @@ import './ContactForm.css'
 function ContactForm() {
   const [state, handleSubmit] = useForm("xjvddevj");
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <p>Thanks you!</p>;
   }
   return (
     <div className='contact-form-wrapper'>
