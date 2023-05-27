@@ -51,7 +51,7 @@ def get_commander_info(commander_name):
         SELECT cmd.name, cmd.scryfall_id
         FROM edhrec_commanders cmd
         WHERE cmd.name = %s
-    """, (commander_name))
+    """, (commander_name,))
 
     data = cur.fetchone()
     if not data:
