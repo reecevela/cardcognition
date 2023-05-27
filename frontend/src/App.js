@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <h1>I'm fixing the database issue as fast as I can, hopefully it'll be less than an hour. Message me through the "Contact" tab if you want to know when it's back up</h1>
       <Navbar />
         <Routes>
           <Route path="/" element={(
