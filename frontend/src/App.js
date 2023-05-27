@@ -5,12 +5,12 @@ import DeckOptimizer from './components/DeckOptimizer';
 import DevDocs from './components/DevDocs';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
       <Navbar />
         <Routes>
           <Route path="/" element={(
@@ -22,7 +22,7 @@ function App() {
           <Route path="/docs" element={<DevDocs />} />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </div>
   );
