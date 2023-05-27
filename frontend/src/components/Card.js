@@ -29,7 +29,7 @@ function Card({ name, score, scryfall_id }) {
 
     return (
         <div className="card">
-            <p>{name} - {score}</p>
+            {(score) ? (<p>{name} - {score}</p>) : (<p>{name}</p>)}
             <img src={imageUrl} alt={name} onClick={handleClick} />
             <a href={affiliateLink} target="_blank" rel="noreferrer">Buy on TCGplayer - ${(cardPrice !== null) ? cardPrice : foilCardPrice}</a>
         </div>
