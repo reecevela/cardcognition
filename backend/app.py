@@ -53,7 +53,7 @@ def get_suggestions(commander_name, count):
         count = 100
 
     cur.execute("""
-    SELECT c.card_name, c.synergy_score, c.scryfall_id, cmd.scryfall_id AS commander_scryfall_id
+    SELECT c.card_name, c.synergy_score, c.scryfall_id
     FROM edhrec_cards c
     JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
     WHERE cmd.name = %s
@@ -62,13 +62,11 @@ def get_suggestions(commander_name, count):
     """, (commander_name, count))
 
     data = cur.fetchall()
-
-    commander_scryfall_id = data[0][3]
     suggestions = [{'name': name, 'score': score, 'scryfall_id': scryfall_id} for name, score, scryfall_id in data]
     
     if not suggestions:
         return jsonify({"error": "No suggestions found for this commander."}), 404
-    return jsonify({"suggestions": suggestions, "count": count, "commander_scryfall_id": commander_scryfall_id}), 200
+    return jsonify({"suggestions": suggestions, "count": count}), 200
 
 @app.route('/<commander_name>/suggestions/range/<start>/<end>', methods=['GET'])
 def get_suggestions_range(commander_name, start, end):
