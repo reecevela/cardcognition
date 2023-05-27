@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import useAutocomplete from '../hooks/useAutocomplete';
 import useSuggestions from '../hooks/useSuggestions';
 import Card from './Card';
+import CommanderFacts from './CommanderFacts';
 
 function DeckOptimizer() {
     const [format, setFormat] = useState("commander");
@@ -21,7 +22,7 @@ function DeckOptimizer() {
     useEffect(() => {
         const normalizedList = normalizeDecklist(decklist);
         setNormalizedDecklist(normalizedList);
-    }, [decklist, normalizeDecklist]);
+    }, [decklist]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -103,6 +104,11 @@ function DeckOptimizer() {
                     <textarea name="decklist" id="decklist" cols="30" rows="10" placeholder="Lightning Bolt" value={decklist} onChange={(e) => setDecklist(e.target.value)}></textarea>
                     <input type="submit" value="Generate" />
                 </form>
+            </div>
+            <div className="commander-facts">
+                {format === "commander" && commander !== "" && (
+                    <CommanderFacts name={commander} />
+                )}
             </div>
             <div className="card-suggestions">
                 <div className="card-list">
