@@ -1,8 +1,10 @@
 .api-docs {
-    margin: 2em 0;
+    margin: 2em auto;
+    padding: 0 1em;
+    max-width: 800px;
 }
 
-.api-docs header {
+.api-docs header, .api-docs section {
     background-color: #ffffff;
     padding: 2em;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -13,27 +15,14 @@
     margin-left: 2em;
 }
 
-.api-docs header p {
-    margin-bottom: 1em;
-}
-
-.api-docs header p:last-child {
-    margin-bottom: 0;
-}
-
-.api-docs section {
-    background-color: #ffffff;
-    padding: 2em;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-}
-
-.api-docs section h3 {
-    margin-bottom: 1em;
+.api-docs header p, .api-docs section h3 {
+    margin-bottom: 1.5em;
 }
 
 .api-docs section table {
     width: 100%;
     margin-bottom: 2em;
+    border-collapse: collapse;
 }
 
 .api-docs section table th,
@@ -51,8 +40,32 @@
     background-color: #f9f9f9;
     border: 1px solid #e5e5e5;
     padding: 1em;
+    overflow-x: auto;
 }
 
 .api-docs section code {
     font-family: monospace;
+    white-space: pre;
+}
+
+@media only screen and (max-width: 600px) {
+    .api-docs {
+        margin: 1em auto;
+    }
+
+    .api-docs header, .api-docs section {
+        padding: 1em;
+    }
+
+    .api-docs header p, .api-docs section h3 {
+        margin-bottom: 1em;
+    }
+
+    .api-docs section table th, .api-docs section table td {
+        padding: 0.5em;
+    }
+
+    .api-docs section pre {
+        padding: 0.5em;
+    }
 }
