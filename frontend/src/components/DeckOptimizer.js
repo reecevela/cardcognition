@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import useAutocomplete from '../hooks/useAutocomplete';
 import useSuggestions from '../hooks/useSuggestions';
 import Card from './Card';
@@ -13,11 +14,19 @@ function DeckOptimizer() {
 
     const { suggestions, isLoading } = useAutocomplete(commander);
     const { suggestions: cardSuggestions, fetchSuggestions } = useSuggestions(commander, 100);
+    const { name: commanderFromUrl } = useParams();
 
     const commanderRef = useRef();
 
     const normalizeCardName = name => name.replace(/[^a-z0-9]/g, '');
     const normalizeDecklist = list => list.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    useEffect(() => {
+        if (commanderFromUrl) {
+            setCommander(commanderFromUrl);
+            fetchSuggestions(commanderFromUrl);
+        }
+    }, [commanderFromUrl]);
 
     useEffect(() => {
         const normalizedList = normalizeDecklist(decklist);
