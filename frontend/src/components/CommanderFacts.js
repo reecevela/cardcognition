@@ -51,7 +51,7 @@ function CommanderFacts({name}) {
                     <ul>
                         {similarCommanders && similarCommanders.map((commander, index) => (
                             <li key={index}>
-                                <Link to={`/commander/${commander.name}`} className="commander-link">
+                                <Link to={`/commander/${commander.card_name}`} className="commander-link">
                                     {commander.card_name} - {Math.round(commander.overlap_percentage * 10) / 10}%
                                 </Link>
                             </li>
