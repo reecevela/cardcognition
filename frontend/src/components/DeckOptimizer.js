@@ -119,7 +119,9 @@ function DeckOptimizer() {
                                 "Alela, Artful Provocateur",
                             ];
                             const randomIndex = Math.floor(Math.random() * randomCommanders.length);
-                            setCommander(randomCommanders[randomIndex]);
+                            const randomCommander = randomCommanders[randomIndex];
+                            setCommander(randomCommander);
+                            fetchSuggestions(randomCommander);
                         }}
                     >Pick Random Commander</button>
                     <label htmlFor="decklist">Enter your deck list: (Optional)</label>

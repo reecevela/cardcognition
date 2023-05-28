@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import formatCommanderName from '../helpers/formatCommanderName';
 
 export default function useSuggestions(commanderName, count = 100) {
     const [suggestions, setSuggestions] = useState([]);
@@ -6,16 +7,6 @@ export default function useSuggestions(commanderName, count = 100) {
     const [error, setError] = useState(null);
 
     const BASE_URL = "https://api.cardcognition.com";
-
-    const formatCommanderName = (name) => {
-        let formattedName = name.split(' // ')[0];
-        if (formattedName.startsWith('A-')) {
-            formattedName = formattedName.slice(2);
-        }
-        formattedName = formattedName.replace(/\s/g, '-');
-        formattedName = formattedName.toLowerCase().replace(/[\s,"'.\u200B]/g, '');
-        return formattedName;
-    };
 
     const fetchSuggestions = useCallback(async (name = commanderName) => {
         setIsLoading(true);
