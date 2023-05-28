@@ -19,39 +19,35 @@ DB_PORT = os.getenv('DB_PORT')
 conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD, host=DB_HOST, port=DB_PORT)
 cur = conn.cursor()
 
-# Create the scryfall_id column in the edhrec_commanders table
+# Create the card_name column in the edhrec_commanders table
 sql_executer("""
     ALTER TABLE edhrec_commanders
-    ADD COLUMN scryfall_id VARCHAR(255)
+    ADD COLUMN card_name VARCHAR(255)
 """)
 
 # Get the list of commanders from the database
 commanders = sql_executer("""
-    SELECT name FROM edhrec_commanders
-    WHERE scryfall_id IS NULL
+    SELECT scryfall_id FROM edhrec_commanders
+    WHERE card_name IS NULL
 """)
 
-# Get the scryfall ID for each commander
-for commander in commanders:
-    print(f"Getting Scryfall ID for {commander[0]}") # kruphix-god-of-horizons for Kruphix, God of Horizons
+# Get the actual card name for each commander
+for commander in commanders[1:]:
+    # Get the scryfall_id for the commander
+    scryfall_id = commander[0]
 
-    # If the commander name has an & symbol, replace it with %26
-    if "&" in commander[0]:
-        commander = [commander[0].replace("&", "%26")]
+    # Get the card name from the scryfall API
+    card = requests.get(f'https://api.scryfall.com/cards/{scryfall_id}').json()
+    card_name = card['name']
+    print(card_name)
 
-    # Get the card data from Scryfall
-    response = requests.get(f"https://api.scryfall.com/cards/named?fuzzy={commander[0]}")
-    if response.status_code != 200:
-        print(f"Error: {response.status_code} for commander {commander[0]}")
-        continue
-    card_data = response.json()
-    card_scryfall_id = card_data['id']
-    # assign the Scryfall ID to the commander in the database
+    # Update the card_name column in the database
     cur.execute("""
         UPDATE edhrec_commanders
-        SET scryfall_id = %s
-        WHERE name = %s
-    """, (card_scryfall_id, commander[0]))
+        SET card_name = %s
+        WHERE scryfall_id = %s
+    """, (card_name, scryfall_id))
+
+    # Commit the changes
     conn.commit()
-    
 
