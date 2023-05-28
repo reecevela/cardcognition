@@ -20,6 +20,7 @@ function App() {
               <DeckOptimizer />
             </>
           )} />
+          <Route path="/commander/:name" element={<DeckOptimizer />} />
           <Route path="/docs" element={<DevDocs />} />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>

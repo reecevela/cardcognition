@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Card from "./Card";
 import "./CommanderFacts.css"
 import formatCommanderName from "../helpers/formatCommanderName";
-
+import { Link } from "react-router-dom";
 
 function CommanderFacts({name}) {
     const [scryfallId, setScryfallId] = React.useState("");
@@ -51,7 +51,9 @@ function CommanderFacts({name}) {
                     <ul>
                         {similarCommanders && similarCommanders.map((commander, index) => (
                             <li key={index}>
-                                {commander.card_name} - {Math.round(commander.overlap_percentage * 10) / 10}%
+                                <Link to={`/commander/${commander.name}`} className="commander-link">
+                                    {commander.card_name} - {Math.round(commander.overlap_percentage * 10) / 10}%
+                                </Link>
                             </li>
                         ))}
                     </ul>

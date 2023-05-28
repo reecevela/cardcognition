@@ -25,6 +25,15 @@
     border-bottom: 1px solid #e5e5e5;
 }
 
+.commander-link {
+    color: #000;
+    text-decoration: underline;
+}
+
+.commander-link:hover {
+    color: royalblue;
+}
+
 @media only screen and (min-width: 600px) {
     .commander-facts-data {
         grid-template-columns: 1fr 1fr;
