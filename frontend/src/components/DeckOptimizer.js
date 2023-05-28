@@ -95,32 +95,33 @@ function DeckOptimizer() {
                             onBlur={handleCommanderInputBlur} 
                             onKeyDown={(e) => { if (e.keyCode === 13) handleCommanderInputBlur(e); }}
                         />
-                        <button 
-                            type="button"
-                            onClick={() => {
-                                // Pick a random commander from this array:
-                                const randomCommanders = [
-                                    "Urza, Lord High Artificer",
-                                    "K'rrik, Son of Yawgmoth",
-                                    "Niv-Mizzet Reborn",
-                                    "Kess, Dissident Mage",
-                                    "Yarok, the Desecrated",
-                                    "Gaalia of the Endless Dance",
-                                    "Atraxa, Praetors' Voice",
-                                    "Korvold, Fae-Cursed King",
-                                    "Queen Marchesa",
-                                    "Alela, Artful Provocateur",
-                                ];
-                                const randomIndex = Math.floor(Math.random() * randomCommanders.length);
-                                setCommander(randomCommanders[randomIndex]);
-                            }}
-                        >Random</button>
                         <datalist id="commanders">
                             {suggestions.map((suggestion, index) => (
                                 <option value={suggestion} key={index} />
-                            ))}
+                                ))}
                         </datalist>
                     </div>
+                    <button 
+                        type="button"
+                        className='button-random'
+                        onClick={() => {
+                            // Pick a random commander from this array:
+                            const randomCommanders = [
+                                "Urza, Lord High Artificer",
+                                "K'rrik, Son of Yawgmoth",
+                                "Niv-Mizzet Reborn",
+                                "Kess, Dissident Mage",
+                                "Yarok, the Desecrated",
+                                "Gaalia of the Endless Dance",
+                                "Atraxa, Praetors' Voice",
+                                "Korvold, Fae-Cursed King",
+                                "Queen Marchesa",
+                                "Alela, Artful Provocateur",
+                            ];
+                            const randomIndex = Math.floor(Math.random() * randomCommanders.length);
+                            setCommander(randomCommanders[randomIndex]);
+                        }}
+                    >Pick Random Commander</button>
                     <label htmlFor="decklist">Enter your deck list: (Optional)</label>
                     <textarea 
                         name="decklist" 
