@@ -87,13 +87,34 @@ function DeckOptimizer() {
                         <input 
                             list="commanders" 
                             name="commander" 
-                            id="commander" 
+                            id="commander"
+                            placeholder="Urza, Lord High Artificer..."
                             value={commander} 
                             onChange={handleCommanderChange} 
                             ref={commanderRef} 
                             onBlur={handleCommanderInputBlur} 
                             onKeyDown={(e) => { if (e.keyCode === 13) handleCommanderInputBlur(e); }}
                         />
+                        <button 
+                            type="button"
+                            onClick={() => {
+                                // Pick a random commander from this array:
+                                const randomCommanders = [
+                                    "Urza, Lord High Artificer",
+                                    "K'rrik, Son of Yawgmoth",
+                                    "Niv-Mizzet Reborn",
+                                    "Kess, Dissident Mage",
+                                    "Yarok, the Desecrated",
+                                    "Gaalia of the Endless Dance",
+                                    "Atraxa, Praetors' Voice",
+                                    "Korvold, Fae-Cursed King",
+                                    "Queen Marchesa",
+                                    "Alela, Artful Provocateur",
+                                ];
+                                const randomIndex = Math.floor(Math.random() * randomCommanders.length);
+                                setCommander(randomCommanders[randomIndex]);
+                            }}
+                        >Random</button>
                         <datalist id="commanders">
                             {suggestions.map((suggestion, index) => (
                                 <option value={suggestion} key={index} />
@@ -101,7 +122,15 @@ function DeckOptimizer() {
                         </datalist>
                     </div>
                     <label htmlFor="decklist">Enter your deck list: (Optional)</label>
-                    <textarea name="decklist" id="decklist" cols="30" rows="10" placeholder="Lightning Bolt" value={decklist} onChange={(e) => setDecklist(e.target.value)}></textarea>
+                    <textarea 
+                        name="decklist" 
+                        id="decklist" 
+                        cols="30" 
+                        rows="10" 
+                        placeholder="Enter however you'd like: 1x Sol Ring, Sol Ring, 1 Sol Ring (1), etc." 
+                        value={decklist} 
+                        onChange={(e) => setDecklist(e.target.value)}
+                    ></textarea>
                     <input type="submit" value="Generate" />
                 </form>
             </div>

@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 body {
@@ -138,6 +138,24 @@ nav ul li a {
   background-color: #f2f2f2;
 }
 
+.autocomplete button {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 2px;
+  background-color: #000000;
+  color: #fff;
+  margin-bottom: 1em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.autocomplete button:hover {
+  background-color: #f2f2f2;
+}
+
 /* Deck Optimizer */
 .optimizer {
   background-color: #ffffff;
@@ -233,6 +251,7 @@ nav ul li a {
   font-size: 1.2em;
   font-weight: bold;
   border-radius: 50px;
+  border: 1px solid #fff;
   transition: background-color 0.3s ease;
 }
 
