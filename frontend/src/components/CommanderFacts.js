@@ -47,11 +47,11 @@ function CommanderFacts({name}) {
                 </div>
                 <div>
                     <p>{explainScore(Math.round(avgSynergyScore * 100) / 100)}</p>
-                    <p>Similar Commanders:</p>
+                    <p>Similar Commanders: (% Similarity)</p>
                     <ul>
                         {similarCommanders && similarCommanders.map((commander, index) => (
                             <li key={index}>
-                                {commander.name} - {Math.round(commander.overlap_percentage * 10) / 10}% overlap
+                                {commander.card_name} - {Math.round(commander.overlap_percentage * 10) / 10}%
                             </li>
                         ))}
                     </ul>
