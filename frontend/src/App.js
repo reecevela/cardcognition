@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import DeckOptimizer from './components/DeckOptimizer';
 import DevDocs from './components/DevDocs';
 import ContactForm from './components/ContactForm';
+import BackToTopButton from './components/BackToTopButton';
 import Footer from './components/Footer';
 import { HashRouter, Routes, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </HashRouter>
+      <BackToTopButton />
       <Footer />
     </div>
   );

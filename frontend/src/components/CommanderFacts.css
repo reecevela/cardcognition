@@ -1,0 +1,33 @@
+.commander-facts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.commander-facts-data {
+    display: grid;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.commander-facts p {
+    margin: 1em;
+}
+
+.commander-facts-data li {
+    margin: 1em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+@media only screen and (min-width: 600px) {
+    .commander-facts-data {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+

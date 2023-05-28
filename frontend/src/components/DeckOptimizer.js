@@ -111,6 +111,7 @@ function DeckOptimizer() {
                 )}
             </div>
             <div className="card-suggestions">
+                <h2>Card Suggestions</h2>
                 <div className="card-list">
                     {cardSuggestions
                         .filter(([name]) => !normalizedDecklist.includes(normalizeCardName(name.toLowerCase()))) // Exclude cards already in decklist
