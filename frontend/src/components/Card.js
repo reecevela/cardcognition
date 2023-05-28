@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import fetchCardData from "../helpers/fetchCardData";
 
 function Card({ name, score, scryfall_id }) {
     const [imageUrl, setImageUrl] = React.useState("");
@@ -9,8 +10,7 @@ function Card({ name, score, scryfall_id }) {
 
     useEffect(() => {
         const fetchScryfallData = async () => {
-            const response = await fetch(`https://api.scryfall.com/cards/${scryfall_id}`);
-            const data = await response.json();
+            const data = await fetchCardData(scryfall_id);
             const affiliateCode = "CARDCOGNITION";
 
             setImageUrl(data.image_uris.normal);
