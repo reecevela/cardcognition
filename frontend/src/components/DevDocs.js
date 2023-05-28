@@ -76,12 +76,14 @@ function DevDocs() {
     "scryfall_id": "9e7fb3c0-5159-4d1f-8490-ce4c9a60f567",
     "similar_commanders": [
         {
+            "card_name": "The Reality Chip",
             "name": "the-reality-chip",
             "overlap_count": 207,
             "overlap_percentage": "71.6262975778546713",
             "scryfall_id": "d859de3a-0be1-4e66-b438-1c3d4ee756cd"
         },
         {
+            "card_name": "Emry, Lurker of the Loch",
             "name": "emry-lurker-of-the-loch",
             "overlap_count": 202,
             "overlap_percentage": "69.8961937716262976",
