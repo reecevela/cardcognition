@@ -25,7 +25,7 @@ function Card({ name, score, scryfall_id }) {
         };
 
         fetchScryfallData();
-    }, [scryfall_id]);
+    }, [scryfall_id, name]);
 
     const handleClick = () => {
         // Open affiliate link in new tab
@@ -35,28 +35,14 @@ function Card({ name, score, scryfall_id }) {
     return (
         <div className="card">
             {
-                isLegendary && score
-                    ? (
-                        <Link to={`/commander/${name}`} className="commander-link">
-                            <p>{name} - {score}x</p>
-                        </Link>
-                    )
-                    : isLegendary && !score
-                        ? (
-                            <Link to={`/commander/${name}`} className="commander-link">
-                                <p>{name}</p>
-                            </Link>
-                        )
-                        : !isLegendary && score
-                            ? (
-                                <p>{name} - {score}x</p>
-                            )
-                            : (
-                                <p>{name}</p>
-                            )
+                score ? (
+                    <p>{name} - {score}x</p>
+                ) : (
+                    <p>{name}</p>
+                )
             }
             <img src={imageUrl} alt={name} onClick={handleClick} />
-            <a href={affiliateLink} target="_blank" rel="noreferrer">Buy on TCGplayer - ${(cardPrice !== null) ? cardPrice : foilCardPrice}</a>
+            <a href={affiliateLink} target="_blank" rel="noreferrer">Click to Buy: ${(cardPrice !== null) ? cardPrice : (foilCardPrice) ? foilCardPrice : "Price unavailable"}</a>
         </div>
     );
 }
