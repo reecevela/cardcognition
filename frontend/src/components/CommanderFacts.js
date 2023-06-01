@@ -41,8 +41,8 @@ function CommanderFacts({name}) {
     return (
         <section className="commander-facts">
             <h2>Commander Facts</h2>
-            <div class="commander-facts-data">
-                <div class="center">                
+            <div className="commander-facts-data">
+                <div className="center">                
                     <Card name={name} scryfall_id={scryfallId} />
                 </div>
                 <div>

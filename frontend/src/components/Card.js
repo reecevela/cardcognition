@@ -1,5 +1,6 @@
 import React, { useEffect} from "react";
-import { Link } from "react-router-dom";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../index";
 import fetchCardData from "../helpers/fetchCardData";
 
 function Card({ name, score, scryfall_id }) {
@@ -7,7 +8,6 @@ function Card({ name, score, scryfall_id }) {
     const [affiliateLink, setAffiliateLink] = React.useState("");
     const [cardPrice, setCardPrice] = React.useState(0);
     const [foilCardPrice, setFoilCardPrice] = React.useState(0);
-    const [isLegendary, setIsLegendary] = React.useState(false);
 
     useEffect(() => {
         const fetchScryfallData = async () => {
@@ -19,16 +19,18 @@ function Card({ name, score, scryfall_id }) {
             setFoilCardPrice(data.prices.usd_foil);
             setAffiliateLink(`https://www.tcgplayer.com/product/${data.tcgplayer_id}?utm_campaign=affiliate&utm_medium=${affiliateCode}&utm_source=${affiliateCode}`);
 
-            if (data.type_line.includes("Legendary")) {
-                setIsLegendary(true);
-            }
         };
 
         fetchScryfallData();
     }, [scryfall_id, name]);
 
     const handleClick = () => {
-        // Open affiliate link in new tab
+        // Analytics through google
+        logEvent(analytics, "card_click", {
+            name: name,
+            time: new Date().toString(),
+        });
+
         window.open(affiliateLink, "_blank");
     };
 
