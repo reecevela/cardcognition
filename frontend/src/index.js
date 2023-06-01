@@ -12,7 +12,7 @@ const firebaseConfig = {
   storageBucket: "card-cognition.appspot.com",
   messagingSenderId: "14506829433",
   appId: "1:14506829433:web:6415d4363e457d066dd6a8",
-  measurementId: "G-15Q6VGZSB5"
+  measurementId: "G-XHCXZNPREM"
 };
 
 const app = initializeApp(firebaseConfig);
