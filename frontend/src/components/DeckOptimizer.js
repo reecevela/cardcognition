@@ -14,7 +14,7 @@ function DeckOptimizer() {
 
     const { suggestions, isLoading } = useAutocomplete(commander);
     const { suggestions: cardSuggestions, fetchSuggestions } = useSuggestions(commander, 100);
-    const { name: commanderFromUrl } = useParams();
+    const { name: commanderFromUrl } = useParams(); // From the URL
 
     const commanderRef = useRef();
 
