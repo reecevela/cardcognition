@@ -41,6 +41,8 @@ conn = psycopg2.connect(
 )
 cur = conn.cursor()
 
+longest_commander_name = 31
+
 @app.route('/dbinfo', methods=['GET'])
 def get_db_info():
     cur.execute("""
@@ -65,6 +67,10 @@ def get_db_info():
 
 @app.route('/<commander_name>/info', methods=['GET'])
 def get_commander_info(commander_name):
+
+    if len(commander_name) > longest_commander_name:
+        return jsonify({"error": "Commander name too long."}), 400
+
     cur.execute("""
         SELECT cmd.name, cmd.scryfall_id,
         (SELECT AVG(c.synergy_score) FROM edhrec_cards c WHERE c.commander_id = cmd.id) as avg_synergy_score,
@@ -112,6 +118,9 @@ def get_suggestions(commander_name, count):
         # Redirect to range endpoint
         return get_suggestions_range(commander_name, count.split('/')[1], count.split('/')[2])
 
+    if len(commander_name) > longest_commander_name:
+        return jsonify({"error": "Commander name too long."}), 400
+
     if int(count) > 100:
         count = 100
 
@@ -140,6 +149,10 @@ def get_suggestions_range(commander_name, start, end):
     except ValueError:
         return jsonify({"error": "Start and end must be integers."}), 400
 
+    # Longest commander name is 31 characters (Asmoranomardicadaistinaculdacar)
+    if len(commander_name) > longest_commander_name:
+        return jsonify({"error": "Commander name too long."}), 400
+
     if int(start) < 0:
         start = 0
     if int(end) > int(start) + 100:
@@ -159,6 +172,36 @@ def get_suggestions_range(commander_name, start, end):
     if not suggestions:
         return jsonify({"error": "No suggestions found for this commander."}), 404
     return jsonify({"suggestions": suggestions, "start": start, "end": end}), 200
+
+@app.route('/<commander_name>/reductions/<count>', methods=['GET'])
+def get_reductions(commander_name, count):
+    try:
+        count = int(count)
+    except ValueError:
+        return jsonify({"error": "Count must be an integer."}), 400
+    
+    if len(commander_name) > longest_commander_name:
+        return jsonify({"error": "Commander name too long."}), 400
+    
+    if count > 100:
+        count = 100
+
+    cur.execute("""
+        SELECT c.card_name, c.synergy_score, c.scryfall_id
+        FROM edhrec_cards c
+        JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
+        WHERE cmd.name = %s
+        ORDER BY c.synergy_score ASC
+        LIMIT %s
+    """, (commander_name, count))
+    data = cur.fetchall()
+
+    reductions = [{'name': name, 'score': score, 'scryfall_id': scryfall_id} for name, score, scryfall_id in data]
+
+    if not reductions:
+        return jsonify({"error": "No reductions found for this commander."}), 404
+    return jsonify({"reductions": reductions, "count": count}), 200
+    
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
