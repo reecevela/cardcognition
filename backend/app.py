@@ -142,7 +142,7 @@ def get_suggestions_range(commander_name, start, end):
 
     if int(start) < 0:
         start = 0
-    if int(end) > start + 100:
+    if int(end) > int(start) + 100:
         end = start + 100
 
     cur.execute("""
