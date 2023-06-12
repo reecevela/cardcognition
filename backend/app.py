@@ -187,16 +187,16 @@ def get_reductions(commander_name, count):
         count = 100
 
     cur.execute("""
-        SELECT c.card_name, c.synergy_score, c.scryfall_id
+        SELECT c.card_name, c.percentage, c.synergy_score, c.scryfall_id
         FROM edhrec_cards c
         JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
-        WHERE cmd.name = %s
-        ORDER BY c.synergy_score ASC
+        WHERE cmd.name = %s AND c.synergy_score < 0.8
+        ORDER BY c.percentage ASC, c.synergy_score ASC
         LIMIT %s
     """, (commander_name, count))
     data = cur.fetchall()
 
-    reductions = [{'name': name, 'score': score, 'scryfall_id': scryfall_id} for name, score, scryfall_id in data]
+    reductions = [{'name': name, 'percentage': percentage, 'score': score, 'scryfall_id': scryfall_id} for name, percentage, score, scryfall_id in data]
 
     if not reductions:
         return jsonify({"error": "No reductions found for this commander."}), 404
