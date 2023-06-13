@@ -200,6 +200,8 @@ nav ul li a {
 
 .reductions-list {
   list-style-type: none;
+  max-height: 50vh;
+  overflow-y: auto;
 }
 
 .reductions-list li {
