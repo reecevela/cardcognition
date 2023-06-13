@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import useAutocomplete from '../hooks/useAutocomplete';
 import useSuggestions from '../hooks/useSuggestions';
+import useReductions from '../hooks/useReductions';
 import Card from './Card';
 import CommanderFacts from './CommanderFacts';
 
@@ -14,30 +15,40 @@ function DeckOptimizer() {
 
     const { suggestions, isLoading } = useAutocomplete(commander);
     const { suggestions: cardSuggestions, fetchSuggestions } = useSuggestions(commander, 100);
+    const { reductions, isLoading: isReducing, fetchReductions } = useReductions(commander, 100);
     const { name: commanderFromUrl } = useParams(); // From the URL
 
     const commanderRef = useRef();
 
-    const normalizeCardName = name => name.replace(/[^a-z0-9]/g, '');
+    const normalizeCardName = name => name.toLowerCase().replace(/[^a-z0-9]/g, '');
     const normalizeDecklist = list => list.toLowerCase().replace(/[^a-z0-9]/g, '');
 
+    // Handles commander routing from the url directly
+    // Also used in the similar commanders
     useEffect(() => {
         if (commanderFromUrl) {
             setCommander(commanderFromUrl);
             fetchSuggestions(commanderFromUrl);
+            fetchReductions(commanderFromUrl);
         }
     }, [commanderFromUrl]);
 
+    // Handles changes in the decklist
     useEffect(() => {
         const normalizedList = normalizeDecklist(decklist);
         setNormalizedDecklist(normalizedList);
     }, [decklist]);
+
+    useEffect(() => {
+        console.log("Reductions: ", reductions);
+    }, [reductions]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (commander !== "") {
             setCardCount(12);
             await fetchSuggestions();
+            await fetchReductions();
         }
     };
 
@@ -59,12 +70,12 @@ function DeckOptimizer() {
         setCardCount(12);
         // Fetch suggestions for the most likely suggestion
         await fetchSuggestions(finalCommander);
+        await fetchReductions(finalCommander);
     };
 
     const loadMore = () => {
         setCardCount(cardCount + 12);
     };
-    
     
     const handleCommanderChange = (e) => {
         setCommander(e.target.value);
@@ -162,6 +173,29 @@ function DeckOptimizer() {
                 {format === "commander" && commander !== "" && (
                     <CommanderFacts name={commander} />
                 )}
+            </div>
+            <div className="card-reductions">
+                <h2>Card Reductions</h2>
+                <div>
+                    {reductions.length > 0 && (
+                        <p>Here are cards in your deck that are less likely to be included in a {commander} deck than other commanders of the same color identity:</p>
+                    )}
+                    <ul className='reductions-list'>
+                        {reductions
+                            .filter(([name]) => normalizedDecklist.includes(normalizeCardName(name))) // Only includes cards in the decklist
+                            .map(([card, percentage, score, scryfall_id], index) => (
+                                <li key={index}>
+                                    <p>{card} -{Math.round((1 - score) * 100)}% frequency</p>
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    {
+                        reductions.length === 0 && (
+                            <p>Enter a decklist to see reductions.</p>
+                        )
+                    }
+                </div>
             </div>
             <div className="card-suggestions">
                 <h2>Card Suggestions</h2>

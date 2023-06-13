@@ -198,6 +198,16 @@ nav ul li a {
   background-color: #333333;
 }
 
+.reductions-list {
+  list-style-type: none;
+}
+
+.reductions-list li {
+  margin: 1em;
+  padding: 0.5em;
+  border-bottom: 1px solid #e5e5e5;
+}
+
 .card-list {
   display: flex;
   flex-wrap: wrap;
