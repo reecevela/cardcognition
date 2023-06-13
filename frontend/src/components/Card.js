@@ -1,6 +1,4 @@
 import React, { useEffect} from "react";
-import { logEvent } from "firebase/analytics";
-import { analytics } from "../index";
 import fetchCardData from "../helpers/fetchCardData";
 
 function Card({ name, score, scryfall_id }) {
@@ -25,12 +23,6 @@ function Card({ name, score, scryfall_id }) {
     }, [scryfall_id, name]);
 
     const handleClick = () => {
-        // Analytics through google
-        logEvent(analytics, "card_click", {
-            name: name,
-            time: new Date().toString(),
-        });
-
         window.open(affiliateLink, "_blank");
     };
 

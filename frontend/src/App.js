@@ -7,14 +7,12 @@ import ContactForm from './components/ContactForm';
 import BackToTopButton from './components/BackToTopButton';
 import Footer from './components/Footer';
 import { HashRouter, Routes, Route } from "react-router-dom";
-import PageViewLogger from './components/PageViewLogger';
 
 function App() {
   return (
     <div className="App">
       <HashRouter>
       <Navbar />
-      <PageViewLogger />
         <Routes>
           <Route path="/" element={(
             <>
