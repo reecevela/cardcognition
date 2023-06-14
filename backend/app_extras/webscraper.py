@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS edhrec_cards (
     card_name TEXT,
     percentage NUMERIC,
     num_decks INTEGER,
-    synergy_score NUMERIC
+    synergy_score NUMERIC,
+    CONSTRAINT unique_commander_card UNIQUE (commander_id, card_name)
 )
 """)
 conn.commit()
@@ -108,6 +109,8 @@ def scrape_commander_data(commander_name: str):
     cur.executemany("""
     INSERT INTO edhrec_cards (commander_id, card_name, percentage, num_decks, synergy_score)
     VALUES (%(commander_id)s, %(card_name)s, %(percentage)s, %(num_decks)s, %(synergy_score)s)
+    ON CONFLICT ON CONSTRAINT unique_commander_card DO UPDATE
+    SET percentage = EXCLUDED.percentage, num_decks = EXCLUDED.num_decks, synergy_score = EXCLUDED.synergy_score
     """, card_list)
 
     conn.commit()
