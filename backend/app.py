@@ -5,6 +5,7 @@ from pathlib import Path
 import psycopg2
 import os
 from dotenv import load_dotenv
+import random
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
@@ -42,6 +43,10 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 longest_commander_name = 31
+
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({"message": "Success!"}), 200
 
 @app.route('/dbinfo', methods=['GET'])
 def get_db_info():
@@ -107,6 +112,23 @@ def get_commander_info(commander_name):
         "similar_commanders": similar_commanders
     }), 200
 
+@app.route('/random-commander', methods=['GET'])
+def get_random_commander():
+    # Get number of commanders
+    cur.execute("""
+        SELECT COUNT(*) FROM edhrec_commanders
+    """)
+    count = cur.fetchone()[0]
+
+    # Get random commander by id
+    cur.execute("""
+        SELECT cmd.name
+        FROM edhrec_commanders cmd
+        WHERE cmd.id = %s
+    """, (random.randint(1, count),))
+    random_commander = cur.fetchone()[0]
+
+    return jsonify({"commander_name": random_commander}), 200
 
 @app.route('/<commander_name>/suggestions/<count>', methods=['GET'])
 def get_suggestions(commander_name, count):
