@@ -153,6 +153,83 @@ function DevDocs() {
                     </code>
                 </pre>
             </section>
+
+            <section>
+                <h3>GET /random-commander</h3>
+                <p>Returns a random commander name.</p>
+                <pre>
+                    <code>
+                        {
+`{
+    "commander_name": "Kangee, Aerie Keeper"
+}`
+                        }
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h3>GET /:formatted-commander-name/reductions/:count</h3>
+                <p>Returns a list of the lowest synergy cards for a given commander.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>:formatted-commander-name</td>
+                            <td>String</td>
+                            <td>The name of the commander, properly formatted as outlined above.</td>
+                        </tr>
+                        <tr>
+                            <td>reductions</td>
+                            <td>Endpoint</td>
+                            <td>Endpoint that returns the lowest synergy cards for the given commander.</td>
+                        </tr>
+                        <tr>
+                            <td>:count</td>
+                            <td>Integer</td>
+                            <td>The desired number of card reductions to be returned.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Example usage: <pre><code>https://api.cardcognition.com/urza-lord-high-artificer/reductions/3</code></pre></p>
+                <h4>Response Structure</h4>
+                <p>The API response is structured as a JSON object. The reductions are sorted by percentage and synergy score in ascending order.</p>
+                <pre>
+                    <code>
+                        {
+`{
+    "count": 3,
+    "reductions": [
+        {
+            "name": "Lonely Sandbar",
+            "percentage": "5",
+            "score": "0.26",
+            "scryfall_id": "81992bb6-b1c0-4c3f-b745-b700d18dec9d"
+        },
+        {
+            "name": "Halimar Depths",
+            "percentage": "5",
+            "score": "0.36",
+            "scryfall_id": "36a04300-764b-4faf-ad46-7516360c9516"
+        },
+        {
+            "name": "Sky Diamond",
+            "percentage": "6",
+            "score": "0.19",
+            "scryfall_id": "d47abfb2-9bcf-485c-9bd4-2c09b714eb32"
+        }
+    ]
+}`
+                        }
+                    </code>
+                </pre>
+            </section>
         </article>
     );
 };
