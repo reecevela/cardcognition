@@ -132,6 +132,7 @@ function DeckOptimizer() {
                                 setCommander(randomCommander);
                                 await fetchSuggestions(randomCommander);
                                 await fetchReductions(randomCommander);
+                                setCardCount(12);
                                 return data;
                             };
                             getRandomCommander();
