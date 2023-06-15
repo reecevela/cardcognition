@@ -19,12 +19,6 @@ DB_PORT = os.getenv('DB_PORT')
 conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD, host=DB_HOST, port=DB_PORT)
 cur = conn.cursor()
 
-# Create the card_name column in the edhrec_commanders table
-sql_executer("""
-    ALTER TABLE edhrec_commanders
-    ADD COLUMN card_name VARCHAR(255)
-""")
-
 # Get the list of commanders from the database
 commanders = sql_executer("""
     SELECT scryfall_id FROM edhrec_commanders

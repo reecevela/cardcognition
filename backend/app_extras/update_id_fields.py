@@ -20,6 +20,8 @@ cur = conn.cursor()
 
 # Create an array of each card name in the edhrec_cards table
 # Only get the card names that don't have a Scryfall ID
+# Use "SELECT card_name FROM edhrec_cards WHERE scryfall_id IS NULL" for edhrec_cards
+# Use "SELECT name FROM edhrec_commanders WHERE scryfall_id IS NULL" for edhrec_commanders
 cur.execute("""
     SELECT card_name FROM edhrec_cards
     WHERE scryfall_id IS NULL
@@ -43,6 +45,7 @@ for original_card, formatted_card in formatted_card_names:
     card_data = response.json()
     card_scryfall_id = card_data['id']
     # assign the Scryfall ID to the card in the database
+    # Set table correctly and swap name for card_name
     cur.execute("""
         UPDATE edhrec_cards
         SET scryfall_id = %s
@@ -51,6 +54,7 @@ for original_card, formatted_card in formatted_card_names:
     conn.commit()
 
     # Pull the card data from the database
+    # Make sure to set table correctly and swap name for card_name
     cur.execute("""
         SELECT card_name, scryfall_id FROM edhrec_cards
         WHERE card_name = %s
