@@ -125,35 +125,16 @@ function DeckOptimizer() {
                         type="button"
                         className='button-random'
                         onClick={() => {
-                            // Pick a random commander from this array:
-                            const randomCommanders = [
-                                "Urza, Lord High Artificer",
-                                "K'rrik, Son of Yawgmoth",
-                                "Niv-Mizzet Reborn",
-                                "Kess, Dissident Mage",
-                                "Yarok, the Desecrated",
-                                "Armix, Filigree Thrasher",
-                                "Atraxa, Praetors' Voice",
-                                "Okaun, Eye of Chaos",
-                                "Araumi of the Dead Tide",
-                                "Purphoros, God of the Forge",
-                                "Korvold, Fae-Cursed King",
-                                "Queen Marchesa",
-                                "Alela, Artful Provocateur",
-                                "Phenax, God of Deception",
-                                "Aegar, the Freezing Flame",
-                                "Zndrsplt, Eye of Wisdom",
-                                "Yahenni, Undying Partisan",
-                                "Klothys, God of Destiny",
-                                "Archangel Avacyn",
-                                "Kozilek, Butcher of Truth",
-                                "Kumena, Tyrant of Orazca",
-                                "Rosheen Meanderer",
-                            ];
-                            const randomIndex = Math.floor(Math.random() * randomCommanders.length);
-                            const randomCommander = randomCommanders[randomIndex];
-                            setCommander(randomCommander);
-                            fetchSuggestions(randomCommander);
+                            const getRandomCommander = async () => {
+                                const response = await fetch("https://api.cardcognition.com/random-commander");
+                                const data = await response.json();
+                                const randomCommander = data.commander_name;
+                                setCommander(randomCommander);
+                                await fetchSuggestions(randomCommander);
+                                await fetchReductions(randomCommander);
+                                return data;
+                            };
+                            getRandomCommander();
                         }}
                     >Pick Random Commander</button>
                     <label htmlFor="decklist">Enter your deck list: (Optional)</label>
@@ -175,11 +156,13 @@ function DeckOptimizer() {
                 )}
             </div>
             <div className="card-reductions">
-                <h2>Card Reductions</h2>
+                {reductions.length > 0 && normalizedDecklist.length > 0 && (
+                    <>
+                    <h2>Card Reductions</h2>
+                    <p>Here are cards in your deck that are less likely to be included in a {commander} deck than other commanders of the same color identity:</p>
+                    </>
+                )}
                 <div>
-                    {reductions.length > 0 && (
-                        <p>Here are cards in your deck that are less likely to be included in a {commander} deck than other commanders of the same color identity:</p>
-                    )}
                     <ul className='reductions-list'>
                         {reductions
                             .filter(([name]) => normalizedDecklist.includes(normalizeCardName(name))) // Only includes cards in the decklist
