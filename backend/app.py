@@ -122,7 +122,7 @@ def get_random_commander():
 
     # Get random commander by id
     cur.execute("""
-        SELECT cmd.name
+        SELECT cmd.card_name
         FROM edhrec_commanders cmd
         WHERE cmd.id = %s
     """, (random.randint(1, count),))
