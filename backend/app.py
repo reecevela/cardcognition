@@ -133,15 +133,8 @@ def get_random_commander():
     cur.execute("""
         SELECT cmd.card_name
         FROM edhrec_commanders cmd
-        WHERE cmd.id = %s
+        LIMIT 1 OFFSET %s
     """, (index,))
-    while (len(cur.fetchone()[0]) == 0):
-        index = random.randint(1, count)
-        cur.execute("""
-            SELECT cmd.card_name
-            FROM edhrec_commanders cmd
-            WHERE cmd.id = %s
-        """, (index,))
     random_commander = cur.fetchone()[0]
         
     return jsonify({"commander_name": random_commander}), 200
