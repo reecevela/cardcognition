@@ -140,7 +140,7 @@ if __name__ == "__main__":
     
     midpoint = len(commanders) // 2
 
-    for commander in commanders[1684:1899]:
+    for commander in commanders[:]:
         try:
             scrape_commander_data(commander.strip())
         except Exception as e:

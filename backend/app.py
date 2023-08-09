@@ -156,9 +156,10 @@ def get_suggestions(commander_name, count):
         count = 100
 
     cur.execute("""
-    SELECT c.card_name, c.synergy_score, c.scryfall_id
+    SELECT sc.card_name, c.synergy_score, sc.scryfall_id
     FROM edhrec_cards c
     JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
+    JOIN scryfall_cards sc ON c.card_id = sc.id
     WHERE cmd.name = %s
     ORDER BY c.synergy_score DESC
     LIMIT %s
@@ -190,9 +191,10 @@ def get_suggestions_range(commander_name, start, end):
         end = start + 100
 
     cur.execute("""
-    SELECT c.card_name, c.synergy_score, c.scryfall_id
+    SELECT sc.card_name, c.synergy_score, sc.scryfall_id
     FROM edhrec_cards c
     JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
+    JOIN scryfall_cards sc ON c.card_id = sc.id
     WHERE cmd.name = %s
     ORDER BY c.synergy_score DESC
     LIMIT %s
@@ -218,9 +220,10 @@ def get_reductions(commander_name, count):
         count = 100
 
     cur.execute("""
-        SELECT c.card_name, c.percentage, c.synergy_score, c.scryfall_id
+        SELECT sc.card_name, c.percentage, c.synergy_score, sc.scryfall_id
         FROM edhrec_cards c
         JOIN edhrec_commanders cmd ON c.commander_id = cmd.id
+        JOIN scryfall_cards sc ON c.card_id = sc.id
         WHERE cmd.name = %s AND c.synergy_score < 0.8
         ORDER BY c.percentage ASC, c.synergy_score ASC
         LIMIT %s
