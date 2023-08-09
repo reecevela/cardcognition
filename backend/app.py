@@ -90,10 +90,10 @@ def get_commander_info(commander_name):
     name, scryfall_id, avg_synergy_score, card_count = data
 
     cur.execute("""
-        SELECT cmd2.card_name, cmd2.name, cmd2.scryfall_id, COUNT(DISTINCT c2.card_name), COUNT(DISTINCT c2.card_name) * 100.0 / %s as overlap_percentage
+        SELECT cmd2.card_name, cmd2.name, cmd2.scryfall_id, COUNT(DISTINCT c2.card_id), COUNT(DISTINCT c2.card_id) * 100.0 / %s as overlap_percentage
         FROM edhrec_cards c1
         JOIN edhrec_commanders cmd1 ON c1.commander_id = cmd1.id
-        JOIN edhrec_cards c2 ON c1.card_name = c2.card_name
+        JOIN edhrec_cards c2 ON c1.card_id = c2.card_id
         JOIN edhrec_commanders cmd2 ON c2.commander_id = cmd2.id
         WHERE cmd1.name = %s AND cmd1.id != cmd2.id
         GROUP BY cmd2.card_name, cmd2.name, cmd2.scryfall_id
@@ -102,7 +102,15 @@ def get_commander_info(commander_name):
     """, (card_count, commander_name))
 
 
-    similar_commanders = [{"card_name": card_name, "name": name, "scryfall_id": scryfall_id, "overlap_count": overlap_count, "overlap_percentage": overlap_percentage} for card_name, name, scryfall_id, overlap_count, overlap_percentage in cur.fetchall()]
+    similar_commanders = [
+        {
+            "card_name": card_name, 
+            "name": name, 
+            "scryfall_id": scryfall_id, 
+            "overlap_count": overlap_count, 
+            "overlap_percentage": round(overlap_percentage, 2)
+        } for card_name, name, scryfall_id, overlap_count, overlap_percentage in cur.fetchall()
+    ]
 
     return jsonify({
         "name": name,
@@ -120,14 +128,22 @@ def get_random_commander():
     """)
     count = cur.fetchone()[0]
 
+    index = random.randint(1, count)
     # Get random commander by id
     cur.execute("""
         SELECT cmd.card_name
         FROM edhrec_commanders cmd
         WHERE cmd.id = %s
-    """, (random.randint(1, count),))
+    """, (index,))
+    while (len(cur.fetchone()[0]) == 0):
+        index = random.randint(1, count)
+        cur.execute("""
+            SELECT cmd.card_name
+            FROM edhrec_commanders cmd
+            WHERE cmd.id = %s
+        """, (index,))
     random_commander = cur.fetchone()[0]
-
+        
     return jsonify({"commander_name": random_commander}), 200
 
 @app.route('/<commander_name>/suggestions/<count>', methods=['GET'])

@@ -54,3 +54,24 @@ CREATE TABLE IF NOT EXISTS public.edhrec_cards
 
 Total DB size before migration: 34MB
 Total DB size after migration: 30MB
+
+Added a ton of data to the scryfall_cards table, now here's what it looks like:
+
+CREATE TABLE IF NOT EXISTS public.scryfall_cards
+(
+    id integer NOT NULL DEFAULT 'nextval('scryfall_cards_id_seq'::regclass)',       -- Ex. 173993
+    scryfall_id character varying(36) COLLATE pg_catalog."default",                 -- Ex. acb3ce9b-ee4f-410a-8db3-e87aeb0a4444
+    card_name character varying(141) COLLATE pg_catalog."default",                  -- Ex. Fiendish Duo
+    mana_cost character varying(46) COLLATE pg_catalog."default",                   -- Ex. {4}{R}{R}
+    cmc smallint,                                                                   -- Ex. 6
+    type_line character varying(90) COLLATE pg_catalog."default",                   -- Ex. Creature — Devil
+    oracle_text text COLLATE pg_catalog."default",                                  -- Ex. First strike If a source would deal damage to an opponent, it deals double that damage to that player instead.
+    colors character varying(5) COLLATE pg_catalog."default",                       -- Ex. R
+    color_identity character varying(5) COLLATE pg_catalog."default",               -- Ex. R
+    commander_legal boolean DEFAULT 'true',                                         -- Ex. true
+    set_code character varying(5) COLLATE pg_catalog."default",                     -- Ex. gn2
+    rarity character varying(8) COLLATE pg_catalog."default",                       -- Ex. mythic
+    prices json,                                                                    -- Ex. {"usd": null, "usd_foil": "27.24", "usd_etched": null, "eur": null, "eur_foil": "20.20", "tix": "1.52"}
+    edhrec_rank integer,                                                            -- Ex. 6479
+    CONSTRAINT scryfall_cards_pkey PRIMARY KEY (id)
+)
