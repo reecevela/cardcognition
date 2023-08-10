@@ -1,12 +1,11 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 from pathlib import Path
 import psycopg2
 import os
 from dotenv import load_dotenv
 import random
-import json
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
@@ -240,7 +239,8 @@ def get_reductions(commander_name, count):
 @app.route('/cards/<card_name>', methods=['GET'])
 def get_card(card_name):
 
-    card_name = card_name.lower()
+    # Shessra%2C%20Death%27s%20Whisper => shessra, death's whisper
+    card_name = unquote(card_name.lower())
 
     cur.execute("""
         SELECT sc.card_name, sc.mana_cost, sc.cmc, sc.type_line, sc.oracle_text, sc.colors, sc.color_identity, sc.commander_legal, sc.set_code, sc.rarity, sc.prices, sc.edhrec_rank
