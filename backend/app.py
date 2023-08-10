@@ -6,6 +6,7 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 import random
+import json
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
@@ -235,6 +236,36 @@ def get_reductions(commander_name, count):
     if not reductions:
         return jsonify({"error": "No reductions found for this commander."}), 404
     return jsonify({"reductions": reductions, "count": count}), 200
+
+@app.route('/cards/<card_name>', methods=['GET'])
+def get_card(card_name):
+
+    card_name = card_name.lower()
+
+    cur.execute("""
+        SELECT sc.card_name, sc.mana_cost, sc.cmc, sc.type_line, sc.oracle_text, sc.colors, sc.color_identity, sc.commander_legal, sc.set_code, sc.rarity, sc.prices, sc.edhrec_rank
+        FROM scryfall_cards sc
+        WHERE LOWER(sc.card_name) = %s
+    """, (card_name,))
+
+    data = list(cur.fetchone())
+    if not data:
+        return jsonify({"error": "Card not found."}), 404
+
+    return jsonify({
+        "name": data[0],
+        "mana_cost": data[1],
+        "cmc": data[2],
+        "type_line": data[3],
+        "oracle_text": data[4],
+        "colors": data[5],
+        "color_identity": data[6],
+        "commander_legal": data[7],
+        "set_code": data[8],
+        "rarity": data[9],
+        "prices": data[10],
+        "edhrec_rank": data[11]
+    }), 200
     
 
 if __name__ == '__main__':
