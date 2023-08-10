@@ -20,10 +20,10 @@ cur = conn.cursor()
 
 # Create an array of each card name in the edhrec_cards table
 # Only get the card names that don't have a Scryfall ID
-# Use "SELECT card_name FROM edhrec_cards WHERE scryfall_id IS NULL" for edhrec_cards
+# Use "SELECT card_name FROM edhrec_cards WHERE scryfall_id IS NULL" for edhrec_cards - Deprecated now, use scryfall_cards table instead
 # Use "SELECT name FROM edhrec_commanders WHERE scryfall_id IS NULL" for edhrec_commanders
 cur.execute("""
-    SELECT card_name FROM edhrec_cards
+    SELECT name FROM edhrec_commanders
     WHERE scryfall_id IS NULL
 """)
 card_names = cur.fetchall()

@@ -1,4 +1,3 @@
-from sql_executer import sql_executer
 from dotenv import load_dotenv
 import os
 from pathlib import Path
@@ -20,10 +19,10 @@ conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD, host
 cur = conn.cursor()
 
 # Get the list of commanders from the database
-commanders = sql_executer("""
+commanders = cur.execute("""
     SELECT scryfall_id FROM edhrec_commanders
     WHERE card_name IS NULL
-""")
+""").fetchall()
 
 # Get the actual card name for each commander
 for commander in commanders[1:]:
