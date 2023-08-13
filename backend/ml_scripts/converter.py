@@ -1,23 +1,27 @@
 from gensim.models.phrases import Phrases
 
 class MLConverter:
-    def __init__(self, data_source):
-        # Would like to use Dependency injection here
-        # Maybe to be able to use in-memory for testing and postgres for production
-        self.data_source = data_source
+    def process_type_line(self, type_line:str):
+        if type_line is None:
+            return None, []
 
-    def encode_colors(self, colors:str) -> list:
+        card_type, *sub_types = type_line.split(' - ')
+        sub_types_list = ' '.join(sub_types).split(' ')
+        
+        return card_type, sub_types_list
+
+    def encode_colors(self, card_colors:str) -> list:
         # Converts MtG color to binary representation
-        # [W, U, B, R, G] - 1 if color is present, 0 otherwise
+        # [W, U, B, R, G] - 1 if color is present, 0 subwise
         # Input ex: "WBU"
         output = [0, 0, 0, 0, 0]
         colors = ["W", "U", "B", "R", "G"]
         for i, color in enumerate(colors):
-            if color in colors:
+            if color in card_colors:
                 output[i] = 1
         return output
     
-    def phrase_oracle_text(self, oracle_texts:list, threshold:int = 3) -> list:
+    def phrase_oracle_text(self, oracle_texts:list, threshold:int = 1) -> list:
         # Tokenizes oracle text, then phrases it to group words that are often together
         # Input ex: [
         #   "Whenever CARDNAME enters the battlefield or attacks, ...",
