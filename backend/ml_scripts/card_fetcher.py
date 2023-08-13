@@ -125,3 +125,11 @@ class CardsContext:
             WHERE sc.id = ANY(%s)
         """, (commander_ids,))
         return self.fetch_list_of_dicts(self.cur)
+    
+    def get_id_by_name(self, card_name:str) -> int:
+        self.cur.execute("""
+            SELECT id FROM scryfall_cards
+            WHERE card_name = %s
+        """, (card_name,))
+        return self.cur.fetchone()[0]
+        

@@ -1,0 +1,134 @@
+[
+    {
+        "test_commanders": [
+            "Gaalia of the Endless Dance",
+            "Grumgully, the Generous",
+            "Jodah, Archmage Eternal"
+        ],
+        "id": 999888,
+        "card_name": "Gronky the Gruul",
+        "mana_cost": "{1}{G}{R}",
+        "cmc": 3,
+        "type_line": "Legendary Creature — Goblin Warrior",
+        "oracle_text": "Haste\nWhenever {{CARDNAME}} attacks, sacrifice an attacking creature and put that many +1/+1 counters on {{CARDNAME}}.",
+        "power": 3,
+        "toughness": 3,
+        "colors": "GR",
+        "color_identity": "GR",
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
+            "Akiri, Line-Slinger",
+            "Toralf, God of Fury",
+            "Zirda, the Dawnwaker",
+            "Nahiri, Heir of the Ancients"
+        ],
+        "id": 999889,
+        "card_name": "Gronky's Axe",
+        "mana_cost": "{4}",
+        "cmc": 4,
+        "type_line": "Artifact — Equipment",
+        "oracle_text": "Equipped creature gets +3/+0.\nWhenever equipped creature attacks, it deals 3 damage to any target.\nEquip {3}",
+        "power": null,
+        "toughness": null,
+        "colors": "",
+        "color_identity": "",
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
+            "Harbin, Vanguard Aviator",
+            "Ephara, God of the Polis",
+            "Brago, King Eternal",
+            "Nahiri, Heir of the Ancients"
+        ],
+        "id": 999890,
+        "card_name": "Mono-White Formatbreaker",
+        "mana_cost": "{W}",
+        "cmc": 1,
+        "type_line": "Creature — Human Soldier",
+        "oracle_text": "Flash\nWhen {{CARDNAME}} enters the battlefield or becomes tapped, you pay put a 1/1 white Soldier creature token onto the battlefield or draw a card.\n{W}, {T}: Exile target creature. Return it to the battlefield under its owner's control at the beginning of the next end step.",
+        "power": 1,
+        "toughness": 2,
+        "colors": "W",
+        "color_identity": "W",
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
+            "Kalamax, the Stormsire",
+            "Maelstrom Wanderer",
+            "Riku of Two Reflections",
+            "Baral, Chief of Compliance"
+        ],
+        "id": 999891,
+        "card_name": "Free Counterspell",
+        "mana_cost": "{4}{U}",
+        "cmc": 5,
+        "type_line": "Instant",
+        "oracle_text": "Convoke, Delve, affinity for artifacts, Improvise\nYou may pay 4 life rather than pay {{CARDNAME}}'s mana cost.\nCounter target spell.",
+        "power": null,
+        "toughness": null,
+        "colors": "U",
+        "color_identity": "U",
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
+            "Prosper, Tome-Bound",
+            "Queen Marchesa",
+            "Korvold, Fae-Cursed King",
+            "Kess, Dissident Mage"
+        ],
+        "id": 999892,
+        "card_name": "Treasure Golem",
+        "mana_cost": "{3}{B}",
+        "cmc": 4,
+        "type_line": "Artifact Creature — Golem",
+        "oracle_text": "When {{CARDNAME}} enters the battlefield, you may sacrifice any number of Treasure tokens. If you do, put that many +1/+1 counters on {{CARDNAME}}.",
+        "power": 3,
+        "toughness": 3,
+        "colors": "B",
+        "color_identity": "B",
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
+            "Queen Marchesa",
+            "Arcades, the Strategist",
+            "Derevi, Empyrial Tactician",
+            "Thalia, Guardian of Thraben"
+        ],
+        "id": 999893,
+        "card_name": "Hypervigilance",
+        "mana_cost": "{2}{W}{W}",
+        "cmc": 4,
+        "type_line": "Enchantment",
+        "oracle_text": "Whenever a creature attacks you or a planeswalker you control, untap all creatures you control.",
+        "power": null,
+        "toughness": null,
+        "colors": "W",
+        "color_identity": "W",
+        "commander_legal": true
+    },
+    {   
+        "test_commanders": [
+            "Kadena, Slinking Sorcerer",
+            "Animar, Soul of Elements",
+            "Muldrotha, the Gravetide",
+            "The Mimeoplasm"
+        ],
+        "id": 999894,
+        "card_name": "Nightside Ambush",
+        "mana_cost": "{2}{U}{B}{G}",
+        "cmc": 5,
+        "type_line": "Instant",
+        "oracle_text": "Search your library for up to two cards with morph abilities, put them onto the battlefield face down, then shuffle your library.",
+        "power": null,
+        "toughness": null,
+        "colors": "UBG",
+        "color_identity": "UBG",
+        "commander_legal": true
+    }
+]

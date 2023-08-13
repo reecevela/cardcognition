@@ -2,6 +2,8 @@ from card_embedder import CardEmbedder
 from card_fetcher import CardsContext
 import numpy as np
 import pickle
+import json
+import pandas as pd
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import train_test_split
 
@@ -53,4 +55,45 @@ model.fit(X_train, y_train)
 score = model.score(X_test, y_test)
 print('Model R^2 Score:', score)
 
-# Predict synergy score for a new pair, e.g. new_commander_embedding, new_deck_card_embedding
+# Validate some fake/custom cards
+
+# Load previously saved mappings and embeddings
+with open('card_id_to_index.pkl', 'rb') as f:
+    card_id_to_index = pickle.load(f)
+with open('commander_id_to_index.pkl', 'rb') as f:
+    commander_id_to_index = pickle.load(f)
+
+card_embeddings = np.load("card_embeddings.npy")
+commander_embeddings = np.load("commander_embeddings.npy")
+
+# Load validation set
+with open("./validation_set.json", 'r') as file:
+    validation_data = json.load(file)
+
+# Create a DataFrame to store the results
+results_df = pd.DataFrame(columns=['Card_Name', 'Commander', 'Predicted_Synergy_Score'])
+
+# Iterate through validation data
+for record in validation_data:
+    card_name = record['card_name']
+    card_id = context.get_id_by_name(card_name)
+    card_embedding = card_embeddings[card_id_to_index[card_id]]
+
+    # Iterate through the test_commanders
+    for commander_name in record['test_commanders']:
+        commander_id = context.get_id_by_name(commander_name)
+        commander_embedding = commander_embeddings[commander_id_to_index[commander_id]]
+
+        # Combine embeddings and predict synergy score
+        new_pair_embedding = np.concatenate((commander_embedding, card_embedding))
+        predicted_synergy_score = model.predict([new_pair_embedding])
+
+        # Append to DataFrame
+        results_df = results_df.append({
+            'Card_Name': card_name,
+            'Commander': commander_name,
+            'Predicted_Synergy_Score': predicted_synergy_score[0]
+        }, ignore_index=True)
+
+# Save the DataFrame to a CSV file
+results_df.to_csv('validation_results.csv', index=False)
