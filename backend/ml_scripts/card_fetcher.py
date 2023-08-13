@@ -53,13 +53,24 @@ class CardsContext:
         self.cur.execute("""
             SELECT * FROM scryfall_cards
             WHERE commander_legal = true
+            ORDER BY id ASC
         """)
         return self.fetch_list_of_dicts(self.cur)
+
+    def get_commander_sc_id_by_id(self, card_id:int) -> int:
+        self.cur.execute("""
+            SELECT sc.id FROM scryfall_cards sc
+            INNER JOIN edhrec_commanders ON sc.id = edhrec_commanders.card_id
+            AND commander_legal = true
+            ORDER BY id ASC
+        """, (card_id,))
+        return self.cur.fetchone()[0]
     
     def get_all_card_types_and_sub_types(self):
         self.cur.execute("""
             SELECT type_line
             FROM scryfall_cards
+            WHERE commander_legal = true
         """)
         card_types = set()
         sub_types = set()
@@ -74,6 +85,7 @@ class CardsContext:
             SELECT * FROM scryfall_cards
             WHERE id = %s
             AND commander_legal = true
+            ORDER BY id ASC
         """, (card_id,))
         return self.fetch_list_of_dicts(self.cur)[0]
 
@@ -83,6 +95,7 @@ class CardsContext:
             WHERE id IN (
                 SELECT card_id FROM edhrec_commanders
             ) AND commander_legal = true
+            ORDER BY id ASC
         """)
         return self.fetch_list_of_dicts(self.cur)
     
@@ -91,22 +104,37 @@ class CardsContext:
             SELECT * FROM edhrec_commanders
             WHERE id = %s
             AND commander_legal = true
+            ORDER BY id ASC
         """, (commander_id,))
         return self.fetch_list_of_dicts(self.cur)[0]
     
     def get_commander_synergies_by_id(self, commander_id:int) -> list:
         self.cur.execute("""
-            SELECT card_id, synergy_score FROM edhrec_cards
+            SELECT ec.card_id, ec.synergy_score
+            FROM edhrec_cards ec
+            INNER JOIN scryfall_cards sc ON ec.card_id = sc.id
             WHERE commander_id = %s
-            AND commander_legal = true
+            AND sc.commander_legal = true
+            ORDER BY ec.card_id ASC;
         """, (commander_id,))
         return self.fetch_list_of_dicts(self.cur)
-    
+
+    def get_cmd_id_from_sc_id(self, scryfall_id:int) -> int:
+        self.cur.execute("""
+            SELECT cmd.id AS commander_id
+            FROM scryfall_cards sc
+            INNER JOIN edhrec_commanders cmd ON sc.card_name = cmd.card_name
+            WHERE sc.id = %s
+            AND sc.commander_legal = true
+        """, (scryfall_id,))
+        return self.cur.fetchone()[0]
+
     def get_card_synergies_by_id(self, card_id:int) -> list:
         self.cur.execute("""
             SELECT commander_id, synergy_score FROM edhrec_cards
             WHERE card_id = %s
             AND commander_legal = true
+            ORDER BY commander_id ASC
         """, (card_id,))
         return self.fetch_list_of_dicts(self.cur)
     

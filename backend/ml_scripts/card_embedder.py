@@ -28,6 +28,7 @@ class CardEmbedder:
         total_cards = len(cards)
 
         embeddings = []
+        FINAL_EMBEDDING_SHAPE = None
         for i, card in enumerate(cards):
             try:
                 colors = np.array(self.converter.encode_colors(card.get("colors"))).reshape(1, -1)
@@ -44,10 +45,14 @@ class CardEmbedder:
                 sub_types_embedding = self.other_types_encoder.transform([sub_types]).toarray().sum(axis=0, keepdims=True)
 
                 final_embedding = np.concatenate((colors, oracle_text_embedding, cmc, card_type_embedding, sub_types_embedding, power, toughness), axis=1)
+                if FINAL_EMBEDDING_SHAPE is None:
+                    FINAL_EMBEDDING_SHAPE = final_embedding.shape
                 embeddings.append(final_embedding)
             except Exception as e:
                 try:
                     print("Lost " + card["card_name"])
+                    default_embedding = np.zeros(FINAL_EMBEDDING_SHAPE)
+                    embeddings.append(default_embedding)
                 except:
                     print(e)
                     print(card)
