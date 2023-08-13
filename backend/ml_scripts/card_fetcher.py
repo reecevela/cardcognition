@@ -6,6 +6,7 @@ from converter import MLConverter
 
 class CardsContext:
     def __init__(self):
+        self.converter = MLConverter()
         self.BASE_DIR = Path(__file__).resolve().parent
         load_dotenv(os.path.join(self.BASE_DIR, '..\.env'))
 
@@ -63,15 +64,11 @@ class CardsContext:
         card_types = set()
         sub_types = set()
         for row in self.cur.fetchall():
-            card_type, sub_types_list = self.process_type_line(row[0])
+            card_type, sub_types_list = self.converter.process_type_line(row[0])
             card_types.add(card_type)
             sub_types.update(sub_types_list)
         return list(card_types), list(sub_types)
 
-    def process_type_line(self, type_line: str):
-        return MLConverter().process_type_line(type_line)
-
-        
     def get_card_by_id(self, card_id:int) -> dict:
         self.cur.execute("""
             SELECT * FROM scryfall_cards

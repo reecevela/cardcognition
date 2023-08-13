@@ -32,6 +32,8 @@ def insert_cards_json(cards):
             cmc,
             type_line,
             oracle_text,
+            power,
+            toughness,
             colors,
             color_identity,
             commander_legal,
@@ -60,6 +62,8 @@ def insert_cards_json(cards):
             card.get('cmc', None),
             card['type_line'],
             card.get('oracle_text', None),
+            card.get('power', None),
+            card.get('toughness', None),
             ''.join(card.get('colors', [])),
             ''.join(card.get('color_identity', [])),
             commander_legal_status,
@@ -94,6 +98,8 @@ def update_cards_json(cards):
             cmc = %s,
             type_line = %s,
             oracle_text = %s,
+            power = %s,
+            toughness = %s,
             colors = %s,
             color_identity = %s,
             commander_legal = %s,
@@ -118,6 +124,8 @@ def update_cards_json(cards):
             card.get('cmc', None),
             card['type_line'],
             card.get('oracle_text', None),
+            card.get('power', None),
+            card.get('toughness', None),
             ''.join(card.get('colors', [])),
             ''.join(card.get('color_identity', [])),
             commander_legal_status,
@@ -129,6 +137,47 @@ def update_cards_json(cards):
         )
 
         if card['name'] in existing_cards:
+            card_tuples.append(card_details)
+     
+    try:
+        cur.executemany(update_sql, card_tuples)
+
+        # Commit the changes and close the connection
+        conn.commit()
+        cur.close()
+        conn.close()
+    except Exception as e:
+        print(e)
+
+def add_missing_power_toughness(data):
+    conn, cur = configure_db()
+
+    update_sql = '''
+        UPDATE scryfall_cards
+        SET power = %s,
+            toughness = %s
+        WHERE card_name = %s
+    '''
+
+    existing_cards = set()
+    cur.execute('SELECT card_name FROM scryfall_cards WHERE power IS NULL')
+    for card in cur.fetchall():
+        existing_cards.add(card[0])
+
+    card_tuples = []
+    for card in data:
+        if card['name'] in existing_cards:
+            try:
+                power = int(card.get('power', None)) if card.get('power', None) != '*' else None
+                toughness = int(card.get('toughness', None)) if card.get('toughness', None) != '*' else None
+            except Exception as e:
+                power = None
+                toughness = None
+            card_details = (
+                power,
+                toughness,
+                card['name'],
+            )
             card_tuples.append(card_details)
      
     try:
@@ -164,4 +213,4 @@ def remove_tokens(data):
 with open(r"C:\Scryfall Cards\cards08082023.json", 'r', encoding="utf-8") as file:
     data = json.load(file)
 
-update_cards_json(data)
+add_missing_power_toughness(data)

@@ -37,10 +37,13 @@ class CardEmbedder:
                 
                 card_type, sub_types = self.converter.process_type_line(card["type_line"])
 
+                power = np.array([card.get("power", None)]).reshape(1, -1)
+                toughness = np.array([card.get("toughness", None)]).reshape(1, -1)
+
                 card_type_embedding = self.card_type_encoder.transform([[card_type]]).toarray() 
                 sub_types_embedding = self.other_types_encoder.transform([sub_types]).toarray().sum(axis=0, keepdims=True)
 
-                final_embedding = np.concatenate((colors, oracle_text_embedding, cmc, card_type_embedding, sub_types_embedding), axis=1)
+                final_embedding = np.concatenate((colors, oracle_text_embedding, cmc, card_type_embedding, sub_types_embedding, power, toughness), axis=1)
                 embeddings.append(final_embedding)
             except Exception as e:
                 try:
