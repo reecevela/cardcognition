@@ -1,9 +1,10 @@
 [
     {
         "test_commanders": [
-            "Gaalia of the Endless Dance",
+            "Gallia of the Endless Dance",
             "Grumgully, the Generous",
-            "Jodah, Archmage Eternal"
+            "Jodah, Archmage Eternal",
+            "Klothys, God of Destiny"
         ],
         "id": 999888,
         "card_name": "Gronky the Gruul",
@@ -20,7 +21,7 @@
     {
         "test_commanders": [
             "Akiri, Line-Slinger",
-            "Toralf, God of Fury",
+            "Zada, Hedron Grinder",
             "Zirda, the Dawnwaker",
             "Nahiri, Heir of the Ancients"
         ],

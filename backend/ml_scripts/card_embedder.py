@@ -18,6 +18,7 @@ class CardEmbedder:
         
         self.other_types_encoder = OneHotEncoder()
         self.other_types_encoder.fit(np.array(sub_types).reshape(-1, 1))
+        self.default_embedding_shape = self.text_embedder(["test"]).shape
 
     def embed_cards(self, cards:list):
         oracle_texts = [card.get("oracle_text") for card in cards]
@@ -33,18 +34,30 @@ class CardEmbedder:
             try:
                 colors = np.array(self.converter.encode_colors(card.get("colors"))).reshape(1, -1)
                 #oracle_text_embedding = self.text_embedder([phrased_oracle_texts[i]]).numpy()
-                oracle_text_embedding = self.text_embedder([card.get("oracle_text")]).numpy()
+                oracle_text = card.get("oracle_text", "")
+                if oracle_text == "":
+                    oracle_text_embedding = np.zeros(self.default_embedding_shape)
+                else:
+                    oracle_text_embedding = self.text_embedder([card.get("oracle_text", 0)]).numpy()
                 cmc = np.array([card["cmc"]]).reshape(1, -1)
                 
                 card_type, sub_types = self.converter.process_type_line(card["type_line"])
 
-                power = np.array([card.get("power", None)]).reshape(1, -1)
-                toughness = np.array([card.get("toughness", None)]).reshape(1, -1)
+                # power = card.get("power")
+                # if power is None or np.isnan(power):
+                #     power = 0
+                # power = np.array([power]).reshape(1, -1)
+
+                # toughness = card.get("toughness")
+                # if toughness is None or np.isnan(toughness):
+                #     toughness = 0
+                # toughness = np.array([toughness]).reshape(1, -1)
 
                 card_type_embedding = self.card_type_encoder.transform([[card_type]]).toarray() 
                 sub_types_embedding = self.other_types_encoder.transform([sub_types]).toarray().sum(axis=0, keepdims=True)
 
-                final_embedding = np.concatenate((colors, oracle_text_embedding, cmc, card_type_embedding, sub_types_embedding, power, toughness), axis=1)
+                # Removed power and toughness from here
+                final_embedding = np.concatenate((colors, oracle_text_embedding, cmc, card_type_embedding, sub_types_embedding), axis=1).reshape(-1)
                 if FINAL_EMBEDDING_SHAPE is None:
                     FINAL_EMBEDDING_SHAPE = final_embedding.shape
                 embeddings.append(final_embedding)

@@ -159,5 +159,5 @@ class CardsContext:
             SELECT id FROM scryfall_cards
             WHERE card_name = %s
         """, (card_name,))
-        return self.cur.fetchone()[0]
+        return self.fetch_list_of_dicts(self.cur)
         
