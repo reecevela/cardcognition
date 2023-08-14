@@ -1,0 +1,1577 @@
+{
+    "score": 0.08087859416355736,
+    "config": {
+        "min_count": 1,
+        "threshold": 0.6,
+        "npmi_scoring": true,
+        "power_encoded": false,
+        "toughness_encoded": false,
+        "batch_size": 2048,
+        "model": "SGDRegressor",
+        "penalty": "l2",
+        "alpha": 1,
+        "test_size": 0.2,
+        "train_size": 0.8,
+        "num_threads": 4
+    },
+    "Gronky the Gruul": {
+        "Gallia of the Endless Dance": 5.65,
+        "Grumgully, the Generous": 5.99,
+        "Jodah, Archmage Eternal": 5.27,
+        "Klothys, God of Destiny": 5.56,
+        "accuracy": 1.0,
+        "correct_list": [
+            [
+                "Gallia of the Endless Dance",
+                5.653597311983962
+            ],
+            [
+                "Grumgully, the Generous",
+                5.985502818704267
+            ],
+            [
+                "Jodah, Archmage Eternal",
+                5.268482421567173
+            ],
+            [
+                "Klothys, God of Destiny",
+                5.560322848729969
+            ]
+        ],
+        "incorrect_list": []
+    },
+    "Gronky's Axe": {
+        "Akiri, Line-Slinger": 6.39,
+        "Nahiri, Heir of the Ancients": 5.96,
+        "Zirda, the Dawnwaker": 6.22,
+        "Brago, King Eternal": 6.78,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Akiri, Line-Slinger",
+                6.38833146722817
+            ],
+            [
+                "Zirda, the Dawnwaker",
+                6.2249127206195
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Nahiri, Heir of the Ancients",
+                5.958968885493041
+            ],
+            [
+                "Brago, King Eternal",
+                6.782675378749611
+            ]
+        ]
+    },
+    "Mono-White Formatbreaker": {
+        "Harbin, Vanguard Aviator": 5.15,
+        "Ephara, God of the Polis": 4.78,
+        "Brago, King Eternal": 5.49,
+        "Nahiri, Heir of the Ancients": 4.67,
+        "Mayael the Anima": 4.83,
+        "accuracy": 0.6,
+        "correct_list": [
+            [
+                "Harbin, Vanguard Aviator",
+                5.146644002273773
+            ],
+            [
+                "Brago, King Eternal",
+                5.49494843730691
+            ],
+            [
+                "Nahiri, Heir of the Ancients",
+                4.671241944050341
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Ephara, God of the Polis",
+                4.7811277688372265
+            ],
+            [
+                "Mayael the Anima",
+                4.831880840520331
+            ]
+        ]
+    },
+    "Free Counterspell": {
+        "Baral, Chief of Compliance": 6.36,
+        "Kess, Dissident Mage": 6.3,
+        "Maelstrom Wanderer": 6.8,
+        "Riku of Two Reflections": 6.34,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Baral, Chief of Compliance",
+                6.358887355309411
+            ],
+            [
+                "Riku of Two Reflections",
+                6.339908374542548
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Kess, Dissident Mage",
+                6.30474063004424
+            ],
+            [
+                "Maelstrom Wanderer",
+                6.8029797368104585
+            ]
+        ]
+    },
+    "Treasure Golem": {
+        "Prosper, Tome-Bound": 6.29,
+        "Korvold, Fae-Cursed King": 6.4,
+        "Queen Marchesa": 6.22,
+        "Kess, Dissident Mage": 5.99,
+        "accuracy": 1.0,
+        "correct_list": [
+            [
+                "Prosper, Tome-Bound",
+                6.285065548455229
+            ],
+            [
+                "Korvold, Fae-Cursed King",
+                6.398609661381789
+            ],
+            [
+                "Queen Marchesa",
+                6.21783155199555
+            ],
+            [
+                "Kess, Dissident Mage",
+                5.99216757164095
+            ]
+        ],
+        "incorrect_list": []
+    },
+    "Hypervigilance": {
+        "Queen Marchesa": 6.11,
+        "Derevi, Empyrial Tactician": 5.61,
+        "Arcades, the Strategist": 5.95,
+        "Thalia, Guardian of Thraben": 6.32,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Queen Marchesa",
+                6.1137616990353765
+            ],
+            [
+                "Arcades, the Strategist",
+                5.9532246692608215
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Derevi, Empyrial Tactician",
+                5.612931693984511
+            ],
+            [
+                "Thalia, Guardian of Thraben",
+                6.323572596212301
+            ]
+        ]
+    },
+    "Nightside Ambush": {
+        "Kadena, Slinking Sorcerer": 6.1,
+        "Animar, Soul of Elements": 6.72,
+        "Muldrotha, the Gravetide": 6.63,
+        "The Mimeoplasm": 6.64,
+        "accuracy": 0.25,
+        "correct_list": [
+            [
+                "Muldrotha, the Gravetide",
+                6.6259985822610705
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Kadena, Slinking Sorcerer",
+                6.098244296621868
+            ],
+            [
+                "Animar, Soul of Elements",
+                6.717731137326657
+            ],
+            [
+                "The Mimeoplasm",
+                6.642679062534821
+            ]
+        ]
+    },
+    "Fungus Infestation": {
+        "Slimefoot, the Stowaway": 6.25,
+        "Mazirek, Kraul Death Priest": 6.41,
+        "Pharika, God of Affliction": 6.06,
+        "Rhys the Redeemed": 5.93,
+        "accuracy": 1.0,
+        "correct_list": [
+            [
+                "Slimefoot, the Stowaway",
+                6.252699985922082
+            ],
+            [
+                "Mazirek, Kraul Death Priest",
+                6.409917570332643
+            ],
+            [
+                "Pharika, God of Affliction",
+                6.057823085673274
+            ],
+            [
+                "Rhys the Redeemed",
+                5.934706452594941
+            ]
+        ],
+        "incorrect_list": []
+    },
+    "Artificer's Awakening": {
+        "Brudiclad, Telchor Engineer": 7.01,
+        "Breya, Etherium Shaper": 6.61,
+        "Kaheera, the Orphanguard": 6.58,
+        "Animar, Soul of Elements": 6.83,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Brudiclad, Telchor Engineer",
+                7.012234349656027
+            ],
+            [
+                "Kaheera, the Orphanguard",
+                6.576342479992913
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Breya, Etherium Shaper",
+                6.608936717566955
+            ],
+            [
+                "Animar, Soul of Elements",
+                6.8307906846294095
+            ]
+        ]
+    },
+    "Deep Wisdom": {
+        "Prime Speaker Zegana": 5.4,
+        "Tanazir Quandrix": 5.56,
+        "Atraxa, Praetors' Voice": 5.78,
+        "Rashmi, Eternities Crafter": 5.71,
+        "accuracy": 0.0,
+        "correct_list": [],
+        "incorrect_list": [
+            [
+                "Prime Speaker Zegana",
+                5.396103442404044
+            ],
+            [
+                "Tanazir Quandrix",
+                5.562300267301783
+            ],
+            [
+                "Atraxa, Praetors' Voice",
+                5.784667190395825
+            ],
+            [
+                "Rashmi, Eternities Crafter",
+                5.706309727625961
+            ]
+        ]
+    },
+    "Forge Master's Hammer": {
+        "Daretti, Scrap Savant": 6.7,
+        "Feldon of the Third Path": 7.06,
+        "Zedruu the Greathearted": 6.86,
+        "Grenzo, Dungeon Warden": 7.13,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Feldon of the Third Path",
+                7.058575559397757
+            ],
+            [
+                "Zedruu the Greathearted",
+                6.86238862933576
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Daretti, Scrap Savant",
+                6.695215133964172
+            ],
+            [
+                "Grenzo, Dungeon Warden",
+                7.129755373128849
+            ]
+        ]
+    },
+    "Carnival of Pain": {
+        "Mogis, God of Slaughter": 6.25,
+        "Rakdos, the Showstopper": 6.47,
+        "Shattergang Brothers": 6.76,
+        "Prossh, Skyraider of Kher": 6.18,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Rakdos, the Showstopper",
+                6.473331857384567
+            ],
+            [
+                "Prossh, Skyraider of Kher",
+                6.1847545450208585
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Mogis, God of Slaughter",
+                6.246767851557455
+            ],
+            [
+                "Shattergang Brothers",
+                6.760136317582595
+            ]
+        ]
+    },
+    "Terra Shaper": {
+        "Omnath, Locus of Rage": 6.77,
+        "Titania, Protector of Argoth": 6.79,
+        "Prossh, Skyraider of Kher": 6.46,
+        "Meren of Clan Nel Toth": 6.67,
+        "accuracy": 1.0,
+        "correct_list": [
+            [
+                "Omnath, Locus of Rage",
+                6.772737378813618
+            ],
+            [
+                "Titania, Protector of Argoth",
+                6.793358487714822
+            ],
+            [
+                "Prossh, Skyraider of Kher",
+                6.458958598553661
+            ],
+            [
+                "Meren of Clan Nel Toth",
+                6.673058060136953
+            ]
+        ],
+        "incorrect_list": []
+    },
+    "Penance Ritual": {
+        "Daxos the Returned": 5.57,
+        "Teysa, Orzhov Scion": 5.35,
+        "Atraxa, Praetors' Voice": 5.58,
+        "Aurelia, the Warleader": 5.51,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Daxos the Returned",
+                5.571803338267371
+            ],
+            [
+                "Aurelia, the Warleader",
+                5.510955529828475
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Teysa, Orzhov Scion",
+                5.3457948828434505
+            ],
+            [
+                "Atraxa, Praetors' Voice",
+                5.5751269235408145
+            ]
+        ]
+    },
+    "Diplomatic Immunity": {
+        "Zedruu the Greathearted": 6.55,
+        "Sen Triplets": 5.92,
+        "Nekusar, the Mindrazer": 6.18,
+        "Grand Arbiter Augustin IV": 6.43,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Zedruu the Greathearted",
+                6.554077847469628
+            ],
+            [
+                "Nekusar, the Mindrazer",
+                6.183623721816778
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Sen Triplets",
+                5.921403164277495
+            ],
+            [
+                "Grand Arbiter Augustin IV",
+                6.430876764579751
+            ]
+        ]
+    },
+    "Electromancer's Bolt": {
+        "Mizzix of the Izmagnus": 5.72,
+        "Melek, Izzet Paragon": 5.27,
+        "Jhoira, Weatherlight Captain": 6.17,
+        "Kambal, Consul of Allocation": 5.68,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Mizzix of the Izmagnus",
+                5.719607923401467
+            ],
+            [
+                "Kambal, Consul of Allocation",
+                5.68230725647361
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Melek, Izzet Paragon",
+                5.268477650460431
+            ],
+            [
+                "Jhoira, Weatherlight Captain",
+                6.166273767621805
+            ]
+        ]
+    },
+    "Spiritual Reckoning": {
+        "Ravos, Soultender": 5.73,
+        "Karlov of the Ghost Council": 5.8,
+        "Tymna the Weaver": 5.69,
+        "Uril, the Miststalker": 5.49,
+        "accuracy": 1.0,
+        "correct_list": [
+            [
+                "Ravos, Soultender",
+                5.726834872095503
+            ],
+            [
+                "Karlov of the Ghost Council",
+                5.804386878070787
+            ],
+            [
+                "Tymna the Weaver",
+                5.692572021827614
+            ],
+            [
+                "Uril, the Miststalker",
+                5.494925690202556
+            ]
+        ],
+        "incorrect_list": []
+    },
+    "Shadow Strike": {
+        "Yuriko, the Tiger's Shadow": 6.0,
+        "Vela the Night-Clad": 5.51,
+        "Muldrotha, the Gravetide": 5.81,
+        "Nekusar, the Mindrazer": 5.54,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Yuriko, the Tiger's Shadow",
+                5.998156672267048
+            ],
+            [
+                "Nekusar, the Mindrazer",
+                5.535306713939049
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Vela the Night-Clad",
+                5.510403781819191
+            ],
+            [
+                "Muldrotha, the Gravetide",
+                5.808419272097272
+            ]
+        ]
+    },
+    "Verdant Pulse": {
+        "Freyalise, Llanowar's Fury": 5.44,
+        "Yeva, Nature's Herald": 5.59,
+        "Omnath, Locus of Mana": 5.6,
+        "Tatyova, Benthic Druid": 5.54,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Yeva, Nature's Herald",
+                5.5914501566996035
+            ],
+            [
+                "Tatyova, Benthic Druid",
+                5.541092661008868
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Freyalise, Llanowar's Fury",
+                5.444250524312258
+            ],
+            [
+                "Omnath, Locus of Mana",
+                5.5981791550806275
+            ]
+        ]
+    },
+    "Harmony's Call": {
+        "Rhys the Redeemed": 5.21,
+        "Trostani, Selesnya's Voice": 5.07,
+        "Xantcha, Sleeper Agent": 5.7,
+        "Selvala, Heart of the Wilds": 5.9,
+        "accuracy": 0.0,
+        "correct_list": [],
+        "incorrect_list": [
+            [
+                "Rhys the Redeemed",
+                5.2133265745226565
+            ],
+            [
+                "Trostani, Selesnya's Voice",
+                5.067131447432415
+            ],
+            [
+                "Xantcha, Sleeper Agent",
+                5.700344282020299
+            ],
+            [
+                "Selvala, Heart of the Wilds",
+                5.897475210806718
+            ]
+        ]
+    },
+    "Hellfire Emissary": {
+        "Tinybones, Trinket Thief": 6.69,
+        "Nath of the Gilt-Leaf": 6.05,
+        "Anhelo, the Painter": 6.29,
+        "Erebos, Bleak-Hearted": 6.14,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Tinybones, Trinket Thief",
+                6.692034464138496
+            ],
+            [
+                "Erebos, Bleak-Hearted",
+                6.140808826314867
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Nath of the Gilt-Leaf",
+                6.053633740417261
+            ],
+            [
+                "Anhelo, the Painter",
+                6.286866304402777
+            ]
+        ]
+    },
+    "Arcane Manipulator": {
+        "Mizzix of the Izmagnus": 6.35,
+        "Niv-Mizzet, Parun": 6.0,
+        "Animar, Soul of Elements": 6.55,
+        "Jodah, Archmage Eternal": 6.01,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Mizzix of the Izmagnus",
+                6.350179200434799
+            ],
+            [
+                "Jodah, Archmage Eternal",
+                6.01317794767062
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Niv-Mizzet, Parun",
+                6.001447389029745
+            ],
+            [
+                "Animar, Soul of Elements",
+                6.547144905380299
+            ]
+        ]
+    },
+    "Vampiric Thirst": {
+        "Edgar Markov": 6.35,
+        "Olivia Voldaren": 6.18,
+        "Anowon, the Ruin Sage": 6.21,
+        "Avacyn, Angel of Hope": 6.27,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Edgar Markov",
+                6.349294417147041
+            ],
+            [
+                "Anowon, the Ruin Sage",
+                6.20592615691616
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Olivia Voldaren",
+                6.175713872037635
+            ],
+            [
+                "Avacyn, Angel of Hope",
+                6.265224799077303
+            ]
+        ]
+    },
+    "Leonin Warcaller": {
+        "Arahbo, Roar of the World": 5.46,
+        "Mirri, Weatherlight Duelist": 5.3,
+        "Kemba, Kha Regent": 5.69,
+        "Anafenza, Kin-Tree Spirit": 6.06,
+        "accuracy": 0.0,
+        "correct_list": [],
+        "incorrect_list": [
+            [
+                "Arahbo, Roar of the World",
+                5.459456587291504
+            ],
+            [
+                "Mirri, Weatherlight Duelist",
+                5.301650629372826
+            ],
+            [
+                "Kemba, Kha Regent",
+                5.6915095026786355
+            ],
+            [
+                "Anafenza, Kin-Tree Spirit",
+                6.064653597440459
+            ]
+        ]
+    },
+    "Mechanized Assembly": {
+        "Urza, Lord High Artificer": 7.1,
+        "Memnarch": 6.32,
+        "Szadek, Lord of Secrets": 6.81,
+        "Kruphix, God of Horizons": 6.66,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Urza, Lord High Artificer",
+                7.095281136143762
+            ],
+            [
+                "Kruphix, God of Horizons",
+                6.6645471199472865
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Memnarch",
+                6.317916231466057
+            ],
+            [
+                "Szadek, Lord of Secrets",
+                6.806248549350574
+            ]
+        ]
+    },
+    "Celestial Alignment": {
+        "Sythis, Harvest's Hand": 6.25,
+        "Tuvasa the Sunlit": 6.21,
+        "Raff Capashen, Ship's Mage": 5.9,
+        "Kemba, Kha Regent": 6.28,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Sythis, Harvest's Hand",
+                6.251281314189697
+            ],
+            [
+                "Raff Capashen, Ship's Mage",
+                5.900241762761448
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Tuvasa the Sunlit",
+                6.207439487823271
+            ],
+            [
+                "Kemba, Kha Regent",
+                6.281277965546622
+            ]
+        ]
+    },
+    "Shadows of the Past": {
+        "Lazav, the Multifarious": 6.83,
+        "Circu, Dimir Lobotomist": 6.15,
+        "Sydri, Galvanic Genius": 6.62,
+        "Purphoros, God of the Forge": 6.41,
+        "accuracy": 0.5,
+        "correct_list": [
+            [
+                "Lazav, the Multifarious",
+                6.825952505307435
+            ],
+            [
+                "Purphoros, God of the Forge",
+                6.414349804671394
+            ]
+        ],
+        "incorrect_list": [
+            [
+                "Circu, Dimir Lobotomist",
+                6.154920261931599
+            ],
+            [
+                "Sydri, Galvanic Genius",
+                6.619663778232791
+            ]
+        ]
+    },
+    "average_accuracy": 0.5314814814814814,
+    "validation_data": [
+        {
+            "test_commanders": [
+                "Gallia of the Endless Dance",
+                "Grumgully, the Generous",
+                "Jodah, Archmage Eternal",
+                "Klothys, God of Destiny"
+            ],
+            "expected_high": [
+                "Gallia of the Endless Dance",
+                "Grumgully, the Generous"
+            ],
+            "expected_low": [
+                "Jodah, Archmage Eternal",
+                "Klothys, God of Destiny"
+            ],
+            "id": 999888,
+            "card_name": "Gronky the Gruul",
+            "mana_cost": "{1}{G}{R}",
+            "cmc": 3,
+            "type_line": "Legendary Creature \u00e2\u20ac\u201d Goblin Warrior",
+            "oracle_text": "Haste\nWhenever {{CARDNAME}} attacks, sacrifice an attacking creature and put that many +1/+1 counters on {{CARDNAME}}.",
+            "power": 3,
+            "toughness": 3,
+            "colors": [
+                "G",
+                "R"
+            ],
+            "color_identity": [
+                "G",
+                "R"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Akiri, Line-Slinger",
+                "Nahiri, Heir of the Ancients",
+                "Zirda, the Dawnwaker",
+                "Brago, King Eternal"
+            ],
+            "expected_high": [
+                "Akiri, Line-Slinger",
+                "Nahiri, Heir of the Ancients"
+            ],
+            "expected_low": [
+                "Zirda, the Dawnwaker",
+                "Brago, King Eternal"
+            ],
+            "id": 999889,
+            "card_name": "Gronky's Axe",
+            "mana_cost": "{4}",
+            "cmc": 4,
+            "type_line": "Artifact \u00e2\u20ac\u201d Equipment",
+            "oracle_text": "Equipped creature gets +3/+0.\nWhenever equipped creature attacks, it deals 3 damage to any target.\nEquip {3}",
+            "power": null,
+            "toughness": null,
+            "colors": [],
+            "color_identity": [],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Harbin, Vanguard Aviator",
+                "Ephara, God of the Polis",
+                "Brago, King Eternal",
+                "Nahiri, Heir of the Ancients",
+                "Mayael the Anima"
+            ],
+            "expected_high": [
+                "Harbin, Vanguard Aviator",
+                "Ephara, God of the Polis",
+                "Brago, King Eternal"
+            ],
+            "expected_low": [
+                "Nahiri, Heir of the Ancients",
+                "Mayael the Anima"
+            ],
+            "id": 999890,
+            "card_name": "Mono-White Formatbreaker",
+            "mana_cost": "{W}",
+            "cmc": 1,
+            "type_line": "Creature \u00e2\u20ac\u201d Soldier",
+            "oracle_text": "Flash\nWhen {{CARDNAME}} enters the battlefield or becomes tapped, you pay put a 1/1 white Soldier creature token onto the battlefield or draw a card.\n{W}, {T}: Exile target creature. Return it to the battlefield under its owner's control at the beginning of the next end step.",
+            "power": 1,
+            "toughness": 2,
+            "colors": [
+                "W"
+            ],
+            "color_identity": [
+                "W"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Baral, Chief of Compliance",
+                "Kess, Dissident Mage",
+                "Maelstrom Wanderer",
+                "Riku of Two Reflections"
+            ],
+            "expected_high": [
+                "Baral, Chief of Compliance",
+                "Kess, Dissident Mage"
+            ],
+            "expected_low": [
+                "Maelstrom Wanderer",
+                "Riku of Two Reflections"
+            ],
+            "id": 999891,
+            "card_name": "Free Counterspell",
+            "mana_cost": "{4}{U}",
+            "cmc": 5,
+            "type_line": "Instant",
+            "oracle_text": "Convoke, Delve, affinity for artifacts, Improvise\nYou may pay 4 life rather than pay {{CARDNAME}}'s mana cost.\nCounter target spell.",
+            "power": null,
+            "toughness": null,
+            "colors": [
+                "U"
+            ],
+            "color_identity": [
+                "U"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Prosper, Tome-Bound",
+                "Korvold, Fae-Cursed King",
+                "Queen Marchesa",
+                "Kess, Dissident Mage"
+            ],
+            "expected_high": [
+                "Prosper, Tome-Bound",
+                "Korvold, Fae-Cursed King"
+            ],
+            "expected_low": [
+                "Queen Marchesa",
+                "Kess, Dissident Mage"
+            ],
+            "id": 999892,
+            "card_name": "Treasure Golem",
+            "mana_cost": "{3}{B}",
+            "cmc": 4,
+            "type_line": "Artifact Creature \u00e2\u20ac\u201d Golem",
+            "oracle_text": "When {{CARDNAME}} enters the battlefield, you may sacrifice any number of Treasure tokens. If you do, put that many +1/+1 counters on {{CARDNAME}}.",
+            "power": 3,
+            "toughness": 3,
+            "colors": [
+                "B"
+            ],
+            "color_identity": [
+                "B"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Queen Marchesa",
+                "Derevi, Empyrial Tactician",
+                "Arcades, the Strategist",
+                "Thalia, Guardian of Thraben"
+            ],
+            "expected_high": [
+                "Queen Marchesa",
+                "Derevi, Empyrial Tactician"
+            ],
+            "expected_low": [
+                "Arcades, the Strategist",
+                "Thalia, Guardian of Thraben"
+            ],
+            "id": 999893,
+            "card_name": "Hypervigilance",
+            "mana_cost": "{2}{W}{W}",
+            "cmc": 4,
+            "type_line": "Enchantment",
+            "oracle_text": "Whenever a creature attacks you or a planeswalker you control, untap all creatures you control.",
+            "power": null,
+            "toughness": null,
+            "colors": [
+                "W"
+            ],
+            "color_identity": [
+                "W"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Kadena, Slinking Sorcerer",
+                "Animar, Soul of Elements",
+                "Muldrotha, the Gravetide",
+                "The Mimeoplasm"
+            ],
+            "expected_high": [
+                "Kadena, Slinking Sorcerer"
+            ],
+            "expected_low": [
+                "Animar, Soul of Elements",
+                "Muldrotha, the Gravetide",
+                "The Mimeoplasm"
+            ],
+            "id": 999894,
+            "card_name": "Nightside Ambush",
+            "mana_cost": "{2}{U}{B}{G}",
+            "cmc": 5,
+            "type_line": "Instant",
+            "oracle_text": "Search your library for up to two cards with morph abilities, put them onto the battlefield face down, then shuffle your library.",
+            "power": null,
+            "toughness": null,
+            "colors": [
+                "U",
+                "B",
+                "G"
+            ],
+            "color_identity": [
+                "U",
+                "B",
+                "G"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Slimefoot, the Stowaway",
+                "Mazirek, Kraul Death Priest",
+                "Pharika, God of Affliction",
+                "Rhys the Redeemed"
+            ],
+            "expected_high": [
+                "Slimefoot, the Stowaway",
+                "Mazirek, Kraul Death Priest"
+            ],
+            "expected_low": [
+                "Pharika, God of Affliction",
+                "Rhys the Redeemed"
+            ],
+            "id": 999900,
+            "card_name": "Fungus Infestation",
+            "mana_cost": "{2}{B}{G}",
+            "cmc": 4,
+            "type_line": "Enchantment",
+            "oracle_text": "Whenever a creature dies, put a spore counter on Fungus Infestation. Remove three spore counters: Create a 1/1 green Saproling creature token.",
+            "colors": [
+                "B",
+                "G"
+            ],
+            "color_identity": [
+                "B",
+                "G"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Brudiclad, Telchor Engineer",
+                "Breya, Etherium Shaper",
+                "Kaheera, the Orphanguard",
+                "Animar, Soul of Elements"
+            ],
+            "expected_high": [
+                "Brudiclad, Telchor Engineer",
+                "Breya, Etherium Shaper"
+            ],
+            "expected_low": [
+                "Kaheera, the Orphanguard",
+                "Animar, Soul of Elements"
+            ],
+            "id": 999902,
+            "card_name": "Artificer's Awakening",
+            "mana_cost": "{3}{U}{R}",
+            "cmc": 5,
+            "type_line": "Sorcery",
+            "oracle_text": "Create a token that's a copy of target artifact you control. If you control three or more artifacts, draw a card.",
+            "colors": [
+                "U",
+                "R"
+            ],
+            "color_identity": [
+                "U",
+                "R"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Prime Speaker Zegana",
+                "Tanazir Quandrix",
+                "Atraxa, Praetors' Voice",
+                "Rashmi, Eternities Crafter"
+            ],
+            "expected_high": [
+                "Prime Speaker Zegana",
+                "Tanazir Quandrix"
+            ],
+            "expected_low": [
+                "Atraxa, Praetors' Voice",
+                "Rashmi, Eternities Crafter"
+            ],
+            "id": 999903,
+            "card_name": "Deep Wisdom",
+            "mana_cost": "{1}{G}{U}",
+            "cmc": 3,
+            "type_line": "Instant",
+            "oracle_text": "Draw a card for each tapped creature you control. Then put a +1/+1 counter on each of those creatures.",
+            "colors": [
+                "G",
+                "U"
+            ],
+            "color_identity": [
+                "G",
+                "U"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Daretti, Scrap Savant",
+                "Feldon of the Third Path",
+                "Zedruu the Greathearted",
+                "Grenzo, Dungeon Warden"
+            ],
+            "expected_high": [
+                "Daretti, Scrap Savant",
+                "Feldon of the Third Path"
+            ],
+            "expected_low": [
+                "Zedruu the Greathearted",
+                "Grenzo, Dungeon Warden"
+            ],
+            "id": 999904,
+            "card_name": "Forge Master's Hammer",
+            "mana_cost": "{4}{R}",
+            "cmc": 5,
+            "type_line": "Artifact \u00e2\u20ac\u201d Equipment",
+            "oracle_text": "Equipped creature gets +2/+0 and has '{T}, Sacrifice an artifact: This creature deals damage equal to the sacrificed artifact's mana value to any target.' Equip {2}",
+            "colors": [
+                "R"
+            ],
+            "color_identity": [
+                "R"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Mogis, God of Slaughter",
+                "Rakdos, the Showstopper",
+                "Shattergang Brothers",
+                "Prossh, Skyraider of Kher"
+            ],
+            "expected_high": [
+                "Mogis, God of Slaughter",
+                "Rakdos, the Showstopper"
+            ],
+            "expected_low": [
+                "Shattergang Brothers",
+                "Prossh, Skyraider of Kher"
+            ],
+            "id": 999906,
+            "card_name": "Carnival of Pain",
+            "mana_cost": "{2}{B}{R}",
+            "cmc": 4,
+            "type_line": "Enchantment",
+            "oracle_text": "Whenever a player loses life, you may pay {1}. If you do, draw a card.",
+            "colors": [
+                "B",
+                "R"
+            ],
+            "color_identity": [
+                "B",
+                "R"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Omnath, Locus of Rage",
+                "Titania, Protector of Argoth",
+                "Prossh, Skyraider of Kher",
+                "Meren of Clan Nel Toth"
+            ],
+            "expected_high": [
+                "Omnath, Locus of Rage",
+                "Titania, Protector of Argoth"
+            ],
+            "expected_low": [
+                "Prossh, Skyraider of Kher",
+                "Meren of Clan Nel Toth"
+            ],
+            "id": 999908,
+            "card_name": "Terra Shaper",
+            "mana_cost": "{3}{G}{R}",
+            "cmc": 5,
+            "type_line": "Creature \u00e2\u20ac\u201d Elemental Shaman",
+            "oracle_text": "Whenever a land is put into your graveyard from anywhere, create a 3/3 green Elemental creature token.",
+            "power": 3,
+            "toughness": 3,
+            "colors": [
+                "G",
+                "R"
+            ],
+            "color_identity": [
+                "G",
+                "R"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Daxos the Returned",
+                "Teysa, Orzhov Scion",
+                "Atraxa, Praetors' Voice",
+                "Aurelia, the Warleader"
+            ],
+            "expected_high": [
+                "Daxos the Returned",
+                "Teysa, Orzhov Scion"
+            ],
+            "expected_low": [
+                "Atraxa, Praetors' Voice",
+                "Aurelia, the Warleader"
+            ],
+            "id": 999910,
+            "card_name": "Penance Ritual",
+            "mana_cost": "{W}{B}",
+            "cmc": 2,
+            "type_line": "Enchantment",
+            "oracle_text": "Whenever a creature you control dies, put a devotion counter on Penance Ritual. Remove five devotion counters from Penance Ritual: Create a 4/4 white and black Angel creature token with flying.",
+            "colors": [
+                "W",
+                "B"
+            ],
+            "color_identity": [
+                "W",
+                "B"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Zedruu the Greathearted",
+                "Sen Triplets",
+                "Nekusar, the Mindrazer",
+                "Grand Arbiter Augustin IV"
+            ],
+            "expected_high": [
+                "Zedruu the Greathearted",
+                "Sen Triplets"
+            ],
+            "expected_low": [
+                "Nekusar, the Mindrazer",
+                "Grand Arbiter Augustin IV"
+            ],
+            "id": 999911,
+            "card_name": "Diplomatic Immunity",
+            "mana_cost": "{2}{W}{U}",
+            "cmc": 4,
+            "type_line": "Enchantment",
+            "oracle_text": "At the beginning of each opponent's upkeep, you may exchange control of target nonland permanent you control and target nonland permanent that player controls with converted mana cost 3 or less.",
+            "colors": [
+                "W",
+                "U"
+            ],
+            "color_identity": [
+                "W",
+                "U"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Mizzix of the Izmagnus",
+                "Melek, Izzet Paragon",
+                "Jhoira, Weatherlight Captain",
+                "Kambal, Consul of Allocation"
+            ],
+            "expected_high": [
+                "Mizzix of the Izmagnus",
+                "Melek, Izzet Paragon"
+            ],
+            "expected_low": [
+                "Jhoira, Weatherlight Captain",
+                "Kambal, Consul of Allocation"
+            ],
+            "id": 999912,
+            "card_name": "Electromancer's Bolt",
+            "mana_cost": "{1}{U}{R}",
+            "cmc": 3,
+            "type_line": "Instant",
+            "oracle_text": "Deal 3 damage to any target. If you've cast a spell with a different name this turn, return Electromancer's Bolt to your hand.",
+            "colors": [
+                "U",
+                "R"
+            ],
+            "color_identity": [
+                "U",
+                "R"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Ravos, Soultender",
+                "Karlov of the Ghost Council",
+                "Tymna the Weaver",
+                "Uril, the Miststalker"
+            ],
+            "expected_high": [
+                "Ravos, Soultender",
+                "Karlov of the Ghost Council"
+            ],
+            "expected_low": [
+                "Tymna the Weaver",
+                "Uril, the Miststalker"
+            ],
+            "id": 999913,
+            "card_name": "Spiritual Reckoning",
+            "mana_cost": "{1}{W}{W}",
+            "cmc": 3,
+            "type_line": "Sorcery",
+            "oracle_text": "Destroy all creatures with converted mana cost 2 or less. You gain life equal to the number of creatures destroyed this way.",
+            "colors": [
+                "W"
+            ],
+            "color_identity": [
+                "W"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Yuriko, the Tiger's Shadow",
+                "Vela the Night-Clad",
+                "Muldrotha, the Gravetide",
+                "Nekusar, the Mindrazer"
+            ],
+            "expected_high": [
+                "Yuriko, the Tiger's Shadow",
+                "Vela the Night-Clad"
+            ],
+            "expected_low": [
+                "Muldrotha, the Gravetide",
+                "Nekusar, the Mindrazer"
+            ],
+            "id": 999914,
+            "card_name": "Shadow Strike",
+            "mana_cost": "{1}{U}{B}",
+            "cmc": 3,
+            "type_line": "Instant",
+            "oracle_text": "Target creature gets -3/-0 and can't be blocked this turn. Draw a card.",
+            "colors": [
+                "U",
+                "B"
+            ],
+            "color_identity": [
+                "U",
+                "B"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Freyalise, Llanowar's Fury",
+                "Yeva, Nature's Herald",
+                "Omnath, Locus of Mana",
+                "Tatyova, Benthic Druid"
+            ],
+            "expected_high": [
+                "Freyalise, Llanowar's Fury",
+                "Yeva, Nature's Herald"
+            ],
+            "expected_low": [
+                "Omnath, Locus of Mana",
+                "Tatyova, Benthic Druid"
+            ],
+            "id": 999916,
+            "card_name": "Verdant Pulse",
+            "mana_cost": "{2}{G}",
+            "cmc": 3,
+            "type_line": "Instant",
+            "oracle_text": "Untap all creatures you control. Elves you control gain hexproof and indestructible until end of turn.",
+            "colors": [
+                "G"
+            ],
+            "color_identity": [
+                "G"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Rhys the Redeemed",
+                "Trostani, Selesnya's Voice",
+                "Xantcha, Sleeper Agent",
+                "Selvala, Heart of the Wilds"
+            ],
+            "expected_high": [
+                "Rhys the Redeemed",
+                "Trostani, Selesnya's Voice"
+            ],
+            "expected_low": [
+                "Xantcha, Sleeper Agent",
+                "Selvala, Heart of the Wilds"
+            ],
+            "id": 999917,
+            "card_name": "Harmony's Call",
+            "mana_cost": "{1}{G}{W}",
+            "cmc": 3,
+            "type_line": "Sorcery",
+            "oracle_text": "Create a 2/2 green and white Elf Warrior creature token for each creature you control with power 2 or less.",
+            "colors": [
+                "G",
+                "W"
+            ],
+            "color_identity": [
+                "G",
+                "W"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Tinybones, Trinket Thief",
+                "Nath of the Gilt-Leaf",
+                "Anhelo, the Painter",
+                "Erebos, Bleak-Hearted"
+            ],
+            "expected_high": [
+                "Tinybones, Trinket Thief",
+                "Nath of the Gilt-Leaf"
+            ],
+            "expected_low": [
+                "Anhelo, the Painter",
+                "Erebos, Bleak-Hearted"
+            ],
+            "id": 999918,
+            "card_name": "Hellfire Emissary",
+            "mana_cost": "{2}{B}{B}",
+            "cmc": 4,
+            "type_line": "Creature \u00e2\u20ac\u201d Demon",
+            "oracle_text": "Whenever an opponent discards a card, you may discard a card. For each card discarded this way, each opponent loses 1 life.",
+            "power": 3,
+            "toughness": 2,
+            "colors": [
+                "B"
+            ],
+            "color_identity": [
+                "B"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Mizzix of the Izmagnus",
+                "Niv-Mizzet, Parun",
+                "Animar, Soul of Elements",
+                "Jodah, Archmage Eternal"
+            ],
+            "expected_high": [
+                "Mizzix of the Izmagnus",
+                "Niv-Mizzet, Parun"
+            ],
+            "expected_low": [
+                "Animar, Soul of Elements",
+                "Jodah, Archmage Eternal"
+            ],
+            "id": 999920,
+            "card_name": "Arcane Manipulator",
+            "mana_cost": "{2}{U}{R}",
+            "cmc": 4,
+            "type_line": "Artifact",
+            "oracle_text": "You may cast spells as though they had flash.\n{1}{U}{R}, {T}: Copy target instant or sorcery spell you control. You may choose new targets for the copy.",
+            "colors": [
+                "U",
+                "R"
+            ],
+            "color_identity": [
+                "U",
+                "R"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Edgar Markov",
+                "Olivia Voldaren",
+                "Anowon, the Ruin Sage",
+                "Avacyn, Angel of Hope"
+            ],
+            "expected_high": [
+                "Edgar Markov",
+                "Olivia Voldaren"
+            ],
+            "expected_low": [
+                "Anowon, the Ruin Sage",
+                "Avacyn, Angel of Hope"
+            ],
+            "id": 999922,
+            "card_name": "Vampiric Thirst",
+            "mana_cost": "{2}{B}{B}",
+            "cmc": 4,
+            "type_line": "Sorcery",
+            "oracle_text": "Destroy target non-Vampire creature. Create a 2/2 black Vampire creature token with lifelink.",
+            "colors": [
+                "B"
+            ],
+            "color_identity": [
+                "B"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Arahbo, Roar of the World",
+                "Mirri, Weatherlight Duelist",
+                "Kemba, Kha Regent",
+                "Anafenza, Kin-Tree Spirit"
+            ],
+            "expected_high": [
+                "Arahbo, Roar of the World",
+                "Mirri, Weatherlight Duelist"
+            ],
+            "expected_low": [
+                "Kemba, Kha Regent",
+                "Anafenza, Kin-Tree Spirit"
+            ],
+            "id": 999924,
+            "card_name": "Leonin Warcaller",
+            "mana_cost": "{1}{W}{G}",
+            "cmc": 3,
+            "type_line": "Creature \u00e2\u20ac\u201d Cat Warrior",
+            "oracle_text": "Vigilance\nWhenever Leonin Warcaller attacks, create a 1/1 white Cat creature token with lifelink that's tapped and attacking.",
+            "power": 2,
+            "toughness": 3,
+            "colors": [
+                "W",
+                "G"
+            ],
+            "color_identity": [
+                "W",
+                "G"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Urza, Lord High Artificer",
+                "Memnarch",
+                "Szadek, Lord of Secrets",
+                "Kruphix, God of Horizons"
+            ],
+            "expected_high": [
+                "Urza, Lord High Artificer",
+                "Memnarch"
+            ],
+            "expected_low": [
+                "Szadek, Lord of Secrets",
+                "Kruphix, God of Horizons"
+            ],
+            "id": 999926,
+            "card_name": "Mechanized Assembly",
+            "mana_cost": "{4}{U}",
+            "cmc": 5,
+            "type_line": "Artifact",
+            "oracle_text": "Artifacts you control have hexproof.\n{2}{U}, {T}: Create a token that's a copy of target artifact you control.",
+            "colors": [],
+            "color_identity": [
+                "U"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Sythis, Harvest's Hand",
+                "Tuvasa the Sunlit",
+                "Raff Capashen, Ship's Mage",
+                "Kemba, Kha Regent"
+            ],
+            "expected_high": [
+                "Sythis, Harvest's Hand",
+                "Tuvasa the Sunlit"
+            ],
+            "expected_low": [
+                "Raff Capashen, Ship's Mage",
+                "Kemba, Kha Regent"
+            ],
+            "id": 999929,
+            "card_name": "Celestial Alignment",
+            "mana_cost": "{2}{W}{W}",
+            "cmc": 4,
+            "type_line": "Enchantment",
+            "oracle_text": "Whenever an enchantment enters the battlefield under your control or you cast an enchantment spell, you may return an enchantment card from your graveyard to your hand or an Aura card from your graveyard to the battlefield.",
+            "colors": [
+                "W"
+            ],
+            "color_identity": [
+                "W"
+            ],
+            "commander_legal": true
+        },
+        {
+            "test_commanders": [
+                "Lazav, the Multifarious",
+                "Circu, Dimir Lobotomist",
+                "Sydri, Galvanic Genius",
+                "Purphoros, God of the Forge"
+            ],
+            "expected_high": [
+                "Lazav, the Multifarious",
+                "Circu, Dimir Lobotomist"
+            ],
+            "expected_low": [
+                "Sydri, Galvanic Genius",
+                "Purphoros, God of the Forge"
+            ],
+            "id": 999930,
+            "card_name": "Shadows of the Past",
+            "mana_cost": "{2}{U}{B}",
+            "cmc": 4,
+            "type_line": "Enchantment",
+            "oracle_text": "Whenever a creature card is put into an opponent's graveyard from anywhere, you may surveil 1.\nWhenever you surveil, you may pay {2}. If you do, each opponent loses 2 life and you gain 2 life.",
+            "colors": [
+                "U",
+                "B"
+            ],
+            "color_identity": [
+                "U",
+                "B"
+            ],
+            "commander_legal": true
+        }
+    ]
+}
