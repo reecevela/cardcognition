@@ -1,7 +1,7 @@
 {
     "min_count":  1,
-    "threshold":  0.2,
-    "npmi_scoring":  true,
+    "threshold":  3,
+    "npmi_scoring":  false,
     "power_encoded":  false,
     "toughness_encoded":  false,
     "batch_size":  16384,
