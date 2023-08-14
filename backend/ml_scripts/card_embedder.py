@@ -40,7 +40,7 @@ class CardEmbedder:
         oracle_texts = [card.get("oracle_text", "") for card in cards]
 
         # Review oracle_texts.txt to see outputs for different min_count, threshold and npmi values
-        phrased_oracle_texts = self.converter.phrase_oracle_text(oracle_texts, min_count=3, threshold=0.5, npmi_scoring=False)
+        phrased_oracle_texts = self.converter.phrase_oracle_text(oracle_texts, min_count=self.min_count, threshold=self.threshold, npmi_scoring=self.npmi_scoring)
         phrased_oracle_texts_str = [" ".join(phrased_text) for phrased_text in phrased_oracle_texts]
 
         start_time = time.time()

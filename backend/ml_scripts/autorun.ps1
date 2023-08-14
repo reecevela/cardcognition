@@ -39,6 +39,12 @@ while (1 -eq 1) {
 
     $config = $bestConfig
 
+    # Override so that the embeddings values are changed every fourth run
+    $appConfig = Get-Content -Path ./config.json | ConvertFrom-Json
+    $config.min_count = $appConfig.min_count
+    $config.npmi_scoring = $appConfig.npmi_scoring
+
+
     $thresholds = @(0.3, 0.5, 0.8, 1, 1.5, 2, 3, 4, 5, 10)
     if ($config.npmi_scoring -eq $true) { 
         $random_shift = (Get-Random -Minimum -3 -Maximum 3) / 10
@@ -70,13 +76,13 @@ while (1 -eq 1) {
     if ($current_alpha_index + $random_shift -gt $alphas.Count - 1) { $random_shift = 0 }
     $config.alpha = $alphas[$current_alpha_index + $random_shift]
 
-    if ($i % 4 -eq 0 -and $i -gt 0) {
+    if ($i % 2 -eq 0) {
         Write-Host "Changing embeddings"
         $random_shift = Get-Random -Minimum -2 -Maximum 2
         $config.min_count = $config.min_count + $random_shift
         if ($config.min_count -lt 1) { $config.min_count = 1 }
         if ($config.min_count -gt 10) { $config.min_count = 10 }
-        if (Get-Random -Minimum 0 -Maximum 1 -eq 0) { 
+        if ($config.npmi_scoring -eq $false) { 
             $config.npmi_scoring = $true
             $config.threshold = (Get-Random -Minimum -10 -Maximum 10) / 10
         } else { 
@@ -93,12 +99,12 @@ while (1 -eq 1) {
         $config | ConvertTo-Json | Set-Content -Path ./config.json
         ./app.py
     }
-    $i = $i + 1
     if ($i % 10 -eq 0) {
         Write-Host "Saving to git"
         git add .
         git commit -m "Auto commit $($i / 10) for hyperparameter tuning"
         git push
     }
+    $i = $i + 1
 }
 
