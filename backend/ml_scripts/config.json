@@ -1,14 +1,14 @@
 {
-    "min_count":  2,
-    "threshold":  1.5,
-    "npmi_scoring":  false,
+    "min_count":  1,
+    "threshold":  -1,
+    "npmi_scoring":  true,
     "power_encoded":  false,
     "toughness_encoded":  false,
-    "batch_size":  3072,
+    "batch_size":  8192,
     "model":  "SGDRegressor",
-    "penalty":  "l2",
-    "alpha":  0.0001,
+    "penalty":  "elasticnet",
+    "alpha":  1,
     "test_size":  0.2,
     "train_size":  0.8,
-    "chunk_size":  4
+    "num_threads":  4
 }

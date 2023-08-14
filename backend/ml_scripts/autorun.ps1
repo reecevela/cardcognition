@@ -27,7 +27,7 @@ while (1 -eq 1) {
 
     foreach ($file in $jsonFiles) {
         $content = Get-Content -Path $file.FullName | ConvertFrom-Json
-        $currentScore = $content.average_accuracy + $content.score
+        $currentScore = $content.average_accuracy + $content.score * 5
 
         if ($currentScore -gt $bestScore) {
             $bestScore = $currentScore

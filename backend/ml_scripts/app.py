@@ -3,12 +3,11 @@ from card_fetcher import CardsContext
 import numpy as np
 import pickle
 import json
-import pandas as pd
+import threading
 from sklearn.linear_model import Ridge, SGDRegressor
 from sklearn.model_selection import train_test_split
 import time
 from sklearn.utils import shuffle
-from sklearn.impute import SimpleImputer
 import os
 import datetime
 
@@ -40,54 +39,74 @@ total_commanders = len(commanders)
 examples = []
 print("Mapping synergies...")
 
-def divide_into_chunks(lst, n):
-    for i in range(0, len(lst), n):
-        yield lst[i:i + n]
-
-commander_chunks = list(divide_into_chunks(list(commander_id_to_index.keys()), config['chunk_size']))
-
-def map_synergies(commander_chunk, examples):
+def process_chunk(start, end, id:int):
     i = 0
     j = 0
-    for commander_card_id in commander_chunk:
-        commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
-        commander_embedding = card_embeddings[card_id_to_index[commander_card_id]]
-        synergies = context.get_commander_synergies_by_id(commander_id)
-        for synergy in synergies:
+    card_errors = 0
+    cmd_errors = 0
+    for commander in commanders[start:end]:
+        # print(commander['card_name'])
+        # Commander's scryfall_cards id
+        commander_card_id = commander['id']
+        try:
+            commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
+        except Exception as e:
+            # print(f"Error getting commander id from scryfall id: {commander_card_id}")
+            cmd_errors += 1
+            continue
+        
+        # embedding for the actual card itself
+        try:
+            commander_embedding = card_embeddings[card_id_to_index[commander_card_id]]
+        except Exception as e:
+            # print(f"Error getting commander embedding from card id: {commander_card_id}")
+            cmd_errors += 1
+            continue
+        
+        try:
+            synergies = context.get_commander_synergies_by_id(commander_id)
+        except Exception as e:
+            # print(f"Error getting synergies for commander id: {commander_id}")
+            cmd_errors += 1
+            continue
+            
+        for card in synergies:
             i += 1
-            card_id = synergy['card_id']
-            synergy_score = synergy['synergy_score']
+            try:
+                card_id = card['card_id']
+                synergy_score = card['synergy_score']
+            except Exception as e:
+                # print(f"Error processing card: {card}")
+                card_errors += 1
+                continue
             try:
                 card_embedding = card_embeddings[card_id_to_index[card_id]]
             except Exception as e:
+                # Can ignore, generally caused by dual-faced cards
+                # print(f"Error getting card embedding from card id: {card_id}")
+                card_errors += 1
                 continue
             examples.append((commander_embedding, card_embedding, synergy_score))
         j += 1
-    return examples
+        if j % 10 == 0:
+            elapsed_time = time.time() - start_time
+            progress = (j+1) / (end - start)
+            remaining_time = elapsed_time * (1-progress) / progress
+            print(f"Progress: {progress*100:.2f}%, Time remaining: {remaining_time:.2f}s Time elapsed: {elapsed_time:.2f}s CMD Errors: {cmd_errors} Card Errors: {card_errors} ID: {id}")
 
+chunk_size = len(commanders) // config['num_threads']
+threads = []
 
-for commander_card_id in commander_id_to_index:
-    # Commander's scryfall_cards id
-    commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
-    # embedding for the actual card itself
-    commander_embedding = card_embeddings[card_id_to_index[commander_card_id]]
+for i in range(config['num_threads']):
+    start = i * chunk_size
+    end = (i + 1) * chunk_size if i != config['num_threads'] - 1 else len(commanders)
+    threads.append(threading.Thread(target=process_chunk, args=(start, end, i)))
 
-    synergies = context.get_commander_synergies_by_id(commander_id)
-    for synergy in synergies:
-        i += 1
-        card_id = synergy['card_id']
-        synergy_score = synergy['synergy_score']
-        try:
-            card_embedding = card_embeddings[card_id_to_index[card_id]]
-        except Exception as e:
-            continue
-        examples.append((commander_embedding, card_embedding, synergy_score))
-    j += 1
-    if j % 100 == 0:
-        elapsed_time = time.time() - start_time
-        progress = (j+1) / total_commanders
-        remaining_time = elapsed_time * (1-progress) / progress
-        print(f"Progress: {progress*100:.2f}%, Time remaining: {remaining_time:.2f}s Loss Percent: {(len(examples) - i)/(i+0.001)*100:.2f}% Loss Count: {len(examples) - i} Time elapsed: {elapsed_time:.2f}s")
+for thread in threads:
+    thread.start()
+
+for thread in threads:
+    thread.join()
 
 print("Starting training...")
 
