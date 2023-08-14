@@ -38,9 +38,34 @@ start_time = time.time()
 total_commanders = len(commanders)
 # Construct examples
 examples = []
-i = 0
-j = 0
 print("Mapping synergies...")
+
+def divide_into_chunks(lst, n):
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
+commander_chunks = list(divide_into_chunks(list(commander_id_to_index.keys()), config['chunk_size']))
+
+def map_synergies(commander_chunk, examples):
+    i = 0
+    j = 0
+    for commander_card_id in commander_chunk:
+        commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
+        commander_embedding = card_embeddings[card_id_to_index[commander_card_id]]
+        synergies = context.get_commander_synergies_by_id(commander_id)
+        for synergy in synergies:
+            i += 1
+            card_id = synergy['card_id']
+            synergy_score = synergy['synergy_score']
+            try:
+                card_embedding = card_embeddings[card_id_to_index[card_id]]
+            except Exception as e:
+                continue
+            examples.append((commander_embedding, card_embedding, synergy_score))
+        j += 1
+    return examples
+
+
 for commander_card_id in commander_id_to_index:
     # Commander's scryfall_cards id
     commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
