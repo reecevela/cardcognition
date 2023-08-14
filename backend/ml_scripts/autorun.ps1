@@ -67,7 +67,7 @@ while (1 -eq 1) {
         }
     }
 
-    $batch_sizes = @(4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576) # Removed lower multiples of 2
+    $batch_sizes = @(4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576)  # removed lower multiples of 2
     if ($bestScore -lt 1) {
         $config.batch_size = Get-Random -InputObject $batch_sizes
     } else {
