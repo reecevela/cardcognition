@@ -27,7 +27,7 @@ while (1 -eq 1) {
 
     foreach ($file in $jsonFiles) {
         $content = Get-Content -Path $file.FullName | ConvertFrom-Json
-        $currentScore = $content.average_accuracy + $content.score * 5
+        $currentScore = $content.average_accuracy + $content.score
 
         if ($currentScore -gt $bestScore) {
             $bestScore = $currentScore
@@ -35,7 +35,7 @@ while (1 -eq 1) {
         }
     }
 
-    Write-Host "Highest scoring config: $($bestConfig | ConvertTo-Json)"
+    Write-Host "Highest scoring config: $($bestConfig | ConvertTo-Json) with score: $bestScore"
 
     $config = $bestConfig
 
@@ -45,7 +45,7 @@ while (1 -eq 1) {
     $config.npmi_scoring = $appConfig.npmi_scoring
 
 
-    $thresholds = @(0.3, 0.5, 0.8, 1, 1.5, 2, 3, 4, 5, 10)
+    $thresholds = @(0.3, 0.5, 0.8, 1, 1.5, 2, 3, 4)
     if ($config.npmi_scoring -eq $true) { 
         $random_shift = (Get-Random -Minimum -3 -Maximum 3) / 10
         $config.threshold = $thresholds + $random_shift
@@ -59,17 +59,17 @@ while (1 -eq 1) {
         $config.threshold = $thresholds[$current_threshold_index + $random_shift]
     }
 
-    $batch_sizes = @(2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 8192, 16384)
+    $batch_sizes = @(4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576) # Removed lower multiples of 2
     $current_batch_size_index = $batch_sizes.IndexOf($config.batch_size)
-    $random_shift = Get-Random -Minimum -4 -Maximum 4
+    $random_shift = Get-Random -Minimum -2 -Maximum 2
     if ($current_batch_size_index + $random_shift -lt 0) { $random_shift = 0 }
     if ($current_batch_size_index + $random_shift -gt $batch_sizes.Count - 1) { $random_shift = 0 }
     $config.batch_size = $batch_sizes[$current_batch_size_index + $random_shift]
 
-    $penalties = @("elasticnet", "l1", "l2")
+    $penalties = @("elasticnet", "l1") #Removed "l2" because it was not improving the score
     $config.penalty = Get-Random -InputObject $penalties
 
-    $alphas = @(0.00001, 0.0001, 0.001, 0.01, 0.1, 1)
+    $alphas = @(0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1)
     $current_alpha_index = $alphas.IndexOf($config.alpha)
     $random_shift = Get-Random -Minimum -2 -Maximum 2
     if ($current_alpha_index + $random_shift -lt 0) { $random_shift = 0 }
