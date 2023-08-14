@@ -172,6 +172,7 @@ for card in validation_data:
     analytics_data[card_name]["incorrect_list"] = incorrect_list
 
 analytics_data["average_accuracy"] = sum(accuracy_scores) / len(accuracy_scores)
+print("Average accuracy:", analytics_data["average_accuracy"])
 analytics_data["validation_data"] = validation_data
 
 # use the datetime to create a unique file name, in analytics folder
