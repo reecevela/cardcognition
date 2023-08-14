@@ -40,6 +40,7 @@ total_commanders = len(commanders)
 examples = []
 i = 0
 j = 0
+print("Mapping synergies...")
 for commander_card_id in commander_id_to_index:
     # Commander's scryfall_cards id
     commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
@@ -162,7 +163,7 @@ for card in validation_data:
                 incorrect_list.append((commander_name, predicted_score))
         else:
             print("Commander not found in expected_high or expected_low", commander_name)
-            analytics_data[card_name]["error"].append("Commander not found in expected_high or expected_low")
+            
     analytics_data[card_name]["accuracy"] = len(correct_list) / (len(correct_list) + len(incorrect_list))
     accuracy_scores.append(analytics_data[card_name]["accuracy"])
     analytics_data[card_name]["correct_list"] = correct_list

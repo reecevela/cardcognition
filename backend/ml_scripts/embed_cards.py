@@ -14,9 +14,12 @@ commanders = [commander for commander in commanders if '//' not in commander['ca
 
 # Embed cards and commanders
 embedder = CardEmbedder()
+print("Embedding cards...")
 card_embeddings = embedder.embed_cards(cards)
+print("Embedding commanders...")
 commander_embeddings = embedder.embed_cards(commanders)
 
+print("Saving embeddings...")
 # Create and save mappings
 card_id_to_index = {card['id']: index for index, card in enumerate(cards)}
 commander_id_to_index = {commander['id']: index for index, commander in enumerate(commanders)}

@@ -37,7 +37,7 @@
             "Akiri, Line-Slinger",
             "Nahiri, Heir of the Ancients",
             "Zirda, the Dawnwaker",
-            "Golos, Tireless Pilgrim"
+            "Brago, King Eternal"
         ],
         "expected_high": [
             "Akiri, Line-Slinger",
@@ -45,7 +45,7 @@
         ],
         "expected_low": [
             "Zirda, the Dawnwaker",
-            "Golos, Tireless Pilgrim"
+            "Brago, King Eternal"
         ],
         "id": 999889,
         "card_name": "Gronky's Axe",
@@ -380,6 +380,14 @@
             "Prossh, Skyraider of Kher",
             "Meren of Clan Nel Toth"
         ],
+        "expected_high": [
+            "Omnath, Locus of Rage",
+            "Titania, Protector of Argoth"
+        ],
+        "expected_low": [
+            "Prossh, Skyraider of Kher",
+            "Meren of Clan Nel Toth"
+        ],
         "id": 999908,
         "card_name": "Terra Shaper",
         "mana_cost": "{3}{G}{R}",
@@ -433,6 +441,14 @@
         "test_commanders": [
             "Zedruu the Greathearted",
             "Sen Triplets",
+            "Nekusar, the Mindrazer",
+            "Grand Arbiter Augustin IV"
+        ],
+        "expected_high": [
+            "Zedruu the Greathearted",
+            "Sen Triplets"
+        ],
+        "expected_low": [
             "Nekusar, the Mindrazer",
             "Grand Arbiter Augustin IV"
         ],
@@ -519,6 +535,14 @@
             "Muldrotha, the Gravetide",
             "Nekusar, the Mindrazer"
         ],
+        "expected_high": [
+            "Yuriko, the Tiger's Shadow",
+            "Vela the Night-Clad"
+        ],
+        "expected_low": [
+            "Muldrotha, the Gravetide",
+            "Nekusar, the Mindrazer"
+        ],
         "id": 999914,
         "card_name": "Shadow Strike",
         "mana_cost": "{1}{U}{B}",
@@ -540,7 +564,7 @@
             "Freyalise, Llanowar's Fury",
             "Yeva, Nature's Herald",
             "Omnath, Locus of Mana",
-            "Sasaya, Orochi Ascendant"
+            "Tatyova, Benthic Druid"
         ],
         "expected_high": [
             "Freyalise, Llanowar's Fury",
@@ -548,7 +572,7 @@
         ],
         "expected_low": [
             "Omnath, Locus of Mana",
-            "Sasaya, Orochi Ascendant"
+            "Tatyova, Benthic Druid"
         ],
         "id": 999916,
         "card_name": "Verdant Pulse",
@@ -598,7 +622,15 @@
     {
         "test_commanders": [
             "Tinybones, Trinket Thief",
-            "Tergrid, God of Fright",
+            "Nath of the Gilt-Leaf",
+            "Anhelo, the Painter",
+            "Erebos, Bleak-Hearted"
+        ],
+        "expected_high": [
+            "Tinybones, Trinket Thief",
+            "Nath of the Gilt-Leaf"
+        ],
+        "expected_low": [
             "Anhelo, the Painter",
             "Erebos, Bleak-Hearted"
         ],
@@ -656,6 +688,14 @@
             "Anowon, the Ruin Sage",
             "Avacyn, Angel of Hope"
         ],
+        "expected_high": [
+            "Edgar Markov",
+            "Olivia Voldaren"
+        ],
+        "expected_low": [
+            "Anowon, the Ruin Sage",
+            "Avacyn, Angel of Hope"
+        ],
         "id": 999922,
         "card_name": "Vampiric Thirst",
         "mana_cost": "{2}{B}{B}",
@@ -674,6 +714,14 @@
         "test_commanders": [
             "Arahbo, Roar of the World",
             "Mirri, Weatherlight Duelist",
+            "Kemba, Kha Regent",
+            "Anafenza, Kin-Tree Spirit"
+        ],
+        "expected_high": [
+            "Arahbo, Roar of the World",
+            "Mirri, Weatherlight Duelist"
+        ],
+        "expected_low": [
             "Kemba, Kha Regent",
             "Anafenza, Kin-Tree Spirit"
         ],
