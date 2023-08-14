@@ -105,7 +105,8 @@ with open("./validation_set.json", 'r') as file:
     validation_data = json.load(file)
 
 analytics_data = {"score": score}
-analytics_data["validation_data"] = validation_data
+analytics_data["config"] = config
+accuracy_scores = []
 
 converter = CardEmbedder()
 # Iterate through validation data
@@ -114,6 +115,7 @@ for card in validation_data:
     card_embedding = converter.embed_cards([card]).reshape(-1)
     print(card_name)
     analytics_data[card_name] = {}
+    predicted_synergy_scores = []
 
     for commander_name in card['test_commanders']:
         commander_id = context.get_id_by_name(commander_name)[0]['id']
@@ -123,8 +125,51 @@ for card in validation_data:
         new_pair_embedding = np.concatenate((commander_embedding, card_embedding)).reshape(1, -1)
 
         predicted_synergy_score = model.predict(new_pair_embedding)
+        predicted_synergy_scores.append((commander_name, predicted_synergy_score[0]))
         analytics_data[card_name][commander_name] = round(predicted_synergy_score[0], 2)
         print(commander_name, " ", round(predicted_synergy_score[0], 2))
+    # In validation_set.json for each card:
+        # "test_commanders": [
+        #     "Gallia of the Endless Dance",
+        #     "Grumgully, the Generous",
+        #     "Jodah, Archmage Eternal",
+        #     "Klothys, God of Destiny"
+        # ],
+        # "expected_high": [
+        #     "Gallic of the Endless Dance",
+        #     "Grumgully, the Generous"
+        # ],
+        # "expected_low": [
+        #     "Jodah, Archmage Eternal",
+        #     "Klothys, God of Destiny"
+        # ],
+        # "id": 999888,
+        # "card_name": "Gronky the Gruul",
+    # Create an accuracy score, "correct_list" and "incorrect_list"
+    correct_list = []
+    incorrect_list = []
+    median_predicted_score = np.median([score for _, score in predicted_synergy_scores])
+    for commander_name, predicted_score in predicted_synergy_scores:
+        if commander_name in card['expected_high']:
+            if predicted_score >= median_predicted_score:
+                correct_list.append((commander_name, predicted_score))
+            else:
+                incorrect_list.append((commander_name, predicted_score))
+        elif commander_name in card['expected_low']:
+            if predicted_score < median_predicted_score:
+                correct_list.append((commander_name, predicted_score))
+            else:
+                incorrect_list.append((commander_name, predicted_score))
+        else:
+            print("Commander not found in expected_high or expected_low", commander_name)
+            analytics_data[card_name]["error"].append("Commander not found in expected_high or expected_low")
+    analytics_data[card_name]["accuracy"] = len(correct_list) / (len(correct_list) + len(incorrect_list))
+    accuracy_scores.append(analytics_data[card_name]["accuracy"])
+    analytics_data[card_name]["correct_list"] = correct_list
+    analytics_data[card_name]["incorrect_list"] = incorrect_list
+
+analytics_data["average_accuracy"] = sum(accuracy_scores) / len(accuracy_scores)
+analytics_data["validation_data"] = validation_data
 
 # use the datetime to create a unique file name, in analytics folder
 if not os.path.exists("analytics"):

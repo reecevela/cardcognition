@@ -4,9 +4,9 @@
     "npmi_scoring": false,
     "power_encoded": false,
     "toughness_encoded": false,
-    "batch_size": 128,
+    "batch_size": 4096,
     "model": "SGDRegressor",
-    "penalty": "l1",
+    "penalty": "elasticnet",
     "alpha": 0.01,
     "test_size": 0.2,
     "train_size": 0.8
