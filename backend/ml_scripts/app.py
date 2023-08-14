@@ -10,6 +10,7 @@ import time
 from sklearn.utils import shuffle
 import os
 import datetime
+from threading import Lock
 
 # Load config.json
 with open("config.json", "r") as f:
@@ -39,34 +40,24 @@ total_commanders = len(commanders)
 examples = []
 print("Mapping synergies...")
 
+lock = Lock()
+
 def process_chunk(start, end, id:int):
     i = 0
     j = 0
     card_errors = 0
     cmd_errors = 0
+    local_examples = []
     for commander in commanders[start:end]:
         # print(commander['card_name'])
         # Commander's scryfall_cards id
-        commander_card_id = commander['id']
         try:
+            commander_card_id = commander['id']
             commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
-        except Exception as e:
-            # print(f"Error getting commander id from scryfall id: {commander_card_id}")
-            cmd_errors += 1
-            continue
-        
-        # embedding for the actual card itself
-        try:
             commander_embedding = card_embeddings[card_id_to_index[commander_card_id]]
-        except Exception as e:
-            # print(f"Error getting commander embedding from card id: {commander_card_id}")
-            cmd_errors += 1
-            continue
-        
-        try:
             synergies = context.get_commander_synergies_by_id(commander_id)
         except Exception as e:
-            # print(f"Error getting synergies for commander id: {commander_id}")
+            # print(f"Error getting commander id from scryfall id: {commander_card_id}")
             cmd_errors += 1
             continue
             
@@ -86,13 +77,16 @@ def process_chunk(start, end, id:int):
                 # print(f"Error getting card embedding from card id: {card_id}")
                 card_errors += 1
                 continue
-            examples.append((commander_embedding, card_embedding, synergy_score))
+            local_examples.append((commander_embedding, card_embedding, synergy_score))
         j += 1
         if j % 10 == 0:
             elapsed_time = time.time() - start_time
             progress = (j+1) / (end - start)
             remaining_time = elapsed_time * (1-progress) / progress
             print(f"Progress: {progress*100:.2f}%, Time remaining: {remaining_time:.2f}s Time elapsed: {elapsed_time:.2f}s CMD Errors: {cmd_errors} Card Errors: {card_errors} ID: {id}")
+
+        with lock:
+            examples.extend(local_examples)
 
 chunk_size = len(commanders) // config['num_threads']
 threads = []
