@@ -14,8 +14,14 @@
         "oracle_text": "Haste\nWhenever {{CARDNAME}} attacks, sacrifice an attacking creature and put that many +1/+1 counters on {{CARDNAME}}.",
         "power": 3,
         "toughness": 3,
-        "colors": "GR",
-        "color_identity": "GR",
+        "colors": [
+            "G",
+            "R"
+        ],
+        "color_identity": [
+            "G",
+            "R"
+        ],
         "commander_legal": true
     },
     {
@@ -33,8 +39,8 @@
         "oracle_text": "Equipped creature gets +3/+0.\nWhenever equipped creature attacks, it deals 3 damage to any target.\nEquip {3}",
         "power": null,
         "toughness": null,
-        "colors": "",
-        "color_identity": "",
+        "colors": [],
+        "color_identity": [],
         "commander_legal": true
     },
     {
@@ -48,12 +54,16 @@
         "card_name": "Mono-White Formatbreaker",
         "mana_cost": "{W}",
         "cmc": 1,
-        "type_line": "Creature — Human Soldier",
+        "type_line": "Creature — Soldier",
         "oracle_text": "Flash\nWhen {{CARDNAME}} enters the battlefield or becomes tapped, you pay put a 1/1 white Soldier creature token onto the battlefield or draw a card.\n{W}, {T}: Exile target creature. Return it to the battlefield under its owner's control at the beginning of the next end step.",
         "power": 1,
         "toughness": 2,
-        "colors": "W",
-        "color_identity": "W",
+        "colors": [
+            "W"
+        ],
+        "color_identity": [
+            "W"
+        ],
         "commander_legal": true
     },
     {
@@ -71,8 +81,12 @@
         "oracle_text": "Convoke, Delve, affinity for artifacts, Improvise\nYou may pay 4 life rather than pay {{CARDNAME}}'s mana cost.\nCounter target spell.",
         "power": null,
         "toughness": null,
-        "colors": "U",
-        "color_identity": "U",
+        "colors": [
+            "U"
+        ],
+        "color_identity": [
+            "U"
+        ],
         "commander_legal": true
     },
     {
@@ -90,8 +104,12 @@
         "oracle_text": "When {{CARDNAME}} enters the battlefield, you may sacrifice any number of Treasure tokens. If you do, put that many +1/+1 counters on {{CARDNAME}}.",
         "power": 3,
         "toughness": 3,
-        "colors": "B",
-        "color_identity": "B",
+        "colors": [
+            "B"
+        ],
+        "color_identity": [
+            "B"
+        ],
         "commander_legal": true
     },
     {
@@ -109,11 +127,15 @@
         "oracle_text": "Whenever a creature attacks you or a planeswalker you control, untap all creatures you control.",
         "power": null,
         "toughness": null,
-        "colors": "W",
-        "color_identity": "W",
+        "colors": [
+            "W"
+        ],
+        "color_identity": [
+            "W"
+        ],
         "commander_legal": true
     },
-    {   
+    {
         "test_commanders": [
             "Kadena, Slinking Sorcerer",
             "Animar, Soul of Elements",
@@ -128,8 +150,16 @@
         "oracle_text": "Search your library for up to two cards with morph abilities, put them onto the battlefield face down, then shuffle your library.",
         "power": null,
         "toughness": null,
-        "colors": "UBG",
-        "color_identity": "UBG",
+        "colors": [
+            "U",
+            "B",
+            "G"
+        ],
+        "color_identity": [
+            "U",
+            "B",
+            "G"
+        ],
         "commander_legal": true
     }
 ]

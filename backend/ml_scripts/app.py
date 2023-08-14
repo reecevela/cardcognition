@@ -9,6 +9,12 @@ from sklearn.model_selection import train_test_split
 import time
 from sklearn.utils import shuffle
 from sklearn.impute import SimpleImputer
+import os
+import datetime
+
+# Load config.json
+with open("config.json", "r") as f:
+    config = json.load(f)
 
 # Load previously saved mappings and embeddings
 with open('card_id_to_index.pkl', 'rb') as f:
@@ -59,32 +65,28 @@ for commander_card_id in commander_id_to_index:
 
 print("Starting training...")
 
-
 # Have to do this otherwise the amount of memory crashes my laptop
-def generate_batches(batch_size, examples, imputer):
+def generate_batches(batch_size, examples):
     while True:
         examples = shuffle(examples)
         for i in range(0, len(examples), batch_size):
-            batch_X = [example[0] for example in examples[i:i+batch_size]]
+            batch_X = [np.concatenate((example[0], example[1])) for example in examples[i:i+batch_size]]
             batch_y = [example[2] for example in examples[i:i+batch_size]]
 
             yield np.array(batch_X), np.array(batch_y)
 
 print("Splitting data...")
 # Combine enbeddings and split data (without storing X and y in memory)
-train_examples, test_examples = train_test_split(examples, test_size=0.2, train_size=0.6)
+train_examples, test_examples = train_test_split(examples, test_size=0.2, train_size=0.8)
 
-print("Fitting the imputer...")
-imputer = SimpleImputer(strategy='constant', fill_value=0)
-imputer.fit([example[0] for example in train_examples[:1000]])
 
-batch_size = 10000
+batch_size = config['batch_size']
 print("Generating training batches...")
-train_batches = generate_batches(batch_size, train_examples, imputer=imputer)
+train_batches = generate_batches(batch_size, train_examples)
 print("Generating testing batches...")
-test_batches = generate_batches(batch_size, test_examples, imputer=imputer)
+test_batches = generate_batches(batch_size, test_examples)
 
-model = SGDRegressor(penalty='l2', alpha=1.0)
+model = SGDRegressor(penalty=config["penalty"], alpha=config["alpha"])
 
 # Train the model using partial_fit
 for i in range(0, len(train_examples), batch_size):
@@ -93,44 +95,43 @@ for i in range(0, len(train_examples), batch_size):
     model.partial_fit(batch_X, batch_y)
 
 # Evaluate the model
-X_test, y_test = next(test_batches) # Assuming test_examples size is at least batch_size
+X_test, y_test = next(test_batches)
 score = model.score(X_test, y_test)
 print('Model R^2 Score:', score)
 
 # Validate some fake/custom cards
 
-# Load validation set
 with open("./validation_set.json", 'r') as file:
     validation_data = json.load(file)
 
-# Create a DataFrame to store the results
-results_df = pd.DataFrame(columns=['Card_Name', 'Commander', 'Predicted_Synergy_Score'])
+analytics_data = {"score": score}
+analytics_data["validation_data"] = validation_data
 
+converter = CardEmbedder()
 # Iterate through validation data
-for record in validation_data:
-    card_name = record['card_name']
+for card in validation_data:
+    card_name = card['card_name']
+    card_embedding = converter.embed_cards([card]).reshape(-1)
+    print(card_name)
+    analytics_data[card_name] = {}
 
-    embedder = CardEmbedder()
-    card_embedding = embedder.embed_cards([record])
-
-    print("Validating card:", card_name)
-    # Iterate through the test_commanders
-    for commander_name in record['test_commanders']:
-        print("Validating commander:", commander_name)
-        commander_id = context.get_id_by_name(commander_name)[0].id
-        print("Commander ID:", commander_id)
-        commander_embedding = card_embeddings[card_id_to_index[commander_id]]
+    for commander_name in card['test_commanders']:
+        commander_id = context.get_id_by_name(commander_name)[0]['id']
+        commander_embedding = np.array(card_embeddings[card_id_to_index[commander_id]]).reshape(-1,)
 
         # Combine embeddings and predict synergy score
-        new_pair_embedding = np.concatenate((commander_embedding, card_embedding))
-        predicted_synergy_score = model.predict([new_pair_embedding])
-        print("Predicted Synergy Score:", predicted_synergy_score[0])
-        # Append to DataFrame
-        results_df = results_df.append({
-            'Card_Name': card_name,
-            'Commander': commander_name,
-            'Predicted_Synergy_Score': predicted_synergy_score[0]
-        }, ignore_index=True)
+        new_pair_embedding = np.concatenate((commander_embedding, card_embedding)).reshape(1, -1)
 
-# Save the DataFrame to a CSV file
-results_df.to_csv('validation_results.csv', index=False)
+        predicted_synergy_score = model.predict(new_pair_embedding)
+        analytics_data[card_name][commander_name] = round(predicted_synergy_score[0], 2)
+        print(commander_name, " ", round(predicted_synergy_score[0], 2))
+
+# use the datetime to create a unique file name, in analytics folder
+if not os.path.exists("analytics"):
+    os.makedirs("analytics")
+
+now = datetime.datetime.now()
+analytics_file_name = f"analytics/analytics_{now.strftime('%Y-%m-%d_%H-%M-%S')}.json"
+
+with open(analytics_file_name, 'w') as file:
+    json.dump(analytics_data, file, indent=4)

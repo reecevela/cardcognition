@@ -67,15 +67,13 @@ class CardsContext:
         return self.cur.fetchone()[0]
     
     def get_all_card_types_and_sub_types(self):
-        self.cur.execute("""
-            SELECT type_line
-            FROM scryfall_cards
-            WHERE commander_legal = true
-        """)
+        return self.get_card_types_and_sub_types(self.get_all_cards())
+    
+    def get_card_types_and_sub_types(self, card_list:list):
         card_types = set()
         sub_types = set()
-        for row in self.cur.fetchall():
-            card_type, sub_types_list = self.converter.process_type_line(row[0])
+        for row in card_list:
+            card_type, sub_types_list = self.converter.process_type_line(row['type_line'])
             card_types.add(card_type)
             sub_types.update(sub_types_list)
         return list(card_types), list(sub_types)
