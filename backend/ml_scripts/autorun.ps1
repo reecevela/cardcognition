@@ -45,43 +45,65 @@ while (1 -eq 1) {
     $config.npmi_scoring = $appConfig.npmi_scoring
 
 
-    $thresholds = @(0.3, 0.5, 0.8, 1, 1.5, 2, 3, 4)
     if ($config.npmi_scoring -eq $true) { 
-        $random_shift = (Get-Random -Minimum -3 -Maximum 3) / 10
-        $config.threshold = $thresholds + $random_shift
-        if ($config.threshold -lt -1) { $config.threshold = -1 }
-        if ($config.threshold -gt 1) { $config.threshold = 1 }
+        if ($bestScore -lt 1) {
+            $config.threshold = (Get-Random -Minimum -10 -Maximum 10) / 10
+        } else {
+            $random_shift = (Get-Random -Minimum -3 -Maximum 3) / 10
+            $config.threshold = $config.threshold + $random_shift
+            if ($config.threshold -lt -1) { $config.threshold = -1 }
+            if ($config.threshold -gt 1) { $config.threshold = 1 }
+        }
     } else {
-        $current_threshold_index = $thresholds.IndexOf($config.threshold)
-        $random_shift = Get-Random -Minimum -2 -Maximum 2
-        if ($current_threshold_index + $random_shift -lt 0) { $random_shift = 0 }
-        if ($current_threshold_index + $random_shift -gt $thresholds.Count - 1) { $random_shift = 0 }
-        $config.threshold = $thresholds[$current_threshold_index + $random_shift]
+        $thresholds = @(0.3, 0.5, 0.8, 1, 1.5, 2, 3, 4)
+        if ($bestScore -lt 1) {
+            $config.threshold = Get-Random -InputObject $thresholds
+        } else {
+            $current_threshold_index = $thresholds.IndexOf($config.threshold)
+            $random_shift = Get-Random -Minimum -2 -Maximum 2
+            if ($current_threshold_index + $random_shift -lt 0) { $random_shift = 0 }
+            if ($current_threshold_index + $random_shift -gt $thresholds.Count - 1) { $random_shift = 0 }
+            $config.threshold = $thresholds[$current_threshold_index + $random_shift]
+        }
     }
 
     $batch_sizes = @(4096, 8192, 16384, 32768, 65536, 131072, 262144, 524288, 1048576) # Removed lower multiples of 2
-    $current_batch_size_index = $batch_sizes.IndexOf($config.batch_size)
-    $random_shift = Get-Random -Minimum -2 -Maximum 2
-    if ($current_batch_size_index + $random_shift -lt 0) { $random_shift = 0 }
-    if ($current_batch_size_index + $random_shift -gt $batch_sizes.Count - 1) { $random_shift = 0 }
-    $config.batch_size = $batch_sizes[$current_batch_size_index + $random_shift]
+    if ($bestScore -lt 1) {
+        $config.batch_size = Get-Random -InputObject $batch_sizes
+    } else {
+        $current_batch_size_index = $batch_sizes.IndexOf($config.batch_size)
+        $random_shift = Get-Random -Minimum -2 -Maximum 2
+        if ($current_batch_size_index + $random_shift -lt 0) { $random_shift = 0 }
+        if ($current_batch_size_index + $random_shift -gt $batch_sizes.Count - 1) { $random_shift = 0 }
+        $config.batch_size = $batch_sizes[$current_batch_size_index + $random_shift]
+    }
 
     $penalties = @("elasticnet", "l1") #Removed "l2" because it was not improving the score
     $config.penalty = Get-Random -InputObject $penalties
 
     $alphas = @(0.000001, 0.00001, 0.0001, 0.001, 0.01, 0.1, 1)
-    $current_alpha_index = $alphas.IndexOf($config.alpha)
-    $random_shift = Get-Random -Minimum -2 -Maximum 2
-    if ($current_alpha_index + $random_shift -lt 0) { $random_shift = 0 }
-    if ($current_alpha_index + $random_shift -gt $alphas.Count - 1) { $random_shift = 0 }
-    $config.alpha = $alphas[$current_alpha_index + $random_shift]
+    if ($bestScore -lt 1) {
+        $config.alpha = Get-Random -InputObject $alphas
+    } else {
+        $current_alpha_index = $alphas.IndexOf($config.alpha)
+        $random_shift = Get-Random -Minimum -2 -Maximum 2
+        if ($current_alpha_index + $random_shift -lt 0) { $random_shift = 0 }
+        if ($current_alpha_index + $random_shift -gt $alphas.Count - 1) { $random_shift = 0 }
+        $config.alpha = $alphas[$current_alpha_index + $random_shift]
+    }
 
     if ($i % 2 -eq 0) {
         Write-Host "Changing embeddings"
-        $random_shift = Get-Random -Minimum -2 -Maximum 2
-        $config.min_count = $config.min_count + $random_shift
-        if ($config.min_count -lt 1) { $config.min_count = 1 }
-        if ($config.min_count -gt 10) { $config.min_count = 10 }
+        if ($bestScore -lt 1) {
+            $config.min_count = Get-Random -Minimum 1 -Maximum 10
+        }
+        else {
+            $random_shift = Get-Random -Minimum -2 -Maximum 2
+            $config.min_count = $config.min_count + $random_shift
+            if ($config.min_count -lt 1) { $config.min_count = 1 }
+            if ($config.min_count -gt 10) { $config.min_count = 10 }
+        }
+
         if ($config.npmi_scoring -eq $false) { 
             $config.npmi_scoring = $true
             $config.threshold = (Get-Random -Minimum -10 -Maximum 10) / 10
