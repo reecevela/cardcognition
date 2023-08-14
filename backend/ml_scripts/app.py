@@ -50,10 +50,10 @@ for commander_card_id in commander_id_to_index:
     commander_embedding = card_embeddings[card_id_to_index[commander_card_id]]
 
     synergies = context.get_commander_synergies_by_id(commander_id)
-    for synergy in synergies:
+    for card in synergies:
         i += 1
-        card_id = synergy['card_id']
-        synergy_score = synergy['synergy_score']
+        card_id = card['card_id']
+        synergy_score = card['synergy_score']
         try:
             card_embedding = card_embeddings[card_id_to_index[card_id]]
         except Exception as e:
