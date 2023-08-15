@@ -32,10 +32,8 @@ class CardEmbedder:
         with open("config.json", "r") as f:
             config = json.load(f)
         
-        self.min_count = config["min_count"]
-        self.threshold = config["threshold"]
-        self.npmi_scoring = config["npmi_scoring"]
-        self.clean_text = config["clean_text"]
+        for key in config:
+            self.key = config[key]
 
     def embed_cards(self, cards:list) -> np.ndarray:
         oracle_texts = [card.get("oracle_text", "") for card in cards]
@@ -47,19 +45,20 @@ class CardEmbedder:
         start_time = time.time()
         total_cards = len(cards)
 
-        # oracle_text_embeddings = self.converter.embed_oracle_texts(oracle_texts, vector_size=100, window=5, min_count=1)
-        oracle_text_embeddings = self.converter.embed_USE_oracle_texts(oracle_texts, clean_text=self.clean_text)
+        if self.oracle_text_encoding_method == "USE":
+            oracle_text_embeddings = self.converter.embed_USE_oracle_texts(oracle_texts, clean_text=self.clean_text)
+        elif self.oracle_text_encoding_method == "W2V":
+            oracle_text_embeddings = self.converter.embed_oracle_texts(oracle_texts, vector_size=self.vector_size, window=self.window, clean_text=self.clean_text)
+        elif self.oracle_text_encoding_method == "PHR":
+            oracle_text_embeddings = self.converter.embed_phrased_oracle_texts(oracle_texts, min_count=self.min_count, threshold=self.threshold, npmi_scoring=self.npmi_scoring, clean_text=self.clean_text)
+        
+        
         embeddings = []
         FINAL_EMBEDDING_SHAPE = None
         for i, card in enumerate(cards):
             try:
                 colors = np.array(self.converter.encode_colors(card.get("colors"))).reshape(1, -1)
 
-                # phrased_oracle_text = phrased_oracle_texts_str[i]
-                # if phrased_oracle_text == "":
-                #     oracle_text_embedding = np.zeros(self.default_embedding_shape)
-                # else:
-                #     oracle_text_embedding = self.text_embedder([phrased_oracle_text]).numpy()
                 oracle_text_embedding = np.array(oracle_text_embeddings[i]).reshape(1, -1)
 
                 power = card.get("power")

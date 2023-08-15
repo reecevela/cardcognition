@@ -18,6 +18,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 with open("config.json", "r") as f:
     config = json.load(f)
 
+card_id_to_index = {}
+commander_id_to_index = {}
+
 # Load previously saved mappings and embeddings
 with open('card_id_to_index.pkl', 'rb') as f:
     card_id_to_index = pickle.load(f)
@@ -36,41 +39,50 @@ commanders = context.get_commanders()
 cards = [card for card in cards if '//' not in card['card_name']]
 commanders = [commander for commander in commanders if '//' not in commander['card_name']]
 
-print("Mapping synergies...")
-
 print("Mapping individual commanders...")
 commander_to_cards = {}
-e_count = 0
 for commander_card_id in commander_id_to_index:
     if len(commander_to_cards) % 100 == 0:
-        print(f"Commanders mapped: {len(commander_to_cards)} out of {len(commander_id_to_index)}")
+        print(f"Commanders mapped: {len(commander_to_cards)} out of {len(commander_id_to_index)}, {round(len(commander_to_cards) / len(commander_id_to_index) * 100, 2)}%")
     try:
         commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
         frequencies = context.get_commander_frequencies_by_id(commander_id)
         commander_to_cards[commander_card_id] = frequencies
     except Exception as e:
-        e_count += 1
-        if e_count % 100 == 0:
-            print(f"Exception count: {e_count}")
+        print(e)
         continue
+
+# commanders_to_cards is structured like this: 
+# {
+#   '1712': [{'card_id': 31020, 'percentage': 16}, {'card_id': 31073, 'percentage': 13}],
+#   '1713': [{'card_id': 31020, 'percentage': 16}, {'card_id': 31073, 'percentage': 13}],
+# ...
+# }
 
 individual_commander_models = {}
 e_count = 0
 for commander_card_id, card_data in commander_to_cards.items():
-    if len(individual_commander_models) % 100 == 0:
-        print(f"Individual commander models created: {len(individual_commander_models)} out of {len(commander_to_cards)}")
-    card_name = context.get_commander_by_id(commander_card_id)['card_name']
-    try:
-        X = [card_embeddings[card_id] for card_id, _ in card_data]
-        y = [score for _, score in card_data]
-        model = SGDRegressor().fit(X, y)
-        individual_commander_models[commander_card_id] = model
-        print(f"Model for {card_name} {commander_card_id} created with score: {model.score(X, y)}")
-    except Exception as e:
-        e_count += 1
-        if e_count % 100 == 0:
-            print(f"Exception count: {e_count}")
+    print(f"Creating model for {commander_card_id}")
+    # Removes invalid cards
+    i = 0
+    removed_count = 0
+    while i < len(card_data):
+        if card_data[i]['card_id'] not in card_id_to_index:
+            card_data.pop(i)
+            removed_count += 1
+            continue
+        i += 1
+    print(f"Removed {removed_count} invalid cards")
+    if len(card_data) < 100:
+        print(f"Commander {commander_card_id} has {len(card_data)} valid cards, skipping...")
         continue
+    X = [card_embeddings[card_id_to_index[card['card_id']]] for card in card_data]
+    y = [card['percentage'] for card in card_data]
+    model = SGDRegressor(penalty=config['penalty'],alpha=config['alpha']).fit(X, y)
+    individual_commander_models[commander_card_id] = model
+    print(f"Model for {commander_card_id} created with score: {model.score(X, y)} on {len(X)} examples")
+
+
 
 start_time = time.time()
 total_commanders = len(commanders)
@@ -90,7 +102,7 @@ for commander_card_id in commander_id_to_index:
     for card in synergies:
         i += 1
         card_id = card['card_id']
-        frequency = card['frequency']
+        frequency = card['percentage']
         try:
             card_embedding = card_embeddings[card_id_to_index[card_id]]
         except Exception as e:
@@ -113,9 +125,10 @@ def generate_batches(batch_size, examples, concat=True):
         for i in range(0, len(examples), batch_size):
             if concat:
                 batch_X = [np.concatenate((example[0], example[1])) for example in examples[i:i+batch_size]]
+                batch_y = [example[2] for example in examples[i:i+batch_size]]
             else:
                 batch_X = [example[0] for example in examples[i:i+batch_size]]
-            batch_y = [example[2] for example in examples[i:i+batch_size]]
+                batch_y = [example[1] for example in examples[i:i+batch_size]]
 
             yield np.array(batch_X), np.array(batch_y)
 
@@ -191,13 +204,13 @@ for card in validation_data:
         gen_cc_predicted_synergy_score = MLConverter().calc_synergy_score(general_cc_pred[0], individual_pred[0])
         gen_predicted_synergy_score = MLConverter().calc_synergy_score(general_pred[0], individual_pred[0])
         
-        predicted_synergy_scores.append((commander_name, gen_predicted_synergy_score[0]))
-        analytics_data[card_name][commander_name] = round(gen_predicted_synergy_score[0], 2)
-        print(commander_name, " ", round(gen_predicted_synergy_score[0], 2))
+        predicted_synergy_scores.append((commander_name, gen_predicted_synergy_score))
+        analytics_data[card_name][commander_name] = round(gen_predicted_synergy_score, 2)
+        print("GEN", commander_name, " ", round(gen_predicted_synergy_score, 2))
 
-        cc_predicted_synergy_scores.append((commander_name, gen_cc_predicted_synergy_score[0]))
-        analytics_data[card_name][commander_name + "CC"] = round(gen_cc_predicted_synergy_score[0], 2)
-        print(commander_name, " ", round(gen_cc_predicted_synergy_score[0], 2))
+        cc_predicted_synergy_scores.append((commander_name, gen_cc_predicted_synergy_score))
+        analytics_data[card_name]["".join([commander_name,"CC"])] = round(gen_cc_predicted_synergy_score, 2)
+        print("GEN CC", commander_name, " ", round(gen_cc_predicted_synergy_score, 2))
     # In validation_set.json for each card:
         # "test_commanders": [
         #     "Gallia of the Endless Dance",
@@ -220,12 +233,12 @@ for card in validation_data:
     incorrect_list = []
     median_predicted_score = np.median([score for _, score in predicted_synergy_scores])
     for commander_name, predicted_score in predicted_synergy_scores:
-        if commander_name in card['expected_high']:
+        if commander_name in analytics_data[card_name]['expected_high']:
             if predicted_score >= median_predicted_score:
                 correct_list.append((commander_name, predicted_score))
             else:
                 incorrect_list.append((commander_name, predicted_score))
-        elif commander_name in card['expected_low']:
+        elif commander_name in analytics_data[card_name]['expected_low']:
             if predicted_score < median_predicted_score:
                 correct_list.append((commander_name, predicted_score))
             else:
@@ -238,7 +251,7 @@ for card in validation_data:
     median_predicted_score = np.median([score for _, score in cc_predicted_synergy_scores])
     for commander_name, predicted_score in cc_predicted_synergy_scores:
         temp_commander_name = commander_name[:-2]
-        if temp_commander_name in card['expected_high']:
+        if temp_commander_name in analytics_data[card_name]['expected_high']:
             if predicted_score >= median_predicted_score:
                 alt_correct_list.append((commander_name, predicted_score))
             else:

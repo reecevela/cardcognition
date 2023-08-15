@@ -2,14 +2,11 @@
     "min_count":  3,
     "threshold":  0.8,
     "npmi_scoring":  false,
-    "power_encoded":  false,
-    "toughness_encoded":  false,
-    "batch_size":  20000,
-    "model":  "SGDRegressor",
-    "penalty":  "elasticnet",
-    "alpha":  0.0001,
-    "test_size":  0.2,
-    "train_size":  0.8,
-    "num_threads":  4,
-    "clean_text": false
+    "batch_size": 80000,
+    "penalty":  "l1",
+    "alpha":  0.01,
+    "clean_text": false,
+    "oracle_text_encoding_method": "USE",
+    "vector_size": 100,
+    "window_size": 5
 }

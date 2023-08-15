@@ -101,7 +101,6 @@ class CardsContext:
         self.cur.execute("""
             SELECT * FROM edhrec_commanders
             WHERE id = %s
-            AND commander_legal = true
             ORDER BY id ASC
         """, (commander_id,))
         return self.fetch_list_of_dicts(self.cur)[0]
@@ -123,7 +122,6 @@ class CardsContext:
             FROM edhrec_cards ec
             INNER JOIN scryfall_cards sc ON ec.card_id = sc.id
             WHERE ec.commander_id = %s
-            AND ec.num_decks > 5
             AND sc.commander_legal = true
             ORDER BY ec.card_id ASC;
         """, (commander_id,))
