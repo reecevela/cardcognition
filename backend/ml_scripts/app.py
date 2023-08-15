@@ -1,5 +1,6 @@
 from card_embedder import CardEmbedder
 from card_fetcher import CardsContext
+from converter import MLConverter
 import numpy as np
 import pickle
 import json
@@ -37,70 +38,124 @@ commanders = [commander for commander in commanders if '//' not in commander['ca
 
 print("Mapping synergies...")
 
+print("Mapping individual commanders...")
+commander_to_cards = {}
+e_count = 0
+for commander_card_id in commander_id_to_index:
+    if len(commander_to_cards) % 100 == 0:
+        print(f"Commanders mapped: {len(commander_to_cards)} out of {len(commander_id_to_index)}")
+    try:
+        commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
+        frequencies = context.get_commander_frequencies_by_id(commander_id)
+        commander_to_cards[commander_card_id] = frequencies
+    except Exception as e:
+        e_count += 1
+        if e_count % 100 == 0:
+            print(f"Exception count: {e_count}")
+        continue
+
+individual_commander_models = {}
+e_count = 0
+for commander_card_id, card_data in commander_to_cards.items():
+    if len(individual_commander_models) % 100 == 0:
+        print(f"Individual commander models created: {len(individual_commander_models)} out of {len(commander_to_cards)}")
+    card_name = context.get_commander_by_id(commander_card_id)['card_name']
+    try:
+        X = [card_embeddings[card_id] for card_id, _ in card_data]
+        y = [score for _, score in card_data]
+        model = SGDRegressor().fit(X, y)
+        individual_commander_models[commander_card_id] = model
+        print(f"Model for {card_name} {commander_card_id} created with score: {model.score(X, y)}")
+    except Exception as e:
+        e_count += 1
+        if e_count % 100 == 0:
+            print(f"Exception count: {e_count}")
+        continue
+
 start_time = time.time()
 total_commanders = len(commanders)
 # Construct examples
-examples = []
+gen_cc_examples = []
+gen_examples = []
 i = 0
 j = 0
+print("Constructing examples...")
 for commander_card_id in commander_id_to_index:
     # Commander's scryfall_cards id
     commander_id = context.get_cmd_id_from_sc_id(commander_card_id)
     # embedding for the actual card itself
     commander_embedding = card_embeddings[card_id_to_index[commander_card_id]]
 
-    synergies = context.get_commander_synergies_by_id(commander_id)
+    synergies = context.get_commander_frequencies_by_id(commander_id)
     for card in synergies:
         i += 1
         card_id = card['card_id']
-        synergy_score = card['synergy_score']
+        frequency = card['frequency']
         try:
             card_embedding = card_embeddings[card_id_to_index[card_id]]
         except Exception as e:
             continue
-        examples.append((commander_embedding, card_embedding, synergy_score))
+        gen_cc_examples.append((commander_embedding, card_embedding, frequency))
+        gen_examples.append((card_embedding, frequency))
     j += 1
     if j % 100 == 0:
         elapsed_time = time.time() - start_time
         progress = (j+1) / total_commanders
         remaining_time = elapsed_time * (1-progress) / progress
-        print(f"Progress: {progress*100:.2f}%, Time remaining: {remaining_time:.2f}s Loss Percent: {(len(examples) - i)/(i+0.001)*100:.2f}% Loss Count: {len(examples) - i} Time elapsed: {elapsed_time:.2f}s")
+        print(f"Progress: {progress*100:.2f}%, Time remaining: {remaining_time:.2f}s Loss Percent: {(len(gen_cc_examples) - i)/(i+0.001)*100:.2f}% Loss Count: {len(gen_cc_examples) - i} Time elapsed: {elapsed_time:.2f}s")
 
 print("Starting training...")
 
 # Have to do this otherwise the amount of memory crashes my laptop
-def generate_batches(batch_size, examples):
+def generate_batches(batch_size, examples, concat=True):
     while True:
         examples = shuffle(examples)
         for i in range(0, len(examples), batch_size):
-            batch_X = [np.concatenate((example[0], example[1])) for example in examples[i:i+batch_size]]
+            if concat:
+                batch_X = [np.concatenate((example[0], example[1])) for example in examples[i:i+batch_size]]
+            else:
+                batch_X = [example[0] for example in examples[i:i+batch_size]]
             batch_y = [example[2] for example in examples[i:i+batch_size]]
 
             yield np.array(batch_X), np.array(batch_y)
 
 print("Splitting data...")
 # Combine enbeddings and split data (without storing X and y in memory)
-train_examples, test_examples = train_test_split(examples, test_size=0.2, train_size=0.8)
-
+gen_cc_train_examples, gen_cc_test_examples = train_test_split(gen_cc_examples, test_size=0.2, train_size=0.8)
+gen_train_examples, gen_test_examples = train_test_split(gen_examples, test_size=0.2, train_size=0.8)
 
 batch_size = config['batch_size']
 print("Generating training batches...")
-train_batches = generate_batches(batch_size, train_examples)
+gen_cc_train_batches = generate_batches(batch_size, gen_cc_train_examples, concat=True)
+gen_train_batches = generate_batches(batch_size, gen_train_examples, concat=False)
 print("Generating testing batches...")
-test_batches = generate_batches(batch_size, test_examples)
+gen_cc_test_batches = generate_batches(batch_size, gen_cc_test_examples, concat=True)
+gen_test_batches = generate_batches(batch_size, gen_test_examples, concat=False)
 
-model = SGDRegressor(penalty=config["penalty"], alpha=config["alpha"])
+general_cc_model = SGDRegressor(penalty=config["penalty"], alpha=config["alpha"])
+general_model = SGDRegressor(penalty=config["penalty"], alpha=config["alpha"])
 
-# Train the model using partial_fit
-for i in range(0, len(train_examples), batch_size):
-    print("Training batch", i, "of", len(train_examples))
-    batch_X, batch_y = next(train_batches)
-    model.partial_fit(batch_X, batch_y)
+# Train the General CC model using partial_fit
+for i in range(0, len(gen_cc_train_examples), batch_size):
+    print("Training batch", i, "of", len(gen_cc_train_examples))
+    batch_X, batch_y = next(gen_cc_train_batches)
+    general_cc_model.partial_fit(batch_X, batch_y)
 
-# Evaluate the model
-X_test, y_test = next(test_batches)
-score = model.score(X_test, y_test)
-print('Model R^2 Score:', score)
+# Train the General model using partial_fit
+for i in range(0, len(gen_train_examples), batch_size):
+    print("Training batch", i, "of", len(gen_train_examples))
+    batch_X, batch_y = next(gen_train_batches)
+    general_model.partial_fit(batch_X, batch_y)
+
+# Evaluate the General CC model
+X_test, y_test = next(gen_cc_test_batches)
+cc_score = general_cc_model.score(X_test, y_test)
+print('General CC Model R^2 Score:', cc_score)
+
+# Evaluate the General model
+X_test, y_test = next(gen_test_batches)
+score = general_model.score(X_test, y_test)
+print('General Model R^2 Score:', score)
 
 # Validate some fake/custom cards
 
@@ -108,8 +163,10 @@ with open("./validation_set.json", 'r') as file:
     validation_data = json.load(file)
 
 analytics_data = {"score": score}
+analytics_data = {"cc_score": cc_score}
 analytics_data["config"] = config
 accuracy_scores = []
+alt_accuracy_scores = []
 
 converter = CardEmbedder()
 # Iterate through validation data
@@ -119,6 +176,7 @@ for card in validation_data:
     print(card_name)
     analytics_data[card_name] = {}
     predicted_synergy_scores = []
+    cc_predicted_synergy_scores = []
 
     for commander_name in card['test_commanders']:
         commander_id = context.get_id_by_name(commander_name)[0]['id']
@@ -126,11 +184,20 @@ for card in validation_data:
 
         # Combine embeddings and predict synergy score
         new_pair_embedding = np.concatenate((commander_embedding, card_embedding)).reshape(1, -1)
+        individual_pred = individual_commander_models[commander_id].predict(card_embedding.reshape(1, -1))
+        general_cc_pred = general_cc_model.predict(new_pair_embedding)
+        general_pred = general_model.predict(card_embedding.reshape(1, -1))
 
-        predicted_synergy_score = model.predict(new_pair_embedding)
-        predicted_synergy_scores.append((commander_name, predicted_synergy_score[0]))
-        analytics_data[card_name][commander_name] = round(predicted_synergy_score[0], 2)
-        print(commander_name, " ", round(predicted_synergy_score[0], 2))
+        gen_cc_predicted_synergy_score = MLConverter().calc_synergy_score(general_cc_pred[0], individual_pred[0])
+        gen_predicted_synergy_score = MLConverter().calc_synergy_score(general_pred[0], individual_pred[0])
+        
+        predicted_synergy_scores.append((commander_name, gen_predicted_synergy_score[0]))
+        analytics_data[card_name][commander_name] = round(gen_predicted_synergy_score[0], 2)
+        print(commander_name, " ", round(gen_predicted_synergy_score[0], 2))
+
+        cc_predicted_synergy_scores.append((commander_name, gen_cc_predicted_synergy_score[0]))
+        analytics_data[card_name][commander_name + "CC"] = round(gen_cc_predicted_synergy_score[0], 2)
+        print(commander_name, " ", round(gen_cc_predicted_synergy_score[0], 2))
     # In validation_set.json for each card:
         # "test_commanders": [
         #     "Gallia of the Endless Dance",
@@ -165,14 +232,42 @@ for card in validation_data:
                 incorrect_list.append((commander_name, predicted_score))
         else:
             print("Commander not found in expected_high or expected_low", commander_name)
+    
+    alt_correct_list = []
+    alt_incorrect_list = []
+    median_predicted_score = np.median([score for _, score in cc_predicted_synergy_scores])
+    for commander_name, predicted_score in cc_predicted_synergy_scores:
+        temp_commander_name = commander_name[:-2]
+        if temp_commander_name in card['expected_high']:
+            if predicted_score >= median_predicted_score:
+                alt_correct_list.append((commander_name, predicted_score))
+            else:
+                alt_incorrect_list.append((commander_name, predicted_score))
+        elif temp_commander_name in card['expected_low']:
+            if predicted_score < median_predicted_score:
+                alt_correct_list.append((commander_name, predicted_score))
+            else:
+                alt_incorrect_list.append((commander_name, predicted_score))
+        else:
+            print("Commander not found in expected_high or expected_low", commander_name)
             
     analytics_data[card_name]["accuracy"] = len(correct_list) / (len(correct_list) + len(incorrect_list))
     accuracy_scores.append(analytics_data[card_name]["accuracy"])
     analytics_data[card_name]["correct_list"] = correct_list
     analytics_data[card_name]["incorrect_list"] = incorrect_list
 
+    analytics_data[card_name]["alt_accuracy"] = len(alt_correct_list) / (len(alt_correct_list) + len(alt_incorrect_list))
+    alt_accuracy_scores.append(analytics_data[card_name]["alt_accuracy"])
+    analytics_data[card_name]["alt_correct_list"] = alt_correct_list
+    analytics_data[card_name]["alt_incorrect_list"] = alt_incorrect_list
+
+
 analytics_data["average_accuracy"] = sum(accuracy_scores) / len(accuracy_scores)
 print("Average accuracy:", analytics_data["average_accuracy"])
+analytics_data["validation_data"] = validation_data
+
+analytics_data["alt_average_accuracy"] = sum(alt_accuracy_scores) / len(alt_accuracy_scores)
+print("Alt Average accuracy:", analytics_data["alt_average_accuracy"])
 analytics_data["validation_data"] = validation_data
 
 # use the datetime to create a unique file name, in analytics folder

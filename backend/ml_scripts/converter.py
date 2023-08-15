@@ -65,6 +65,9 @@ class MLConverter:
         embeddings = self.text_embedder(oracle_texts)
         return embeddings
     
+    def calc_synergy_score(self, inclusion_rate, base_rate):
+        return (inclusion_rate / base_rate if base_rate != 0 else inclusion_rate)
+    
     def embed_oracle_texts(self, oracle_texts:list, vector_size:int=100, window:int=5,min_count:int=1) -> list:
         oracle_texts = self._clean_texts(oracle_texts)
         sentences = [text.lower().split() if text else [] for text in oracle_texts]

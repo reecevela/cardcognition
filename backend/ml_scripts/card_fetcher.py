@@ -117,6 +117,18 @@ class CardsContext:
         """, (commander_id,))
         return self.fetch_list_of_dicts(self.cur)
 
+    def get_commander_frequencies_by_id(self, commander_id:int) -> list:
+        self.cur.execute("""
+            SELECT ec.card_id, ec.percentage
+            FROM edhrec_cards ec
+            INNER JOIN scryfall_cards sc ON ec.card_id = sc.id
+            WHERE ec.commander_id = %s
+            AND ec.num_decks > 5
+            AND sc.commander_legal = true
+            ORDER BY ec.card_id ASC;
+        """, (commander_id,))
+        return self.fetch_list_of_dicts(self.cur)
+
     def get_cmd_id_from_sc_id(self, scryfall_id:int) -> int:
         self.cur.execute("""
             SELECT cmd.id AS commander_id
