@@ -38,10 +38,6 @@ class CardEmbedder:
     def embed_cards(self, cards:list) -> np.ndarray:
         oracle_texts = [card.get("oracle_text", "") for card in cards]
 
-        # Review oracle_texts.txt to see outputs for different min_count, threshold and npmi values
-        # phrased_oracle_texts = self.converter.phrase_oracle_text(oracle_texts, min_count=self.min_count, threshold=self.threshold, npmi_scoring=self.npmi_scoring)
-        # phrased_oracle_texts_str = [" ".join(phrased_text) for phrased_text in phrased_oracle_texts]
-
         start_time = time.time()
         total_cards = len(cards)
 
@@ -74,7 +70,7 @@ class CardEmbedder:
                 card_type_embedding = self.card_type_encoder.transform([[card_type]]).toarray() 
                 sub_types_embedding = self.sub_types_encoder.transform(sub_types).sum(axis=0, keepdims=True)
 
-                # Removed power and toughness from here
+
                 final_embedding = np.concatenate((colors, oracle_text_embedding, power, toughness, cmc, card_type_embedding, sub_types_embedding), axis=1).reshape(-1)
                 if FINAL_EMBEDDING_SHAPE is None:
                     FINAL_EMBEDDING_SHAPE = final_embedding.shape

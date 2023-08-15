@@ -2,11 +2,11 @@
     "min_count":  3,
     "threshold":  0.8,
     "npmi_scoring":  false,
-    "batch_size": 80000,
+    "batch_size":  256,
     "penalty":  "l1",
-    "alpha":  0.01,
-    "clean_text": false,
-    "oracle_text_encoding_method": "USE",
-    "vector_size": 100,
-    "window_size": 5
+    "alpha":  0.00001,
+    "clean_text":  true,
+    "oracle_text_encoding_method":  "USE",
+    "vector_size":  100,
+    "window_size":  5
 }

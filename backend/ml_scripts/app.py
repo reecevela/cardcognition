@@ -62,7 +62,6 @@ for commander_card_id in commander_id_to_index:
 individual_commander_models = {}
 e_count = 0
 for commander_card_id, card_data in commander_to_cards.items():
-    print(f"Creating model for {commander_card_id}")
     # Removes invalid cards
     i = 0
     removed_count = 0
@@ -72,7 +71,6 @@ for commander_card_id, card_data in commander_to_cards.items():
             removed_count += 1
             continue
         i += 1
-    print(f"Removed {removed_count} invalid cards")
     if len(card_data) < 100:
         print(f"Commander {commander_card_id} has {len(card_data)} valid cards, skipping...")
         continue
