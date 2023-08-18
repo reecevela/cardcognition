@@ -7,8 +7,12 @@ import warnings
 import time
 
 from sklearn.model_selection import train_test_split
+from sklearn.utils import shuffle
 from sklearn.linear_model import SGDRegressor
+#from sklearn.ensemble import RandomForestRegressor
+from sklearn.neural_network import MLPRegressor
 import numpy as np
+
 
 with open('config.json', 'r') as f:
     config = json.load(f)
@@ -84,14 +88,15 @@ embedder = CardEmbedder()
 embeddings = embedder.embed_cards(cards_raw, testing=False)
 
 for commander_name, commander_data in commanders.items():
+    break
     try:
         # print(commander_name, " ", commander_data.get('id'))
         # print(len(commander_data.get('cards', [])))
         if commander_name not in commanders:
-            print(f"Skipping {commander_name} because it's not in the cards list")
+            # print(f"Skipping {commander_name} because it's not in the cards list")
             continue
         if len(commander_data.get('cards', 0)) < 100:
-            print(f"Skipping {commander_name} because it has {len(commander_data.get('cards', 0))} cards")
+            # print(f"Skipping {commander_name} because it has {len(commander_data.get('cards', 0))} cards")
             continue
         X = []
         y = []
@@ -107,11 +112,64 @@ for commander_name, commander_data in commanders.items():
         commanders[commander_name]['model'].fit(X_train, y_train)
         commanders[commander_name]['score'] = commanders[commander_name]['model'].score(X_test, y_test)
 
-        print(f"Score for {commander_name}: {commanders[commander_name]['score']}")
+        # print(f"Score for {commander_name}: {commanders[commander_name]['score']}")
     except Exception as e:
         continue
         #print(f"Error for {commander_name}: {e}")
 
+def generate_batches(batch_size, examples, concat=True):
+    while True:
+        examples = shuffle(examples)
+        for i in range(0, len(examples), batch_size):
+            if concat:
+                batch_X = [np.concatenate((example[0], example[1])) for example in examples[i:i+batch_size]]
+                batch_y = [example[2] for example in examples[i:i+batch_size]]
+            else:
+                batch_X = [example[0] for example in examples[i:i+batch_size]]
+                batch_y = [example[1] for example in examples[i:i+batch_size]]
+
+            yield np.array(batch_X), np.array(batch_y)
+
+class CardBatchGenerator:
+    def __init__(self, commanders):
+        self.commanders = commanders
+        self.commander_names = list(commanders.keys())
+        self.index = 0
+    
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index >= len(self.commander_names):
+            self.index = 0
+            raise StopIteration
+        else:
+            commander_name = self.commander_names[self.index]
+            self.index += 1
+            output = []
+            for card in self.commanders[commander_name]['cards']:
+                try:
+                    output.append((np.concatenate(embeddings[self.commanders[commander_name]['index']], embeddings[card[0]['index']]), card[1]))
+                except Exception as e:
+                    continue
+            return output
+
+# Training a general model using all cards with CardBatchGenerator
+batch_generator = CardBatchGenerator(commanders)
+# Doesn't support partial fit, will try when I get a better laptop/PC
+#gen_model = RandomForestRegressor(n_estimators=100, random_state=42) 
+gen_model = MLPRegressor(hidden_layer_sizes=(100, 50), max_iter=1, warm_start=True, random_state=42)
+
+# Trained with (commander_embedding, card_embedding) -> frequency
+X, y = [], []
+
+for batch in batch_generator:
+    batch_X, batch_y = generate_batches(config["batch_size"], [
+        (commander_embedding, card_embedding, frequency) for commander_embedding, card_embedding, frequency in batch
+    ], concat=True)
+    gen_model.partial_fit(batch_X, batch_y, classes=[0])
+
+# Validation Testing
 with open("./validation_set.json", 'r') as file:
     validation_data = json.load(file)
 
@@ -124,11 +182,15 @@ for card in validation_data:
 
     for commander_name in card['test_commanders']:
         if commander_name not in commanders:
-            print(f"Skipping {commander_name} because it's not in the dataset")
+            # print(f"Skipping {commander_name} because it's not in the dataset")
             continue
         commander = commanders[commander_name]
-        score = round(commander['model'].predict([card_embedding])[0], 2) * 100
+        score = round(commander['model'].predict([card_embedding])[0], 4) * 100
         card_predictions[commander_name] = score
+
+        # General model predicts commander + card frequency
+        gen_score = round(gen_model.predict([[commander['index'], card['index']]])[0], 4) * 100
+        analytics_data[card['card_name']]['general'] =[commander_name, gen_score]
 
     median = np.median(list(card_predictions.values()))
     correct_list = []
@@ -151,6 +213,26 @@ for card in validation_data:
     analytics_data[card['card_name']]['accuracy'] = accuracy
     analytics_data[card['card_name']]['correct'] = correct_list
     analytics_data[card['card_name']]['incorrect'] = incorrect_list
+
+    gen_accuracy = 0
+    total = 0
+    for cmd_prediction in analytics_data[card['card_name']]['general']:
+        if cmd_prediction[1] >= median:
+            if commander_name in card['expected_high']:
+                print(f"General Model Correct: {cmd_prediction}")
+                gen_accuracy += 1
+            else:
+                print(f"General Model Incorrect: {cmd_prediction}")
+        else:
+            if commander_name in card['expected_low']:
+                print(f"General Model Correct: {cmd_prediction}")
+                gen_accuracy += 1
+            else:
+                print(f"General Model Incorrect: {cmd_prediction}")
+        total += 1
+    gen_accuracy /= total
+    print(f"General Model Accuracy: {gen_accuracy}")
+
 
 average_validation_accuracy = np.mean([analytics_data[card]['accuracy'] for card in analytics_data])
 print(f"Average validation accuracy: {average_validation_accuracy}")

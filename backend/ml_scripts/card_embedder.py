@@ -12,30 +12,6 @@ class CardEmbedder:
         self.converter = MLConverter()
         self.context = CardsContext()
 
-        #     def process_type_line(self, type_line: str)-> dict:
-        # supertypes = ["Basic", "Legendary", "Ongoing", "Snow", "World"]
-        # types = ["Artifact", "Creature", "Enchantment", "Instant", "Land", "Planeswalker", "Sorcery", "Tribal"]
-        # separator = "—"
-
-        # super_types = []
-        # card_types = []
-        # sub_types = []
-
-        # # "Legendary Artifact Creature —  Elder Golem Warrior" might be an example
-        # if separator not in type_line:
-        #     for s in supertypes:
-        #         if s in type_line:
-        #             super_types.append(s)
-        #             type_line = type_line.replace(s, "")
-        #     for t in types:
-        #         if t in type_line:
-        #             card_types.append(t)
-        #             type_line = type_line.replace(t, "")
-        # sub_types = type_line.split().remove(separator)
-        # return {"super_types": super_types, "card_types": card_types, "sub_types": sub_types}
-        #
-        # Needs to implement the above and be refactored
-
         super_types, card_types, sub_types = self.context.get_all_card_types_and_sub_types()
 
         validation_set = None
@@ -79,6 +55,8 @@ class CardEmbedder:
                 self.clean_text = config[key]
             elif key == "freq_cutoff":
                 self.freq_cutoff = config[key]
+            elif key == "embedding_size":
+                self.embedding_size = config[key]
 
     def embed_cards(self, cards:list, testing=False) -> np.ndarray:
         oracle_texts = [card.get("oracle_text", "") for card in cards]
@@ -89,7 +67,7 @@ class CardEmbedder:
         if self.oracle_text_encoding_method == "USE":
             oracle_text_embeddings = self.converter.embed_USE_oracle_texts(oracle_texts, clean_text=self.clean_text)
         elif self.oracle_text_encoding_method == "TFIDF":
-            oracle_text_embeddings = self.converter.embed_tfidf_oracle_texts(oracle_texts, freq_cutoff=self.freq_cutoff, testing=testing)
+            oracle_text_embeddings = self.converter.embed_tfidf_oracle_texts(oracle_texts, freq_cutoff=self.freq_cutoff, embedding_size=self.embedding_size, testing=testing)
         elif self.oracle_text_encoding_method == "W2V":
             oracle_text_embeddings = self.converter.embed_oracle_texts(oracle_texts, vector_size=self.vector_size, window=self.window, clean_text=self.clean_text)
         elif self.oracle_text_encoding_method == "PHR":
@@ -121,12 +99,12 @@ class CardEmbedder:
 
                 final_embedding = np.concatenate(
                     (
-                        #colors, 
-                        oracle_text_embedding, 
-                        #power, 
-                        #toughness, 
-                        #cmc, 
-                        #super_type_embedding,
+                        colors, 
+                        #oracle_text_embedding, 
+                        power, 
+                        toughness, 
+                        cmc, 
+                        super_type_embedding,
                         card_type_embedding, 
                         sub_types_embedding
                     ), axis=1).reshape(-1)
