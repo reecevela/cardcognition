@@ -100,7 +100,7 @@ class CardEmbedder:
                 final_embedding = np.concatenate(
                     (
                         colors, 
-                        #oracle_text_embedding, 
+                        oracle_text_embedding, 
                         power, 
                         toughness, 
                         cmc, 

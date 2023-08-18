@@ -1,12 +1,11 @@
 from gensim.models.phrases import Phrases
-from gensim.models import Word2Vec
+from gensim.models import Word2Vec, FastText
 from gensim import corpora, models
 from tensorflow_hub import KerasLayer
 from sklearn.decomposition import TruncatedSVD
 import re
 import numpy as np
 import json
-import os
 
 class MLConverter:
     def __init__(self):
@@ -74,6 +73,42 @@ class MLConverter:
             if color in card_colors:
                 output[i] = 1
         return output
+    
+    def embed_fasttext_oracle_texts(self, oracle_texts:list, freq_cutoff:int=3, embedding_size:int=100, window:int=5, testing:bool=False) -> list:
+        embeddings = []
+        if not testing:
+            # Preprocessing and tokenization
+            temp_frequency = {}
+            for oracle_text in oracle_texts:
+                for token in tokens:
+                    temp_frequency[token] = temp_frequency.get(token, 0) + 1
+
+            tokens = [[word for word in token if temp_frequency[word] > 1] for token in tokens]
+
+            # Train the model
+            model = FastText(tokens, size=embedding_size, window=window, min_count=freq_cutoff, workers=4)
+            model.save("fasttext_model.model")
+        else:
+            # Load pre-existing model
+            model = FastText.load("fasttext_model.model")
+        
+        for oracle_text in oracle_texts:
+            embeddings.append(model.wv[oracle_text])
+
+        max_size = max(max((id for id, _ in doc), default=-1) for doc in embeddings) + 1
+
+        embeddings = []
+        for doc in embeddings:
+            vec = [0] * max_size
+            for id, value in doc:
+                if id < max_size:
+                    vec[id] = value
+            embeddings.append(vec)
+
+        svd = TruncatedSVD(n_components=embedding_size)
+        embeddings = svd.fit_transform(embeddings)
+
+        return embeddings
     
     def embed_tfidf_oracle_texts(self, oracle_texts:list, freq_cutoff:int=3, embedding_size:int=100, testing:bool=False) -> list:
         tokens_list = []

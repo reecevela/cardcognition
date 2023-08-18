@@ -4,11 +4,12 @@
     "npmi_scoring":  true,
     "batch_size":  65536,
     "penalty":  "l1",
-    "alpha":  0.01,
+    "alpha":  0.00001,
     "clean_text":  true,
     "oracle_text_encoding_method":  "TFIDF",
     "vector_size":  100,
     "window":  5,
-    "freq_cutoff":  5,
-    "embedding_size": 10
+    "freq_cutoff":  3,
+    "embedding_size": 50,
+    "activation": "relu"
 }
