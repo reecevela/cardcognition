@@ -1,12 +1,12 @@
 {
-    "min_count":  3,
-    "threshold":  0.8,
-    "npmi_scoring":  false,
-    "batch_size":  256,
+    "min_count":  25,
+    "threshold":  -0.95,
+    "npmi_scoring":  true,
+    "batch_size":  1024,
     "penalty":  "l1",
     "alpha":  0.00001,
     "clean_text":  true,
-    "oracle_text_encoding_method":  "USE",
+    "oracle_text_encoding_method":  "PHR",
     "vector_size":  100,
-    "window_size":  5
+    "window":  5
 }

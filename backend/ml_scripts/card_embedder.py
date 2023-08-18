@@ -33,7 +33,22 @@ class CardEmbedder:
             config = json.load(f)
         
         for key in config:
-            self.key = config[key]
+            if key == "oracle_text_encoding_method":
+                self.oracle_text_encoding_method = config[key]
+            elif key == "vector_size":
+                self.vector_size = config[key]
+            elif key == "window":
+                self.window = config[key]
+            elif key == "min_count":
+                self.min_count = config[key]
+            elif key == "threshold":
+                self.threshold = config[key]
+            elif key == "npmi_scoring":
+                self.npmi_scoring = config[key]
+            elif key == "clean_text":
+                self.clean_text = config[key]
+            elif key == "freq_cutoff":
+                self.freq_cutoff = config[key]
 
     def embed_cards(self, cards:list) -> np.ndarray:
         oracle_texts = [card.get("oracle_text", "") for card in cards]
@@ -43,10 +58,12 @@ class CardEmbedder:
 
         if self.oracle_text_encoding_method == "USE":
             oracle_text_embeddings = self.converter.embed_USE_oracle_texts(oracle_texts, clean_text=self.clean_text)
+        elif self.oracle_text_encoding_method == "TFIDF":
+            oracle_text_embeddings = self.converter.embed_tfidf_oracle_texts(oracle_texts, freq_cutoff=self.freq_cutoff)
         elif self.oracle_text_encoding_method == "W2V":
             oracle_text_embeddings = self.converter.embed_oracle_texts(oracle_texts, vector_size=self.vector_size, window=self.window, clean_text=self.clean_text)
         elif self.oracle_text_encoding_method == "PHR":
-            oracle_text_embeddings = self.converter.embed_phrased_oracle_texts(oracle_texts, min_count=self.min_count, threshold=self.threshold, npmi_scoring=self.npmi_scoring, clean_text=self.clean_text)
+            oracle_text_embeddings = self.converter.embed_phrased_oracle_texts(oracle_texts, min_count=self.min_count, threshold=self.threshold, npmi_scoring=self.npmi_scoring, clean_text=self.clean_text, window=self.window, vector_size=self.vector_size)
         
         
         embeddings = []
@@ -92,3 +109,34 @@ class CardEmbedder:
                 print(f"Progress: {progress*100:.2f}%, Time remaining: {remaining_time:.2f}s Loss Percent: {(len(embeddings) - i)/(i+0.001)*100:.2f}% Time elapsed: {elapsed_time:.2f}s")
 
         return np.array(embeddings)
+
+    def test_embedding_methods(self, cards:list):
+        oracle_texts = [card.get("oracle_text", "") for card in cards]
+        
+        embeddings = []
+        oracle_text_embeddings = self.converter.embed_USE_oracle_texts(oracle_texts, clean_text=self.clean_text)
+        print(oracle_text_embeddings[0])
+        print(oracle_text_embeddings.shape)
+        for i, card in enumerate(cards):
+            oracle_text_embedding = np.array(oracle_text_embeddings[i]).reshape(1, -1)
+            embeddings.append(oracle_text_embedding)
+        print(np.array(embeddings).shape)
+
+        embeddings = []
+        oracle_text_embeddings = self.converter.embed_oracle_texts(oracle_texts, vector_size=self.vector_size, window=self.window, clean_text=self.clean_text)
+        print(oracle_text_embeddings[0])
+        print(oracle_text_embeddings.shape)
+        for i, card in enumerate(cards):
+            oracle_text_embedding = np.array(oracle_text_embeddings[i]).reshape(1, -1)
+            embeddings.append(oracle_text_embedding)
+        print(np.array(embeddings).shape)
+
+        embeddings = []
+        oracle_text_embeddings = self.converter.embed_phrased_oracle_texts(oracle_texts, min_count=self.min_count, threshold=self.threshold, npmi_scoring=self.npmi_scoring, clean_text=self.clean_text)
+        print(oracle_text_embeddings[0])
+        print(oracle_text_embeddings.shape)
+        for i, card in enumerate(cards):
+            oracle_text_embedding = np.array(oracle_text_embeddings[i]).reshape(1, -1)
+            embeddings.append(oracle_text_embedding)
+        print(np.array(embeddings).shape)
+        

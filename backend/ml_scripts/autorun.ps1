@@ -62,6 +62,7 @@ while (1 -eq 1) {
     $config.oracle_text_encoding_method = $encodingMethod
     $encodingOptions = $options.oracle_text_encoding.$encodingMethod
 
+    # HAS ISSUES HERE
     $encodingOptions.PSObject.Properties | ForEach-Object {
         $property = $_.Name
         $values = $_.Value

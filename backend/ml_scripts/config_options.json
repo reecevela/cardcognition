@@ -3,6 +3,9 @@
         "USE": {
             "clean_text": [true, false]
         },
+        "TFIDF": {
+            "freq_cutoff": [1, 2, 3, 4, 5, 10, 15, 20, 25, 50, 100]
+        },
         "W2V": {
             "clean_text": [true, false],
             "vector_size": [50, 100, 200, 300, 500, 1000],
@@ -17,7 +20,9 @@
                 "threshold": [0.3, 0.8, 1.1, 1.3, 1.8, 2.1, 2.5, 3, 4]
             },
             "clean_text": [true, false],
-            "min_count": [1, 2, 3, 4, 5, 10, 15, 20, 25, 50, 100]
+            "min_count": [1, 2, 3, 4, 5, 10, 15, 20, 25, 50, 100],
+            "vector_size": [50, 100, 200, 300, 500, 1000],
+            "window": [4, 6, 8, 10, 15, 20, 25, 50]
         }
     },
     "ml_model_properties": {

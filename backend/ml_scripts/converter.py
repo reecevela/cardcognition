@@ -1,8 +1,10 @@
 from gensim.models.phrases import Phrases
 from gensim.models import Word2Vec
+from gensim import corpora, models
 from tensorflow_hub import KerasLayer
 import re
 import numpy as np
+import json
 
 class MLConverter:
     def __init__(self):
@@ -57,6 +59,33 @@ class MLConverter:
                 output[i] = 1
         return output
     
+    def embed_tfidf_oracle_texts(self, oracle_texts:list, freq_cutoff:int=5) -> list:
+        tokens_list = []
+
+        temp_frequency = {}
+        for oracle_text in oracle_texts:
+            tokens = self.remove_common_words_to_list(oracle_text)
+            tokens_list.append(tokens)
+            for token in tokens:
+                temp_frequency[token] = temp_frequency.get(token, 0) + 1
+            
+        tokens_list = [[word for word in token if temp_frequency[word] > 1] for token in tokens_list]
+
+        dictionary = corpora.Dictionary(tokens_list)
+        dictionary.filter_tokens(bad_ids=[tokenid for tokenid, docfreq in dictionary.dfs.items() if docfreq < freq_cutoff])
+        dictionary.compactify()
+        corpora.Dictionary.save(dictionary, "gensim_dictionary.dict")
+
+        corpus = [dictionary.doc2bow(token) for token in tokens_list]
+        corpora.MmCorpus.serialize("gensim_corpus.mm", corpus)
+
+        tfidf = models.TfidfModel(corpus)
+        corpus_tfidf = tfidf[corpus]
+        corpora.MmCorpus.serialize("gensim_corpus_tfidf.mm", corpus_tfidf)
+
+        return corpus_tfidf
+
+    
     def embed_USE_oracle_texts(self, oracle_texts:list, clean_text:bool=False) -> list:
         oracle_texts = [text if text else "" for text in oracle_texts]
         if clean_text:
@@ -80,7 +109,7 @@ class MLConverter:
                 embeddings.append(np.zeros((1, model.vector_size)))
         return embeddings
 
-    def embed_phrased_oracle_texts(self, oracle_texts:list, min_count:int = 1, threshold:int = 1, npmi_scoring:bool = False, clean_text:bool=False) -> list:
+    def embed_phrased_oracle_texts(self, oracle_texts:list, vector_size:int, min_count:int = 1, threshold:int = 1, npmi_scoring:bool = False, clean_text:bool=False, window:int=5) -> np.array:
         tokenized_oracle_texts = []
         if clean_text:
             oracle_texts = self._clean_texts(oracle_texts)
@@ -90,11 +119,22 @@ class MLConverter:
         if npmi_scoring:
             phrase_model = Phrases(tokenized_oracle_texts, min_count=min_count, threshold=threshold, scoring='npmi')
         else:
-            phrase_model = Phrases(tokenized_oracle_texts, min_count=min_count, threshold=threshold)           
+            phrase_model = Phrases(tokenized_oracle_texts, min_count=min_count, threshold=threshold)
+        
+        phrased_texts = [phrase_model[oracle_text] for oracle_text in tokenized_oracle_texts]
+        
+        word2vec_model = Word2Vec(phrased_texts, vector_size=vector_size, window=window)
+        
         embeddings = []
-        for oracle_text in tokenized_oracle_texts:
-            embeddings.append(phrase_model[oracle_text])
-        return embeddings
+        for text in phrased_texts:
+            vectors = [word2vec_model.wv[word] for word in text if word in word2vec_model.wv]
+            if vectors:
+                embeddings.append(np.mean(vectors, axis=0))
+            else:
+                embeddings.append(np.zeros(vector_size))
+
+        return np.array(embeddings)
+
             
     def _clean_texts(self, oracle_texts:list) -> list:
         output_texts = []
@@ -110,3 +150,41 @@ class MLConverter:
             oracle_text = oracle_text.replace(",", "").lower().replace("\n", " ")
             output_texts.append(oracle_text)
         return output_texts
+    
+    def remove_common_words_to_list(self, sentence:str) -> list:
+        with open("oracle_rm_list.json", "r") as f:
+            rm_json = json.load(f)
+
+        if not sentence:
+            return []
+        sentence = sentence.lower()
+
+        sentence = sentence.replace("{", " ").replace("}", " ")
+        
+        for char in rm_json["rm_chars"]:
+            sentence = sentence.replace(char, "")
+        
+        for original in rm_json["replacements"].keys():
+            replacement = rm_json["replacements"][original]
+            sentence = sentence.replace(original, replacement)
+        
+        # Deal with costs by splitting them up
+        # 3{4}{u}{u} => 3 4 u u
+
+        sentence = sentence.split()
+
+        output = []
+        for word in sentence:
+            if word[:4] == 'non-':
+                word = word[4:]
+            if word[:-2] == 'es' or word[:-2] == 'ed':
+                word = word[:-2]        
+            if word in rm_json["rm_words"]:
+                continue
+            # if word in output:
+            #     continue
+            if word[:-1] == 's' and len(word) > 2 and word[len(word) - 3] not in ['a', 'e', 'i', 'o', 'u']:
+                word = word[:-1]
+            output.append(word)
+
+        return output

@@ -10,22 +10,13 @@ class CardsContext:
         self.BASE_DIR = Path(__file__).resolve().parent
         load_dotenv(os.path.join(self.BASE_DIR, '..\.env'))
 
-        # Database Configuration
-        self.db_config = {
-            'name': os.getenv('DB_NAME'),
-            'user': os.getenv('DB_USER'),
-            'password': os.getenv('DB_PASSWORD'),
-            'host': os.getenv('DB_HOST'),
-            'port': os.getenv('DB_PORT')
-        }
-
         # Connect to the database
         self.conn = psycopg2.connect(
-            dbname=self.db_config['name'],
-            user=self.db_config['user'],
-            password=self.db_config['password'],
-            host=self.db_config['host'],
-            port=self.db_config['port']
+            dbname=os.getenv('DB_NAME'),
+            user=os.getenv('DB_USER'),
+            password=os.getenv('DB_PASSWORD'),
+            host=os.getenv('DB_HOST'),
+            port=os.getenv('DB_PORT')
         )
         self.cur = self.conn.cursor()
 
