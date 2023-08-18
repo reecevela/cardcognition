@@ -3,6 +3,8 @@ from card_fetcher import CardsContext
 import json
 import os
 import datetime
+import warnings
+import time
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import SGDRegressor
@@ -10,6 +12,9 @@ import numpy as np
 
 with open('config.json', 'r') as f:
     config = json.load(f)
+warnings.filterwarnings("ignore")
+
+startTime = time.time()
 
 db = CardsContext()
 
@@ -72,33 +77,40 @@ for rel in rels:
             )
         )
 
+print(f"Relations: {len(rels)}")
+print(f"Time Elapsed: {time.time() - startTime}")
+
 embedder = CardEmbedder()
 embeddings = embedder.embed_cards(cards_raw, testing=False)
 
 for commander_name, commander_data in commanders.items():
-    print(commander_name, " ", commander_data['id'])
-    print(len(commander_data['cards']))
-    if commander_name not in commanders:
-        print(f"Skipping {commander_name} because it's not in the cards list")
-        continue
-    if len(commander_data['cards']) < 100:
-        print(f"Skipping {commander_name} because it has {len(commander_data['cards'])} cards")
-        continue
-    X = []
-    y = []
-    for card in commander_data['cards']:
-        print(card[0]['card_name'], card[1])
-        print(embeddings[card[0]['index']].shape)
-        if card:
-            X.append(embeddings[card[0]['index']])
-            y.append(card[1])
+    try:
+        # print(commander_name, " ", commander_data.get('id'))
+        # print(len(commander_data.get('cards', [])))
+        if commander_name not in commanders:
+            print(f"Skipping {commander_name} because it's not in the cards list")
+            continue
+        if len(commander_data.get('cards', 0)) < 100:
+            print(f"Skipping {commander_name} because it has {len(commander_data.get('cards', 0))} cards")
+            continue
+        X = []
+        y = []
+        for card in commander_data['cards']:
+            # print(card[0]['card_name'], card[1])
+            # print(embeddings[card[0].get('index')].shape)
+            if card and card[0].get('index', None) is not None:
+                X.append(embeddings[card[0]['index']])
+                y.append(card[1] / 100)
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-    commanders[commander_name]['model'] = SGDRegressor(penalty=config["penalty"], alpha=config["alpha"])
-    commanders[commander_name]['model'].fit(X_train, y_train)
-    commanders[commander_name]['score'] = commanders[commander_name]['model'].score(X_test, y_test)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+        commanders[commander_name]['model'] = SGDRegressor(penalty=config["penalty"], alpha=config["alpha"])
+        commanders[commander_name]['model'].fit(X_train, y_train)
+        commanders[commander_name]['score'] = commanders[commander_name]['model'].score(X_test, y_test)
 
-    print(f"Score for {commander_name}: {commanders[commander_name]['score']}")
+        print(f"Score for {commander_name}: {commanders[commander_name]['score']}")
+    except Exception as e:
+        continue
+        #print(f"Error for {commander_name}: {e}")
 
 with open("./validation_set.json", 'r') as file:
     validation_data = json.load(file)
@@ -115,7 +127,7 @@ for card in validation_data:
             print(f"Skipping {commander_name} because it's not in the dataset")
             continue
         commander = commanders[commander_name]
-        score = commander['model'].predict([card_embedding])[0]
+        score = round(commander['model'].predict([card_embedding])[0], 2) * 100
         card_predictions[commander_name] = score
 
     median = np.median(list(card_predictions.values()))
@@ -123,9 +135,15 @@ for card in validation_data:
     incorrect_list = []
     for commander_name in card_predictions:
         if card_predictions[commander_name] >= median:
-            correct_list.append((commander_name, card_predictions[commander_name]))
+            if commander_name in card['expected_high']:
+                correct_list.append((commander_name, card_predictions[commander_name]))
+            else:
+                incorrect_list.append((commander_name, card_predictions[commander_name]))
         else:
-            incorrect_list.append((commander_name, card_predictions[commander_name]))
+            if commander_name in card['expected_low']:
+                correct_list.append((commander_name, card_predictions[commander_name]))
+            else:
+                incorrect_list.append((commander_name, card_predictions[commander_name]))
     accuracy = len(correct_list) / (len(correct_list) + len(incorrect_list))
     print(f"Accuracy for {card['card_name']}: {accuracy}")
     print(f"Correct: {correct_list}")
@@ -133,6 +151,26 @@ for card in validation_data:
     analytics_data[card['card_name']]['accuracy'] = accuracy
     analytics_data[card['card_name']]['correct'] = correct_list
     analytics_data[card['card_name']]['incorrect'] = incorrect_list
+
+average_validation_accuracy = np.mean([analytics_data[card]['accuracy'] for card in analytics_data])
+print(f"Average validation accuracy: {average_validation_accuracy}")
+analytics_data['average_validation_accuracy'] = average_validation_accuracy
+
+commander_sum_score = 0
+count = 0
+for commander_name, commander_data in commanders.items():
+    try:
+        commander_sum_score += commander_data.get('score', 0)
+        count += 1
+    except Exception as e:
+        continue
+average_commander_score = commander_sum_score / count
+print(f"Average commander score: {average_commander_score}")
+analytics_data['average_commander_score'] = average_commander_score
+
+total_time_elapsed = time.time() - startTime
+print(f"Total time elapsed: {total_time_elapsed}")
+analytics_data['total_time_elapsed'] = total_time_elapsed
 
 if not os.path.exists("analytics"):
     os.makedirs("analytics")

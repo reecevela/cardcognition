@@ -1,0 +1,624 @@
+{
+    "Gronky the Gruul": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Gallia of the Endless Dance",
+                20.0
+            ],
+            [
+                "Grumgully, the Generous",
+                19.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Jodah, Archmage Eternal",
+                19.0
+            ],
+            [
+                "Klothys, God of Destiny",
+                19.0
+            ]
+        ]
+    },
+    "Gronky's Axe": {
+        "accuracy": 0.6666666666666666,
+        "correct": [
+            [
+                "Akiri, Line-Slinger",
+                25.0
+            ],
+            [
+                "Zirda, the Dawnwaker",
+                16.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Brago, King Eternal",
+                19.0
+            ]
+        ]
+    },
+    "Mono-White Formatbreaker": {
+        "accuracy": 0.25,
+        "correct": [
+            [
+                "Harbin, Vanguard Aviator",
+                32.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Ephara, God of the Polis",
+                22.0
+            ],
+            [
+                "Brago, King Eternal",
+                19.0
+            ],
+            [
+                "Mayael the Anima",
+                25.0
+            ]
+        ]
+    },
+    "Free Counterspell": {
+        "accuracy": 1.0,
+        "correct": [
+            [
+                "Baral, Chief of Compliance",
+                26.0
+            ],
+            [
+                "Kess, Dissident Mage",
+                26.0
+            ],
+            [
+                "Maelstrom Wanderer",
+                23.0
+            ],
+            [
+                "Riku of Two Reflections",
+                18.0
+            ]
+        ],
+        "incorrect": []
+    },
+    "Treasure Golem": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Prosper, Tome-Bound",
+                23.0
+            ],
+            [
+                "Queen Marchesa",
+                20.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Korvold, Fae-Cursed King",
+                20.0
+            ],
+            [
+                "Kess, Dissident Mage",
+                26.0
+            ]
+        ]
+    },
+    "Hypervigilance": {
+        "accuracy": 0.0,
+        "correct": [],
+        "incorrect": [
+            [
+                "Queen Marchesa",
+                20.0
+            ],
+            [
+                "Derevi, Empyrial Tactician",
+                19.0
+            ],
+            [
+                "Arcades, the Strategist",
+                26.0
+            ],
+            [
+                "Thalia, Guardian of Thraben",
+                25.0
+            ]
+        ]
+    },
+    "Nightside Ambush": {
+        "accuracy": 0.75,
+        "correct": [
+            [
+                "Kadena, Slinking Sorcerer",
+                36.0
+            ],
+            [
+                "Animar, Soul of Elements",
+                20.0
+            ],
+            [
+                "Muldrotha, the Gravetide",
+                20.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "The Mimeoplasm",
+                22.0
+            ]
+        ]
+    },
+    "Fungus Infestation": {
+        "accuracy": 1.0,
+        "correct": [
+            [
+                "Slimefoot, the Stowaway",
+                23.0
+            ],
+            [
+                "Mazirek, Kraul Death Priest",
+                24.0
+            ],
+            [
+                "Pharika, God of Affliction",
+                20.0
+            ],
+            [
+                "Rhys the Redeemed",
+                22.0
+            ]
+        ],
+        "incorrect": []
+    },
+    "Artificer's Awakening": {
+        "accuracy": 0.25,
+        "correct": [
+            [
+                "Brudiclad, Telchor Engineer",
+                21.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Breya, Etherium Shaper",
+                19.0
+            ],
+            [
+                "Kaheera, the Orphanguard",
+                20.0
+            ],
+            [
+                "Animar, Soul of Elements",
+                20.0
+            ]
+        ]
+    },
+    "Deep Wisdom": {
+        "accuracy": 0.0,
+        "correct": [],
+        "incorrect": [
+            [
+                "Prime Speaker Zegana",
+                18.0
+            ],
+            [
+                "Tanazir Quandrix",
+                19.0
+            ],
+            [
+                "Atraxa, Praetors' Voice",
+                20.0
+            ],
+            [
+                "Rashmi, Eternities Crafter",
+                22.0
+            ]
+        ]
+    },
+    "Forge Master's Hammer": {
+        "accuracy": 1.0,
+        "correct": [
+            [
+                "Daretti, Scrap Savant",
+                25.0
+            ],
+            [
+                "Feldon of the Third Path",
+                27.0
+            ],
+            [
+                "Zedruu the Greathearted",
+                21.0
+            ],
+            [
+                "Grenzo, Dungeon Warden",
+                22.0
+            ]
+        ],
+        "incorrect": []
+    },
+    "Carnival of Pain": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Rakdos, the Showstopper",
+                21.0
+            ],
+            [
+                "Shattergang Brothers",
+                17.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Mogis, God of Slaughter",
+                16.0
+            ],
+            [
+                "Prossh, Skyraider of Kher",
+                23.0
+            ]
+        ]
+    },
+    "Terra Shaper": {
+        "accuracy": 1.0,
+        "correct": [
+            [
+                "Omnath, Locus of Rage",
+                26.0
+            ],
+            [
+                "Titania, Protector of Argoth",
+                28.000000000000004
+            ],
+            [
+                "Prossh, Skyraider of Kher",
+                23.0
+            ],
+            [
+                "Meren of Clan Nel Toth",
+                23.0
+            ]
+        ],
+        "incorrect": []
+    },
+    "Penance Ritual": {
+        "accuracy": 1.0,
+        "correct": [
+            [
+                "Daxos the Returned",
+                21.0
+            ],
+            [
+                "Teysa, Orzhov Scion",
+                22.0
+            ],
+            [
+                "Atraxa, Praetors' Voice",
+                20.0
+            ],
+            [
+                "Aurelia, the Warleader",
+                17.0
+            ]
+        ],
+        "incorrect": []
+    },
+    "Diplomatic Immunity": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Zedruu the Greathearted",
+                21.0
+            ],
+            [
+                "Sen Triplets",
+                18.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Nekusar, the Mindrazer",
+                18.0
+            ],
+            [
+                "Grand Arbiter Augustin IV",
+                18.0
+            ]
+        ]
+    },
+    "Electromancer's Bolt": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Mizzix of the Izmagnus",
+                22.0
+            ],
+            [
+                "Kambal, Consul of Allocation",
+                21.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Melek, Izzet Paragon",
+                16.0
+            ],
+            [
+                "Jhoira, Weatherlight Captain",
+                24.0
+            ]
+        ]
+    },
+    "Spiritual Reckoning": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Karlov of the Ghost Council",
+                22.0
+            ],
+            [
+                "Tymna the Weaver",
+                19.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Ravos, Soultender",
+                20.0
+            ],
+            [
+                "Uril, the Miststalker",
+                33.0
+            ]
+        ]
+    },
+    "Shadow Strike": {
+        "accuracy": 0.75,
+        "correct": [
+            [
+                "Yuriko, the Tiger's Shadow",
+                31.0
+            ],
+            [
+                "Vela the Night-Clad",
+                20.0
+            ],
+            [
+                "Nekusar, the Mindrazer",
+                18.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Muldrotha, the Gravetide",
+                20.0
+            ]
+        ]
+    },
+    "Verdant Pulse": {
+        "accuracy": 1.0,
+        "correct": [
+            [
+                "Freyalise, Llanowar's Fury",
+                25.0
+            ],
+            [
+                "Yeva, Nature's Herald",
+                27.0
+            ],
+            [
+                "Omnath, Locus of Mana",
+                21.0
+            ],
+            [
+                "Tatyova, Benthic Druid",
+                20.0
+            ]
+        ],
+        "incorrect": []
+    },
+    "Harmony's Call": {
+        "accuracy": 0.0,
+        "correct": [],
+        "incorrect": [
+            [
+                "Rhys the Redeemed",
+                22.0
+            ],
+            [
+                "Trostani, Selesnya's Voice",
+                21.0
+            ],
+            [
+                "Xantcha, Sleeper Agent",
+                23.0
+            ],
+            [
+                "Selvala, Heart of the Wilds",
+                30.0
+            ]
+        ]
+    },
+    "Hellfire Emissary": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Tinybones, Trinket Thief",
+                28.000000000000004
+            ],
+            [
+                "Erebos, Bleak-Hearted",
+                19.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Nath of the Gilt-Leaf",
+                20.0
+            ],
+            [
+                "Anhelo, the Painter",
+                30.0
+            ]
+        ]
+    },
+    "Arcane Manipulator": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Mizzix of the Izmagnus",
+                22.0
+            ],
+            [
+                "Jodah, Archmage Eternal",
+                19.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Niv-Mizzet, Parun",
+                19.0
+            ],
+            [
+                "Animar, Soul of Elements",
+                20.0
+            ]
+        ]
+    },
+    "Vampiric Thirst": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Edgar Markov",
+                25.0
+            ],
+            [
+                "Anowon, the Ruin Sage",
+                24.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Olivia Voldaren",
+                18.0
+            ],
+            [
+                "Avacyn, Angel of Hope",
+                25.0
+            ]
+        ]
+    },
+    "Leonin Warcaller": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Arahbo, Roar of the World",
+                22.0
+            ],
+            [
+                "Anafenza, Kin-Tree Spirit",
+                21.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Mirri, Weatherlight Duelist",
+                17.0
+            ],
+            [
+                "Kemba, Kha Regent",
+                22.0
+            ]
+        ]
+    },
+    "Mechanized Assembly": {
+        "accuracy": 1.0,
+        "correct": [
+            [
+                "Urza, Lord High Artificer",
+                28.999999999999996
+            ],
+            [
+                "Memnarch",
+                19.0
+            ],
+            [
+                "Szadek, Lord of Secrets",
+                18.0
+            ],
+            [
+                "Kruphix, God of Horizons",
+                17.0
+            ]
+        ],
+        "incorrect": []
+    },
+    "Celestial Alignment": {
+        "accuracy": 1.0,
+        "correct": [
+            [
+                "Sythis, Harvest's Hand",
+                30.0
+            ],
+            [
+                "Tuvasa the Sunlit",
+                25.0
+            ],
+            [
+                "Raff Capashen, Ship's Mage",
+                18.0
+            ],
+            [
+                "Kemba, Kha Regent",
+                22.0
+            ]
+        ],
+        "incorrect": []
+    },
+    "Shadows of the Past": {
+        "accuracy": 0.5,
+        "correct": [
+            [
+                "Lazav, the Multifarious",
+                21.0
+            ],
+            [
+                "Circu, Dimir Lobotomist",
+                25.0
+            ]
+        ],
+        "incorrect": [
+            [
+                "Sydri, Galvanic Genius",
+                21.0
+            ],
+            [
+                "Purphoros, God of the Forge",
+                21.0
+            ]
+        ]
+    },
+    "average_validation_accuracy": 0.5987654320987653,
+    "average_commander_score": -0.028416500348817122,
+    "total_time_elapsed": 177.62420678138733,
+    "config": {
+        "min_count": 5,
+        "threshold": -0.95,
+        "npmi_scoring": true,
+        "batch_size": 65536,
+        "penalty": "l1",
+        "alpha": 0.0001,
+        "clean_text": true,
+        "oracle_text_encoding_method": "TFIDF",
+        "vector_size": 100,
+        "window": 5,
+        "freq_cutoff": 10
+    }
+}

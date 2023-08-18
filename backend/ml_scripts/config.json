@@ -9,5 +9,5 @@
     "oracle_text_encoding_method":  "TFIDF",
     "vector_size":  100,
     "window":  5,
-    "freq_cutoff":  5
+    "freq_cutoff":  10
 }

@@ -132,7 +132,7 @@ class CardEmbedder:
                     ), axis=1).reshape(-1)
                 if FINAL_EMBEDDING_SHAPE is None:
                     FINAL_EMBEDDING_SHAPE = final_embedding.shape
-                    print(colors.shape, oracle_text_embedding.shape, power.shape, toughness.shape, cmc.shape, super_type_embedding.shape, card_type_embedding.shape, sub_types_embedding.shape, final_embedding.shape)
+                    # print(colors.shape, oracle_text_embedding.shape, power.shape, toughness.shape, cmc.shape, super_type_embedding.shape, card_type_embedding.shape, sub_types_embedding.shape, final_embedding.shape)
                 embeddings.append(final_embedding)
             except Exception as e:
                 try:
@@ -145,12 +145,13 @@ class CardEmbedder:
                     print(e)
                     print(card)
 
-            if i % 1000 == 0:
+            if i % 1000 == 0 and i > 0:
                 elapsed_time = time.time() - start_time
                 progress = (i+1) / total_cards
                 remaining_time = elapsed_time * (1-progress) / progress
                 print(f"Progress: {progress*100:.2f}%, Time remaining: {remaining_time:.2f}s Loss Percent: {(len(embeddings) - i)/(i+0.001)*100:.2f}% Time elapsed: {elapsed_time:.2f}s")
-        print("Shape: ", np.array(embeddings).shape, " Cards embedded: ", len(embeddings))
+        if len(embeddings) > 100:
+            print("Shape: ", np.array(embeddings).shape, " Cards embedded: ", len(embeddings))
         return np.array(embeddings)
 
     def test_embedding_methods(self, cards:list):
