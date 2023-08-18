@@ -61,13 +61,15 @@ class CardsContext:
         return self.get_card_types_and_sub_types(self.get_all_cards())
     
     def get_card_types_and_sub_types(self, card_list:list):
+        super_types = set()
         card_types = set()
         sub_types = set()
         for row in card_list:
-            card_type, sub_types_list = self.converter.process_type_line(row['type_line'])
-            card_types.add(card_type)
-            sub_types.update(sub_types_list)
-        return list(card_types), list(sub_types)
+            type_dict = self.converter.process_type_line(row['type_line'])
+            super_types.update(set(type_dict.get('super_types', [])))
+            card_types.update(set(type_dict.get('card_types', [])))
+            sub_types.update(set(type_dict.get('sub_types', [])))
+        return list(super_types), list(card_types), list(sub_types)
 
     def get_card_by_id(self, card_id:int) -> dict:
         self.cur.execute("""
@@ -77,12 +79,46 @@ class CardsContext:
             ORDER BY id ASC
         """, (card_id,))
         return self.fetch_list_of_dicts(self.cur)[0]
+    
+    def get_card_ids_of_commanders(self) -> list:
+        self.cur.execute("""
+            SELECT ec.card_name, ec.card_id FROM edhrec_commanders ec
+            INNER JOIN scryfall_cards sc ON ec.card_id = sc.id
+            WHERE ec.card_name IS NOT NULL
+            AND ec.id IS NOT NULL
+            AND ec.card_id IS NOT NULL
+            AND sc.commander_legal = true
+            ORDER BY card_id ASC
+        """)
+        return [{'card_name': row[0], 'card_id': row[1]} for row in self.cur.fetchall()]
+    
+    def get_cards(self) -> list:
+        self.cur.execute("""
+            SELECT * FROM scryfall_cards
+            WHERE commander_legal = true
+            ORDER BY id ASC
+        """)
+        return self.fetch_list_of_dicts(self.cur)
+    
+    def get_cmd_pct_relations(self) -> list:
+        self.cur.execute("""
+            SELECT cmd.card_id AS cmd_card_id, ec.card_id AS ec_card_id, percentage, synergy_score
+            FROM edhrec_cards ec
+            INNER JOIN edhrec_commanders cmd ON ec.commander_id = cmd.id
+            INNER JOIN scryfall_cards sc1 ON ec.card_id = sc1.id
+            INNER JOIN scryfall_cards sc2 ON cmd.card_id = sc2.id
+            WHERE sc1.commander_legal = true AND sc2.commander_legal = true
+            GROUP BY cmd.card_id, ec.card_id, percentage, synergy_score
+            ORDER BY cmd.card_id ASC
+        """)
+        return [{'commander_id': row[0], 'card_id': row[1], 'percentage': row[2], 'synergy_score': row[3]} for row in self.cur.fetchall()]
+
 
     def get_commanders(self) -> list:
         self.cur.execute("""
-            SELECT * FROM scryfall_cards
+            SELECT  FROM scryfall_cards sc
             WHERE id IN (
-                SELECT card_id FROM edhrec_commanders
+                SELECT card_id FROM edhrec_commanders ec
             ) AND commander_legal = true
             ORDER BY id ASC
         """)

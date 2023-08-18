@@ -183,7 +183,7 @@ converter = CardEmbedder()
 # Iterate through validation data
 for card in validation_data:
     card_name = card['card_name']
-    card_embedding = converter.embed_cards([card]).reshape(-1)
+    card_embedding = converter.embed_cards([card], testing=True).reshape(-1)
     print(card_name)
     analytics_data[card_name] = {}
     predicted_synergy_scores = []
@@ -230,6 +230,8 @@ for card in validation_data:
     correct_list = []
     incorrect_list = []
     median_predicted_score = np.median([score for _, score in predicted_synergy_scores])
+    analytics_data[card_name]['expected_high'] = [commander_name for commander_name in card['expected_high']]
+    analytics_data[card_name]['expected_low'] = [commander_name for commander_name in card['expected_low']]
     for commander_name, predicted_score in predicted_synergy_scores:
         if commander_name in analytics_data[card_name]['expected_high']:
             if predicted_score >= median_predicted_score:

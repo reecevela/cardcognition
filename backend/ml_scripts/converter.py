@@ -2,9 +2,11 @@ from gensim.models.phrases import Phrases
 from gensim.models import Word2Vec
 from gensim import corpora, models
 from tensorflow_hub import KerasLayer
+from sklearn.decomposition import TruncatedSVD
 import re
 import numpy as np
 import json
+import os
 
 class MLConverter:
     def __init__(self):
@@ -13,17 +15,31 @@ class MLConverter:
     def calc_synergy_score(self, inclusion_rate, base_rate):
         return (inclusion_rate / base_rate if base_rate != 0 else inclusion_rate)
 
-    def process_type_line(self, type_line: str):
-        if type_line is None:
-            return None, []
+    def process_type_line(self, type_line: str)-> dict:
+        supertypes = ["Basic", "Legendary", "Ongoing", "Snow", "World"]
+        types = ["Artifact", "Creature", "Enchantment", "Instant", "Land", "Planeswalker", "Sorcery", "Tribal"]
+        separator = "—"
 
-        if ' — ' not in type_line:
-            return type_line, []
+        super_types = []
+        card_types = []
 
-        card_type, sub_types_str = type_line.split(' — ', 1)
-        sub_types_list = sub_types_str.split(' ')
+        if not type_line:
+            return {"super_types": super_types, "card_types": card_types, "sub_types": []}
 
-        return card_type, sub_types_list
+        # "Legendary Artifact Creature —  Elder Golem Warrior" might be an example
+        main_part, *sub_types_part = type_line.split(separator)
+        sub_types = sub_types_part[0].split() if sub_types_part else []
+
+        for s in supertypes:
+            if s in main_part:
+                super_types.append(s)
+                main_part = main_part.replace(s, "")
+        for t in types:
+            if t in main_part:
+                card_types.append(t)
+                main_part = main_part.replace(t, "")
+
+        return {"super_types": super_types, "card_types": card_types, "sub_types": sub_types}
     
     def encode_power_or_toughness(self, value: str)-> list:
         # Categories:
@@ -59,31 +75,52 @@ class MLConverter:
                 output[i] = 1
         return output
     
-    def embed_tfidf_oracle_texts(self, oracle_texts:list, freq_cutoff:int=5) -> list:
+    def embed_tfidf_oracle_texts(self, oracle_texts:list, freq_cutoff:int=3, embedding_size:int=100, testing:bool=False) -> list:
         tokens_list = []
 
-        temp_frequency = {}
-        for oracle_text in oracle_texts:
-            tokens = self.remove_common_words_to_list(oracle_text)
-            tokens_list.append(tokens)
-            for token in tokens:
-                temp_frequency[token] = temp_frequency.get(token, 0) + 1
-            
-        tokens_list = [[word for word in token if temp_frequency[word] > 1] for token in tokens_list]
+        if not testing:
+            # Preprocessing and tokenization
+            temp_frequency = {}
+            for oracle_text in oracle_texts:
+                tokens = self.remove_common_words_to_list(oracle_text)
+                tokens_list.append(tokens)
+                for token in tokens:
+                    temp_frequency[token] = temp_frequency.get(token, 0) + 1
 
-        dictionary = corpora.Dictionary(tokens_list)
-        dictionary.filter_tokens(bad_ids=[tokenid for tokenid, docfreq in dictionary.dfs.items() if docfreq < freq_cutoff])
-        dictionary.compactify()
-        corpora.Dictionary.save(dictionary, "gensim_dictionary.dict")
+            tokens_list = [[word for word in token if temp_frequency[word] > 1] for token in tokens_list]
 
-        corpus = [dictionary.doc2bow(token) for token in tokens_list]
-        corpora.MmCorpus.serialize("gensim_corpus.mm", corpus)
+            dictionary = corpora.Dictionary(tokens_list)
+            dictionary.filter_tokens(bad_ids=[tokenid for tokenid, docfreq in dictionary.dfs.items() if docfreq < freq_cutoff])
+            dictionary.compactify()
+            dictionary.save("gensim_dictionary.dict")
 
-        tfidf = models.TfidfModel(corpus)
-        corpus_tfidf = tfidf[corpus]
-        corpora.MmCorpus.serialize("gensim_corpus_tfidf.mm", corpus_tfidf)
+            corpus = [dictionary.doc2bow(token) for token in tokens_list]
+            corpora.MmCorpus.serialize("gensim_corpus.mm", corpus)
 
-        return corpus_tfidf
+            tfidf = models.TfidfModel(corpus)
+            corpus_tfidf = tfidf[corpus]
+            corpora.MmCorpus.serialize("gensim_corpus_tfidf.mm", corpus_tfidf)
+        else:
+            # Load pre-existing files
+            dictionary = corpora.Dictionary.load("gensim_dictionary.dict")
+            corpus = corpora.MmCorpus("gensim_corpus.mm")
+            tfidf = models.TfidfModel(corpus)
+            corpus_tfidf = tfidf[corpus]
+
+        max_size = max(max((id for id, _ in doc), default=-1) for doc in corpus_tfidf) + 1
+
+        embeddings = []
+        for doc in corpus_tfidf:
+            vec = [0] * max_size
+            for id, value in doc:
+                if id < max_size:
+                    vec[id] = value
+            embeddings.append(vec)
+        
+        svd = TruncatedSVD(n_components=embedding_size)
+        embeddings = svd.fit_transform(embeddings)
+
+        return embeddings
 
     
     def embed_USE_oracle_texts(self, oracle_texts:list, clean_text:bool=False) -> list:

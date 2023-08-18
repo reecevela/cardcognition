@@ -17,7 +17,7 @@ embedder = CardEmbedder()
 print("Embedding cards...")
 card_embeddings = embedder.embed_cards(cards)
 print("Embedding commanders...")
-commander_embeddings = embedder.embed_cards(commanders)
+commander_embeddings = embedder.embed_cards(commanders, testing=True) # Since they're already calculated in card embeddings
 
 print("Saving embeddings...")
 # Create and save mappings
