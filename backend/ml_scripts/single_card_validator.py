@@ -1,7 +1,6 @@
 from converter import MLConverter
 from card_fetcher import CardsContext
 from card_embedder import CardEmbedder
-
 import joblib
 import os
 import warnings
@@ -13,23 +12,22 @@ context = CardsContext()
 embedder = CardEmbedder()
 
 commander_names = [commander['card_name'] for commander in context.get_commanders() if os.path.exists(f"cmd_models/{converter.sanitize_filename(commander['card_name'])}.joblib")]
-average_scores = {commander_name: 0 for commander_name in commander_names}
-count_scores = {commander_name: 0 for commander_name in commander_names}
-
-print(commander_names[:10])
-
 cards = context.get_all_cards()
 cards = [
-    card for card in cards
+    card for card in cards[:100]
     if card['card_name'] is not None
     and card['type_line'] is not None
     and card['oracle_text'] is not None
     and '//' not in card['card_name'] 
     and '//' not in card['type_line'] 
 ]
-scores = {card['card_name']: [] for card in cards}
+# Initialize max and min score for each commander
+commander_score_bounds = {commander_name: {'min': float('inf'), 'max': float('-inf')} for commander_name in commander_names}
+raw_scores = {card['card_name']: {} for card in cards}
+
 embeddings = embedder.embed_cards(cards, testing=True)
 
+# Collect raw scores and update max and min for each commander
 for i, card in enumerate(cards):
     try:
         if i % 100 == 0:
@@ -41,28 +39,26 @@ for i, card in enumerate(cards):
             if os.path.exists(f"cmd_models/{commander_name}.joblib"):
                 file_cmd_name = converter.sanitize_filename(commander_name)
                 model = joblib.load(f"cmd_models/{file_cmd_name}.joblib")
-                score = model.predict([card_embedding])
-                average_scores[commander_name] += score
-                count_scores[commander_name] += 1
-                scores[card['card_name']].append((commander_name, score))
+                score = model.predict([card_embedding])[0]
+                raw_scores[card['card_name']][commander_name] = score
+                commander_score_bounds[commander_name]['min'] = min(commander_score_bounds[commander_name]['min'], score)
+                commander_score_bounds[commander_name]['max'] = max(commander_score_bounds[commander_name]['max'], score)
     except Exception as e:
         continue
 
-for commander_name in commander_names:
-    if count_scores[commander_name] > 0:
-        average_scores[commander_name] /= count_scores[commander_name]
+# Normalize the scores
+scores = {card['card_name']: [] for card in cards}
+for card_name, card_scores in raw_scores.items():
+    for commander_name, raw_score in card_scores.items():
+        min_score = commander_score_bounds[commander_name]['min']
+        max_score = commander_score_bounds[commander_name]['max']
+        normalized_score = (raw_score - min_score) / (max_score - min_score) if max_score != min_score else 0
+        scores[card_name].append((commander_name, normalized_score))
 
-# Normalize the scores for each card's commander, since some commanders produce higher scores for any given card
-for card in cards:
-    for i, score in enumerate(scores[card['card_name']]):
-        scores[card['card_name']][i] = (score[0], score[1] - average_scores[score[0]])
-    scores[card['card_name']].sort(key=lambda x: x[1], reverse=True)
-    print(f"{card['card_name']}: {[scores[card['card_name']][i][0] for i in range(10)]}")
-
-#'card_resulsts.txt'
 with open('card_results.txt', 'w') as f:
     for card_name, score_list in scores.items():
         f.write(f"{card_name}\n")
+        score_list.sort(key=lambda x: x[1], reverse=True)
         for score in score_list[:100]:
             f.write(f"\t'{score[0]}', --{score[1]}\n")
         f.write("\n")

@@ -18,7 +18,6 @@ import numpy as np
 with open('config.json', 'r') as f:
     config = json.load(f)
 warnings.filterwarnings("ignore")
-warnings.filterwarnings("no attribute")
 
 startTime = time.time()
 

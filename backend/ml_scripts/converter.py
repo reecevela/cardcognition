@@ -9,7 +9,8 @@ import json
 
 class MLConverter:
     def __init__(self):
-        self.text_embedder = KerasLayer("https://tfhub.dev/google/universal-sentence-encoder/4")
+        #self.text_embedder = KerasLayer("https://tfhub.dev/google/universal-sentence-encoder/4")
+        pass
 
     def calc_synergy_score(self, inclusion_rate, base_rate):
         return (inclusion_rate / base_rate if base_rate != 0 else inclusion_rate)
