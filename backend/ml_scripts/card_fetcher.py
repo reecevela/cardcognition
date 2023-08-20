@@ -116,7 +116,7 @@ class CardsContext:
 
     def get_commanders(self) -> list:
         self.cur.execute("""
-            SELECT  FROM scryfall_cards sc
+            SELECT * FROM scryfall_cards sc
             WHERE id IN (
                 SELECT card_id FROM edhrec_commanders ec
             ) AND commander_legal = true
@@ -142,6 +142,19 @@ class CardsContext:
             ORDER BY ec.card_id ASC;
         """, (commander_id,))
         return self.fetch_list_of_dicts(self.cur)
+    
+    def get_cmd_pct_relations_by_id(self, card_id:str) -> list:
+        self.cur.execute("""
+            SELECT cmd.card_id AS cmd_card_id, ec.card_id AS ec_card_id, percentage, synergy_score
+            FROM edhrec_cards ec
+            INNER JOIN edhrec_commanders cmd ON ec.commander_id = cmd.id
+            INNER JOIN scryfall_cards sc1 ON ec.card_id = sc1.id
+            INNER JOIN scryfall_cards sc2 ON cmd.card_id = sc2.id
+            WHERE sc1.commander_legal = true AND sc2.commander_legal = true
+            AND cmd.card_id = %s
+            GROUP BY cmd.card_id, ec.card_id, percentage, synergy_score
+        """, (card_id,))
+        return [{'commander_id': row[0], 'card_id': row[1], 'percentage': row[2], 'synergy_score': row[3]} for row in self.cur.fetchall()]
 
     def get_commander_frequencies_by_id(self, commander_id:int) -> list:
         self.cur.execute("""

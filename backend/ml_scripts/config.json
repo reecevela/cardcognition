@@ -4,12 +4,15 @@
     "npmi_scoring":  true,
     "batch_size":  65536,
     "penalty":  "l1",
-    "alpha":  0.00001,
+    "alpha":  0.001,
     "clean_text":  true,
     "oracle_text_encoding_method":  "TFIDF",
     "vector_size":  100,
     "window":  5,
     "freq_cutoff":  3,
-    "embedding_size": 50,
-    "activation": "relu"
+    "embedding_size": 30,
+    "remove_common_words":  false,
+    "activation": "relu",
+    "general_model": "MLPRegressor",
+    "notes": "Turning off the oracle rm words list for this run, going to make a larger oracle text window and lower alpha to see what happens"
 }

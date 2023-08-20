@@ -7,7 +7,7 @@ import time
 import json
 
 class CardEmbedder:
-    def __init__(self):
+    def __init__(self, config_options:dict=None):
         self.text_embedder = KerasLayer("https://tfhub.dev/google/universal-sentence-encoder/4")
         self.converter = MLConverter()
         self.context = CardsContext()
@@ -37,26 +37,26 @@ class CardEmbedder:
 
         with open("config.json", "r") as f:
             config = json.load(f)
+
+        self.min_count = config.get("min_count", 5)
+        self.threshold = config.get("threshold", 0.5)
+        self.npmi_scoring = config.get("npmi_scoring", True)
+        self.batch_size = config.get("batch_size", 65536)
+        self.penalty = config.get("penalty", "l1")
+        self.alpha = config.get("alpha", 0.001)
+        self.clean_text = config.get("clean_text", True)
+        self.oracle_text_encoding_method = config.get("oracle_text_encoding_method", "TFIDF")
+        self.vector_size = config.get("vector_size", 100)
+        self.window = config.get("window", 5)
+        self.freq_cutoff = config.get("freq_cutoff", 3)
+        self.embedding_size = config.get("embedding_size", 30)
+        self.remove_common_words = config.get("remove_common_words", False)
+        self.activation = config.get("activation", "relu")
         
-        for key in config:
-            if key == "oracle_text_encoding_method":
-                self.oracle_text_encoding_method = config[key]
-            elif key == "vector_size":
-                self.vector_size = config[key]
-            elif key == "window":
-                self.window = config[key]
-            elif key == "min_count":
-                self.min_count = config[key]
-            elif key == "threshold":
-                self.threshold = config[key]
-            elif key == "npmi_scoring":
-                self.npmi_scoring = config[key]
-            elif key == "clean_text":
-                self.clean_text = config[key]
-            elif key == "freq_cutoff":
-                self.freq_cutoff = config[key]
-            elif key == "embedding_size":
-                self.embedding_size = config[key]
+        # I wish I could do this with the config options, that was having some issues though
+        if config_options is not None:
+            for key in config_options:
+                self.key = config_options[key]
 
     def embed_cards(self, cards:list, testing=False) -> np.ndarray:
         oracle_texts = [card.get("oracle_text", "") for card in cards]
@@ -67,7 +67,7 @@ class CardEmbedder:
         if self.oracle_text_encoding_method == "USE":
             oracle_text_embeddings = self.converter.embed_USE_oracle_texts(oracle_texts, clean_text=self.clean_text)
         elif self.oracle_text_encoding_method == "TFIDF":
-            oracle_text_embeddings = self.converter.embed_tfidf_oracle_texts(oracle_texts, freq_cutoff=self.freq_cutoff, embedding_size=self.embedding_size, testing=testing)
+            oracle_text_embeddings = self.converter.embed_tfidf_oracle_texts(oracle_texts, freq_cutoff=self.freq_cutoff, embedding_size=self.embedding_size, testing=testing, remove_common_words=self.remove_common_words)
         elif self.oracle_text_encoding_method == "W2V":
             oracle_text_embeddings = self.converter.embed_oracle_texts(oracle_texts, vector_size=self.vector_size, window=self.window, clean_text=self.clean_text)
         elif self.oracle_text_encoding_method == "PHR":
@@ -97,17 +97,26 @@ class CardEmbedder:
                 sub_types_embedding = self.sub_types_encoder.transform(sub_types).sum(axis=0, keepdims=True)
 
 
-                final_embedding = np.concatenate(
-                    (
-                        colors, 
-                        oracle_text_embedding, 
-                        power, 
-                        toughness, 
-                        cmc, 
-                        super_type_embedding,
-                        card_type_embedding, 
-                        sub_types_embedding
-                    ), axis=1).reshape(-1)
+                final_embedding_components = []
+
+                if not getattr(self, "exclude_colors", False):
+                    final_embedding_components.append(colors)
+                if not getattr(self, "exclude_oracle_text", False):
+                    final_embedding_components.append(oracle_text_embedding)
+                if not getattr(self, "exclude_power", False):
+                    final_embedding_components.append(power)
+                if not getattr(self, "exclude_toughness", False):
+                    final_embedding_components.append(toughness)
+                if not getattr(self, "exclude_cmc", False):
+                    final_embedding_components.append(cmc)
+                if not getattr(self, "exclude_super_types", False):
+                    final_embedding_components.append(super_type_embedding)
+                if not getattr(self, "exclude_card_types", False):
+                    final_embedding_components.append(card_type_embedding)
+                if not getattr(self, "exclude_sub_types", False):
+                    final_embedding_components.append(sub_types_embedding)
+
+                final_embedding = np.concatenate(final_embedding_components, axis=1).reshape(-1)
                 if FINAL_EMBEDDING_SHAPE is None:
                     FINAL_EMBEDDING_SHAPE = final_embedding.shape
                     # print(colors.shape, oracle_text_embedding.shape, power.shape, toughness.shape, cmc.shape, super_type_embedding.shape, card_type_embedding.shape, sub_types_embedding.shape, final_embedding.shape)

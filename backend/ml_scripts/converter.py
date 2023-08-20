@@ -73,6 +73,12 @@ class MLConverter:
             if color in card_colors:
                 output[i] = 1
         return output
+
+    def sanitize_filename(self, filename):
+        filename = re.sub(r'[<>:"/\\|?*]', '_', filename)
+        filename = filename.replace(' ', '_')
+        filename = filename[:250]
+        return filename
     
     def embed_fasttext_oracle_texts(self, oracle_texts:list, freq_cutoff:int=3, embedding_size:int=100, window:int=5, testing:bool=False) -> list:
         embeddings = []
@@ -110,14 +116,17 @@ class MLConverter:
 
         return embeddings
     
-    def embed_tfidf_oracle_texts(self, oracle_texts:list, freq_cutoff:int=3, embedding_size:int=100, testing:bool=False) -> list:
+    def embed_tfidf_oracle_texts(self, oracle_texts:list, freq_cutoff:int=3, embedding_size:int=100, testing:bool=False, remove_common_words=True) -> list:
         tokens_list = []
 
         if not testing:
             # Preprocessing and tokenization
             temp_frequency = {}
             for oracle_text in oracle_texts:
-                tokens = self.remove_common_words_to_list(oracle_text)
+                if remove_common_words:
+                    tokens = self.remove_common_words_to_list(oracle_text)
+                else:
+                    tokens = self._clean_texts([oracle_text])
                 tokens_list.append(tokens)
                 for token in tokens:
                     temp_frequency[token] = temp_frequency.get(token, 0) + 1
