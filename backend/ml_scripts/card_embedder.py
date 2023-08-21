@@ -1,10 +1,12 @@
-from tensorflow_hub import KerasLayer
-import numpy as np
-from sklearn.preprocessing import OneHotEncoder, MultiLabelBinarizer
+from card_reducer import CardReducer
 from converter import MLConverter
 from card_fetcher import CardsContext
-import time
+from card_parser import CardParser
 import json
+import time
+import numpy as np
+from tensorflow_hub import KerasLayer
+from sklearn.preprocessing import MultiLabelBinarizer
 
 class CardEmbedder:
     def __init__(self, config_options:dict=None):

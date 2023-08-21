@@ -1,84 +1,57 @@
 [
   {
-    "name": "Pyroblast",
+    "name": "Vivien's Invocation",
     "abilities": [],
     "effects": [
       [
         "CAST",
-        "Choose one \u2014"
-      ],
-      [
-        "CAST",
-        "\u2022 Counter target spell if it's blue."
-      ],
-      [
-        "CAST",
-        "\u2022 Destroy target permanent if it's blue."
+        "Look at the top seven cards of your library. You may put a creature card from among them onto the battlefield. Put the rest on the bottom of your library in a random order. When a creature is put onto the battlefield this way, it deals damage equal to its power to target creature an opponent controls."
       ]
     ],
     "properties": [
+      "creatures_matter",
+      "green",
       "spell",
-      "red",
-      "cmc:1",
-      "counterspells",
-      "Instant"
+      "Sorcery",
+      "cmc:7"
     ]
   },
   {
-    "name": "Trailblazing Historian",
+    "name": "Kalemne's Captain",
     "abilities": [
       [
         [
-          "{T}"
+          "{5}",
+          "{W}",
+          "{W}"
         ],
         [
-          "Another target creature gains haste until end of turn"
+          "Monstrosity 3"
         ]
       ]
     ],
     "effects": [
-      "Haste"
-    ],
-    "properties": [
-      "permanent",
-      "Human",
-      "Shaman",
-      "haste",
-      "red",
-      "1power",
-      "cmc:2",
-      "mid_toughness",
-      "Creature"
-    ]
-  },
-  {
-    "name": "Samut, Vizier of Naktamun",
-    "abilities": [],
-    "effects": [
-      "First strike",
       [
-        "a creature you control deals combat damage to a player, if that creature entered the battlefield this turn",
-        "draw a card"
+        "CARDNAME becomes monstrous",
+        "exile all artifacts and enchantments"
       ]
     ],
     "properties": [
-      "permanent",
-      "Human",
-      "cmc:3",
-      "Legendary",
-      "mid_toughness",
+      "cmc:5",
       "Creature",
-      "card_draw",
-      "Warrior",
-      "red",
-      "Cleric",
-      "2power",
-      "green",
-      "first strike"
+      "vigilance",
+      "Soldier",
+      "board_wipe",
+      "permanent",
+      "counters",
+      "high_power",
+      "white",
+      "Giant",
+      "high_toughness"
     ]
   },
   {
-    "name": "Talisman of Conviction",
+    "name": "Warped Landscape",
     "abilities": [
       [
         [
@@ -90,54 +63,92 @@
       ],
       [
         [
+          "{2}",
           "{T}"
         ],
         [
-          "Add {R} or {W}",
-          "CARDNAME deals 1 damage to you"
+          "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle"
         ]
       ]
     ],
     "effects": [],
     "properties": [
+      "Land",
       "permanent",
-      "cmc:2",
-      "Artifact",
-      "ramp"
+      "tap",
+      "lands_matter",
+      "ramp",
+      "cmc:0"
     ]
   },
   {
-    "name": "Sengir, the Dark Baron",
+    "name": "Black Sun's Twilight",
     "abilities": [],
     "effects": [
-      "Flying",
       [
-        "another creature dies",
-        "put two +1/+1 counters on CARDNAME"
-      ],
-      [
-        "another player loses the game",
-        "you gain life equal to that player's life total as the turn began"
+        "CAST",
+        "Up to one target creature gets -X/-X until end of turn. If X is 5 or more, return a creature card with mana value X or less from your graveyard to the battlefield tapped."
       ]
     ],
     "properties": [
-      "permanent",
-      "Legendary",
-      "Vampire",
-      "mid_toughness",
-      "counters",
-      "flying",
-      "Creature",
-      "life_gain",
-      "death",
-      "Noble",
       "black",
-      "cmc:6",
-      "mid_power"
+      "cmc:1",
+      "creatures_matter",
+      "spell",
+      "Instant",
+      "tap",
+      "recursion"
     ]
   },
   {
-    "name": "Return of the Wildspeaker",
+    "name": "Crypt Rats",
+    "abilities": [
+      [
+        [
+          "{X}"
+        ],
+        [
+          "CARDNAME deals X damage to each creature and each player",
+          "Spend only black mana on X"
+        ]
+      ]
+    ],
+    "effects": [],
+    "properties": [
+      "black",
+      "cmc:3",
+      "Creature",
+      "board_wipe",
+      "permanent",
+      "1power",
+      "Rat",
+      "1toughness"
+    ]
+  },
+  {
+    "name": "Siren of the Fanged Coast",
+    "abilities": [],
+    "effects": [
+      [
+        "CARDNAME enters the battlefield, if tribute wasn't paid",
+        "gain control of target creature"
+      ]
+    ],
+    "properties": [
+      "control_effect",
+      "cmc:5",
+      "Creature",
+      "permanent",
+      "flying",
+      "counters",
+      "1power",
+      "blue",
+      "1toughness",
+      "Siren"
+    ]
+  },
+  {
+    "name": "Brotherhood's End",
     "abilities": [],
     "effects": [
       [
@@ -146,100 +157,82 @@
       ],
       [
         "CAST",
-        "\u2022 Draw cards equal to the greatest power among non-Human creatures you control."
+        "\u2022 CARDNAME deals 3 damage to each creature and each planeswalker."
       ],
       [
         "CAST",
-        "\u2022 Non-Human creatures you control get +3/+3 until end of turn."
+        "\u2022 Destroy all artifacts with mana value 3 or less."
       ]
     ],
     "properties": [
-      "card_draw",
+      "cmc:3",
       "spell",
-      "Instant",
-      "green",
-      "cmc:5"
+      "board_wipe",
+      "Sorcery",
+      "red"
     ]
   },
   {
-    "name": "Frostboil Snarl",
-    "abilities": [
+    "name": "Research Thief",
+    "abilities": [],
+    "effects": [
       [
-        [
-          "{T}"
-        ],
-        [
-          "Add {U} or {R}"
-        ]
+        "an artifact creature you control deals combat damage to a player",
+        "draw a card"
       ]
     ],
+    "properties": [
+      "artifacts_matter",
+      "cmc:5",
+      "Creature",
+      "permanent",
+      "flash",
+      "Moonfolk",
+      "mid_power",
+      "blue",
+      "card_advantage",
+      "Wizard",
+      "Artifact",
+      "card_draw",
+      "mid_toughness",
+      "aggressive_combat"
+    ]
+  },
+  {
+    "name": "Dream Twist",
+    "abilities": [],
+    "effects": [
+      [
+        "CAST",
+        "Target player mills three cards."
+      ],
+      [
+        "CAST",
+        "Flashback {1}{U}"
+      ]
+    ],
+    "properties": [
+      "cmc:1",
+      "milling",
+      "spell",
+      "Instant",
+      "graveyard_castable",
+      "blue"
+    ]
+  },
+  {
+    "name": "Simian Grunts",
+    "abilities": [],
     "effects": [],
     "properties": [
-      "cmc:0",
-      "ramp",
-      "Land",
-      "permanent"
-    ]
-  },
-  {
-    "name": "Siren's Call",
-    "abilities": [],
-    "effects": [
-      [
-        "CAST",
-        "Cast this spell only during an opponent's turn, before attackers are declared."
-      ],
-      [
-        "CAST",
-        "Creatures the active player controls attack this turn if able."
-      ],
-      [
-        "CAST",
-        "At the beginning of the next end step, destroy all non-Wall creatures that player controls that didn't attack this turn. Ignore this effect for each creature the player didn't control continuously since the beginning of the turn."
-      ]
-    ],
-    "properties": [
-      "spell",
-      "cmc:1",
-      "Instant",
-      "blue",
-      "board_wipe"
-    ]
-  },
-  {
-    "name": "Hokori, Dust Drinker",
-    "abilities": [],
-    "effects": [
-      [
-        "OPT",
-        "that player untaps a land they control"
-      ]
-    ],
-    "properties": [
+      "Ape",
+      "cmc:3",
+      "green",
+      "Creature",
       "permanent",
-      "2toughness",
-      "Spirit",
-      "cmc:4",
-      "Legendary",
-      "2power",
-      "white",
-      "Creature"
-    ]
-  },
-  {
-    "name": "Cleaver Riot",
-    "abilities": [],
-    "effects": [
-      [
-        "CAST",
-        "Creatures you control gain double strike until end of turn."
-      ]
-    ],
-    "properties": [
-      "Sorcery",
-      "cmc:5",
-      "red",
-      "spell"
+      "flash",
+      "mid_toughness",
+      "mid_power"
     ]
   }
 ]
