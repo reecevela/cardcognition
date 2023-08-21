@@ -1,0 +1,245 @@
+[
+  {
+    "name": "Pyroblast",
+    "abilities": [],
+    "effects": [
+      [
+        "CAST",
+        "Choose one \u2014"
+      ],
+      [
+        "CAST",
+        "\u2022 Counter target spell if it's blue."
+      ],
+      [
+        "CAST",
+        "\u2022 Destroy target permanent if it's blue."
+      ]
+    ],
+    "properties": [
+      "spell",
+      "red",
+      "cmc:1",
+      "counterspells",
+      "Instant"
+    ]
+  },
+  {
+    "name": "Trailblazing Historian",
+    "abilities": [
+      [
+        [
+          "{T}"
+        ],
+        [
+          "Another target creature gains haste until end of turn"
+        ]
+      ]
+    ],
+    "effects": [
+      "Haste"
+    ],
+    "properties": [
+      "permanent",
+      "Human",
+      "Shaman",
+      "haste",
+      "red",
+      "1power",
+      "cmc:2",
+      "mid_toughness",
+      "Creature"
+    ]
+  },
+  {
+    "name": "Samut, Vizier of Naktamun",
+    "abilities": [],
+    "effects": [
+      "First strike",
+      [
+        "a creature you control deals combat damage to a player, if that creature entered the battlefield this turn",
+        "draw a card"
+      ]
+    ],
+    "properties": [
+      "permanent",
+      "Human",
+      "cmc:3",
+      "Legendary",
+      "mid_toughness",
+      "Creature",
+      "card_draw",
+      "Warrior",
+      "red",
+      "Cleric",
+      "2power",
+      "green",
+      "first strike"
+    ]
+  },
+  {
+    "name": "Talisman of Conviction",
+    "abilities": [
+      [
+        [
+          "{T}"
+        ],
+        [
+          "Add {C}"
+        ]
+      ],
+      [
+        [
+          "{T}"
+        ],
+        [
+          "Add {R} or {W}",
+          "CARDNAME deals 1 damage to you"
+        ]
+      ]
+    ],
+    "effects": [],
+    "properties": [
+      "permanent",
+      "cmc:2",
+      "Artifact",
+      "ramp"
+    ]
+  },
+  {
+    "name": "Sengir, the Dark Baron",
+    "abilities": [],
+    "effects": [
+      "Flying",
+      [
+        "another creature dies",
+        "put two +1/+1 counters on CARDNAME"
+      ],
+      [
+        "another player loses the game",
+        "you gain life equal to that player's life total as the turn began"
+      ]
+    ],
+    "properties": [
+      "permanent",
+      "Legendary",
+      "Vampire",
+      "mid_toughness",
+      "counters",
+      "flying",
+      "Creature",
+      "life_gain",
+      "death",
+      "Noble",
+      "black",
+      "cmc:6",
+      "mid_power"
+    ]
+  },
+  {
+    "name": "Return of the Wildspeaker",
+    "abilities": [],
+    "effects": [
+      [
+        "CAST",
+        "Choose one \u2014"
+      ],
+      [
+        "CAST",
+        "\u2022 Draw cards equal to the greatest power among non-Human creatures you control."
+      ],
+      [
+        "CAST",
+        "\u2022 Non-Human creatures you control get +3/+3 until end of turn."
+      ]
+    ],
+    "properties": [
+      "card_draw",
+      "spell",
+      "Instant",
+      "green",
+      "cmc:5"
+    ]
+  },
+  {
+    "name": "Frostboil Snarl",
+    "abilities": [
+      [
+        [
+          "{T}"
+        ],
+        [
+          "Add {U} or {R}"
+        ]
+      ]
+    ],
+    "effects": [],
+    "properties": [
+      "cmc:0",
+      "ramp",
+      "Land",
+      "permanent"
+    ]
+  },
+  {
+    "name": "Siren's Call",
+    "abilities": [],
+    "effects": [
+      [
+        "CAST",
+        "Cast this spell only during an opponent's turn, before attackers are declared."
+      ],
+      [
+        "CAST",
+        "Creatures the active player controls attack this turn if able."
+      ],
+      [
+        "CAST",
+        "At the beginning of the next end step, destroy all non-Wall creatures that player controls that didn't attack this turn. Ignore this effect for each creature the player didn't control continuously since the beginning of the turn."
+      ]
+    ],
+    "properties": [
+      "spell",
+      "cmc:1",
+      "Instant",
+      "blue",
+      "board_wipe"
+    ]
+  },
+  {
+    "name": "Hokori, Dust Drinker",
+    "abilities": [],
+    "effects": [
+      [
+        "OPT",
+        "that player untaps a land they control"
+      ]
+    ],
+    "properties": [
+      "permanent",
+      "2toughness",
+      "Spirit",
+      "cmc:4",
+      "Legendary",
+      "2power",
+      "white",
+      "Creature"
+    ]
+  },
+  {
+    "name": "Cleaver Riot",
+    "abilities": [],
+    "effects": [
+      [
+        "CAST",
+        "Creatures you control gain double strike until end of turn."
+      ]
+    ],
+    "properties": [
+      "Sorcery",
+      "cmc:5",
+      "red",
+      "spell"
+    ]
+  }
+]
