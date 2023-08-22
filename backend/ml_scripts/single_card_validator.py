@@ -36,11 +36,18 @@ scores = {card['card_name']: dict() for card in cards}
 
 embeddings = embedder.embed_and_parse_cards(cards, testing=True)
 
-commander_name = converter.sanitize_filename('Urza, Lord High Artificer')
+commander_name = converter.sanitize_filename('Atraxa, Praetors\' Voice')
 commander_model = joblib.load(f"cmd_models/{commander_name}.joblib")
 cmd_scores = {card['card_name']: 0 for card in cards}
 
-cards = [card for card in cards if "W" not in card['color_identity'] and "B" not in card['color_identity'] and "R" not in card['color_identity'] and "G" not in card['color_identity']]
+disallowed_colors = [
+    #'W', 
+    #'U',
+    #'B', 
+    'R', 
+    #'G'
+]
+cards = [card for card in cards if not any([color in card['color_identity'] for color in disallowed_colors])]
 
 for i, card in enumerate(cards):
     try:

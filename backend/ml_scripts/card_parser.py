@@ -105,7 +105,7 @@ class CardParser:
             "tutor": ["land card", "forest card", "island card", "mountain card", "swamp card", "plains card", "basic land"],
             "planeswalkers_matter": ["trample", "or planeswalker"],
             "targeted_interaction": [["gets", "/-0"], "target opponent", "you control"],
-            "lands_matter": [["opponent", "equal to", "that player"], "exile target land", "destroy target land", "exile two target land", "that card is a land card", "destroy all"],
+            "lands_matter": [["opponent", "equal to", "that player"], "exile target land", "destroy target land", "exile two target land", "that card is a land card", "destroy all", "nonland"],
             "tap": ["untap"],
             "untap": ["doesn't untap", "stun counter", ["skip", "untap"]],
             "creatures_matter": ["noncreature"],
@@ -113,8 +113,9 @@ class CardParser:
             "pillowfort": ["This creature can't attack"],
             "extra_turn": ["skip"],
             "death": ["age counter"],
-            "card_advantage": ["draw a card."],
+            "card_advantage": ["draw a card.", "would draw"],
             "evasion": ["CARDNAME can't block"],
+            "artifacts_matter": ["nonartifact"],
         }
         self.initial_verbs = [
             "Search", "Choose", "Put", "Create", "Return", "Destroy", "Exile", "Sacrifice", "Discard", "Tap", "Untap", "Gain", "Lose", "Draw", "Shuffle", "Scry", "Reveal", "Counter", "You may", "Roll", "Each", "Target", "CARDNAME deals", "Return", "Add", "Each opponen"

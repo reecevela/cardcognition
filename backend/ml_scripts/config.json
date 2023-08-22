@@ -18,5 +18,6 @@
     "card_start": 0,
     "card_stop": 2000,
     "print_limit": 5,
-    "specific_commander": "Daretti, Scrap Savant"
+    "specific_commander": "Daretti, Scrap Savant",
+    "min_num_decks": 30
 }

@@ -1,6 +1,7 @@
 from pathlib import Path
 import psycopg2
 import os
+import json
 from dotenv import load_dotenv
 from converter import MLConverter
 
@@ -19,6 +20,9 @@ class CardsContext:
             port=os.getenv('DB_PORT')
         )
         self.cur = self.conn.cursor()
+
+        with open('config.json', 'r') as f:
+            self.config = json.load(f)
 
     # DB Columns and example data but in JSON format for readability:
     # edhrec_commanders table
@@ -108,9 +112,10 @@ class CardsContext:
             INNER JOIN scryfall_cards sc1 ON ec.card_id = sc1.id
             INNER JOIN scryfall_cards sc2 ON cmd.card_id = sc2.id
             WHERE sc1.commander_legal = true AND sc2.commander_legal = true
+            AND ec.num_decks > %s
             GROUP BY cmd.card_id, ec.card_id, percentage, synergy_score
             ORDER BY cmd.card_id ASC
-        """)
+        """, (self.config['min_num_decks'],))
         return [{'commander_id': row[0], 'card_id': row[1], 'percentage': row[2], 'synergy_score': row[3]} for row in self.cur.fetchall()]
 
 
