@@ -106,22 +106,16 @@ for commander_name, commander_data in commanders.items():
             continue
         X = []
         y = []
-        # highest_card_score = 0
-        # lowest_card_score = 100
-        # for card in commander_data['cards']:
-        #     if card and card[0].get('index', None) is not None:
-        #         if card[1] > highest_card_score:
-        #             highest_card_score = card[1]
-        #         if card[1] < lowest_card_score:
-        #             lowest_card_score = card[1]
+        highest_card_score = commander_data['highest_score']
+        lowest_card_score = commander_data['lowest_score']
         for card in commander_data['cards']:
             # print(card[0]['card_name'], card[1])
             # print(embeddings[card[0].get('index')].shape)
             if card and card[0].get('index', None) is not None:
                 X.append(embeddings[card[0]['index']])
                 # Normalizes the score, so some commanders aren't skewed to the top when ranked later
-                # y.append( card[1] - lowest_card_score / (highest_card_score - lowest_card_score) )
-                y.append(card[1] / 100)
+                y.append( card[1] - lowest_card_score / (highest_card_score - lowest_card_score) )
+                # y.append(card[1] / 100)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         commanders[commander_name]['model'] = SGDRegressor(penalty=config["penalty"], alpha=config["alpha"])
         commanders[commander_name]['model'].fit(X_train, y_train)
@@ -146,10 +140,14 @@ def generate_batches(batch_size, rels, embeddings, commander_name_map, card_name
             if commander_name and card_name:
                 commander_idx = commanders[commander_name]['index']
                 card_idx = cards[card_name]['index']
+                cmd_high = commanders[commander_name].get('highest_score', None)
+                cmd_low = commanders[commander_name].get('lowest_score', None)
+                if cmd_high is None or cmd_low is None:
+                    continue
                 commander_embedding = embeddings[commander_idx]
                 card_embedding = embeddings[card_idx]
                 X.append(np.concatenate((commander_embedding, card_embedding)).reshape(1, -1))
-                y.append(rel['percentage'] / 100)
+                y.append(rel['percentage'] - cmd_low / (cmd_high + 1 - cmd_low))
         X = np.vstack(X)
         yield X, np.array(y)
 

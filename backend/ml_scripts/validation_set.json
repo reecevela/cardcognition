@@ -125,6 +125,68 @@
     },
     {
         "test_commanders": [
+            "Erebos, Bleak-Hearted",
+            "Athreos, Shroud-Veiled",
+            "Kambal, Consul of Allocation",
+            "Karlov of the Ghost Council"
+        ],
+        "expected_high": [
+            "Erebos, Bleak-Hearted",
+            "Karlov of the Ghost Council"
+        ],
+        "expected_low": [
+            "Kambal, Consul of Allocation",
+            "Athreos, Shroud-Veiled"
+        ],
+        "id": 999903,
+        "card_name": "Pact of Desperation",
+        "mana_cost": "{1}{B}{B}",
+        "cmc": 3,
+        "type_line": "Enchantment",
+        "oracle_text": "Whenever a creature you control dies, you may pay 2 life. If you do, draw a card.",
+        "colors": [
+            "B"
+        ],
+        "color_identity": [
+            "B"
+        ],
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
+            "Riku of Two Reflections",
+            "Yidris, Maelstrom Wielder",
+            "Maelstrom Wanderer",
+            "Omnath, Locus of the Roil"
+        ],
+        "expected_high": [
+            "Riku of Two Reflections",
+            "Maelstrom Wanderer"
+        ],
+        "expected_low": [
+            "Omnath, Locus of the Roil",
+            "Yidris, Maelstrom Wielder"
+        ],
+        "id": 999904,
+        "card_name": "Chaos Unleashed",
+        "mana_cost": "{2}{U}{R}{G}",
+        "cmc": 5,
+        "type_line": "Sorcery",
+        "oracle_text": "Cascade, cascade.\nYou may cast an instant or sorcery spell this turn without paying its mana cost.",
+        "colors": [
+            "U",
+            "R",
+            "G"
+        ],
+        "color_identity": [
+            "U",
+            "R",
+            "G"
+        ],
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
             "Prosper, Tome-Bound",
             "Korvold, Fae-Cursed King",
             "Queen Marchesa",
@@ -146,6 +208,66 @@
         "oracle_text": "When CARDNAME enters the battlefield, you may sacrifice any number of Treasure tokens. If you do, put that many +1/+1 counters on CARDNAME.",
         "power": 3,
         "toughness": 3,
+        "colors": [
+            "B"
+        ],
+        "color_identity": [
+            "B"
+        ],
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
+            "Ezuri, Claw of Progress",
+            "Eutropia the Twice-Favored",
+            "Vorel of the Hull Clade",
+            "Aesi, Tyrant of Gyre Strait"
+        ],
+        "expected_high": [
+            "Ezuri, Claw of Progress",
+            "Vorel of the Hull Clade"
+        ],
+        "expected_low": [
+            "Eutropia the Twice-Favored",
+            "Aesi, Tyrant of Gyre Strait"
+        ],
+        "id": 999906,
+        "card_name": "Evolutionary Leap",
+        "mana_cost": "{1}{G}{U}",
+        "cmc": 3,
+        "type_line": "Enchantment",
+        "oracle_text": "Whenever one or more +1/+1 counters are placed on a creature you control, you may draw a card.",
+        "colors": [
+            "G",
+            "U"
+        ],
+        "color_identity": [
+            "G",
+            "U"
+        ],
+        "commander_legal": true
+    },
+    {
+        "test_commanders": [
+            "Ghoulcaller Gisa",
+            "Liliana, Heretical Healer",
+            "Zur, the Enchanter",
+            "Queen Marchesa"
+        ],
+        "expected_high": [
+            "Ghoulcaller Gisa",
+            "Liliana, Heretical Healer"
+        ],
+        "expected_low": [
+            "Queen Marchesa",
+            "Zur, the Enchanter"
+        ],
+        "id": 999907,
+        "card_name": "Necrotic Revival",
+        "mana_cost": "{3}{B}{B}",
+        "cmc": 5,
+        "type_line": "Sorcery",
+        "oracle_text": "Return up to two target creature cards from your graveyard to the battlefield. Each of them becomes a black Zombie in addition to its other colors and types.",
         "colors": [
             "B"
         ],

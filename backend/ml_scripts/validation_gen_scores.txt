@@ -1,0 +1,792 @@
+Gronky the Gruul
+	Brudiclad, Telchor Engineer: 40.65
+	Sydri, Galvanic Genius: 38.35
+	Muldrotha, the Gravetide: 37.94
+	Arcades, the Strategist: 37.89
+	Trostani, Selesnya's Voice: 37.74
+Gronky's Axe
+	Brudiclad, Telchor Engineer: 24.71
+	Arcades, the Strategist: 24.16
+	Muldrotha, the Gravetide: 23.52
+	Tanazir Quandrix: 22.59
+	Trostani, Selesnya's Voice: 22.21
+Mono-White Formatbreaker
+	Brudiclad, Telchor Engineer: 39.39
+	Jhoira, Weatherlight Captain: 35.71
+	Sydri, Galvanic Genius: 35.56
+	Lazav, the Multifarious: 35.16
+	Muldrotha, the Gravetide: 35.15
+Free Counterspell
+	Tanazir Quandrix: 24.59
+	Brudiclad, Telchor Engineer: 23.58
+	Uril, the Miststalker: 23.4
+	Muldrotha, the Gravetide: 23.25
+	Arahbo, Roar of the World: 23.21
+Pact of Desperation
+	Brudiclad, Telchor Engineer: 27.25
+	Arcades, the Strategist: 25.62
+	Muldrotha, the Gravetide: 25.59
+	Sydri, Galvanic Genius: 25.51
+	Lazav, the Multifarious: 25.32
+Chaos Unleashed
+	Brudiclad, Telchor Engineer: 26.39
+	Tanazir Quandrix: 25.63
+	Muldrotha, the Gravetide: 24.82
+	Arahbo, Roar of the World: 24.66
+	Omnath, Locus of the Roil: 24.16
+Treasure Golem
+	Brudiclad, Telchor Engineer: 36.02
+	Trostani, Selesnya's Voice: 35.41
+	Sydri, Galvanic Genius: 35.3
+	Arcades, the Strategist: 35.16
+	Lazav, the Multifarious: 34.58
+Evolutionary Leap
+	Brudiclad, Telchor Engineer: 31.18
+	Muldrotha, the Gravetide: 29.94
+	Arcades, the Strategist: 29.26
+	Sydri, Galvanic Genius: 28.91
+	Arahbo, Roar of the World: 28.7
+Necrotic Revival
+	Brudiclad, Telchor Engineer: 22.51
+	Tanazir Quandrix: 20.08
+	Arahbo, Roar of the World: 19.32
+	Arcades, the Strategist: 19.16
+	Trostani, Selesnya's Voice: 19.12
+Hypervigilance
+	Arcades, the Strategist: 22.13
+	Brudiclad, Telchor Engineer: 21.91
+	Sythis, Harvest's Hand: 21.87
+	Mirri, Weatherlight Duelist: 21.63
+	Tanazir Quandrix: 21.6
+Nightside Ambush
+	Brudiclad, Telchor Engineer: 27.03
+	Muldrotha, the Gravetide: 23.83
+	Trostani, Selesnya's Voice: 22.85
+	Arahbo, Roar of the World: 22.68
+	Lazav, the Multifarious: 22.49
+Fungus Infestation
+	Brudiclad, Telchor Engineer: 28.15
+	Muldrotha, the Gravetide: 26.07
+	Arcades, the Strategist: 25.64
+	Lazav, the Multifarious: 25.58
+	Arahbo, Roar of the World: 25.21
+Artificer's Awakening
+	Brudiclad, Telchor Engineer: 27.51
+	Tanazir Quandrix: 26.35
+	Muldrotha, the Gravetide: 26.04
+	Arahbo, Roar of the World: 25.37
+	Atraxa, Praetors' Voice: 25.12
+Deep Wisdom
+	Brudiclad, Telchor Engineer: 30.83
+	Muldrotha, the Gravetide: 30.73
+	Arcades, the Strategist: 29.44
+	Arahbo, Roar of the World: 29.06
+	Breya, Etherium Shaper: 29.03
+Forge Master's Hammer
+	Brudiclad, Telchor Engineer: 25.42
+	Arcades, the Strategist: 24.69
+	Sydri, Galvanic Genius: 24.61
+	Tanazir Quandrix: 24.44
+	Muldrotha, the Gravetide: 23.73
+Carnival of Pain
+	Brudiclad, Telchor Engineer: 29.12
+	Muldrotha, the Gravetide: 27.39
+	Arcades, the Strategist: 26.88
+	Lazav, the Multifarious: 26.75
+	Sydri, Galvanic Genius: 26.69
+Terra Shaper
+	Brudiclad, Telchor Engineer: 40.78
+	Muldrotha, the Gravetide: 35.36
+	Sydri, Galvanic Genius: 34.97
+	Lazav, the Multifarious: 34.84
+	Jhoira, Weatherlight Captain: 34.48
+Penance Ritual
+	Brudiclad, Telchor Engineer: 24.52
+	Lazav, the Multifarious: 23.07
+	Muldrotha, the Gravetide: 22.87
+	Sydri, Galvanic Genius: 22.7
+	Sythis, Harvest's Hand: 22.62
+Diplomatic Immunity
+	Brudiclad, Telchor Engineer: 19.42
+	Mirri, Weatherlight Duelist: 19.22
+	Tanazir Quandrix: 19.06
+	Arcades, the Strategist: 19.02
+	Klothys, God of Destiny: 19.01
+Electromancer's Bolt
+	Lazav, the Multifarious: 31.85
+	Vorel of the Hull Clade: 31.27
+	Trostani, Selesnya's Voice: 30.96
+	Brudiclad, Telchor Engineer: 30.79
+	Muldrotha, the Gravetide: 30.73
+Spiritual Reckoning
+	Brudiclad, Telchor Engineer: 22.08
+	Tanazir Quandrix: 20.58
+	Uril, the Miststalker: 19.33
+	Arcades, the Strategist: 19.04
+	Trostani, Selesnya's Voice: 19.02
+Shadow Strike
+	Muldrotha, the Gravetide: 28.11
+	Brudiclad, Telchor Engineer: 27.73
+	Lazav, the Multifarious: 27.62
+	Trostani, Selesnya's Voice: 26.79
+	Arahbo, Roar of the World: 26.62
+Verdant Pulse
+	Brudiclad, Telchor Engineer: 26.9
+	Lazav, the Multifarious: 24.82
+	Muldrotha, the Gravetide: 22.94
+	Vorel of the Hull Clade: 22.78
+	Tanazir Quandrix: 22.59
+Harmony's Call
+	Brudiclad, Telchor Engineer: 27.85
+	Tanazir Quandrix: 22.9
+	Jhoira, Weatherlight Captain: 22.58
+	Muldrotha, the Gravetide: 22.12
+	Arcades, the Strategist: 21.74
+Hellfire Emissary
+	Brudiclad, Telchor Engineer: 41.09
+	Jhoira, Weatherlight Captain: 35.81
+	Muldrotha, the Gravetide: 35.62
+	Trostani, Selesnya's Voice: 35.56
+	Sydri, Galvanic Genius: 35.18
+Arcane Manipulator
+	Tanazir Quandrix: 24.37
+	Arcades, the Strategist: 23.21
+	Brudiclad, Telchor Engineer: 22.84
+	Omnath, Locus of the Roil: 22.81
+	Trostani, Selesnya's Voice: 22.13
+Vampiric Thirst
+	Brudiclad, Telchor Engineer: 23.72
+	Tanazir Quandrix: 21.34
+	Uril, the Miststalker: 19.93
+	Jhoira, Weatherlight Captain: 19.77
+	Muldrotha, the Gravetide: 19.47
+Leonin Warcaller
+	Brudiclad, Telchor Engineer: 41.01
+	Sydri, Galvanic Genius: 37.3
+	Muldrotha, the Gravetide: 37.13
+	Lazav, the Multifarious: 37.13
+	Feldon of the Third Path: 36.85
+Mechanized Assembly
+	Brudiclad, Telchor Engineer: 25.0
+	Tanazir Quandrix: 24.28
+	Arahbo, Roar of the World: 22.98
+	Muldrotha, the Gravetide: 22.9
+	Mirri, Weatherlight Duelist: 22.72
+Celestial Alignment
+	Brudiclad, Telchor Engineer: 24.84
+	Mirri, Weatherlight Duelist: 23.7
+	Muldrotha, the Gravetide: 23.55
+	Sydri, Galvanic Genius: 23.51
+	Lazav, the Multifarious: 23.2
+Shadows of the Past
+	Brudiclad, Telchor Engineer: 27.48
+	Uril, the Miststalker: 25.15
+	Muldrotha, the Gravetide: 25.07
+	Arahbo, Roar of the World: 25.02
+	Arcades, the Strategist: 24.94
+Brago, King Eternal
+	Terra Shaper: 32.95
+	Leonin Warcaller: 32.75
+	Hellfire Emissary: 32.57
+	Mono-White Formatbreaker: 32.5
+	Gronky the Gruul: 31.87
+Tatyova, Benthic Druid
+	Gronky the Gruul: 34.51
+	Mono-White Formatbreaker: 32.41
+	Treasure Golem: 31.71
+	Hellfire Emissary: 31.25
+	Leonin Warcaller: 31.14
+Vorel of the Hull Clade
+	Leonin Warcaller: 35.81
+	Gronky the Gruul: 35.42
+	Terra Shaper: 33.8
+	Mono-White Formatbreaker: 33.79
+	Treasure Golem: 33.27
+Grumgully, the Generous
+	Gronky the Gruul: 31.87
+	Leonin Warcaller: 31.01
+	Mono-White Formatbreaker: 29.15
+	Terra Shaper: 28.98
+	Hellfire Emissary: 28.68
+Anowon, the Ruin Sage
+	Leonin Warcaller: 33.18
+	Gronky the Gruul: 32.92
+	Hellfire Emissary: 32.35
+	Terra Shaper: 31.37
+	Mono-White Formatbreaker: 31.11
+Sen Triplets
+	Gronky the Gruul: 30.0
+	Mono-White Formatbreaker: 28.52
+	Hellfire Emissary: 27.56
+	Leonin Warcaller: 26.94
+	Treasure Golem: 26.2
+Kruphix, God of Horizons
+	Gronky the Gruul: 34.95
+	Leonin Warcaller: 33.13
+	Hellfire Emissary: 32.98
+	Treasure Golem: 32.53
+	Mono-White Formatbreaker: 32.25
+Erebos, Bleak-Hearted
+	Gronky the Gruul: 35.48
+	Leonin Warcaller: 32.48
+	Hellfire Emissary: 32.46
+	Treasure Golem: 32.11
+	Mono-White Formatbreaker: 31.7
+Szadek, Lord of Secrets
+	Gronky the Gruul: 30.96
+	Leonin Warcaller: 29.56
+	Hellfire Emissary: 28.42
+	Mono-White Formatbreaker: 27.82
+	Treasure Golem: 27.82
+Freyalise, Llanowar's Fury
+	Gronky the Gruul: 28.39
+	Treasure Golem: 27.32
+	Hellfire Emissary: 27.05
+	Leonin Warcaller: 26.82
+	Mono-White Formatbreaker: 26.73
+Feldon of the Third Path
+	Leonin Warcaller: 36.85
+	Gronky the Gruul: 34.72
+	Hellfire Emissary: 34.08
+	Mono-White Formatbreaker: 33.79
+	Terra Shaper: 33.04
+Gallia of the Endless Dance
+	Gronky the Gruul: 29.66
+	Leonin Warcaller: 29.4
+	Mono-White Formatbreaker: 29.06
+	Treasure Golem: 28.63
+	Hellfire Emissary: 27.88
+Purphoros, God of the Forge
+	Gronky the Gruul: 34.19
+	Leonin Warcaller: 33.04
+	Hellfire Emissary: 31.6
+	Treasure Golem: 30.74
+	Terra Shaper: 30.45
+Omnath, Locus of the Roil
+	Gronky the Gruul: 33.66
+	Leonin Warcaller: 32.2
+	Hellfire Emissary: 31.29
+	Terra Shaper: 30.75
+	Mono-White Formatbreaker: 30.71
+Pharika, God of Affliction
+	Gronky the Gruul: 33.55
+	Hellfire Emissary: 31.65
+	Treasure Golem: 31.53
+	Leonin Warcaller: 31.39
+	Mono-White Formatbreaker: 30.42
+Mirri, Weatherlight Duelist
+	Gronky the Gruul: 34.93
+	Leonin Warcaller: 32.66
+	Hellfire Emissary: 32.44
+	Treasure Golem: 31.24
+	Mono-White Formatbreaker: 30.66
+Muldrotha, the Gravetide
+	Gronky the Gruul: 37.94
+	Leonin Warcaller: 37.13
+	Hellfire Emissary: 35.62
+	Terra Shaper: 35.36
+	Mono-White Formatbreaker: 35.15
+Animar, Soul of Elements
+	Gronky the Gruul: 31.28
+	Hellfire Emissary: 28.95
+	Treasure Golem: 27.93
+	Mono-White Formatbreaker: 27.34
+	Electromancer's Bolt: 27.29
+Meren of Clan Nel Toth
+	Gronky the Gruul: 33.12
+	Mono-White Formatbreaker: 32.12
+	Leonin Warcaller: 31.49
+	Hellfire Emissary: 31.29
+	Treasure Golem: 31.13
+Jhoira, Weatherlight Captain
+	Leonin Warcaller: 36.59
+	Gronky the Gruul: 35.83
+	Hellfire Emissary: 35.81
+	Mono-White Formatbreaker: 35.71
+	Terra Shaper: 34.48
+Rashmi, Eternities Crafter
+	Gronky the Gruul: 29.59
+	Mono-White Formatbreaker: 29.16
+	Leonin Warcaller: 28.2
+	Terra Shaper: 27.71
+	Hellfire Emissary: 27.48
+Karlov of the Ghost Council
+	Gronky the Gruul: 33.66
+	Treasure Golem: 31.83
+	Leonin Warcaller: 30.83
+	Terra Shaper: 30.51
+	Hellfire Emissary: 30.34
+Rakdos, the Showstopper
+	Gronky the Gruul: 33.1
+	Treasure Golem: 31.31
+	Leonin Warcaller: 31.3
+	Hellfire Emissary: 30.94
+	Terra Shaper: 28.94
+Ephara, God of the Polis
+	Gronky the Gruul: 35.19
+	Leonin Warcaller: 32.65
+	Hellfire Emissary: 32.06
+	Treasure Golem: 31.75
+	Mono-White Formatbreaker: 31.21
+Grenzo, Dungeon Warden
+	Gronky the Gruul: 30.72
+	Leonin Warcaller: 30.4
+	Treasure Golem: 29.69
+	Mono-White Formatbreaker: 29.0
+	Terra Shaper: 27.66
+Sythis, Harvest's Hand
+	Gronky the Gruul: 36.17
+	Treasure Golem: 33.77
+	Leonin Warcaller: 33.06
+	Hellfire Emissary: 32.78
+	Mono-White Formatbreaker: 32.58
+Kemba, Kha Regent
+	Leonin Warcaller: 34.55
+	Gronky the Gruul: 34.17
+	Mono-White Formatbreaker: 33.23
+	Treasure Golem: 31.99
+	Hellfire Emissary: 31.96
+Grand Arbiter Augustin IV
+	Gronky the Gruul: 27.51
+	Hellfire Emissary: 25.86
+	Treasure Golem: 24.9
+	Mono-White Formatbreaker: 24.87
+	Leonin Warcaller: 24.36
+Athreos, Shroud-Veiled
+	Gronky the Gruul: 35.93
+	Hellfire Emissary: 34.96
+	Leonin Warcaller: 33.32
+	Terra Shaper: 33.02
+	Treasure Golem: 33.0
+Prossh, Skyraider of Kher
+	Gronky the Gruul: 31.79
+	Leonin Warcaller: 30.6
+	Treasure Golem: 29.99
+	Hellfire Emissary: 29.51
+	Terra Shaper: 29.48
+Prime Speaker Zegana
+	Gronky the Gruul: 33.36
+	Treasure Golem: 31.74
+	Electromancer's Bolt: 29.71
+	Mono-White Formatbreaker: 29.49
+	Leonin Warcaller: 29.4
+Teysa, Orzhov Scion
+	Gronky the Gruul: 34.79
+	Hellfire Emissary: 32.84
+	Leonin Warcaller: 32.57
+	Treasure Golem: 32.04
+	Terra Shaper: 31.29
+Slimefoot, the Stowaway
+	Gronky the Gruul: 36.24
+	Leonin Warcaller: 35.56
+	Hellfire Emissary: 34.18
+	Treasure Golem: 33.79
+	Terra Shaper: 33.73
+Akiri, Line-Slinger
+	Leonin Warcaller: 33.95
+	Gronky the Gruul: 33.86
+	Mono-White Formatbreaker: 32.64
+	Hellfire Emissary: 32.6
+	Treasure Golem: 31.14
+Vela the Night-Clad
+	Gronky the Gruul: 31.16
+	Hellfire Emissary: 29.27
+	Mono-White Formatbreaker: 29.19
+	Leonin Warcaller: 29.1
+	Terra Shaper: 27.54
+Tuvasa the Sunlit
+	Gronky the Gruul: 32.68
+	Treasure Golem: 30.52
+	Mono-White Formatbreaker: 29.78
+	Hellfire Emissary: 28.98
+	Leonin Warcaller: 28.38
+Kess, Dissident Mage
+	Gronky the Gruul: 31.82
+	Leonin Warcaller: 31.1
+	Mono-White Formatbreaker: 30.29
+	Hellfire Emissary: 28.76
+	Terra Shaper: 28.64
+Melek, Izzet Paragon
+	Gronky the Gruul: 31.97
+	Leonin Warcaller: 31.53
+	Mono-White Formatbreaker: 30.19
+	Hellfire Emissary: 29.95
+	Terra Shaper: 28.96
+Uril, the Miststalker
+	Gronky the Gruul: 35.72
+	Hellfire Emissary: 34.61
+	Treasure Golem: 33.0
+	Leonin Warcaller: 31.99
+	Terra Shaper: 30.68
+Olivia Voldaren
+	Gronky the Gruul: 30.5
+	Leonin Warcaller: 30.04
+	Mono-White Formatbreaker: 30.01
+	Hellfire Emissary: 28.81
+	Terra Shaper: 28.17
+Tinybones, Trinket Thief
+	Mono-White Formatbreaker: 32.19
+	Leonin Warcaller: 31.59
+	Gronky the Gruul: 31.25
+	Treasure Golem: 30.26
+	Terra Shaper: 27.73
+Tanazir Quandrix
+	Gronky the Gruul: 35.44
+	Leonin Warcaller: 33.77
+	Terra Shaper: 33.53
+	Hellfire Emissary: 33.44
+	Mono-White Formatbreaker: 32.53
+Ghoulcaller Gisa
+	Gronky the Gruul: 31.13
+	Leonin Warcaller: 30.32
+	Mono-White Formatbreaker: 29.73
+	Hellfire Emissary: 29.32
+	Terra Shaper: 29.15
+Avacyn, Angel of Hope
+	Gronky the Gruul: 32.15
+	Leonin Warcaller: 29.77
+	Hellfire Emissary: 29.24
+	Terra Shaper: 28.93
+	Treasure Golem: 28.43
+Trostani, Selesnya's Voice
+	Gronky the Gruul: 37.74
+	Hellfire Emissary: 35.56
+	Leonin Warcaller: 35.48
+	Treasure Golem: 35.41
+	Mono-White Formatbreaker: 32.6
+Mazirek, Kraul Death Priest
+	Gronky the Gruul: 32.11
+	Treasure Golem: 30.51
+	Mono-White Formatbreaker: 29.84
+	Hellfire Emissary: 29.69
+	Leonin Warcaller: 29.09
+Yeva, Nature's Herald
+	Gronky the Gruul: 30.75
+	Leonin Warcaller: 30.37
+	Mono-White Formatbreaker: 29.27
+	Hellfire Emissary: 29.16
+	Terra Shaper: 27.81
+Jodah, Archmage Eternal
+	Gronky the Gruul: 32.93
+	Leonin Warcaller: 31.1
+	Mono-White Formatbreaker: 30.02
+	Hellfire Emissary: 29.27
+	Electromancer's Bolt: 29.07
+Arcades, the Strategist
+	Gronky the Gruul: 37.89
+	Leonin Warcaller: 35.46
+	Treasure Golem: 35.16
+	Hellfire Emissary: 35.15
+	Terra Shaper: 33.46
+Yidris, Maelstrom Wielder
+	Gronky the Gruul: 28.49
+	Electromancer's Bolt: 26.71
+	Mono-White Formatbreaker: 26.1
+	Terra Shaper: 25.86
+	Treasure Golem: 25.5
+Kaheera, the Orphanguard
+	Gronky the Gruul: 34.4
+	Leonin Warcaller: 34.39
+	Mono-White Formatbreaker: 32.86
+	Treasure Golem: 32.21
+	Hellfire Emissary: 32.13
+Baral, Chief of Compliance
+	Mono-White Formatbreaker: 24.67
+	Gronky the Gruul: 23.89
+	Hellfire Emissary: 21.75
+	Treasure Golem: 21.73
+	Leonin Warcaller: 21.26
+Mizzix of the Izmagnus
+	Gronky the Gruul: 26.53
+	Mono-White Formatbreaker: 25.3
+	Leonin Warcaller: 24.69
+	Hellfire Emissary: 24.25
+	Treasure Golem: 23.33
+Tymna the Weaver
+	Gronky the Gruul: 27.68
+	Mono-White Formatbreaker: 26.66
+	Leonin Warcaller: 26.29
+	Treasure Golem: 25.56
+	Hellfire Emissary: 25.03
+Urza, Lord High Artificer
+	Gronky the Gruul: 34.22
+	Mono-White Formatbreaker: 32.66
+	Treasure Golem: 32.39
+	Leonin Warcaller: 32.3
+	Hellfire Emissary: 30.87
+Xantcha, Sleeper Agent
+	Gronky the Gruul: 28.96
+	Leonin Warcaller: 28.04
+	Mono-White Formatbreaker: 27.77
+	Treasure Golem: 27.35
+	Hellfire Emissary: 25.76
+Harbin, Vanguard Aviator
+	Gronky the Gruul: 32.55
+	Hellfire Emissary: 30.0
+	Leonin Warcaller: 29.4
+	Mono-White Formatbreaker: 29.22
+	Treasure Golem: 28.14
+Thalia, Guardian of Thraben
+	Leonin Warcaller: 29.83
+	Gronky the Gruul: 29.77
+	Mono-White Formatbreaker: 29.77
+	Terra Shaper: 28.05
+	Hellfire Emissary: 27.8
+Aesi, Tyrant of Gyre Strait
+	Gronky the Gruul: 34.99
+	Hellfire Emissary: 32.45
+	Treasure Golem: 32.29
+	Leonin Warcaller: 31.58
+	Mono-White Formatbreaker: 30.32
+Zirda, the Dawnwaker
+	Leonin Warcaller: 26.55
+	Gronky the Gruul: 26.03
+	Mono-White Formatbreaker: 25.17
+	Hellfire Emissary: 24.72
+	Terra Shaper: 23.1
+Daxos the Returned
+	Gronky the Gruul: 30.98
+	Hellfire Emissary: 29.31
+	Leonin Warcaller: 28.79
+	Treasure Golem: 28.72
+	Mono-White Formatbreaker: 27.67
+Rhys the Redeemed
+	Gronky the Gruul: 28.69
+	Treasure Golem: 27.22
+	Leonin Warcaller: 26.85
+	Mono-White Formatbreaker: 26.34
+	Hellfire Emissary: 25.71
+Mogis, God of Slaughter
+	Gronky the Gruul: 33.33
+	Leonin Warcaller: 31.47
+	Hellfire Emissary: 30.93
+	Treasure Golem: 30.65
+	Mono-White Formatbreaker: 30.49
+Prosper, Tome-Bound
+	Mono-White Formatbreaker: 34.25
+	Leonin Warcaller: 34.24
+	Gronky the Gruul: 33.09
+	Terra Shaper: 32.45
+	Treasure Golem: 32.36
+Niv-Mizzet, Parun
+	Gronky the Gruul: 30.31
+	Leonin Warcaller: 28.18
+	Hellfire Emissary: 27.15
+	Treasure Golem: 26.56
+	Mono-White Formatbreaker: 25.86
+Anafenza, Kin-Tree Spirit
+	Gronky the Gruul: 31.29
+	Treasure Golem: 29.94
+	Hellfire Emissary: 28.72
+	Leonin Warcaller: 28.64
+	Mono-White Formatbreaker: 28.01
+Ravos, Soultender
+	Gronky the Gruul: 31.06
+	Leonin Warcaller: 29.02
+	Mono-White Formatbreaker: 28.85
+	Treasure Golem: 28.62
+	Hellfire Emissary: 28.18
+Yuriko, the Tiger's Shadow
+	Gronky the Gruul: 30.22
+	Leonin Warcaller: 28.31
+	Mono-White Formatbreaker: 27.87
+	Treasure Golem: 27.32
+	Hellfire Emissary: 27.28
+Kambal, Consul of Allocation
+	Gronky the Gruul: 31.93
+	Leonin Warcaller: 29.14
+	Hellfire Emissary: 28.81
+	Treasure Golem: 28.7
+	Mono-White Formatbreaker: 28.12
+Titania, Protector of Argoth
+	Gronky the Gruul: 31.71
+	Terra Shaper: 29.82
+	Hellfire Emissary: 29.56
+	Leonin Warcaller: 28.66
+	Treasure Golem: 28.61
+Ezuri, Claw of Progress
+	Gronky the Gruul: 33.39
+	Mono-White Formatbreaker: 31.32
+	Hellfire Emissary: 30.86
+	Leonin Warcaller: 30.39
+	Treasure Golem: 29.75
+Lazav, the Multifarious
+	Leonin Warcaller: 37.13
+	Gronky the Gruul: 37.01
+	Mono-White Formatbreaker: 35.16
+	Hellfire Emissary: 34.93
+	Terra Shaper: 34.84
+Klothys, God of Destiny
+	Gronky the Gruul: 33.91
+	Hellfire Emissary: 31.59
+	Treasure Golem: 31.47
+	Leonin Warcaller: 31.21
+	Mono-White Formatbreaker: 30.84
+Omnath, Locus of Mana
+	Gronky the Gruul: 33.17
+	Leonin Warcaller: 32.89
+	Terra Shaper: 31.15
+	Hellfire Emissary: 31.03
+	Mono-White Formatbreaker: 30.69
+Anhelo, the Painter
+	Gronky the Gruul: 31.7
+	Mono-White Formatbreaker: 31.44
+	Leonin Warcaller: 31.13
+	Treasure Golem: 29.03
+	Hellfire Emissary: 28.72
+Arahbo, Roar of the World
+	Gronky the Gruul: 36.66
+	Hellfire Emissary: 34.8
+	Leonin Warcaller: 34.17
+	Treasure Golem: 33.48
+	Terra Shaper: 32.77
+Eutropia the Twice-Favored
+	Gronky the Gruul: 28.98
+	Leonin Warcaller: 26.8
+	Mono-White Formatbreaker: 26.78
+	Treasure Golem: 26.69
+	Hellfire Emissary: 25.56
+Circu, Dimir Lobotomist
+	Gronky the Gruul: 27.75
+	Mono-White Formatbreaker: 27.61
+	Leonin Warcaller: 26.58
+	Hellfire Emissary: 24.86
+	Treasure Golem: 24.69
+Nekusar, the Mindrazer
+	Gronky the Gruul: 28.26
+	Mono-White Formatbreaker: 25.67
+	Hellfire Emissary: 25.59
+	Leonin Warcaller: 25.5
+	Treasure Golem: 25.49
+Queen Marchesa
+	Leonin Warcaller: 33.59
+	Gronky the Gruul: 33.24
+	Mono-White Formatbreaker: 32.13
+	Treasure Golem: 30.93
+	Terra Shaper: 30.48
+Omnath, Locus of Rage
+	Gronky the Gruul: 32.85
+	Hellfire Emissary: 30.95
+	Leonin Warcaller: 30.34
+	Terra Shaper: 30.01
+	Treasure Golem: 29.6
+Memnarch
+	Gronky the Gruul: 34.44
+	Mono-White Formatbreaker: 32.83
+	Leonin Warcaller: 32.41
+	Hellfire Emissary: 32.33
+	Terra Shaper: 30.99
+Derevi, Empyrial Tactician
+	Gronky the Gruul: 30.7
+	Treasure Golem: 28.52
+	Hellfire Emissary: 27.94
+	Electromancer's Bolt: 26.51
+	Leonin Warcaller: 26.19
+Aurelia, the Warleader
+	Gronky the Gruul: 31.6
+	Hellfire Emissary: 30.91
+	Leonin Warcaller: 30.49
+	Terra Shaper: 28.99
+	Mono-White Formatbreaker: 28.56
+Raff Capashen, Ship's Mage
+	Gronky the Gruul: 32.28
+	Leonin Warcaller: 30.25
+	Terra Shaper: 29.95
+	Mono-White Formatbreaker: 29.93
+	Hellfire Emissary: 29.48
+Korvold, Fae-Cursed King
+	Gronky the Gruul: 32.45
+	Leonin Warcaller: 31.47
+	Terra Shaper: 30.63
+	Hellfire Emissary: 30.42
+	Mono-White Formatbreaker: 30.23
+Atraxa, Praetors' Voice
+	Gronky the Gruul: 34.56
+	Terra Shaper: 33.31
+	Mono-White Formatbreaker: 33.24
+	Leonin Warcaller: 32.67
+	Hellfire Emissary: 31.89
+Maelstrom Wanderer
+	Gronky the Gruul: 33.39
+	Leonin Warcaller: 31.04
+	Hellfire Emissary: 30.53
+	Treasure Golem: 30.15
+	Electromancer's Bolt: 28.86
+Brudiclad, Telchor Engineer
+	Hellfire Emissary: 41.09
+	Leonin Warcaller: 41.01
+	Terra Shaper: 40.78
+	Gronky the Gruul: 40.65
+	Mono-White Formatbreaker: 39.39
+Selvala, Heart of the Wilds
+	Gronky the Gruul: 29.69
+	Leonin Warcaller: 28.82
+	Treasure Golem: 28.58
+	Mono-White Formatbreaker: 28.23
+	Terra Shaper: 27.01
+Edgar Markov
+	Gronky the Gruul: 30.76
+	Hellfire Emissary: 29.87
+	Leonin Warcaller: 28.43
+	Mono-White Formatbreaker: 27.12
+	Terra Shaper: 26.71
+Kadena, Slinking Sorcerer
+	Gronky the Gruul: 28.0
+	Mono-White Formatbreaker: 26.41
+	Leonin Warcaller: 25.89
+	Hellfire Emissary: 25.6
+	Treasure Golem: 25.55
+Sydri, Galvanic Genius
+	Gronky the Gruul: 38.35
+	Leonin Warcaller: 37.3
+	Mono-White Formatbreaker: 35.56
+	Treasure Golem: 35.3
+	Hellfire Emissary: 35.18
+Zedruu the Greathearted
+	Gronky the Gruul: 29.66
+	Leonin Warcaller: 26.64
+	Hellfire Emissary: 26.36
+	Treasure Golem: 25.0
+	Mono-White Formatbreaker: 24.19
+The Mimeoplasm
+	Gronky the Gruul: 31.62
+	Treasure Golem: 30.44
+	Hellfire Emissary: 29.27
+	Leonin Warcaller: 28.57
+	Mono-White Formatbreaker: 28.39
+Mayael the Anima
+	Gronky the Gruul: 30.71
+	Leonin Warcaller: 30.54
+	Hellfire Emissary: 29.36
+	Treasure Golem: 29.35
+	Mono-White Formatbreaker: 28.17
+Shattergang Brothers
+	Gronky the Gruul: 35.39
+	Leonin Warcaller: 34.79
+	Hellfire Emissary: 33.48
+	Mono-White Formatbreaker: 33.18
+	Terra Shaper: 32.86
+Nath of the Gilt-Leaf
+	Mono-White Formatbreaker: 27.49
+	Gronky the Gruul: 26.17
+	Leonin Warcaller: 25.09
+	Hellfire Emissary: 24.77
+	Treasure Golem: 24.04
+Breya, Etherium Shaper
+	Gronky the Gruul: 36.46
+	Leonin Warcaller: 34.17
+	Hellfire Emissary: 33.75
+	Treasure Golem: 32.2
+	Mono-White Formatbreaker: 32.04
+Daretti, Scrap Savant
+	Gronky the Gruul: 27.65
+	Hellfire Emissary: 26.34
+	Mono-White Formatbreaker: 25.9
+	Leonin Warcaller: 25.62
+	Treasure Golem: 24.87
+Riku of Two Reflections
+	Gronky the Gruul: 34.24
+	Leonin Warcaller: 32.77
+	Hellfire Emissary: 31.89
+	Treasure Golem: 31.19
+	Mono-White Formatbreaker: 30.82

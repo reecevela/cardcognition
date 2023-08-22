@@ -29,15 +29,39 @@ cards = [
     and card['oracle_text'] is not None
     and '//' not in card['card_name'] 
     and '//' not in card['type_line'] 
-][card_start:card_stop]
+]#[card_start:card_stop]
 
 commander_scores = {commander_name: {card['card_name']: 0 for card in cards} for commander_name in commander_names}
 scores = {card['card_name']: dict() for card in cards}
 
 embeddings = embedder.embed_and_parse_cards(cards, testing=True)
 
+commander_name = converter.sanitize_filename('Urza, Lord High Artificer')
+commander_model = joblib.load(f"cmd_models/{commander_name}.joblib")
+cmd_scores = {card['card_name']: 0 for card in cards}
+
+cards = [card for card in cards if "W" not in card['color_identity'] and "B" not in card['color_identity'] and "R" not in card['color_identity'] and "G" not in card['color_identity']]
+
+for i, card in enumerate(cards):
+    try:
+        if i % 1000 == 0:
+            print(f"Scoring {i} of {len(cards)}")
+        card_embedding = embeddings[i]
+        if card_embedding is None:
+            continue
+        score = round(commander_model.predict([card_embedding])[0], 2)
+        cmd_scores[card['card_name']] = score
+    except Exception as e:
+        continue
+
+with open('urza_scores.txt', 'w') as f:
+    for card_name, score in sorted(cmd_scores.items(), key=lambda x: x[1], reverse=True):
+        f.write(f"{card_name}: {score}\n")
+
+
 # Collect raw scores
 for i, card in enumerate(cards):
+    continue
     try:
         if i % 100 == 0:
             print(f"Scoring {i} of {len(cards)}")

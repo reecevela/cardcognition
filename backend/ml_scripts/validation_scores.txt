@@ -1,0 +1,792 @@
+Gronky the Gruul
+	Arahbo, Roar of the World: 61.14
+	Harbin, Vanguard Aviator: 48.81
+	Mazirek, Kraul Death Priest: 44.37
+	Thalia, Guardian of Thraben: 40.97
+	Feldon of the Third Path: 40.71
+Gronky's Axe
+	Anhelo, the Painter: 40.27
+	Uril, the Miststalker: 35.96
+	Meren of Clan Nel Toth: 31.02
+	Aesi, Tyrant of Gyre Strait: 30.92
+	Daretti, Scrap Savant: 28.88
+Mono-White Formatbreaker
+	Meren of Clan Nel Toth: 69.89
+	Selvala, Heart of the Wilds: 67.25
+	Nekusar, the Mindrazer: 62.13
+	Yeva, Nature's Herald: 57.15
+	Rakdos, the Showstopper: 53.37
+Free Counterspell
+	Feldon of the Third Path: 49.65
+	Prosper, Tome-Bound: 45.1
+	Kemba, Kha Regent: 43.48
+	Urza, Lord High Artificer: 37.85
+	Sythis, Harvest's Hand: 36.49
+Pact of Desperation
+	Tuvasa the Sunlit: 52.67
+	Omnath, Locus of Rage: 34.46
+	Uril, the Miststalker: 34.13
+	Daxos the Returned: 32.84
+	Arahbo, Roar of the World: 29.66
+Chaos Unleashed
+	Kemba, Kha Regent: 52.83
+	Prosper, Tome-Bound: 49.69
+	Arahbo, Roar of the World: 44.82
+	Feldon of the Third Path: 42.04
+	Urza, Lord High Artificer: 40.73
+Treasure Golem
+	Arahbo, Roar of the World: 54.19
+	Feldon of the Third Path: 48.62
+	Aesi, Tyrant of Gyre Strait: 47.99
+	Kadena, Slinking Sorcerer: 46.49
+	Mayael the Anima: 46.08
+Evolutionary Leap
+	Feldon of the Third Path: 43.88
+	Uril, the Miststalker: 42.29
+	Tuvasa the Sunlit: 39.31
+	Karlov of the Ghost Council: 39.27
+	Edgar Markov: 38.84
+Necrotic Revival
+	Daretti, Scrap Savant: 41.75
+	Arcades, the Strategist: 38.89
+	Selvala, Heart of the Wilds: 38.87
+	Kemba, Kha Regent: 33.55
+	Omnath, Locus of Rage: 31.0
+Hypervigilance
+	Tuvasa the Sunlit: 47.27
+	Daxos the Returned: 45.53
+	Anowon, the Ruin Sage: 38.05
+	Yidris, Maelstrom Wielder: 35.58
+	Edgar Markov: 34.97
+Nightside Ambush
+	Kadena, Slinking Sorcerer: 63.07
+	Kemba, Kha Regent: 52.66
+	Arahbo, Roar of the World: 47.18
+	Feldon of the Third Path: 42.57
+	Baral, Chief of Compliance: 41.0
+Fungus Infestation
+	Tuvasa the Sunlit: 55.52
+	Kadena, Slinking Sorcerer: 40.59
+	Avacyn, Angel of Hope: 38.32
+	Daxos the Returned: 36.37
+	Omnath, Locus of Rage: 34.26
+Artificer's Awakening
+	Kemba, Kha Regent: 49.69
+	Daretti, Scrap Savant: 48.48
+	Arahbo, Roar of the World: 41.67
+	Selvala, Heart of the Wilds: 35.84
+	Kaheera, the Orphanguard: 35.37
+Deep Wisdom
+	Daretti, Scrap Savant: 36.37
+	Kemba, Kha Regent: 35.45
+	Baral, Chief of Compliance: 35.36
+	Selvala, Heart of the Wilds: 34.93
+	Niv-Mizzet, Parun: 34.02
+Forge Master's Hammer
+	Kadena, Slinking Sorcerer: 41.91
+	Anhelo, the Painter: 41.18
+	Daretti, Scrap Savant: 37.39
+	Arahbo, Roar of the World: 34.15
+	Meren of Clan Nel Toth: 29.36
+Carnival of Pain
+	Tuvasa the Sunlit: 54.84
+	Arahbo, Roar of the World: 43.11
+	Daxos the Returned: 38.07
+	Freyalise, Llanowar's Fury: 37.44
+	Harbin, Vanguard Aviator: 37.17
+Terra Shaper
+	Arahbo, Roar of the World: 59.22
+	Thalia, Guardian of Thraben: 54.3
+	Harbin, Vanguard Aviator: 48.1
+	Kemba, Kha Regent: 47.5
+	Feldon of the Third Path: 46.25
+Penance Ritual
+	Tuvasa the Sunlit: 52.67
+	Kadena, Slinking Sorcerer: 51.95
+	Nekusar, the Mindrazer: 48.72
+	Daxos the Returned: 47.57
+	Omnath, Locus of Rage: 35.45
+Diplomatic Immunity
+	Kadena, Slinking Sorcerer: 57.67
+	Mogis, God of Slaughter: 40.73
+	Nekusar, the Mindrazer: 37.83
+	Zedruu the Greathearted: 37.68
+	Omnath, Locus of Rage: 37.4
+Electromancer's Bolt
+	Kemba, Kha Regent: 43.53
+	Baral, Chief of Compliance: 41.99
+	Arahbo, Roar of the World: 38.95
+	Prosper, Tome-Bound: 36.29
+	Selvala, Heart of the Wilds: 35.52
+Spiritual Reckoning
+	Selvala, Heart of the Wilds: 42.3
+	Nekusar, the Mindrazer: 39.19
+	Anhelo, the Painter: 37.1
+	Grenzo, Dungeon Warden: 31.61
+	Uril, the Miststalker: 31.48
+Shadow Strike
+	Baral, Chief of Compliance: 52.94
+	Kemba, Kha Regent: 43.13
+	Daretti, Scrap Savant: 40.27
+	Arahbo, Roar of the World: 35.09
+	Selvala, Heart of the Wilds: 34.71
+Verdant Pulse
+	Arcades, the Strategist: 42.55
+	Feldon of the Third Path: 40.29
+	Akiri, Line-Slinger: 38.82
+	Rashmi, Eternities Crafter: 34.91
+	Anowon, the Ruin Sage: 34.37
+Harmony's Call
+	Purphoros, God of the Forge: 44.17
+	Arcades, the Strategist: 44.11
+	Selvala, Heart of the Wilds: 43.13
+	Nekusar, the Mindrazer: 41.97
+	Anhelo, the Painter: 37.15
+Hellfire Emissary
+	Tinybones, Trinket Thief: 64.37
+	Feldon of the Third Path: 54.94
+	Edgar Markov: 51.36
+	Thalia, Guardian of Thraben: 51.19
+	Vorel of the Hull Clade: 48.86
+Arcane Manipulator
+	Arahbo, Roar of the World: 48.86
+	Anhelo, the Painter: 44.9
+	Teysa, Orzhov Scion: 35.67
+	Kemba, Kha Regent: 33.69
+	Harbin, Vanguard Aviator: 32.37
+Vampiric Thirst
+	Uril, the Miststalker: 34.33
+	Tuvasa the Sunlit: 33.14
+	Prosper, Tome-Bound: 32.32
+	Mirri, Weatherlight Duelist: 32.13
+	Yeva, Nature's Herald: 28.58
+Leonin Warcaller
+	Yeva, Nature's Herald: 59.15
+	Thalia, Guardian of Thraben: 56.01
+	Yuriko, the Tiger's Shadow: 51.6
+	Maelstrom Wanderer: 50.12
+	Ezuri, Claw of Progress: 44.97
+Mechanized Assembly
+	Kemba, Kha Regent: 43.02
+	Feldon of the Third Path: 42.69
+	Daretti, Scrap Savant: 37.0
+	Xantcha, Sleeper Agent: 36.84
+	Arcades, the Strategist: 36.43
+Celestial Alignment
+	Nekusar, the Mindrazer: 67.61
+	Yeva, Nature's Herald: 43.25
+	Selvala, Heart of the Wilds: 40.8
+	Tuvasa the Sunlit: 40.05
+	Mogis, God of Slaughter: 37.89
+Shadows of the Past
+	Harbin, Vanguard Aviator: 42.48
+	Feldon of the Third Path: 40.67
+	Tuvasa the Sunlit: 40.04
+	Titania, Protector of Argoth: 39.34
+	Uril, the Miststalker: 38.06
+Brago, King Eternal
+	Leonin Warcaller: 38.99
+	Hellfire Emissary: 36.91
+	Penance Ritual: 33.66
+	Shadow Strike: 29.61
+	Terra Shaper: 29.28
+Tatyova, Benthic Druid
+	Fungus Infestation: 27.98
+	Leonin Warcaller: 27.6
+	Evolutionary Leap: 27.5
+	Penance Ritual: 26.41
+	Carnival of Pain: 25.61
+Vorel of the Hull Clade
+	Hellfire Emissary: 48.86
+	Leonin Warcaller: 36.99
+	Mono-White Formatbreaker: 35.86
+	Terra Shaper: 28.62
+	Treasure Golem: 22.91
+Grumgully, the Generous
+	Treasure Golem: 29.23
+	Mechanized Assembly: 26.46
+	Mono-White Formatbreaker: 23.04
+	Shadows of the Past: 22.83
+	Artificer's Awakening: 21.53
+Anowon, the Ruin Sage
+	Mono-White Formatbreaker: 46.95
+	Hypervigilance: 38.05
+	Terra Shaper: 37.35
+	Leonin Warcaller: 35.57
+	Verdant Pulse: 34.37
+Sen Triplets
+	Gronky the Gruul: 35.08
+	Leonin Warcaller: 30.73
+	Terra Shaper: 27.61
+	Free Counterspell: 24.25
+	Gronky's Axe: 23.65
+Kruphix, God of Horizons
+	Leonin Warcaller: 32.8
+	Hypervigilance: 31.04
+	Terra Shaper: 30.76
+	Hellfire Emissary: 29.7
+	Penance Ritual: 25.51
+Erebos, Bleak-Hearted
+	Mono-White Formatbreaker: 45.03
+	Gronky the Gruul: 40.35
+	Deep Wisdom: 32.2
+	Evolutionary Leap: 31.98
+	Treasure Golem: 30.78
+Szadek, Lord of Secrets
+	Terra Shaper: 43.12
+	Leonin Warcaller: 35.74
+	Harmony's Call: 33.65
+	Shadows of the Past: 31.58
+	Nightside Ambush: 31.17
+Freyalise, Llanowar's Fury
+	Carnival of Pain: 37.44
+	Leonin Warcaller: 37.37
+	Evolutionary Leap: 36.27
+	Electromancer's Bolt: 34.21
+	Artificer's Awakening: 33.55
+Feldon of the Third Path
+	Hellfire Emissary: 54.94
+	Free Counterspell: 49.65
+	Treasure Golem: 48.62
+	Terra Shaper: 46.25
+	Leonin Warcaller: 43.91
+Gallia of the Endless Dance
+	Leonin Warcaller: 41.83
+	Terra Shaper: 40.33
+	Hellfire Emissary: 40.26
+	Gronky the Gruul: 38.2
+	Mono-White Formatbreaker: 36.05
+Purphoros, God of the Forge
+	Mono-White Formatbreaker: 50.15
+	Harmony's Call: 44.17
+	Leonin Warcaller: 40.61
+	Gronky the Gruul: 37.41
+	Treasure Golem: 36.16
+Omnath, Locus of the Roil
+	Hellfire Emissary: 45.05
+	Treasure Golem: 42.68
+	Mono-White Formatbreaker: 38.69
+	Gronky the Gruul: 33.01
+	Terra Shaper: 32.08
+Pharika, God of Affliction
+	Terra Shaper: 32.1
+	Carnival of Pain: 30.66
+	Mono-White Formatbreaker: 29.94
+	Chaos Unleashed: 25.18
+	Fungus Infestation: 23.69
+Mirri, Weatherlight Duelist
+	Treasure Golem: 39.22
+	Diplomatic Immunity: 36.75
+	Shadows of the Past: 34.67
+	Carnival of Pain: 33.03
+	Vampiric Thirst: 32.13
+Muldrotha, the Gravetide
+	Hellfire Emissary: 47.14
+	Gronky the Gruul: 40.7
+	Treasure Golem: 38.13
+	Mono-White Formatbreaker: 36.2
+	Terra Shaper: 31.68
+Animar, Soul of Elements
+	Leonin Warcaller: 42.53
+	Terra Shaper: 36.05
+	Mono-White Formatbreaker: 33.86
+	Gronky the Gruul: 32.75
+	Treasure Golem: 32.2
+Meren of Clan Nel Toth
+	Mono-White Formatbreaker: 69.89
+	Hellfire Emissary: 35.91
+	Treasure Golem: 35.25
+	Leonin Warcaller: 31.97
+	Gronky's Axe: 31.02
+Jhoira, Weatherlight Captain
+	Hellfire Emissary: 43.43
+	Celestial Alignment: 29.73
+	Terra Shaper: 28.55
+	Spiritual Reckoning: 26.03
+	Nightside Ambush: 25.83
+Rashmi, Eternities Crafter
+	Verdant Pulse: 34.91
+	Hellfire Emissary: 28.92
+	Mono-White Formatbreaker: 28.1
+	Nightside Ambush: 26.98
+	Electromancer's Bolt: 26.55
+Karlov of the Ghost Council
+	Evolutionary Leap: 39.27
+	Hellfire Emissary: 33.73
+	Chaos Unleashed: 32.56
+	Nightside Ambush: 32.04
+	Free Counterspell: 31.23
+Rakdos, the Showstopper
+	Mono-White Formatbreaker: 53.37
+	Electromancer's Bolt: 32.48
+	Terra Shaper: 32.14
+	Nightside Ambush: 29.28
+	Arcane Manipulator: 28.73
+Ephara, God of the Polis
+	Mono-White Formatbreaker: 41.7
+	Terra Shaper: 35.27
+	Hellfire Emissary: 32.61
+	Leonin Warcaller: 32.54
+	Mechanized Assembly: 30.68
+Grenzo, Dungeon Warden
+	Treasure Golem: 39.93
+	Mono-White Formatbreaker: 36.88
+	Terra Shaper: 35.13
+	Leonin Warcaller: 34.35
+	Spiritual Reckoning: 31.61
+Sythis, Harvest's Hand
+	Leonin Warcaller: 42.64
+	Terra Shaper: 39.32
+	Celestial Alignment: 36.77
+	Free Counterspell: 36.49
+	Carnival of Pain: 35.28
+Kemba, Kha Regent
+	Chaos Unleashed: 52.83
+	Nightside Ambush: 52.66
+	Artificer's Awakening: 49.69
+	Terra Shaper: 47.5
+	Electromancer's Bolt: 43.53
+Grand Arbiter Augustin IV
+	Mono-White Formatbreaker: 32.43
+	Terra Shaper: 30.31
+	Leonin Warcaller: 30.03
+	Gronky the Gruul: 28.27
+	Nightside Ambush: 27.22
+Athreos, Shroud-Veiled
+	Leonin Warcaller: 37.93
+	Arcane Manipulator: 31.74
+	Mono-White Formatbreaker: 31.48
+	Treasure Golem: 30.49
+	Penance Ritual: 26.05
+Prossh, Skyraider of Kher
+	Gronky the Gruul: 37.69
+	Hellfire Emissary: 37.01
+	Penance Ritual: 35.02
+	Leonin Warcaller: 33.4
+	Evolutionary Leap: 31.21
+Prime Speaker Zegana
+	Leonin Warcaller: 26.88
+	Terra Shaper: 25.64
+	Treasure Golem: 24.03
+	Hellfire Emissary: 22.29
+	Gronky the Gruul: 22.2
+Teysa, Orzhov Scion
+	Mono-White Formatbreaker: 38.74
+	Arcane Manipulator: 35.67
+	Shadows of the Past: 31.04
+	Evolutionary Leap: 30.16
+	Gronky's Axe: 28.08
+Slimefoot, the Stowaway
+	Mono-White Formatbreaker: 43.38
+	Terra Shaper: 36.77
+	Treasure Golem: 35.82
+	Gronky the Gruul: 35.0
+	Nightside Ambush: 31.24
+Akiri, Line-Slinger
+	Verdant Pulse: 38.82
+	Mono-White Formatbreaker: 35.71
+	Leonin Warcaller: 34.86
+	Celestial Alignment: 33.24
+	Penance Ritual: 30.6
+Vela the Night-Clad
+	Terra Shaper: 28.04
+	Hellfire Emissary: 24.53
+	Evolutionary Leap: 23.05
+	Leonin Warcaller: 22.91
+	Gronky's Axe: 20.63
+Tuvasa the Sunlit
+	Fungus Infestation: 55.52
+	Carnival of Pain: 54.84
+	Pact of Desperation: 52.67
+	Penance Ritual: 52.67
+	Hypervigilance: 47.27
+Kess, Dissident Mage
+	Mono-White Formatbreaker: 37.16
+	Hellfire Emissary: 34.62
+	Verdant Pulse: 28.61
+	Free Counterspell: 26.65
+	Evolutionary Leap: 26.29
+Melek, Izzet Paragon
+	Nightside Ambush: 32.92
+	Free Counterspell: 29.12
+	Shadow Strike: 25.55
+	Shadows of the Past: 25.44
+	Electromancer's Bolt: 24.0
+Uril, the Miststalker
+	Evolutionary Leap: 42.29
+	Shadows of the Past: 38.06
+	Carnival of Pain: 37.01
+	Gronky's Axe: 35.96
+	Celestial Alignment: 34.99
+Olivia Voldaren
+	Leonin Warcaller: 41.11
+	Terra Shaper: 38.09
+	Treasure Golem: 30.63
+	Mono-White Formatbreaker: 30.48
+	Hellfire Emissary: 28.13
+Tinybones, Trinket Thief
+	Hellfire Emissary: 64.37
+	Mono-White Formatbreaker: 46.52
+	Terra Shaper: 28.71
+	Spiritual Reckoning: 24.7
+	Carnival of Pain: 24.32
+Tanazir Quandrix
+	Terra Shaper: 43.44
+	Treasure Golem: 37.39
+	Leonin Warcaller: 35.42
+	Hellfire Emissary: 33.81
+	Gronky the Gruul: 31.68
+Ghoulcaller Gisa
+	Leonin Warcaller: 37.43
+	Terra Shaper: 31.79
+	Mono-White Formatbreaker: 27.79
+	Spiritual Reckoning: 26.08
+	Vampiric Thirst: 23.11
+Avacyn, Angel of Hope
+	Hellfire Emissary: 39.56
+	Fungus Infestation: 38.32
+	Leonin Warcaller: 37.83
+	Terra Shaper: 37.26
+	Gronky the Gruul: 36.09
+Trostani, Selesnya's Voice
+	Hellfire Emissary: 34.16
+	Free Counterspell: 32.36
+	Terra Shaper: 31.85
+	Electromancer's Bolt: 31.2
+	Carnival of Pain: 31.18
+Mazirek, Kraul Death Priest
+	Mono-White Formatbreaker: 48.35
+	Treasure Golem: 45.27
+	Gronky the Gruul: 44.37
+	Terra Shaper: 42.04
+	Hellfire Emissary: 36.42
+Yeva, Nature's Herald
+	Leonin Warcaller: 59.15
+	Mono-White Formatbreaker: 57.15
+	Celestial Alignment: 43.25
+	Treasure Golem: 40.48
+	Free Counterspell: 33.57
+Jodah, Archmage Eternal
+	Terra Shaper: 37.74
+	Leonin Warcaller: 33.45
+	Chaos Unleashed: 33.11
+	Shadows of the Past: 24.43
+	Hellfire Emissary: 23.3
+Arcades, the Strategist
+	Harmony's Call: 44.11
+	Verdant Pulse: 42.55
+	Necrotic Revival: 38.89
+	Leonin Warcaller: 37.95
+	Mono-White Formatbreaker: 37.52
+Yidris, Maelstrom Wielder
+	Leonin Warcaller: 40.97
+	Hypervigilance: 35.58
+	Terra Shaper: 31.36
+	Harmony's Call: 30.37
+	Spiritual Reckoning: 28.88
+Kaheera, the Orphanguard
+	Artificer's Awakening: 35.37
+	Arcane Manipulator: 29.35
+	Mechanized Assembly: 26.66
+	Chaos Unleashed: 24.12
+	Terra Shaper: 23.55
+Baral, Chief of Compliance
+	Shadow Strike: 52.94
+	Electromancer's Bolt: 41.99
+	Nightside Ambush: 41.0
+	Deep Wisdom: 35.36
+	Verdant Pulse: 33.83
+Mizzix of the Izmagnus
+	Nightside Ambush: 33.61
+	Shadow Strike: 32.2
+	Electromancer's Bolt: 30.01
+	Deep Wisdom: 28.56
+	Vampiric Thirst: 27.11
+Tymna the Weaver
+	Mono-White Formatbreaker: 36.44
+	Leonin Warcaller: 30.31
+	Terra Shaper: 26.69
+	Hellfire Emissary: 25.37
+	Hypervigilance: 23.81
+Urza, Lord High Artificer
+	Chaos Unleashed: 40.73
+	Free Counterspell: 37.85
+	Leonin Warcaller: 36.72
+	Arcane Manipulator: 32.3
+	Hellfire Emissary: 31.28
+Xantcha, Sleeper Agent
+	Mechanized Assembly: 36.84
+	Leonin Warcaller: 33.76
+	Penance Ritual: 30.83
+	Hypervigilance: 30.25
+	Spiritual Reckoning: 28.46
+Harbin, Vanguard Aviator
+	Gronky the Gruul: 48.81
+	Terra Shaper: 48.1
+	Hellfire Emissary: 42.87
+	Shadows of the Past: 42.48
+	Carnival of Pain: 37.17
+Thalia, Guardian of Thraben
+	Leonin Warcaller: 56.01
+	Terra Shaper: 54.3
+	Hellfire Emissary: 51.19
+	Mono-White Formatbreaker: 47.39
+	Gronky the Gruul: 40.97
+Aesi, Tyrant of Gyre Strait
+	Treasure Golem: 47.99
+	Hellfire Emissary: 40.87
+	Leonin Warcaller: 33.72
+	Gronky's Axe: 30.92
+	Terra Shaper: 29.68
+Zirda, the Dawnwaker
+	Hellfire Emissary: 21.73
+	Celestial Alignment: 19.02
+	Necrotic Revival: 18.82
+	Mono-White Formatbreaker: 18.43
+	Arcane Manipulator: 17.84
+Daxos the Returned
+	Penance Ritual: 47.57
+	Hypervigilance: 45.53
+	Carnival of Pain: 38.07
+	Diplomatic Immunity: 36.73
+	Fungus Infestation: 36.37
+Rhys the Redeemed
+	Mono-White Formatbreaker: 28.7
+	Carnival of Pain: 26.92
+	Shadows of the Past: 26.65
+	Free Counterspell: 25.27
+	Penance Ritual: 25.14
+Mogis, God of Slaughter
+	Mono-White Formatbreaker: 50.68
+	Diplomatic Immunity: 40.73
+	Celestial Alignment: 37.89
+	Terra Shaper: 35.83
+	Leonin Warcaller: 35.09
+Prosper, Tome-Bound
+	Chaos Unleashed: 49.69
+	Free Counterspell: 45.1
+	Terra Shaper: 41.87
+	Nightside Ambush: 39.76
+	Evolutionary Leap: 37.72
+Niv-Mizzet, Parun
+	Deep Wisdom: 34.02
+	Nightside Ambush: 32.97
+	Electromancer's Bolt: 30.36
+	Verdant Pulse: 27.63
+	Evolutionary Leap: 27.29
+Anafenza, Kin-Tree Spirit
+	Leonin Warcaller: 32.42
+	Treasure Golem: 31.07
+	Mono-White Formatbreaker: 26.04
+	Deep Wisdom: 24.53
+	Celestial Alignment: 23.62
+Ravos, Soultender
+	Mono-White Formatbreaker: 32.73
+	Chaos Unleashed: 24.74
+	Hellfire Emissary: 22.82
+	Arcane Manipulator: 22.79
+	Free Counterspell: 22.78
+Yuriko, the Tiger's Shadow
+	Leonin Warcaller: 51.6
+	Mono-White Formatbreaker: 37.68
+	Gronky the Gruul: 34.14
+	Shadow Strike: 33.91
+	Hypervigilance: 29.98
+Kambal, Consul of Allocation
+	Terra Shaper: 29.66
+	Chaos Unleashed: 28.74
+	Shadows of the Past: 28.05
+	Evolutionary Leap: 27.08
+	Leonin Warcaller: 26.88
+Titania, Protector of Argoth
+	Mono-White Formatbreaker: 40.58
+	Shadows of the Past: 39.34
+	Free Counterspell: 36.09
+	Leonin Warcaller: 35.91
+	Evolutionary Leap: 35.22
+Ezuri, Claw of Progress
+	Leonin Warcaller: 44.97
+	Terra Shaper: 42.76
+	Gronky the Gruul: 36.88
+	Mono-White Formatbreaker: 35.64
+	Treasure Golem: 32.67
+Lazav, the Multifarious
+	Mono-White Formatbreaker: 45.67
+	Hellfire Emissary: 36.52
+	Terra Shaper: 27.24
+	Leonin Warcaller: 23.58
+	Electromancer's Bolt: 23.21
+Klothys, God of Destiny
+	Harmony's Call: 33.21
+	Mono-White Formatbreaker: 30.82
+	Diplomatic Immunity: 29.19
+	Celestial Alignment: 26.29
+	Treasure Golem: 25.16
+Omnath, Locus of Mana
+	Free Counterspell: 34.48
+	Nightside Ambush: 33.32
+	Chaos Unleashed: 31.12
+	Leonin Warcaller: 30.9
+	Mono-White Formatbreaker: 30.19
+Anhelo, the Painter
+	Arcane Manipulator: 44.9
+	Forge Master's Hammer: 41.18
+	Gronky's Axe: 40.27
+	Harmony's Call: 37.15
+	Spiritual Reckoning: 37.1
+Arahbo, Roar of the World
+	Gronky the Gruul: 61.14
+	Terra Shaper: 59.22
+	Treasure Golem: 54.19
+	Arcane Manipulator: 48.86
+	Nightside Ambush: 47.18
+Eutropia the Twice-Favored
+	Terra Shaper: 35.16
+	Carnival of Pain: 34.07
+	Fungus Infestation: 33.01
+	Evolutionary Leap: 29.31
+	Forge Master's Hammer: 28.69
+Circu, Dimir Lobotomist
+	Free Counterspell: 27.54
+	Hellfire Emissary: 27.02
+	Electromancer's Bolt: 19.2
+	Nightside Ambush: 18.58
+	Shadow Strike: 18.56
+Nekusar, the Mindrazer
+	Celestial Alignment: 67.61
+	Mono-White Formatbreaker: 62.13
+	Penance Ritual: 48.72
+	Leonin Warcaller: 42.56
+	Harmony's Call: 41.97
+Queen Marchesa
+	Treasure Golem: 34.02
+	Mono-White Formatbreaker: 30.33
+	Terra Shaper: 28.38
+	Leonin Warcaller: 27.4
+	Penance Ritual: 24.99
+Omnath, Locus of Rage
+	Hellfire Emissary: 41.16
+	Diplomatic Immunity: 37.4
+	Nightside Ambush: 35.81
+	Penance Ritual: 35.45
+	Pact of Desperation: 34.46
+Memnarch
+	Leonin Warcaller: 41.94
+	Chaos Unleashed: 36.39
+	Harmony's Call: 33.38
+	Verdant Pulse: 30.64
+	Evolutionary Leap: 29.66
+Derevi, Empyrial Tactician
+	Leonin Warcaller: 30.36
+	Gronky the Gruul: 22.22
+	Mono-White Formatbreaker: 21.7
+	Fungus Infestation: 21.2
+	Terra Shaper: 21.13
+Aurelia, the Warleader
+	Verdant Pulse: 30.68
+	Leonin Warcaller: 29.67
+	Terra Shaper: 26.87
+	Nightside Ambush: 26.13
+	Evolutionary Leap: 24.55
+Raff Capashen, Ship's Mage
+	Leonin Warcaller: 32.17
+	Terra Shaper: 26.12
+	Gronky the Gruul: 26.06
+	Penance Ritual: 25.27
+	Verdant Pulse: 24.53
+Korvold, Fae-Cursed King
+	Terra Shaper: 36.61
+	Treasure Golem: 35.62
+	Verdant Pulse: 31.28
+	Leonin Warcaller: 30.88
+	Hellfire Emissary: 29.33
+Atraxa, Praetors' Voice
+	Mono-White Formatbreaker: 47.46
+	Hellfire Emissary: 31.7
+	Terra Shaper: 31.68
+	Leonin Warcaller: 30.48
+	Electromancer's Bolt: 28.06
+Maelstrom Wanderer
+	Leonin Warcaller: 50.12
+	Terra Shaper: 37.89
+	Gronky the Gruul: 35.07
+	Chaos Unleashed: 33.92
+	Mono-White Formatbreaker: 33.17
+Brudiclad, Telchor Engineer
+	Hellfire Emissary: 44.63
+	Mechanized Assembly: 34.33
+	Penance Ritual: 31.27
+	Artificer's Awakening: 28.57
+	Treasure Golem: 27.95
+Selvala, Heart of the Wilds
+	Mono-White Formatbreaker: 67.25
+	Harmony's Call: 43.13
+	Treasure Golem: 43.1
+	Spiritual Reckoning: 42.3
+	Celestial Alignment: 40.8
+Edgar Markov
+	Hellfire Emissary: 51.36
+	Leonin Warcaller: 44.69
+	Treasure Golem: 39.97
+	Mono-White Formatbreaker: 39.28
+	Evolutionary Leap: 38.84
+Kadena, Slinking Sorcerer
+	Nightside Ambush: 63.07
+	Diplomatic Immunity: 57.67
+	Penance Ritual: 51.95
+	Treasure Golem: 46.49
+	Forge Master's Hammer: 41.91
+Sydri, Galvanic Genius
+	Chaos Unleashed: 37.53
+	Mechanized Assembly: 34.07
+	Evolutionary Leap: 32.85
+	Hellfire Emissary: 30.38
+	Terra Shaper: 30.27
+Zedruu the Greathearted
+	Diplomatic Immunity: 37.68
+	Penance Ritual: 25.45
+	Hypervigilance: 24.45
+	Electromancer's Bolt: 22.9
+	Terra Shaper: 21.46
+The Mimeoplasm
+	Hellfire Emissary: 23.21
+	Leonin Warcaller: 22.81
+	Harmony's Call: 22.6
+	Verdant Pulse: 22.11
+	Treasure Golem: 20.73
+Mayael the Anima
+	Treasure Golem: 46.08
+	Leonin Warcaller: 42.86
+	Gronky the Gruul: 39.95
+	Mono-White Formatbreaker: 39.81
+	Hellfire Emissary: 34.82
+Shattergang Brothers
+	Terra Shaper: 29.13
+	Treasure Golem: 26.08
+	Hellfire Emissary: 25.48
+	Mono-White Formatbreaker: 23.26
+	Gronky the Gruul: 21.94
+Nath of the Gilt-Leaf
+	Hellfire Emissary: 47.86
+	Mono-White Formatbreaker: 46.04
+	Carnival of Pain: 29.94
+	Terra Shaper: 29.33
+	Chaos Unleashed: 28.24
+Breya, Etherium Shaper
+	Verdant Pulse: 25.68
+	Hellfire Emissary: 24.54
+	Chaos Unleashed: 24.45
+	Evolutionary Leap: 24.36
+	Leonin Warcaller: 22.92
+Daretti, Scrap Savant
+	Artificer's Awakening: 48.48
+	Necrotic Revival: 41.75
+	Mono-White Formatbreaker: 40.84
+	Treasure Golem: 40.74
+	Shadow Strike: 40.27
+Riku of Two Reflections
+	Hellfire Emissary: 21.99
+	Leonin Warcaller: 20.86
+	Spiritual Reckoning: 20.16
+	Shadow Strike: 19.3
+	Verdant Pulse: 18.96

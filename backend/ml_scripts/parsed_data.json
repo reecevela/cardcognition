@@ -1,238 +1,707 @@
 [
-  {
-    "name": "Raven Guild Initiate",
-    "abilities": [],
-    "effects": [],
-    "properties": [
-      "creatures_matter",
-      "mid_toughness",
-      "TYP_Creature",
-      "1power",
-      "SUB_Human",
-      "blue",
-      "mid_cmc",
-      "SUB_Wizard"
-    ]
-  },
-  {
-    "name": "Sylvan Brushstrider",
-    "abilities": [],
-    "effects": [
-      [
-        "CARDNAME enters the battlefield",
-        "you gain 2 life"
-      ]
-    ],
-    "properties": [
-      "2toughness",
-      "SUB_Beast",
-      "life_gain",
-      "trigger_once",
-      "TYP_Creature",
-      "ETB",
-      "mid_power",
-      "mid_cmc",
-      "green"
-    ]
-  },
-  {
-    "name": "Spitting Hydra",
-    "abilities": [
-      [
+  [
+    {
+      "name": "Avoid Fate",
+      "abilities": [],
+      "effects": [
         [
-          "{1}",
-          "{R}"
+          "CAST",
+          "Counter target instant or Aura spell that targets a permanent you control."
+        ]
+      ],
+      "properties": [
+        "TYP_Instant",
+        "counterspells",
+        "aura",
+        "1cmc",
+        "green"
+      ]
+    },
+    "Counter target instant or Aura spell that targets a permanent you control."
+  ],
+  [
+    {
+      "name": "Blade of the Oni",
+      "abilities": [],
+      "effects": [],
+      "properties": [
+        "SUB_Equipment",
+        "menace",
+        "SUB_Demon",
+        "black",
+        "1toughness",
+        "mid_power",
+        "TYP_Artifact",
+        "2cmc",
+        "TYP_Creature"
+      ]
+    },
+    "Menace\nEquipped creature has base power and toughness 5/5, has menace, and is a black Demon in addition to its other colors and types.\nReconfigure {2}{B}{B} ({2}{B}{B}: Attach to target creature you control; or unattach from a creature. Reconfigure only as a sorcery. While attached, this isn't a creature.)"
+  ],
+  [
+    {
+      "name": "Sword of Vengeance",
+      "abilities": [],
+      "effects": [],
+      "properties": [
+        "SUB_Equipment",
+        "mid_cmc",
+        "TYP_Artifact",
+        "power_boost"
+      ]
+    },
+    "Equipped creature gets +2/+0 and has first strike, vigilance, trample, and haste.\nEquip {3}"
+  ],
+  [
+    {
+      "name": "Soulless One",
+      "abilities": [],
+      "effects": [],
+      "properties": [
+        "SUB_Zombie",
+        "SUB_Avatar",
+        "black",
+        "TYP_Creature",
+        "mid_cmc"
+      ]
+    },
+    "CARDNAME's power and toughness are each equal to the number of Zombies on the battlefield plus the number of Zombie cards in all graveyards."
+  ],
+  [
+    {
+      "name": "Bribery",
+      "abilities": [],
+      "effects": [
+        [
+          "CAST",
+          "Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles."
+        ]
+      ],
+      "properties": [
+        "high_cmc",
+        "blue",
+        "creatures_matter",
+        "TYP_Sorcery"
+      ]
+    },
+    "Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles."
+  ],
+  [
+    {
+      "name": "Aphetto Alchemist",
+      "abilities": [
+        [
+          [
+            "{T}"
+          ],
+          [
+            "Untap target artifact or creature"
+          ]
+        ]
+      ],
+      "effects": [],
+      "properties": [
+        "creatures_matter",
+        "SUB_Wizard",
+        "morph",
+        "1power",
+        "untap",
+        "blue",
+        "2toughness",
+        "SUB_Human",
+        "2cmc",
+        "TYP_Creature",
+        "artifacts_matter"
+      ]
+    },
+    "{T}: Untap target artifact or creature.\nMorph {U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)"
+  ],
+  [
+    {
+      "name": "Team Pennant",
+      "abilities": [],
+      "effects": [],
+      "properties": [
+        "SUB_Equipment",
+        "1cmc",
+        "TYP_Artifact",
+        "power_boost"
+      ]
+    },
+    "Equipped creature gets +1/+1 and has vigilance and trample.\nEquip creature token {1}\nEquip {3}"
+  ],
+  [
+    {
+      "name": "Dragon Blood",
+      "abilities": [
+        [
+          [
+            "{3}",
+            "{T}"
+          ],
+          [
+            "Put a +1/+1 counter on target creature"
+          ]
+        ]
+      ],
+      "effects": [],
+      "properties": [
+        "counters",
+        "mid_cmc",
+        "TYP_Artifact"
+      ]
+    },
+    "{3}, {T}: Put a +1/+1 counter on target creature."
+  ],
+  [
+    {
+      "name": "Conqueror's Galleon // Conqueror's Foothold",
+      "abilities": [],
+      "effects": [],
+      "properties": [
+        "TYP_Artifact",
+        "SUB_//",
+        "SUB_Land",
+        "SUB_Vehicle",
+        "mid_cmc"
+      ]
+    },
+    null
+  ],
+  [
+    {
+      "name": "Satyr Piper",
+      "abilities": [
+        [
+          [
+            "{3}",
+            "{G}"
+          ],
+          [
+            "Target creature must be blocked this turn if able"
+          ]
+        ]
+      ],
+      "effects": [],
+      "properties": [
+        "SUB_Rogue",
+        "2power",
+        "1toughness",
+        "forced_block",
+        "green",
+        "mid_cmc",
+        "TYP_Creature",
+        "SUB_Satyr"
+      ]
+    },
+    "{3}{G}: Target creature must be blocked this turn if able."
+  ],
+  [
+    {
+      "name": "Athreos, Shroud-Veiled",
+      "abilities": [],
+      "effects": [
+        [
+          "a creature with a coin counter on it dies or is put into exile",
+          "return that card to the battlefield under your control"
         ],
         [
-          "It deals 1 damage to target creature"
+          "OPT",
+          "put a coin counter on another target creature"
         ]
+      ],
+      "properties": [
+        "protection",
+        "high_toughness",
+        "black",
+        "counters",
+        "SUP_Legendary",
+        "mid_power",
+        "SUB_God",
+        "indestructible",
+        "TYP_Enchantment",
+        "death",
+        "high_cmc",
+        "white",
+        "TYP_Creature",
+        "repeat_trigger"
       ]
-    ],
-    "effects": [],
-    "properties": [
-      "high_cmc",
-      "counters",
-      "red",
-      "TYP_Creature",
-      "power_boost",
-      "ETB",
-      "0power",
-      "SUB_Hydra",
-      "0toughness"
-    ]
-  },
-  {
-    "name": "Codie, Vociferous Codex",
-    "abilities": [
-      [
+    },
+    "Indestructible\nAs long as your devotion to white and black is less than seven, CARDNAME isn't a creature.\nAt the beginning of your end step, put a coin counter on another target creature.\nWhenever a creature with a coin counter on it dies or is put into exile, return that card to the battlefield under your control."
+  ],
+  [
+    {
+      "name": "Maestros Diabolist",
+      "abilities": [],
+      "effects": [
         [
-          "{4}",
-          "{T}"
+          "CARDNAME attacks, if you don't control a Devil token, create a tapped and attacking 1/1 red Devil creature token with \"When this creature dies",
+          "it deals 1 damage to any target"
         ],
         [
-          "Add {W}{U}{B}{R}{G}",
-          "When you cast your next spell this turn, exile cards from the top of your library until you exile an instant or sorcery card with lesser mana value",
-          "Until end of turn, you may cast that card without paying its mana cost",
-          "Put each other card exiled this way on the bottom of your library in a random order"
+          "this creature dies",
+          "it deals 1 damage to any target"
         ]
+      ],
+      "properties": [
+        "red",
+        "SUB_Vampire",
+        "deathtouch",
+        "1power",
+        "targeted_interaction",
+        "blue",
+        "damage",
+        "mid_toughness",
+        "combat_trigger",
+        "death",
+        "mid_cmc",
+        "tap",
+        "black",
+        "TYP_Creature",
+        "SUB_Warrior",
+        "repeat_trigger",
+        "trigger_once"
       ]
-    ],
-    "effects": [
-      [
-        "you cast your next spell this turn",
-        "exile cards from the top of your library until you exile an instant or sorcery card with lesser mana value"
+    },
+    "Deathtouch, haste\nWhenever CARDNAME attacks, if you don't control a Devil token, create a tapped and attacking 1/1 red Devil creature token with \"When this creature dies, it deals 1 damage to any target.\""
+  ],
+  [
+    {
+      "name": "Ayumi, the Last Visitor",
+      "abilities": [],
+      "effects": [],
+      "properties": [
+        "SUP_Legendary",
+        "SUB_Spirit",
+        "high_cmc",
+        "green",
+        "TYP_Creature",
+        "high_power",
+        "mid_toughness"
       ]
-    ],
-    "properties": [
-      "instants_matter",
-      "trigger_once",
-      "mid_toughness",
-      "TYP_Artifact",
-      "TYP_Creature",
-      "cost_reducer",
-      "1power",
-      "chaos",
-      "ramp",
-      "mid_cmc",
-      "hate",
-      "sorceries_matter",
-      "SUP_Legendary",
-      "alternate_casting",
-      "SUB_Construct"
-    ]
-  },
-  {
-    "name": "Ascending Aven",
-    "abilities": [],
-    "effects": [],
-    "properties": [
-      "2toughness",
-      "creatures_matter",
-      "SUB_Soldier",
-      "TYP_Creature",
-      "blue",
-      "mid_power",
-      "mid_cmc",
-      "SUB_Bird",
-      "flying"
-    ]
-  },
-  {
-    "name": "Fleshformer",
-    "abilities": [
-      [
+    },
+    "Legendary landwalk (This creature can't be blocked as long as defending player controls a legendary land.)"
+  ],
+  [
+    {
+      "name": "Twisted Image",
+      "abilities": [],
+      "effects": [
         [
-          "{W}",
-          "{U}",
-          "{B}",
-          "{R}",
-          "{G}"
+          "CAST",
+          "Switch target creature's power and toughness until end of turn."
         ],
         [
-          "CARDNAME gets +2/+2 and gains fear until end of turn",
-          "Target creature gets -2/-2 until end of turn",
-          "Activate only during your turn"
+          "CAST",
+          "Draw a card."
         ]
+      ],
+      "properties": [
+        "1cmc",
+        "blue",
+        "card_advantage",
+        "TYP_Instant"
       ]
-    ],
-    "effects": [],
-    "properties": [
-      "2toughness",
-      "2power",
-      "TYP_Creature",
-      "power_boost",
-      "SUB_Human",
-      "black",
-      "mid_cmc",
-      "aggressive_combat",
-      "SUB_Wizard",
-      "hate"
-    ]
-  },
-  {
-    "name": "Runaway Carriage",
-    "abilities": [],
-    "effects": [
-      [
-        "CARDNAME attacks or blocks",
-        "sacrifice it at end of combat"
+    },
+    "Switch target creature's power and toughness until end of turn.\nDraw a card."
+  ],
+  [
+    {
+      "name": "Lux Artillery",
+      "abilities": [],
+      "effects": [
+        [
+          "you cast an artifact creature spell",
+          "it gains sunburst"
+        ],
+        [
+          "OPT",
+          "if there are thirty or more counters among artifacts and creatures you control, CARDNAME deals 10 damage to each opponent"
+        ]
+      ],
+      "properties": [
+        "creatures_matter",
+        "ETB",
+        "TYP_Artifact",
+        "damage",
+        "mid_cmc",
+        "counters",
+        "artifacts_matter",
+        "repeat_trigger"
       ]
-    ],
-    "properties": [
-      "high_power",
-      "trigger_once",
-      "TYP_Artifact",
-      "TYP_Creature",
-      "trample",
-      "mid_cmc",
-      "high_toughness",
-      "SUB_Construct"
-    ]
-  },
-  {
-    "name": "Worldheart Phoenix",
-    "abilities": [],
-    "effects": [],
-    "properties": [
-      "2toughness",
-      "counters",
-      "red",
-      "2power",
-      "TYP_Creature",
-      "graveyard_castable",
-      "ETB",
-      "power_boost",
-      "mid_cmc",
-      "SUB_Phoenix",
-      "flying"
-    ]
-  },
-  {
-    "name": "Bant Sojourners",
-    "abilities": [],
-    "effects": [
-      [
-        "you cycle CARDNAME or it dies",
-        "you may create a 1/1 white Soldier creature token"
+    },
+    "Whenever you cast an artifact creature spell, it gains sunburst. (It enters the battlefield with a +1/+1 counter on it for each color of mana spent to cast it.)\nAt the beginning of your end step, if there are thirty or more counters among artifacts and creatures you control, CARDNAME deals 10 damage to each opponent."
+  ],
+  [
+    {
+      "name": "Path of Anger's Flame",
+      "abilities": [],
+      "effects": [
+        [
+          "CAST",
+          "Creatures you control get +2/+0 until end of turn."
+        ]
+      ],
+      "properties": [
+        "SUB_Arcane",
+        "red",
+        "TYP_Instant",
+        "mid_cmc"
       ]
-    ],
-    "properties": [
-      "SUB_Soldier",
-      "card_advantage",
-      "discard",
-      "mid_toughness",
-      "TYP_Creature",
-      "2power",
-      "death",
-      "trigger_once",
-      "SUB_Human",
-      "blue",
-      "mid_cmc",
-      "white",
-      "green"
-    ]
-  },
-  {
-    "name": "Rotfeaster Maggot",
-    "abilities": [],
-    "effects": [
-      [
-        "CARDNAME enters the battlefield",
-        "exile target creature card from a graveyard"
+    },
+    "Creatures you control get +2/+0 until end of turn."
+  ],
+  [
+    {
+      "name": "Hibernation's End",
+      "abilities": [],
+      "effects": [
+        [
+          "you pay CARDNAME's cumulative upkeep, you may search your library for a creature card with mana value equal to the number of age counters on CARDNAME, put it onto the battlefield",
+          "then shuffle"
+        ]
+      ],
+      "properties": [
+        "creatures_matter",
+        "TYP_Enchantment",
+        "death",
+        "high_cmc",
+        "green",
+        "counters",
+        "repeat_trigger"
       ]
-    ],
-    "properties": [
-      "high_cmc",
-      "life_gain",
-      "creatures_matter",
-      "trigger_once",
-      "TYP_Creature",
-      "SUB_Insect",
-      "ETB",
-      "mid_power",
-      "black",
-      "targeted_interaction",
-      "high_toughness"
-    ]
-  }
+    },
+    "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever you pay CARDNAME's cumulative upkeep, you may search your library for a creature card with mana value equal to the number of age counters on CARDNAME, put it onto the battlefield, then shuffle."
+  ],
+  [
+    {
+      "name": "Grim Haruspex",
+      "abilities": [],
+      "effects": [
+        [
+          "another nontoken creature you control dies",
+          "draw a card"
+        ]
+      ],
+      "properties": [
+        "creatures_matter",
+        "SUB_Wizard",
+        "morph",
+        "mid_power",
+        "card_advantage",
+        "2toughness",
+        "death",
+        "SUB_Human",
+        "black",
+        "TYP_Creature",
+        "mid_cmc",
+        "repeat_trigger"
+      ]
+    },
+    "Morph {B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhenever another nontoken creature you control dies, draw a card."
+  ],
+  [
+    {
+      "name": "Devastation",
+      "abilities": [],
+      "effects": [
+        [
+          "CAST",
+          "Destroy all creatures and lands."
+        ]
+      ],
+      "properties": [
+        "red",
+        "TYP_Sorcery",
+        "high_cmc",
+        "board_wipe",
+        "lands_matter"
+      ]
+    },
+    "Destroy all creatures and lands."
+  ],
+  [
+    {
+      "name": "Search Party Captain",
+      "abilities": [],
+      "effects": [
+        [
+          "CARDNAME enters the battlefield",
+          "draw a card"
+        ]
+      ],
+      "properties": [
+        "creatures_matter",
+        "2power",
+        "SUB_Soldier",
+        "ETB",
+        "card_advantage",
+        "2toughness",
+        "combat_trigger",
+        "SUB_Human",
+        "white",
+        "TYP_Creature",
+        "mid_cmc",
+        "trigger_once"
+      ]
+    },
+    "This spell costs {1} less to cast for each creature you attacked with this turn.\nWhen CARDNAME enters the battlefield, draw a card."
+  ],
+  [
+    {
+      "name": "Walk the Plank",
+      "abilities": [],
+      "effects": [
+        [
+          "CAST",
+          "Destroy target non-Merfolk creature."
+        ]
+      ],
+      "properties": [
+        "targeted_interaction",
+        "TYP_Sorcery",
+        "black",
+        "2cmc"
+      ]
+    },
+    "Destroy target non-Merfolk creature."
+  ],
+  [
+    {
+      "name": "Emergent Woodwurm",
+      "abilities": [],
+      "effects": [
+        [
+          "this creature attacks, look at the top X cards of your library",
+          "where X is its power"
+        ]
+      ],
+      "properties": [
+        "counters",
+        "ETB",
+        "mid_power",
+        "combat_trigger",
+        "high_cmc",
+        "green",
+        "SUB_Wurm",
+        "TYP_Creature",
+        "mid_toughness",
+        "repeat_trigger",
+        "trigger_once"
+      ]
+    },
+    "Backup 3 (When this creature enters the battlefield, put three +1/+1 counters on target creature. If that's another creature, it gains the following ability until end of turn.)\nWhenever this creature attacks, look at the top X cards of your library, where X is its power. You may put a permanent card with mana value X or less from among them onto the battlefield. Put the rest on the bottom of your library in a random order."
+  ],
+  [
+    {
+      "name": "Orzhov Basilica",
+      "abilities": [
+        [
+          [
+            "{T}"
+          ],
+          [
+            "Add {W}{B}"
+          ]
+        ]
+      ],
+      "effects": [
+        [
+          "CARDNAME enters the battlefield",
+          "return a land you control to its owner's hand"
+        ]
+      ],
+      "properties": [
+        "ETB",
+        "ramp",
+        "0cmc",
+        "TYP_Land",
+        "tap",
+        "lands_matter",
+        "trigger_once"
+      ]
+    },
+    "CARDNAME enters the battlefield tapped.\nWhen CARDNAME enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{B}."
+  ],
+  [
+    {
+      "name": "Dragonspeaker Shaman",
+      "abilities": [],
+      "effects": [],
+      "properties": [
+        "SUB_Shaman",
+        "2power",
+        "red",
+        "cost_reducer",
+        "2toughness",
+        "SUB_Human",
+        "SUB_Barbarian",
+        "TYP_Creature",
+        "mid_cmc"
+      ]
+    },
+    "Dragon spells you cast cost {2} less to cast."
+  ],
+  [
+    {
+      "name": "Tribute Mage",
+      "abilities": [],
+      "effects": [
+        [
+          "CARDNAME enters the battlefield, you may search your library for an artifact card with mana value 2, reveal that card, put it into your hand",
+          "then shuffle"
+        ]
+      ],
+      "properties": [
+        "2power",
+        "SUB_Wizard",
+        "ETB",
+        "tutor",
+        "card_advantage",
+        "blue",
+        "2toughness",
+        "SUB_Human",
+        "TYP_Creature",
+        "mid_cmc",
+        "artifacts_matter",
+        "trigger_once"
+      ]
+    },
+    "When CARDNAME enters the battlefield, you may search your library for an artifact card with mana value 2, reveal that card, put it into your hand, then shuffle."
+  ],
+  [
+    {
+      "name": "Myr Reservoir",
+      "abilities": [
+        [
+          [
+            "{T}"
+          ],
+          [
+            "Add {C}{C}",
+            "Spend this mana only to cast Myr spells or activate abilities of Myr"
+          ]
+        ],
+        [
+          [
+            "{3}",
+            "{T}"
+          ],
+          [
+            "Return target Myr card from your graveyard to your hand"
+          ]
+        ]
+      ],
+      "effects": [],
+      "properties": [
+        "ramp",
+        "card_advantage",
+        "TYP_Artifact",
+        "recursion",
+        "mid_cmc"
+      ]
+    },
+    "{T}: Add {C}{C}. Spend this mana only to cast Myr spells or activate abilities of Myr.\n{3}, {T}: Return target Myr card from your graveyard to your hand."
+  ],
+  [
+    {
+      "name": "Ayara, First of Locthwain",
+      "abilities": [
+        [
+          [
+            "{T}"
+          ],
+          [
+            "Draw a card"
+          ]
+        ]
+      ],
+      "effects": [
+        [
+          "CARDNAME or another black creature enters the battlefield under your control",
+          "each opponent loses 1 life and you gain 1 life"
+        ]
+      ],
+      "properties": [
+        "SUB_Noble",
+        "2power",
+        "SUP_Legendary",
+        "ETB",
+        "SUB_Elf",
+        "card_advantage",
+        "death",
+        "mid_cmc",
+        "life_gain",
+        "black",
+        "TYP_Creature",
+        "mid_toughness",
+        "repeat_trigger"
+      ]
+    },
+    "Whenever CARDNAME or another black creature enters the battlefield under your control, each opponent loses 1 life and you gain 1 life.\n{T}, Sacrifice another black creature: Draw a card."
+  ],
+  [
+    {
+      "name": "Custodi Soulcaller",
+      "abilities": [],
+      "effects": [
+        [
+          "CARDNAME attacks, return target creature card with mana value X or less from your graveyard to the battlefield",
+          "where X is the number of players you attacked this combat"
+        ]
+      ],
+      "properties": [
+        "creatures_matter",
+        "1power",
+        "SUB_Cleric",
+        "2toughness",
+        "combat_trigger",
+        "power_boost",
+        "recursion",
+        "SUB_Human",
+        "white",
+        "TYP_Creature",
+        "graveyard_matter",
+        "mid_cmc",
+        "repeat_trigger"
+      ]
+    },
+    "Melee (Whenever this creature attacks, it gets +1/+1 until end of turn for each opponent you attacked this combat.)\nWhenever CARDNAME attacks, return target creature card with mana value X or less from your graveyard to the battlefield, where X is the number of players you attacked this combat."
+  ],
+  [
+    {
+      "name": "Relentless Assault",
+      "abilities": [],
+      "effects": [
+        [
+          "CAST",
+          "Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase."
+        ]
+      ],
+      "properties": [
+        "red",
+        "untap",
+        "TYP_Sorcery",
+        "mid_cmc"
+      ]
+    },
+    "Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase."
+  ],
+  [
+    {
+      "name": "Clone",
+      "abilities": [],
+      "effects": [],
+      "properties": [
+        "clone",
+        "0power",
+        "blue",
+        "TYP_Creature",
+        "0toughness",
+        "mid_cmc",
+        "SUB_Shapeshifter"
+      ]
+    },
+    "You may have CARDNAME enter the battlefield as a copy of any creature on the battlefield."
+  ]
 ]

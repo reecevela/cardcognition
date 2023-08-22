@@ -1,2 +1,13 @@
 *.npy
 *.pkl
+*.joblib
+analytics/*
+errors.txt
+*.mm
+*.mm.index
+*.dict
+parsed_data.json
+commander_scores.txt
+card_scores.txt
+card_results.txt
+oracle_texts.txt

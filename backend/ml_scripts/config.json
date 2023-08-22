@@ -17,6 +17,6 @@
     "notes": "Changed to CardParser to use features instead of sentence vectors",
     "card_start": 0,
     "card_stop": 2000,
-    "print_limit": 10,
+    "print_limit": 5,
     "specific_commander": "Daretti, Scrap Savant"
 }
