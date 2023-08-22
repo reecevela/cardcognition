@@ -57,8 +57,8 @@ for i, commander in enumerate(commanders_raw):
     commanders[commander['card_name']]['cards'] = []
     commanders[commander['card_id']] = commander['card_name']
 
-print(f"Cards: {len(cards)}")
-print(f"Commanders: {len(commanders)}")
+# print(f"Cards: {len(cards)}")
+# print(f"Commanders: {len(commanders)}")
 
 # Avoid mapping embeddings at all costs, each card can be a massive vector
 # 500,000 rels, 30,000 cards, 1,900 commanders
@@ -77,45 +77,61 @@ for rel in rels:
                 rel['synergy_score']
             )
         )
+        if 'highest_score' not in commanders[commander_name] or commanders[commander_name]['highest_score'] < rel['percentage']:
+            commanders[commander_name]['highest_score'] = rel['percentage']
+        if 'lowest_score' not in commanders[commander_name] or commanders[commander_name]['lowest_score'] > rel['percentage']:
+            commanders[commander_name]['lowest_score'] = rel['percentage']
 
-print(f"Relations: {len(rels)}")
+# print(f"Relations: {len(rels)}")
 print(f"Time Elapsed: {time.time() - startTime}")
 
 embedder = CardEmbedder()
-embeddings = embedder.embed_cards(cards_raw, testing=False)
+embeddings = embedder.embed_and_parse_cards(cards_raw) #, testing=False)
 joblib.dump(embeddings, 'embeddings.npy')
 print(f"Time Elapsed: {time.time() - startTime}")
 
+i = 0
 for commander_name, commander_data in commanders.items():
+    i += 1
+    if i % 100 == 0:
+        print(f"Training model {i} of {len(commanders)}")
     try:
         # print(commander_name, " ", commander_data.get('id'))
         # print(len(commander_data.get('cards', [])))
         if commander_name not in commanders:
             # print(f"Skipping {commander_name} because it's not in the cards list")
             continue
-        if len(commander_data.get('cards', 0)) < 100:
+        if len(commander_data.get('cards', 0)) < 130:
             # print(f"Skipping {commander_name} because it has {len(commander_data.get('cards', 0))} cards")
             continue
         X = []
         y = []
+        # highest_card_score = 0
+        # lowest_card_score = 100
+        # for card in commander_data['cards']:
+        #     if card and card[0].get('index', None) is not None:
+        #         if card[1] > highest_card_score:
+        #             highest_card_score = card[1]
+        #         if card[1] < lowest_card_score:
+        #             lowest_card_score = card[1]
         for card in commander_data['cards']:
             # print(card[0]['card_name'], card[1])
             # print(embeddings[card[0].get('index')].shape)
             if card and card[0].get('index', None) is not None:
                 X.append(embeddings[card[0]['index']])
+                # Normalizes the score, so some commanders aren't skewed to the top when ranked later
+                # y.append( card[1] - lowest_card_score / (highest_card_score - lowest_card_score) )
                 y.append(card[1] / 100)
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         commanders[commander_name]['model'] = SGDRegressor(penalty=config["penalty"], alpha=config["alpha"])
         commanders[commander_name]['model'].fit(X_train, y_train)
         commanders[commander_name]['score'] = commanders[commander_name]['model'].score(X_test, y_test)
-        print(f"Score for {commander_name}: {commanders[commander_name]['score']}")
+        # print(f"Score for {commander_name}: {commanders[commander_name]['score']}")
         # Save model
-        print(commander_name)
         cmd_file_name = converter.sanitize_filename(commander_name)
-        print(f"Saving model for {commander_name} to {cmd_file_name}")
+        # print(f"Saving model for {commander_name} to {cmd_file_name}")
         joblib.dump(commanders[commander_name]['model'], f"cmd_models/{cmd_file_name}.joblib")
     except Exception as e:
-        print(e)
         continue
         #print(f"Error for {commander_name}: {e}")
 
@@ -162,7 +178,7 @@ with open("./validation_set.json", 'r') as file:
 analytics_data = dict()
 
 for card in validation_data:
-    card_embedding = embedder.embed_cards([card], testing=True)[0]
+    card_embedding = embedder.embed_and_parse_cards([card], testing=True)[0]
     test_commanders = [cmd for cmd in card['test_commanders'] if cmd in commanders]
     commander_indices = [commanders[cmd_name]['index'] for cmd_name in test_commanders]
     commander_embeddings = np.array([embeddings[idx] for idx in commander_indices])
@@ -189,7 +205,7 @@ for card in validation_data:
             print(e)
             continue
         gen_score = round(gen_model.predict(combined_input)[0], 4) * 100
-        print(f"{commander_name} {card['card_name']} {gen_score}")
+        # print(f"{commander_name} {card['card_name']} {gen_score}")
         analytics_data[card['card_name']]['general'].append([commander_name, gen_score])
 
     try:
@@ -199,9 +215,9 @@ for card in validation_data:
 
         accuracy = len(correct_list) / (len(correct_list) + len(incorrect_list))
         
-        print(f"Accuracy for {card['card_name']}: {accuracy}")
-        print(f"Correct: {correct_list}")
-        print(f"Incorrect: {incorrect_list}")
+        # print(f"Accuracy for {card['card_name']}: {accuracy}")
+        # print(f"Correct: {correct_list}")
+        # print(f"Incorrect: {incorrect_list}")
         analytics_data[card['card_name']]['accuracy'] = accuracy
         analytics_data[card['card_name']]['correct'] = correct_list
         analytics_data[card['card_name']]['incorrect'] = incorrect_list
@@ -213,9 +229,9 @@ for card in validation_data:
         gen_incorrect_list = [cmd_prediction for cmd_prediction in analytics_data[card['card_name']]['general'] if (cmd_prediction[1] >= gen_median and cmd_prediction[0] not in card['expected_high']) or (cmd_prediction[1] < gen_median and cmd_prediction[0] not in card['expected_low'])]
 
         gen_accuracy = len(gen_correct_list) / (len(gen_correct_list) + len(gen_incorrect_list))
-        print(f"General Model Accuracy: {gen_accuracy}, {gen_accuracy} / {len(gen_correct_list) + len(gen_incorrect_list)}")
-        print(f"General Model Correct: {gen_correct_list}")
-        print(f"General Model Incorrect: {gen_incorrect_list}")
+        # print(f"General Model Accuracy: {gen_accuracy}, {gen_accuracy} / {len(gen_correct_list) + len(gen_incorrect_list)}")
+        # print(f"General Model Correct: {gen_correct_list}")
+        # print(f"General Model Incorrect: {gen_incorrect_list}")
         analytics_data[card['card_name']]['general_accuracy'] = gen_accuracy
         analytics_data[card['card_name']]['general_correct'] = gen_correct_list
         analytics_data[card['card_name']]['general_incorrect'] = gen_incorrect_list
@@ -228,7 +244,12 @@ try:
     analytics_data['average_validation_accuracy'] = average_validation_accuracy
 except Exception as e:
     print(e)
-
+try:
+    average_general_accuracy = np.mean([data['general_accuracy'] for card_name, data in analytics_data.items()])
+    print(f"Average general model accuracy: {average_general_accuracy}")
+    analytics_data['average_general_accuracy'] = average_general_accuracy
+except Exception as e:
+    print(e)
 try:
     sum = 0
     count = 0

@@ -19,7 +19,7 @@
         "mana_cost": "{1}{G}{R}",
         "cmc": 3,
         "type_line": "Legendary Creature — Goblin Warrior",
-        "oracle_text": "Haste\nWhenever {{CARDNAME}} attacks, sacrifice an attacking creature and put that many +1/+1 counters on {{CARDNAME}}.",
+        "oracle_text": "Haste\nWhenever CARDNAME attacks, sacrifice an attacking creature and put that many +1/+1 counters on CARDNAME.",
         "power": 3,
         "toughness": 3,
         "colors": [
@@ -81,7 +81,7 @@
         "mana_cost": "{W}",
         "cmc": 1,
         "type_line": "Creature — Soldier",
-        "oracle_text": "Flash\nWhen {{CARDNAME}} enters the battlefield or becomes tapped, you pay put a 1/1 white Soldier creature token onto the battlefield or draw a card.\n{W}, {T}: Exile target creature. Return it to the battlefield under its owner's control at the beginning of the next end step.",
+        "oracle_text": "Flash\nWhen CARDNAME enters the battlefield or becomes tapped, you pay put a 1/1 white Soldier creature token onto the battlefield or draw a card.\n{W}, {T}: Exile target creature. Return it to the battlefield under its owner's control at the beginning of the next end step.",
         "power": 1,
         "toughness": 2,
         "colors": [
@@ -112,7 +112,7 @@
         "mana_cost": "{4}{U}",
         "cmc": 5,
         "type_line": "Instant",
-        "oracle_text": "Convoke, Delve, affinity for artifacts, Improvise\nYou may pay 4 life rather than pay {{CARDNAME}}'s mana cost.\nCounter target spell.",
+        "oracle_text": "Convoke, Delve, affinity for artifacts, Improvise\nYou may pay 4 life rather than pay CARDNAME's mana cost.\nCounter target spell.",
         "power": null,
         "toughness": null,
         "colors": [
@@ -143,7 +143,7 @@
         "mana_cost": "{3}{B}",
         "cmc": 4,
         "type_line": "Artifact Creature — Golem",
-        "oracle_text": "When {{CARDNAME}} enters the battlefield, you may sacrifice any number of Treasure tokens. If you do, put that many +1/+1 counters on {{CARDNAME}}.",
+        "oracle_text": "When CARDNAME enters the battlefield, you may sacrifice any number of Treasure tokens. If you do, put that many +1/+1 counters on CARDNAME.",
         "power": 3,
         "toughness": 3,
         "colors": [

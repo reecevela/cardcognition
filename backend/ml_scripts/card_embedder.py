@@ -10,15 +10,25 @@ from sklearn.preprocessing import MultiLabelBinarizer
 
 class CardEmbedder:
     def __init__(self, config_options:dict=None):
-        self.text_embedder = KerasLayer("https://tfhub.dev/google/universal-sentence-encoder/4")
+        self.text_embedder = "" #KerasLayer("https://tfhub.dev/google/universal-sentence-encoder/4")
         self.converter = MLConverter()
         self.context = CardsContext()
+        self.parser = CardParser()
+        self.reducer = CardReducer()
 
         super_types, card_types, sub_types = self.context.get_all_card_types_and_sub_types()
 
         validation_set = None
         with open("validation_set.json", "r") as f:
             validation_set = json.load(f)
+        
+        cards = self.context.get_all_cards()
+        cards.extend(validation_set)
+        parsed_cards = [self.parser.parse_card(card) for card in cards]
+        reduced_cards = self.reducer.reduce_cards(parsed_cards)
+
+        self.parsed_properties_encoder = MultiLabelBinarizer()
+        self.parsed_properties_encoder.fit([card['properties'] for card in reduced_cards])
 
         val_super_types, val_card_types, val_sub = self.context.get_card_types_and_sub_types(validation_set)
         super_types.extend(val_super_types)
@@ -27,7 +37,6 @@ class CardEmbedder:
 
         self.super_type_encoder = MultiLabelBinarizer()
         self.super_type_encoder.fit(super_types)
-
         
         self.card_type_encoder = MultiLabelBinarizer()
         self.card_type_encoder.fit(card_types)
@@ -35,7 +44,7 @@ class CardEmbedder:
         self.sub_types_encoder = MultiLabelBinarizer()
         self.sub_types_encoder.fit(sub_types)
 
-        self.default_embedding_shape = self.text_embedder(["Legendary Creature — Elf Warrior"]).shape
+        self.default_embedding_shape = ""#self.text_embedder(["Legendary Creature — Elf Warrior"]).shape
 
         with open("config.json", "r") as f:
             config = json.load(f)
@@ -59,6 +68,16 @@ class CardEmbedder:
         if config_options is not None:
             for key in config_options:
                 self.key = config_options[key]
+
+    def embed_and_parse_cards(self, cards:list, testing=False) -> np.ndarray:
+        cards = [self.parser.parse_card(card) for card in cards]
+        cards = self.reducer.reduce_cards(cards, min_count=self.min_count)
+
+        encoded_cards = self.parsed_properties_encoder.transform([card['properties'] for card in cards])
+        encoded_cards = np.array(encoded_cards)
+
+        return encoded_cards
+
 
     def embed_cards(self, cards:list, testing=False) -> np.ndarray:
         oracle_texts = [card.get("oracle_text", "") for card in cards]

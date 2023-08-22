@@ -3,8 +3,8 @@
     "threshold":  -0.95,
     "npmi_scoring":  true,
     "batch_size":  65536,
-    "penalty":  "l1",
-    "alpha":  0.001,
+    "penalty":  "elasticnet",
+    "alpha":  0.01,
     "clean_text":  true,
     "oracle_text_encoding_method":  "TFIDF",
     "vector_size":  100,
@@ -14,5 +14,9 @@
     "remove_common_words":  false,
     "activation": "relu",
     "general_model": "MLPRegressor",
-    "notes": "Turning off the oracle rm words list for this run, going to make a larger oracle text window and lower alpha to see what happens"
+    "notes": "Changed to CardParser to use features instead of sentence vectors",
+    "card_start": 0,
+    "card_stop": 2000,
+    "print_limit": 10,
+    "specific_commander": "Daretti, Scrap Savant"
 }

@@ -4,6 +4,7 @@ from card_embedder import CardEmbedder
 import joblib
 import os
 import warnings
+import json
 
 warnings.filterwarnings("ignore")
 
@@ -11,23 +12,31 @@ converter = MLConverter()
 context = CardsContext()
 embedder = CardEmbedder()
 
+with open('config.json', 'r') as f:
+    config = json.load(f)
+
+card_start = config['card_start']
+card_stop = config['card_stop']
+print_limit = config['print_limit']
+min_count = config['min_count']
+
 commander_names = [commander['card_name'] for commander in context.get_commanders() if os.path.exists(f"cmd_models/{converter.sanitize_filename(commander['card_name'])}.joblib")]
 cards = context.get_all_cards()
 cards = [
-    card for card in cards[:100]
+    card for card in cards
     if card['card_name'] is not None
     and card['type_line'] is not None
     and card['oracle_text'] is not None
     and '//' not in card['card_name'] 
     and '//' not in card['type_line'] 
-]
-# Initialize max and min score for each commander
-commander_score_bounds = {commander_name: {'min': float('inf'), 'max': float('-inf')} for commander_name in commander_names}
-raw_scores = {card['card_name']: {} for card in cards}
+][card_start:card_stop]
 
-embeddings = embedder.embed_cards(cards, testing=True)
+commander_scores = {commander_name: {card['card_name']: 0 for card in cards} for commander_name in commander_names}
+scores = {card['card_name']: dict() for card in cards}
 
-# Collect raw scores and update max and min for each commander
+embeddings = embedder.embed_and_parse_cards(cards, testing=True)
+
+# Collect raw scores
 for i, card in enumerate(cards):
     try:
         if i % 100 == 0:
@@ -36,29 +45,28 @@ for i, card in enumerate(cards):
         if card_embedding is None:
             continue
         for commander_name in commander_names:
-            if os.path.exists(f"cmd_models/{commander_name}.joblib"):
-                file_cmd_name = converter.sanitize_filename(commander_name)
-                model = joblib.load(f"cmd_models/{file_cmd_name}.joblib")
-                score = model.predict([card_embedding])[0]
-                raw_scores[card['card_name']][commander_name] = score
-                commander_score_bounds[commander_name]['min'] = min(commander_score_bounds[commander_name]['min'], score)
-                commander_score_bounds[commander_name]['max'] = max(commander_score_bounds[commander_name]['max'], score)
+            file_cmd_name = converter.sanitize_filename(commander_name)
+            model = joblib.load(f"cmd_models/{file_cmd_name}.joblib")
+            score = model.predict([card_embedding])[0]
+            commander_scores[commander_name][card['card_name']] = score
+            scores[card['card_name']][commander_name] = score
+        if card['card_name'] == 'Urza, Lord High Artificer':
+            print(scores[card['card_name']])
     except Exception as e:
+        print(card['card_name'])
+        print(len(scores[card['card_name']]))
+        print(e)
         continue
-
-# Normalize the scores
-scores = {card['card_name']: [] for card in cards}
-for card_name, card_scores in raw_scores.items():
-    for commander_name, raw_score in card_scores.items():
-        min_score = commander_score_bounds[commander_name]['min']
-        max_score = commander_score_bounds[commander_name]['max']
-        normalized_score = (raw_score - min_score) / (max_score - min_score) if max_score != min_score else 0
-        scores[card_name].append((commander_name, normalized_score))
-
-with open('card_results.txt', 'w') as f:
-    for card_name, score_list in scores.items():
+with open('card_scores.txt', 'w') as f:
+    for card_name, cmd_scores in scores.items():
         f.write(f"{card_name}\n")
-        score_list.sort(key=lambda x: x[1], reverse=True)
-        for score in score_list[:100]:
-            f.write(f"\t'{score[0]}', --{score[1]}\n")
-        f.write("\n")
+        strings = [f"\t{commander}: {score}\n" for commander, score in sorted(cmd_scores.items(), key=lambda x: x[1])]
+        strings = strings[:print_limit]
+        f.write(''.join(strings))
+
+with open('commander_scores.txt', 'w') as f:
+    for commander_name, cmd_scores in commander_scores.items():
+        f.write(f"{commander_name}\n")
+        strings = [f"\t{card}: {score}\n" for card, score in sorted(cmd_scores.items(), key=lambda x: x[1]) if score > 0]
+        strings = strings[:print_limit]
+        f.write(''.join(strings))

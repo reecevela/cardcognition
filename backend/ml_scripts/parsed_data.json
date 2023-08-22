@@ -1,238 +1,238 @@
 [
   {
-    "name": "Vivien's Invocation",
+    "name": "Raven Guild Initiate",
     "abilities": [],
-    "effects": [
-      [
-        "CAST",
-        "Look at the top seven cards of your library. You may put a creature card from among them onto the battlefield. Put the rest on the bottom of your library in a random order. When a creature is put onto the battlefield this way, it deals damage equal to its power to target creature an opponent controls."
-      ]
-    ],
-    "properties": [
-      "creatures_matter",
-      "green",
-      "spell",
-      "Sorcery",
-      "cmc:7"
-    ]
-  },
-  {
-    "name": "Kalemne's Captain",
-    "abilities": [
-      [
-        [
-          "{5}",
-          "{W}",
-          "{W}"
-        ],
-        [
-          "Monstrosity 3"
-        ]
-      ]
-    ],
-    "effects": [
-      [
-        "CARDNAME becomes monstrous",
-        "exile all artifacts and enchantments"
-      ]
-    ],
-    "properties": [
-      "cmc:5",
-      "Creature",
-      "vigilance",
-      "Soldier",
-      "board_wipe",
-      "permanent",
-      "counters",
-      "high_power",
-      "white",
-      "Giant",
-      "high_toughness"
-    ]
-  },
-  {
-    "name": "Warped Landscape",
-    "abilities": [
-      [
-        [
-          "{T}"
-        ],
-        [
-          "Add {C}"
-        ]
-      ],
-      [
-        [
-          "{2}",
-          "{T}"
-        ],
-        [
-          "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle"
-        ]
-      ]
-    ],
     "effects": [],
     "properties": [
-      "Land",
-      "permanent",
-      "tap",
-      "lands_matter",
-      "ramp",
-      "cmc:0"
-    ]
-  },
-  {
-    "name": "Black Sun's Twilight",
-    "abilities": [],
-    "effects": [
-      [
-        "CAST",
-        "Up to one target creature gets -X/-X until end of turn. If X is 5 or more, return a creature card with mana value X or less from your graveyard to the battlefield tapped."
-      ]
-    ],
-    "properties": [
-      "black",
-      "cmc:1",
       "creatures_matter",
-      "spell",
-      "Instant",
-      "tap",
-      "recursion"
-    ]
-  },
-  {
-    "name": "Crypt Rats",
-    "abilities": [
-      [
-        [
-          "{X}"
-        ],
-        [
-          "CARDNAME deals X damage to each creature and each player",
-          "Spend only black mana on X"
-        ]
-      ]
-    ],
-    "effects": [],
-    "properties": [
-      "black",
-      "cmc:3",
-      "Creature",
-      "board_wipe",
-      "permanent",
+      "mid_toughness",
+      "TYP_Creature",
       "1power",
-      "Rat",
-      "1toughness"
-    ]
-  },
-  {
-    "name": "Siren of the Fanged Coast",
-    "abilities": [],
-    "effects": [
-      [
-        "CARDNAME enters the battlefield, if tribute wasn't paid",
-        "gain control of target creature"
-      ]
-    ],
-    "properties": [
-      "control_effect",
-      "cmc:5",
-      "Creature",
-      "permanent",
-      "flying",
-      "counters",
-      "1power",
+      "SUB_Human",
       "blue",
-      "1toughness",
-      "Siren"
+      "mid_cmc",
+      "SUB_Wizard"
     ]
   },
   {
-    "name": "Brotherhood's End",
+    "name": "Sylvan Brushstrider",
     "abilities": [],
     "effects": [
       [
-        "CAST",
-        "Choose one \u2014"
-      ],
-      [
-        "CAST",
-        "\u2022 CARDNAME deals 3 damage to each creature and each planeswalker."
-      ],
-      [
-        "CAST",
-        "\u2022 Destroy all artifacts with mana value 3 or less."
+        "CARDNAME enters the battlefield",
+        "you gain 2 life"
       ]
     ],
     "properties": [
-      "cmc:3",
-      "spell",
-      "board_wipe",
-      "Sorcery",
-      "red"
-    ]
-  },
-  {
-    "name": "Research Thief",
-    "abilities": [],
-    "effects": [
-      [
-        "an artifact creature you control deals combat damage to a player",
-        "draw a card"
-      ]
-    ],
-    "properties": [
-      "artifacts_matter",
-      "cmc:5",
-      "Creature",
-      "permanent",
-      "flash",
-      "Moonfolk",
+      "2toughness",
+      "SUB_Beast",
+      "life_gain",
+      "trigger_once",
+      "TYP_Creature",
+      "ETB",
       "mid_power",
-      "blue",
-      "card_advantage",
-      "Wizard",
-      "Artifact",
-      "card_draw",
-      "mid_toughness",
-      "aggressive_combat"
+      "mid_cmc",
+      "green"
     ]
   },
   {
-    "name": "Dream Twist",
-    "abilities": [],
+    "name": "Spitting Hydra",
+    "abilities": [
+      [
+        [
+          "{1}",
+          "{R}"
+        ],
+        [
+          "It deals 1 damage to target creature"
+        ]
+      ]
+    ],
+    "effects": [],
+    "properties": [
+      "high_cmc",
+      "counters",
+      "red",
+      "TYP_Creature",
+      "power_boost",
+      "ETB",
+      "0power",
+      "SUB_Hydra",
+      "0toughness"
+    ]
+  },
+  {
+    "name": "Codie, Vociferous Codex",
+    "abilities": [
+      [
+        [
+          "{4}",
+          "{T}"
+        ],
+        [
+          "Add {W}{U}{B}{R}{G}",
+          "When you cast your next spell this turn, exile cards from the top of your library until you exile an instant or sorcery card with lesser mana value",
+          "Until end of turn, you may cast that card without paying its mana cost",
+          "Put each other card exiled this way on the bottom of your library in a random order"
+        ]
+      ]
+    ],
     "effects": [
       [
-        "CAST",
-        "Target player mills three cards."
-      ],
-      [
-        "CAST",
-        "Flashback {1}{U}"
+        "you cast your next spell this turn",
+        "exile cards from the top of your library until you exile an instant or sorcery card with lesser mana value"
       ]
     ],
     "properties": [
-      "cmc:1",
-      "milling",
-      "spell",
-      "Instant",
-      "graveyard_castable",
-      "blue"
+      "instants_matter",
+      "trigger_once",
+      "mid_toughness",
+      "TYP_Artifact",
+      "TYP_Creature",
+      "cost_reducer",
+      "1power",
+      "chaos",
+      "ramp",
+      "mid_cmc",
+      "hate",
+      "sorceries_matter",
+      "SUP_Legendary",
+      "alternate_casting",
+      "SUB_Construct"
     ]
   },
   {
-    "name": "Simian Grunts",
+    "name": "Ascending Aven",
     "abilities": [],
     "effects": [],
     "properties": [
-      "Ape",
-      "cmc:3",
-      "green",
-      "Creature",
-      "permanent",
-      "flash",
+      "2toughness",
+      "creatures_matter",
+      "SUB_Soldier",
+      "TYP_Creature",
+      "blue",
+      "mid_power",
+      "mid_cmc",
+      "SUB_Bird",
+      "flying"
+    ]
+  },
+  {
+    "name": "Fleshformer",
+    "abilities": [
+      [
+        [
+          "{W}",
+          "{U}",
+          "{B}",
+          "{R}",
+          "{G}"
+        ],
+        [
+          "CARDNAME gets +2/+2 and gains fear until end of turn",
+          "Target creature gets -2/-2 until end of turn",
+          "Activate only during your turn"
+        ]
+      ]
+    ],
+    "effects": [],
+    "properties": [
+      "2toughness",
+      "2power",
+      "TYP_Creature",
+      "power_boost",
+      "SUB_Human",
+      "black",
+      "mid_cmc",
+      "aggressive_combat",
+      "SUB_Wizard",
+      "hate"
+    ]
+  },
+  {
+    "name": "Runaway Carriage",
+    "abilities": [],
+    "effects": [
+      [
+        "CARDNAME attacks or blocks",
+        "sacrifice it at end of combat"
+      ]
+    ],
+    "properties": [
+      "high_power",
+      "trigger_once",
+      "TYP_Artifact",
+      "TYP_Creature",
+      "trample",
+      "mid_cmc",
+      "high_toughness",
+      "SUB_Construct"
+    ]
+  },
+  {
+    "name": "Worldheart Phoenix",
+    "abilities": [],
+    "effects": [],
+    "properties": [
+      "2toughness",
+      "counters",
+      "red",
+      "2power",
+      "TYP_Creature",
+      "graveyard_castable",
+      "ETB",
+      "power_boost",
+      "mid_cmc",
+      "SUB_Phoenix",
+      "flying"
+    ]
+  },
+  {
+    "name": "Bant Sojourners",
+    "abilities": [],
+    "effects": [
+      [
+        "you cycle CARDNAME or it dies",
+        "you may create a 1/1 white Soldier creature token"
+      ]
+    ],
+    "properties": [
+      "SUB_Soldier",
+      "card_advantage",
+      "discard",
       "mid_toughness",
-      "mid_power"
+      "TYP_Creature",
+      "2power",
+      "death",
+      "trigger_once",
+      "SUB_Human",
+      "blue",
+      "mid_cmc",
+      "white",
+      "green"
+    ]
+  },
+  {
+    "name": "Rotfeaster Maggot",
+    "abilities": [],
+    "effects": [
+      [
+        "CARDNAME enters the battlefield",
+        "exile target creature card from a graveyard"
+      ]
+    ],
+    "properties": [
+      "high_cmc",
+      "life_gain",
+      "creatures_matter",
+      "trigger_once",
+      "TYP_Creature",
+      "SUB_Insect",
+      "ETB",
+      "mid_power",
+      "black",
+      "targeted_interaction",
+      "high_toughness"
     ]
   }
 ]

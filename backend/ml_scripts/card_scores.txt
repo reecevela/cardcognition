@@ -1,0 +1,400 @@
+Sarkhan, Dragonsoul
+	Zimone, Quandrix Prodigy: 0.07902843258034091
+	Kyodai, Soul of Kamigawa: 0.07964177361441746
+	Higure, the Still Wind: 0.08531825552155026
+Fervent Cathar
+	Kyodai, Soul of Kamigawa: 0.09010859749173022
+	Hurkyl, Master Wizard: 0.09437444532815958
+	Sidisi, Undead Vizier: 0.09631504125758296
+Poison the Cup
+	Kyodai, Soul of Kamigawa: 0.08833797073978769
+	Zimone, Quandrix Prodigy: 0.0995952792009232
+	Gadrak, the Crown-Scourge: 0.099852383506207
+Urza's Incubator
+	Kyodai, Soul of Kamigawa: 0.08856728302338368
+	Zimone, Quandrix Prodigy: 0.09322041249299864
+	Garth One-Eye: 0.10012158125887549
+Shield of Duty and Reason
+	Rishkar, Peema Renegade: 0.0827334125594518
+	Molimo, Maro-Sorcerer: 0.08523461859776128
+	Zimone, Quandrix Prodigy: 0.08563170852164174
+Sigil of Distinction
+	Arasta of the Endless Web: 0.09614203477249587
+	Urgoros, the Empty One: 0.09967822460498765
+	Baru, Fist of Krosa: 0.10193584024509651
+Sifter of Skulls
+	Hurkyl, Master Wizard: 0.11961211772227125
+	Kyodai, Soul of Kamigawa: 0.12244895842256168
+	Kaho, Minamo Historian: 0.1236937757862187
+Kor Skyfisher
+	Child of Alara: 0.09345924082920394
+	Kyodai, Soul of Kamigawa: 0.10386535023229984
+	Sidisi, Undead Vizier: 0.11202128975902767
+Pegasus Refuge
+	Zimone, Quandrix Prodigy: 0.08215743970359446
+	Sidisi, Undead Vizier: 0.0850718283020283
+	Jegantha, the Wellspring: 0.08843228289745601
+Walking Ballista
+	Kaho, Minamo Historian: 0.11426186721592554
+	Kyodai, Soul of Kamigawa: 0.11464038195215397
+	Molimo, Maro-Sorcerer: 0.11555634816482518
+Sigil of Myrkul
+	Zimone, Quandrix Prodigy: 0.08215743970359446
+	Kyodai, Soul of Kamigawa: 0.08505244013456623
+	Tobias Andrion: 0.09147970624793478
+Vivify
+	Kyodai, Soul of Kamigawa: 0.09944349939703191
+	Sidisi, Undead Vizier: 0.10238800145901639
+	Varragoth, Bloodsky Sire: 0.10302469586166217
+Jor Kadeen, the Prevailer
+	Kyodai, Soul of Kamigawa: 0.09198411674520607
+	Talrand, Sky Summoner: 0.09216903284203112
+	Hurkyl, Master Wizard: 0.09227829338819686
+Alpha Authority
+	Tormod, the Desecrator: 0.0920224792762684
+	Kyodai, Soul of Kamigawa: 0.09786371916850531
+	Sidisi, Undead Vizier: 0.09962848155976636
+Hallowed Spiritkeeper
+	Sidisi, Undead Vizier: 0.09263605534865116
+	Hurkyl, Master Wizard: 0.09336314287453656
+	Kyodai, Soul of Kamigawa: 0.09553567178463455
+Agitator Ant
+	Kyodai, Soul of Kamigawa: 0.09010859749173022
+	Hurkyl, Master Wizard: 0.09437444532815958
+	Tobias Andrion: 0.09653902567554713
+Earsplitting Rats
+	Kyodai, Soul of Kamigawa: 0.09073315367502989
+	Hurkyl, Master Wizard: 0.09437444532815958
+	Tobias Andrion: 0.09636461990486847
+Blood Hypnotist
+	Kyodai, Soul of Kamigawa: 0.09010859749173022
+	Hurkyl, Master Wizard: 0.09163652931495095
+	Sidisi, Undead Vizier: 0.09349272592781918
+Kaervek, the Spiteful
+	Kyodai, Soul of Kamigawa: 0.08914986954830045
+	Hurkyl, Master Wizard: 0.09437444532815958
+	Tobias Andrion: 0.09653902567554713
+Mardu Strike Leader
+	Kyodai, Soul of Kamigawa: 0.08914986954830045
+	Hurkyl, Master Wizard: 0.09610105888774521
+	Legolas, Master Archer: 0.09707435528048403
+Vivien's Stampede
+	Niv-Mizzet, Dracogenius: 0.09049045094051138
+	Ayesha Tanaka: 0.09301880930546415
+	Chromium: 0.0936348331266828
+Varchild's War-Riders
+	Child of Alara: 0.09136057699533191
+	Kyodai, Soul of Kamigawa: 0.0984382759393955
+	Hurkyl, Master Wizard: 0.11120835894598889
+Wave of Reckoning
+	Higure, the Still Wind: 0.07889897965660546
+	Zimone, Quandrix Prodigy: 0.08047661738821142
+	Kaho, Minamo Historian: 0.08742342656755206
+Pack Guardian
+	Sidisi, Undead Vizier: 0.09349272592781918
+	Kyodai, Soul of Kamigawa: 0.09521475426130369
+	Hurkyl, Master Wizard: 0.0983852381691337
+Yawgmoth's Agenda
+	Kyodai, Soul of Kamigawa: 0.07942783498467465
+	Dwynen, Gilt-Leaf Daen: 0.08025894549441004
+	Higure, the Still Wind: 0.08673653913932247
+Roiling Regrowth
+	Maralen of the Mornsong: 0.12477913260239927
+	Sidisi, Undead Vizier: 0.1287918279130626
+	Rograkh, Son of Rohgahh: 0.13048325557495669
+Geode Rager
+	Kyodai, Soul of Kamigawa: 0.08448399234183865
+	Hurkyl, Master Wizard: 0.09456247266958537
+	Sidisi, Undead Vizier: 0.09480485853766935
+Battlefront Krushok
+	Kyodai, Soul of Kamigawa: 0.08800686498468267
+	Hurkyl, Master Wizard: 0.09400490694778249
+	Tobias Andrion: 0.09626543367716024
+Plate Armor
+	Zimone, Quandrix Prodigy: 0.09322041249299864
+	Kyodai, Soul of Kamigawa: 0.0965396629729862
+	Archelos, Lagoon Mystic: 0.10070220087697042
+Blatant Thievery
+	Kyodai, Soul of Kamigawa: 0.08341982323819376
+	Zimone, Quandrix Prodigy: 0.0875636714358614
+	Kaysa: 0.08765324060943644
+Bubble Snare
+	Molimo, Maro-Sorcerer: 0.07895727440502871
+	Arasta of the Endless Web: 0.08086441057930378
+	Kyodai, Soul of Kamigawa: 0.08275116616008701
+Drake Umbra
+	Kyodai, Soul of Kamigawa: 0.07831351281764135
+	Tormod, the Desecrator: 0.086160978982558
+	Sidisi, Undead Vizier: 0.08638396091187846
+Gaea's Blessing
+	Tormod, the Desecrator: 0.09794742023285859
+	Gisa and Geralf: 0.10344837920665734
+	Baird, Steward of Argive: 0.10385622817669722
+Dermoplasm
+	Kyodai, Soul of Kamigawa: 0.08893354511639222
+	Sidisi, Undead Vizier: 0.09234313068411254
+	Maralen of the Mornsong: 0.09798139179878254
+Crawling Infestation
+	Sidisi, Undead Vizier: 0.0850718283020283
+	Varragoth, Bloodsky Sire: 0.08936314975939125
+	Kyodai, Soul of Kamigawa: 0.08953404072084002
+Kitesail Apprentice
+	Kyodai, Soul of Kamigawa: 0.0945998088427732
+	Child of Alara: 0.09959709145472152
+	Molimo, Maro-Sorcerer: 0.10086606283245696
+Tormentor's Trident
+	Kaysa: 0.0915591698621389
+	Child of Alara: 0.09706755592209648
+	Kyodai, Soul of Kamigawa: 0.09736921701728406
+Warkite Marauder
+	Child of Alara: 0.09233459179446493
+	Kyodai, Soul of Kamigawa: 0.09636522582893242
+	Progenitus: 0.11033371469271755
+Electrolyze
+	Jegantha, the Wellspring: 0.09386451315301833
+	Kyodai, Soul of Kamigawa: 0.09592062675418789
+	Zimone, Quandrix Prodigy: 0.09880565275498526
+Radha, Coalition Warlord
+	Sidisi, Undead Vizier: 0.09349272592781918
+	Hurkyl, Master Wizard: 0.09665862460954809
+	Maralen of the Mornsong: 0.10311964387984757
+Draugr Recruiter
+	Kyodai, Soul of Kamigawa: 0.09577379761927086
+	Child of Alara: 0.09896022530355034
+	Legolas, Master Archer: 0.10670688863317941
+Repel the Abominable
+	Tormod, the Desecrator: 0.0920224792762684
+	Child of Alara: 0.0949206770710748
+	Radha, Heir to Keld: 0.09953665075913347
+Inscription of Ruin
+	Zimone, Quandrix Prodigy: 0.09003412019718238
+	Kyodai, Soul of Kamigawa: 0.09174203468184808
+	Niv-Mizzet, Dracogenius: 0.09658707295147216
+Underworld Hermit
+	Kyodai, Soul of Kamigawa: 0.08352526439840888
+	Talrand, Sky Summoner: 0.09002052240581268
+	Hurkyl, Master Wizard: 0.09227829338819686
+Herald of Anguish
+	Kyodai, Soul of Kamigawa: 0.08510854852513831
+	Hurkyl, Master Wizard: 0.09126699093457384
+	Child of Alara: 0.09326615389006955
+Dawn Elemental
+	Sidisi, Undead Vizier: 0.09349272592781918
+	Hurkyl, Master Wizard: 0.09437444532815958
+	Kyodai, Soul of Kamigawa: 0.09553567178463455
+Ertai, Wizard Adept
+	Kyodai, Soul of Kamigawa: 0.08893354511639222
+	Sidisi, Undead Vizier: 0.09234313068411254
+	Child of Alara: 0.09804704820641008
+Ravager's Mace
+	Kyodai, Soul of Kamigawa: 0.09222691084711518
+	Zimone, Quandrix Prodigy: 0.09322041249299864
+	Garth One-Eye: 0.10194051382250727
+Spirit Link
+	Molimo, Maro-Sorcerer: 0.07895727440502871
+	Arasta of the Endless Web: 0.08086441057930378
+	Zimone, Quandrix Prodigy: 0.08563170852164174
+Krark-Clan Stoker
+	Hurkyl, Master Wizard: 0.11961211772227125
+	Kyodai, Soul of Kamigawa: 0.12340768636599146
+	Maralen of the Mornsong: 0.12604959142459565
+Serum Raker
+	Kyodai, Soul of Kamigawa: 0.08961883150799657
+	Sidisi, Undead Vizier: 0.09263605534865116
+	Child of Alara: 0.09604328023518849
+Gilt-Leaf Archdruid
+	Sidisi, Undead Vizier: 0.1004787692604121
+	Krark, the Thumbless: 0.10671553029746825
+	Kyodai, Soul of Kamigawa: 0.11026009138916423
+Chandra's Defeat
+	Dwynen, Gilt-Leaf Daen: 0.09019485017993031
+	Arasta of the Endless Web: 0.09244522578874582
+	Molimo, Maro-Sorcerer: 0.09300076370484862
+Flame-Kin Zealot
+	Hurkyl, Master Wizard: 0.09437444532815958
+	Sidisi, Undead Vizier: 0.09660796592212158
+	Kyodai, Soul of Kamigawa: 0.09760872189509764
+Halsin, Emerald Archdruid
+	Kyodai, Soul of Kamigawa: 0.09363147013457425
+	Hurkyl, Master Wizard: 0.09437444532815958
+	Tobias Andrion: 0.09653902567554713
+Protean Raider
+	Kyodai, Soul of Kamigawa: 0.09010859749173022
+	Sidisi, Undead Vizier: 0.09660796592212158
+	Child of Alara: 0.0990210630055431
+Dauthi Ghoul
+	Child of Alara: 0.09227375409247217
+	Kyodai, Soul of Kamigawa: 0.09837754573109081
+	Hurkyl, Master Wizard: 0.10948174538640328
+Trench Behemoth
+	Kyodai, Soul of Kamigawa: 0.0830578511009161
+	Sidisi, Undead Vizier: 0.0936552632939627
+	Child of Alara: 0.10576224060003574
+Grisly Sigil
+	Arasta of the Endless Web: 0.08551698702229861
+	Zimone, Quandrix Prodigy: 0.08563170852164174
+	Kyodai, Soul of Kamigawa: 0.08832488987813221
+Oath of Druids
+	Kyodai, Soul of Kamigawa: 0.09786371916850531
+	Sidisi, Undead Vizier: 0.09962848155976636
+	Tormod, the Desecrator: 0.1041501351140373
+Cyclopean Snare
+	Kaysa: 0.0915591698621389
+	Dwynen, Gilt-Leaf Daen: 0.11125746374675982
+	Kyodai, Soul of Kamigawa: 0.11252625980456009
+Croakid Amphibonaut
+	Kyodai, Soul of Kamigawa: 0.08241094223137557
+	Child of Alara: 0.09435674476415087
+	Sidisi, Undead Vizier: 0.09480485853766935
+Flamespeaker's Will
+	Kyodai, Soul of Kamigawa: 0.08417730740100957
+	Dwynen, Gilt-Leaf Daen: 0.08849560939995914
+	Jegantha, the Wellspring: 0.08884870040930287
+Road of Return
+	Gisa and Geralf: 0.10147083898077165
+	Tormod, the Desecrator: 0.10812876946132834
+	Kyodai, Soul of Kamigawa: 0.10959395766002814
+Selesnya Sanctuary
+	Dwynen, Gilt-Leaf Daen: 0.11083926492589445
+	Silvos, Rogue Elemental: 0.12030969336524659
+	Captain Ripley Vance: 0.12100701738395675
+Unspeakable Symbol
+	Zimone, Quandrix Prodigy: 0.08215743970359446
+	Kyodai, Soul of Kamigawa: 0.08505244013456623
+	Tobias Andrion: 0.08950265341230003
+Body of Research
+	Kyodai, Soul of Kamigawa: 0.08901574599150087
+	Heliod, Sun-Crowned: 0.09109547698870188
+	Taranika, Akroan Veteran: 0.09168325459265406
+Airlift Chaplain
+	Child of Alara: 0.09917169724114909
+	Sidisi, Undead Vizier: 0.10161853618893134
+	Zimone, Quandrix Prodigy: 0.10240820607800057
+Pirate Ship
+	Kyodai, Soul of Kamigawa: 0.08241094223137557
+	Sidisi, Undead Vizier: 0.09480485853766935
+	Tobias Andrion: 0.10483816038513405
+Squad Commander
+	Sidisi, Undead Vizier: 0.09349272592781918
+	Kyodai, Soul of Kamigawa: 0.09553567178463455
+	Hurkyl, Master Wizard: 0.09610105888774521
+Calix, Destiny's Hand
+	Sidisi, Undead Vizier: 0.09416998878747362
+	Niv-Mizzet, Dracogenius: 0.09804134152892871
+	Gadrak, the Crown-Scourge: 0.10012015145754959
+Mask of Law and Grace
+	Rishkar, Peema Renegade: 0.0827334125594518
+	Molimo, Maro-Sorcerer: 0.08523461859776128
+	Zimone, Quandrix Prodigy: 0.08563170852164174
+Radagast, Wizard of Wilds
+	Sidisi, Undead Vizier: 0.09234313068411254
+	Kyodai, Soul of Kamigawa: 0.09363147013457425
+	Tobias Andrion: 0.10610685547097945
+Space Marine Devastator
+	Sidisi, Undead Vizier: 0.09349272592781918
+	Kyodai, Soul of Kamigawa: 0.09553567178463455
+	Hurkyl, Master Wizard: 0.09610105888774521
+Wind-Scarred Crag
+	Silvos, Rogue Elemental: 0.11150531376382514
+	Dwynen, Gilt-Leaf Daen: 0.11967559051250504
+	Captain Ripley Vance: 0.12100701738395675
+Mage Hunters' Onslaught
+	Kyodai, Soul of Kamigawa: 0.09080565942465918
+	Zimone, Quandrix Prodigy: 0.09188222955215172
+	Jegantha, the Wellspring: 0.09240824641630187
+Essence Symbiote
+	Kyodai, Soul of Kamigawa: 0.10196114858223952
+	Child of Alara: 0.10812890998490232
+	Tobias Andrion: 0.10998444970332642
+Llanowar Druid
+	Sidisi, Undead Vizier: 0.10719270860638923
+	Hurkyl, Master Wizard: 0.11221966139961191
+	Kyodai, Soul of Kamigawa: 0.11848844465087574
+Nissa Revane
+	Kyodai, Soul of Kamigawa: 0.08878925140715306
+	Sidisi, Undead Vizier: 0.09006207075171035
+	Gadrak, the Crown-Scourge: 0.09098434609159957
+Fen Stalker
+	Hurkyl, Master Wizard: 0.09665862460954809
+	Kyodai, Soul of Kamigawa: 0.10477916788181157
+	Tobias Andrion: 0.11113691118329093
+Seer of Stolen Sight
+	Kyodai, Soul of Kamigawa: 0.08914986954830045
+	Hurkyl, Master Wizard: 0.09163652931495095
+	Tobias Andrion: 0.09653902567554713
+Hymn of Rebirth
+	Higure, the Still Wind: 0.07889897965660546
+	Niv-Mizzet, Dracogenius: 0.09049045094051138
+	Urgoros, the Empty One: 0.0929975686297119
+Velomachus Lorehold
+	Kyodai, Soul of Kamigawa: 0.0926310256147466
+	Sidisi, Undead Vizier: 0.0936552632939627
+	Child of Alara: 0.09548139379888988
+Gift of Orzhova
+	Zimone, Quandrix Prodigy: 0.08215743970359446
+	Kyodai, Soul of Kamigawa: 0.08393811796753292
+	Jegantha, the Wellspring: 0.08409198724588575
+Astral Confrontation
+	Kyodai, Soul of Kamigawa: 0.08909916782623023
+	Tourach, Dread Cantor: 0.0923890383731587
+	Zimone, Quandrix Prodigy: 0.09791445688554017
+Tectonic Rift
+	Jegantha, the Wellspring: 0.08601707857176144
+	Zimone, Quandrix Prodigy: 0.09003412019718238
+	Varragoth, Bloodsky Sire: 0.09075689087988782
+Resourceful Defense
+	Zimone, Quandrix Prodigy: 0.08215743970359446
+	Jegantha, the Wellspring: 0.0872596753130414
+	Sidisi, Undead Vizier: 0.08867332308410432
+Jungle Wayfinder
+	Kyodai, Soul of Kamigawa: 0.09363147013457425
+	Sidisi, Undead Vizier: 0.09719697588597172
+	Hurkyl, Master Wizard: 0.09802773948695369
+Tangleweave Armor
+	Kyodai, Soul of Kamigawa: 0.09463546132292588
+	Jegantha, the Wellspring: 0.10171229605544015
+	Garth One-Eye: 0.10409560231069756
+Inspiring Vantage
+	Dwynen, Gilt-Leaf Daen: 0.11083926492589445
+	Silvos, Rogue Elemental: 0.12030969336524659
+	Captain Ripley Vance: 0.12100701738395675
+Akroan Hoplite
+	Child of Alara: 0.09248522603007092
+	Kyodai, Soul of Kamigawa: 0.106836398077888
+	Sidisi, Undead Vizier: 0.10719270860638923
+Nissa's Revelation
+	Higure, the Still Wind: 0.08512527587642214
+	Crosis, the Purger: 0.08976627947342086
+	Niv-Mizzet, Dracogenius: 0.09049045094051138
+Titania's Chosen
+	Hurkyl, Master Wizard: 0.09437444532815958
+	Kyodai, Soul of Kamigawa: 0.09452946786969933
+	Sidisi, Undead Vizier: 0.09594462546618858
+Olivia's Wrath
+	Higure, the Still Wind: 0.07889897965660546
+	Zimone, Quandrix Prodigy: 0.08047661738821142
+	Kyodai, Soul of Kamigawa: 0.08453414540522707
+Ishkanah, Grafwidow
+	Kyodai, Soul of Kamigawa: 0.08800686498468267
+	Sidisi, Undead Vizier: 0.0936552632939627
+	Hurkyl, Master Wizard: 0.09400490694778249
+Launch Party
+	Kyodai, Soul of Kamigawa: 0.08898487960932823
+	Jegantha, the Wellspring: 0.09187957975546676
+	Kodama of the East Tree: 0.10129411083202058
+Spearpoint Oread
+	Kyodai, Soul of Kamigawa: 0.0908533868054172
+	Hurkyl, Master Wizard: 0.09610105888774521
+	Sidisi, Undead Vizier: 0.09660796592212158
+Galadhrim Bow
+	Kyodai, Soul of Kamigawa: 0.11026475965643703
+	Sidisi, Undead Vizier: 0.11068462511536936
+	Gadrak, the Crown-Scourge: 0.11086032098501833
+Dusk Legion Duelist
+	Child of Alara: 0.09345924082920394
+	Kyodai, Soul of Kamigawa: 0.11048927830327025
+	Sidisi, Undead Vizier: 0.1168385299026024
+Whispersilk Cloak
+	Jegantha, the Wellspring: 0.08758214373268972
+	Kyodai, Soul of Kamigawa: 0.08903953856961878
+	Zimone, Quandrix Prodigy: 0.09322041249299864

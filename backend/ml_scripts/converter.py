@@ -76,6 +76,8 @@ class MLConverter:
         return output
 
     def sanitize_filename(self, filename):
+        filename = filename.lower()
+        filename = filename.replace(',', '')
         filename = re.sub(r'[<>:"/\\|?*]', '_', filename)
         filename = filename.replace(' ', '_')
         filename = filename[:250]

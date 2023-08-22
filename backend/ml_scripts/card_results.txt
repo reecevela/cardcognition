@@ -1,2976 +1,2874 @@
-Go for the Throat
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.854848676552872
-	'Progenitus', --0.7701069219914474
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.7419737805746514
-	'Chandler', --0.6643953098527186
-	'Ragnar', --0.6465717327608266
-	'Nebuchadnezzar', --0.5876890080540662
-	'Phelddagrif', --0.48025809889843535
-	'Halfdane', --0.4606681693318084
-	'Nihiloor', --0.4288878674378826
-	'Cromat', --0.4245636612358066
-	'Stangg', --0.40178781345371567
-	'Memnarch', --0.3907661678046056
-	'Joven', --0.38987359131680077
-	'Borborygmos', --0.3514282728009862
-	'Thraximundar', --0.340575306746896
-	'Gallowbraid', --0.32212455655619604
-	'Themberchaud', --0.2940523423814209
-	'Tiamat', --0.2874979269244333
-	'Atogatog', --0.2483226016770075
-	'Marrow-Gnawer', --0.22834901495576185
-	'Johan', --0.20997021293931922
-	'Kaysa', --0.18493044436481998
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Malfegor', --0.1443151113535864
-	'Tromokratis', --0.11038831510428343
-	'Morinfen', --0.0635609393695463
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Extract the Truth
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.854848676552872
-	'Progenitus', --0.7701069219914474
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.7419737805746514
-	'Chandler', --0.6643953098527186
-	'Ragnar', --0.6465717327608266
-	'Nebuchadnezzar', --0.5876890080540662
-	'Phelddagrif', --0.48025809889843535
-	'Halfdane', --0.4606681693318084
-	'Nihiloor', --0.4288878674378826
-	'Cromat', --0.4245636612358066
-	'Stangg', --0.40178781345371567
-	'Memnarch', --0.3907661678046056
-	'Joven', --0.38987359131680077
-	'Borborygmos', --0.3514282728009862
-	'Thraximundar', --0.340575306746896
-	'Gallowbraid', --0.32212455655619604
-	'Themberchaud', --0.2940523423814209
-	'Tiamat', --0.2874979269244333
-	'Atogatog', --0.2483226016770075
-	'Marrow-Gnawer', --0.22834901495576185
-	'Johan', --0.20997021293931922
-	'Kaysa', --0.18493044436481998
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Malfegor', --0.1443151113535864
-	'Tromokratis', --0.11038831510428343
-	'Morinfen', --0.0635609393695463
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Puncture Bolt
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.8443613155467947
-	'Progenitus', --0.7836049180378954
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.6820568103913893
-	'Ragnar', --0.6465717327608266
-	'Chandler', --0.6297157546180151
-	'Halfdane', --0.5610410653888711
-	'Nebuchadnezzar', --0.5205879062912664
-	'Phelddagrif', --0.5081782815037609
-	'Borborygmos', --0.44386750665819336
-	'Cromat', --0.4294167464170707
-	'Memnarch', --0.42612619437966576
-	'Nihiloor', --0.4178326461207898
-	'Stangg', --0.40178781345371567
-	'Thraximundar', --0.37520217165458963
-	'Marrow-Gnawer', --0.3516419356216536
-	'Joven', --0.3282976155456609
-	'Atogatog', --0.305851409999869
-	'Malfegor', --0.30196935944474945
-	'Tiamat', --0.29454970649279205
-	'Gallowbraid', --0.24416900541924286
-	'Johan', --0.23865200072617831
-	'Kaysa', --0.18493044436481998
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Morinfen', --0.1278814712294921
-	'Themberchaud', --0.11745948571455986
-	'Tromokratis', --0.11038831510428343
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-
-Extravagant Replication
-	'Taniwha', --1.0
-	'Themberchaud', --0.742611012656545
-	'Gallowbraid', --0.5989544902614111
-	'Elminster', --0.5122307484339619
-	'Progenitus', --0.2606490743701142
-	'Chandler', --0.24461657858851707
-	'Palladia-Mors', --0.2259213417239548
-	'Chromium', --0.19894931221731538
-	'Halfdane', --0.16570365334901266
-	'Ragnar', --0.1250235682005728
-	'Tiamat', --0.08485316301848328
-	'Thraximundar', --0.0788741584290382
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.05320014603154233
-	'Nebuchadnezzar', --0.052347001498654004
-	'Atogatog', --0.025803057223183327
-	'Johan', --0.013275066770443088
-	'Phelddagrif', --0.011232247814687225
-	'Eight-and-a-Half-Tails', --0.0
-	'Kaysa', --0.0
-	'Cromat', --0.0
-	'Malfegor', --0.0
-	'Borborygmos', --0.0
-	'Marrow-Gnawer', --0.0
-	'Joven', --0.0
-	'Tromokratis', --0.0
-	'Memnarch', --0.0
-	'Nihiloor', --0.0
-	'Stangg', --0.0
-
-Applied Biomancy
-	'Taniwha', --1.0
-	'Elminster', --0.8118836013977683
-	'Palladia-Mors', --0.7419737805746514
-	'Chromium', --0.6994625216609274
-	'Progenitus', --0.693439238294324
-	'Chandler', --0.6648714623470195
-	'Ragnar', --0.6234820199007969
-	'Halfdane', --0.6035147900615279
-	'Nebuchadnezzar', --0.5729349077899204
-	'Joven', --0.414763861228462
-	'Stangg', --0.40178781345371567
-	'Marrow-Gnawer', --0.38270709129653513
-	'Borborygmos', --0.3642294891569207
-	'Nihiloor', --0.3635631365277714
-	'Thraximundar', --0.36256875649896125
-	'Cromat', --0.33841964454296236
-	'Memnarch', --0.308464260646649
-	'Phelddagrif', --0.2688537193067873
-	'Themberchaud', --0.24003255862529813
-	'Malfegor', --0.23849053991408836
-	'Johan', --0.23337318793319348
-	'Atogatog', --0.2281889806583245
-	'Gallowbraid', --0.1996514967538039
-	'Kaysa', --0.19340189087836102
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Tiamat', --0.1625850631988848
-	'Asmoranomardicadaistinaculdacar', --0.05126007253976472
-	'Tromokratis', --0.035154155327617835
-	'Morinfen', --0.017733382010513762
-
-Bag of Devouring
-	'Elminster', --0.9297618897938239
-	'Taniwha', --0.9085804046645629
-	'Progenitus', --0.8783044629724994
-	'Chromium', --0.8748716976390971
-	'Palladia-Mors', --0.8709868902873257
-	'Chandler', --0.7694590307923443
-	'Ragnar', --0.7564086182544225
-	'Nebuchadnezzar', --0.7178359846268829
-	'Phelddagrif', --0.5713714535949349
-	'Halfdane', --0.5701209535099372
-	'Nihiloor', --0.5197786515698254
-	'Cromat', --0.5137266105287478
-	'Stangg', --0.5022347668171445
-	'Joven', --0.48734198914600096
-	'Memnarch', --0.46788223296626796
-	'Borborygmos', --0.4340623125323693
-	'Thraximundar', --0.41149895626437694
-	'Tiamat', --0.32837077505456314
-	'Atogatog', --0.30585548510911365
-	'Marrow-Gnawer', --0.29903366241609475
-	'Johan', --0.26246276617414904
-	'Kaysa', --0.23116305545602497
-	'Eight-and-a-Half-Tails', --0.22284320652918535
-	'Gallowbraid', --0.2222988081792944
-	'Malfegor', --0.2039377463321086
-	'Themberchaud', --0.17659285666686106
-	'Tromokratis', --0.11917685393618789
-	'Morinfen', --0.05469424836428941
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Riding the Dilu Horse
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7752603602771448
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.612960670861977
-	'Ragnar', --0.5958457569930695
-	'Chandler', --0.5598077414073938
-	'Halfdane', --0.4515882812107423
-	'Nebuchadnezzar', --0.39044092971844974
-	'Thraximundar', --0.36186399365652155
-	'Themberchaud', --0.3574920443398583
-	'Nihiloor', --0.32694186198884684
-	'Cromat', --0.3220578834422371
-	'Joven', --0.3172954633992618
-	'Memnarch', --0.31365010264294346
-	'Marrow-Gnawer', --0.31202244383620226
-	'Stangg', --0.3013408600902868
-	'Gallowbraid', --0.29947724513070556
-	'Borborygmos', --0.2815954494255376
-	'Phelddagrif', --0.27334006408949896
-	'Malfegor', --0.17886790493556617
-	'Atogatog', --0.17259865029631796
-	'Johan', --0.16760556792792058
-	'Kaysa', --0.14716927978715602
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tiamat', --0.12261854439038922
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.05126007253976472
-	'Morinfen', --0.026600073015771164
-
-Chance for Glory
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7618406581284608
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Phelddagrif', --0.5482345907258814
-	'Chandler', --0.546547481816494
-	'Ragnar', --0.506934339834135
-	'Palladia-Mors', --0.4982756408256938
-	'Nebuchadnezzar', --0.4341138013167348
-	'Memnarch', --0.3661895645494474
-	'Borborygmos', --0.35906913188474365
-	'Gallowbraid', --0.3213269629187034
-	'Halfdane', --0.31927846441332025
-	'Thraximundar', --0.3115734643954648
-	'Stangg', --0.3013408600902868
-	'Cromat', --0.28723318834755934
-	'Atogatog', --0.28645164427543385
-	'Marrow-Gnawer', --0.28095728816132065
-	'Nihiloor', --0.2652317336188727
-	'Themberchaud', --0.258408688027744
-	'Malfegor', --0.24234672446622743
-	'Joven', --0.2308292177164607
-	'Eight-and-a-Half-Tails', --0.21050963289143493
-	'Tiamat', --0.20535621738433438
-	'Kaysa', --0.13869783327361493
-	'Morinfen', --0.13674816223474898
-	'Johan', --0.13578566263210978
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-
-Pithing Needle
-	'Elminster', --0.9250867867590481
-	'Taniwha', --0.9085804046645629
-	'Progenitus', --0.8918024590189475
-	'Chromium', --0.8748716976390971
-	'Palladia-Mors', --0.8709868902873257
-	'Chandler', --0.769935183286645
-	'Ragnar', --0.7564086182544225
-	'Halfdane', --0.670493849567
-	'Nebuchadnezzar', --0.6507348828640831
-	'Phelddagrif', --0.5623987207763972
-	'Cromat', --0.5186159346569204
-	'Nihiloor', --0.5087234302527326
-	'Thraximundar', --0.5037112926914833
-	'Stangg', --0.5022347668171445
-	'Joven', --0.48734198914600096
-	'Memnarch', --0.46788223296626796
-	'Borborygmos', --0.41317019865691557
-	'Marrow-Gnawer', --0.3534232373016645
-	'Atogatog', --0.31541002745381286
-	'Malfegor', --0.29811317489261036
-	'Tiamat', --0.29012373299076616
-	'Johan', --0.26246276617414904
-	'Kaysa', --0.23116305545602497
-	'Eight-and-a-Half-Tails', --0.22284320652918535
-	'Themberchaud', --0.15531358408374477
-	'Tromokratis', --0.11917685393618789
-	'Gallowbraid', --0.09982574837690165
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.008866691005256881
-
-Giant Strength
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.8443613155467947
-	'Progenitus', --0.7836049180378954
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.6820568103913893
-	'Ragnar', --0.6465717327608266
-	'Chandler', --0.6297157546180151
-	'Halfdane', --0.5610410653888711
-	'Nebuchadnezzar', --0.5205879062912664
-	'Phelddagrif', --0.5081782815037609
-	'Borborygmos', --0.44386750665819336
-	'Cromat', --0.4294167464170707
-	'Memnarch', --0.42612619437966576
-	'Nihiloor', --0.4178326461207898
-	'Stangg', --0.40178781345371567
-	'Thraximundar', --0.37520217165458963
-	'Marrow-Gnawer', --0.3516419356216536
-	'Joven', --0.3282976155456609
-	'Atogatog', --0.305851409999869
-	'Malfegor', --0.30196935944474945
-	'Tiamat', --0.29454970649279205
-	'Gallowbraid', --0.24416900541924286
-	'Johan', --0.23865200072617831
-	'Kaysa', --0.18492818652947393
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Morinfen', --0.1278814712294921
-	'Themberchaud', --0.11745948571455986
-	'Tromokratis', --0.11038831510428343
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-
-Sai of the Shinobi
-	'Elminster', --0.9250867867590481
-	'Taniwha', --0.9085804046645629
-	'Progenitus', --0.8918024590189475
-	'Chromium', --0.8748716976390971
-	'Palladia-Mors', --0.8709868902873257
-	'Chandler', --0.769935183286645
-	'Ragnar', --0.7564086182544225
-	'Halfdane', --0.670493849567
-	'Nebuchadnezzar', --0.6507348828640831
-	'Phelddagrif', --0.5623987207763972
-	'Cromat', --0.5186159346569204
-	'Nihiloor', --0.5087234302527326
-	'Thraximundar', --0.5037112926914833
-	'Stangg', --0.5022347668171445
-	'Joven', --0.48734198914600096
-	'Memnarch', --0.46788223296626796
-	'Borborygmos', --0.41317019865691557
-	'Marrow-Gnawer', --0.3534232373016645
-	'Atogatog', --0.31541002745381286
-	'Malfegor', --0.29811317489261036
-	'Tiamat', --0.29012373299076616
-	'Johan', --0.26246276617414904
-	'Kaysa', --0.23116305545602497
-	'Eight-and-a-Half-Tails', --0.22284320652918535
-	'Themberchaud', --0.15531358408374477
-	'Tromokratis', --0.11917685393618789
-	'Gallowbraid', --0.09982574837690165
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.008866691005256881
-
-Shelob, Child of Ungoliant
-	'Tromokratis', --1.0
-	'Asmoranomardicadaistinaculdacar', --0.9172979975308362
-	'Eight-and-a-Half-Tails', --0.8961792736940001
-	'Cromat', --0.8938651453263523
-	'Nihiloor', --0.8431290869153214
-	'Tiamat', --0.8110970356396512
-	'Johan', --0.8087723165280991
-	'Kaysa', --0.7775827942013983
-	'Morinfen', --0.7712957175175015
-	'Gallowbraid', --0.7527937507848259
-	'Marrow-Gnawer', --0.7320020382862785
-	'Borborygmos', --0.6842845779828773
-	'Malfegor', --0.679719885777727
-	'Phelddagrif', --0.6283638425756001
-	'Thraximundar', --0.6242223484339123
-	'Stangg', --0.5603987578338561
-	'Atogatog', --0.5018514738071416
-	'Ragnar', --0.47082218879249665
-	'Joven', --0.45277996941118975
-	'Nebuchadnezzar', --0.44181298921797335
-	'Chromium', --0.4256657806999754
-	'Themberchaud', --0.42357980920694166
-	'Memnarch', --0.4044168896144432
-	'Progenitus', --0.40126030664028045
-	'Palladia-Mors', --0.38703932913802297
-	'Chandler', --0.31471501032457566
-	'Elminster', --0.2677047148779589
-	'Halfdane', --0.23526516413392012
-	'Taniwha', --0.08437377530005037
-
-Winding Constrictor
-	'Marrow-Gnawer', --1.0
-	'Nihiloor', --1.0
-	'Cromat', --0.9866033353773108
-	'Borborygmos', --0.9855882448471649
-	'Kaysa', --0.9625132385662182
-	'Stangg', --0.9621865712875715
-	'Nebuchadnezzar', --0.9603139244078003
-	'Tiamat', --0.9489679055432874
-	'Eight-and-a-Half-Tails', --0.9427511188078169
-	'Johan', --0.9397052584934562
-	'Ragnar', --0.9101697307668812
-	'Asmoranomardicadaistinaculdacar', --0.9037659302661479
-	'Thraximundar', --0.8938389012889618
-	'Joven', --0.8864624424464267
-	'Memnarch', --0.8811813133384047
-	'Morinfen', --0.8614303646944141
-	'Malfegor', --0.859948977881985
-	'Chromium', --0.850653630507697
-	'Progenitus', --0.8295501783511475
-	'Chandler', --0.8288369101502326
-	'Phelddagrif', --0.8216865618370985
-	'Palladia-Mors', --0.8175629569988494
-	'Atogatog', --0.7817677009757051
-	'Halfdane', --0.6936107273883313
-	'Gallowbraid', --0.62762675818237
-	'Themberchaud', --0.6144257041824414
-	'Tromokratis', --0.588361768520068
-	'Elminster', --0.5673575678417655
-	'Taniwha', --0.013546250958713982
-
-Boros Keyrune
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7752603602771448
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.612960670861977
-	'Chandler', --0.5598077414073938
-	'Ragnar', --0.5367348472672302
-	'Halfdane', --0.4515882812107423
-	'Nebuchadnezzar', --0.39044092971844974
-	'Themberchaud', --0.39023255551286484
-	'Phelddagrif', --0.3801720113833974
-	'Thraximundar', --0.36186399365652155
-	'Cromat', --0.34029003607103825
-	'Nihiloor', --0.32694186198884684
-	'Memnarch', --0.31365010264294346
-	'Stangg', --0.3013408600902868
-	'Gallowbraid', --0.29947724513070556
-	'Joven', --0.2924051934876006
-	'Borborygmos', --0.2479021191941493
-	'Marrow-Gnawer', --0.21205394238099867
-	'Tiamat', --0.2083780367305066
-	'Atogatog', --0.20034426058960075
-	'Malfegor', --0.17886790493556617
-	'Johan', --0.15747765970448943
-	'Kaysa', --0.13869783327361493
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.026600073015771164
-
-In the Darkness Bind Them
-	'Taniwha', --1.0
-	'Gallowbraid', --0.66611931035234
-	'Elminster', --0.5860068067383873
-	'Themberchaud', --0.49111721544135606
-	'Progenitus', --0.35534861930471845
-	'Chromium', --0.32407761457821843
-	'Chandler', --0.3140484393048374
-	'Palladia-Mors', --0.2950174812533667
-	'Nebuchadnezzar', --0.24959507983427018
-	'Ragnar', --0.2348604536941689
-	'Borborygmos', --0.21685750133949783
-	'Tiamat', --0.20927187484456572
-	'Morinfen', --0.20030910160429577
-	'Halfdane', --0.174783541470079
-	'Phelddagrif', --0.14821125075358813
-	'Atogatog', --0.12175566428875233
-	'Memnarch', --0.11247609173672249
-	'Nihiloor', --0.10194600544903556
-	'Stangg', --0.10044695336342885
-	'Johan', --0.09444940779213208
-	'Marrow-Gnawer', --0.08519841835508518
-	'Cromat', --0.08423738621786002
-	'Kaysa', --0.046232611091204974
-	'Eight-and-a-Half-Tails', --0.04456864130583711
-	'Joven', --0.03589242205806029
-	'Malfegor', --0.028926025948681322
-	'Tromokratis', --0.008788538831904459
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-	'Thraximundar', --0.0
-
-Riveteers Overlook
-	'Progenitus', --1.0
-	'Elminster', --1.0
-	'Chromium', --1.0
-	'Palladia-Mors', --1.0
-	'Taniwha', --0.9085804046645629
-	'Chandler', --0.874998904226271
-	'Ragnar', --0.8662455037480185
-	'Nebuchadnezzar', --0.7808818594368995
-	'Halfdane', --0.7799466337451288
-	'Phelddagrif', --0.6535120754728967
-	'Cromat', --0.607778883949861
-	'Stangg', --0.602681720180574
-	'Nihiloor', --0.5996142143846755
-	'Joven', --0.5848103869752012
-	'Thraximundar', --0.5746349422089639
-	'Memnarch', --0.5449982981279303
-	'Borborygmos', --0.4958042383882986
-	'Marrow-Gnawer', --0.4241078847619976
-	'Atogatog', --0.37294291088591885
-	'Malfegor', --0.35773580987113235
-	'Tiamat', --0.3309965811208959
-	'Johan', --0.31495531940897886
-	'Kaysa', --0.27739566654723
-	'Eight-and-a-Half-Tails', --0.2674118478350225
-	'Tromokratis', --0.12796539276809235
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Themberchaud', --0.0378540983691849
-	'Gallowbraid', --0.0
-	'Morinfen', --0.0
-
-Fangren Firstborn
-	'Johan', --0.889210527486656
-	'Kaysa', --0.8697736132399259
-	'Thraximundar', --0.8589140523374972
-	'Eight-and-a-Half-Tails', --0.8577876157027408
-	'Asmoranomardicadaistinaculdacar', --0.8466959006903618
-	'Morinfen', --0.8440243534219891
-	'Cromat', --0.8209567222364696
-	'Borborygmos', --0.7927347053073335
-	'Malfegor', --0.7922212115556263
-	'Marrow-Gnawer', --0.7913590035264301
-	'Nihiloor', --0.7900117142281197
-	'Tiamat', --0.7722145449534038
-	'Stangg', --0.7612926645607144
-	'Tromokratis', --0.7209931392776774
-	'Memnarch', --0.6931817840699411
-	'Ragnar', --0.690495959779689
-	'Joven', --0.6745971725682935
-	'Atogatog', --0.6579110984893928
-	'Themberchaud', --0.6555179961422803
-	'Chromium', --0.6298660255387326
-	'Progenitus', --0.6024848816932239
-	'Gallowbraid', --0.6006970064923933
-	'Chandler', --0.6000987373794635
-	'Phelddagrif', --0.5974238286727902
-	'Halfdane', --0.5930641083478504
-	'Palladia-Mors', --0.5685684597506118
-	'Nebuchadnezzar', --0.5658861986832652
-	'Elminster', --0.4588345956808464
-	'Taniwha', --0.01617717696833993
-
-Terror of the Peaks
-	'Asmoranomardicadaistinaculdacar', --0.9799266775801995
-	'Cromat', --0.9779689218314438
-	'Malfegor', --0.9439323919787922
-	'Tiamat', --0.9387165736701603
-	'Eight-and-a-Half-Tails', --0.9097440079966816
-	'Johan', --0.879818749326357
-	'Phelddagrif', --0.8542293271713239
-	'Morinfen', --0.8358756088364914
-	'Marrow-Gnawer', --0.8260111049572998
-	'Borborygmos', --0.8189282593416234
-	'Tromokratis', --0.8168045343115126
-	'Kaysa', --0.8153439587790623
-	'Nihiloor', --0.8090662914539956
-	'Thraximundar', --0.7297728628590867
-	'Gallowbraid', --0.6705262038570612
-	'Stangg', --0.6608457111972855
-	'Atogatog', --0.6503898777766122
-	'Memnarch', --0.5541950777293062
-	'Chromium', --0.5445016467938241
-	'Progenitus', --0.5229558436677811
-	'Ragnar', --0.5215481645602535
-	'Nebuchadnezzar', --0.5027718929265506
-	'Joven', --0.4637821215575882
-	'Halfdane', --0.4450908443691112
-	'Palladia-Mors', --0.4119053027892098
-	'Chandler', --0.38509917602949767
-	'Elminster', --0.3321305671128331
-	'Themberchaud', --0.31707092661845193
-	'Taniwha', --0.01241096465689081
-
-Keeper of the Accord
-	'Asmoranomardicadaistinaculdacar', --1.0
-	'Phelddagrif', --1.0
-	'Eight-and-a-Half-Tails', --0.9862627055864546
-	'Cromat', --0.9678034105952368
-	'Malfegor', --0.9179993332119464
-	'Tiamat', --0.8823412205918054
-	'Thraximundar', --0.8803826819835094
-	'Kaysa', --0.8615765698702671
-	'Johan', --0.8551768073486292
-	'Marrow-Gnawer', --0.8277924066373102
-	'Borborygmos', --0.7785717163597272
-	'Nihiloor', --0.7714808639710851
-	'Stangg', --0.7612926645607144
-	'Morinfen', --0.7520436010615247
-	'Atogatog', --0.7070804761060036
-	'Nebuchadnezzar', --0.676591741097652
-	'Memnarch', --0.6713049740133548
-	'Chromium', --0.6608925686488898
-	'Tromokratis', --0.6537695156771676
-	'Progenitus', --0.6311533846488335
-	'Gallowbraid', --0.6242369406240785
-	'Joven', --0.6228264951579283
-	'Ragnar', --0.6015845426207546
-	'Themberchaud', --0.5817125007363263
-	'Chandler', --0.5676811108780584
-	'Palladia-Mors', --0.5222922120289389
-	'Halfdane', --0.4222338117498178
-	'Elminster', --0.4052485941477044
-	'Taniwha', --0.0
-
-Shimmering Mirage
-	'Taniwha', --1.0
-	'Elminster', --0.8118836013977683
-	'Palladia-Mors', --0.7419737805746514
-	'Chromium', --0.6994625216609274
-	'Progenitus', --0.693439238294324
-	'Chandler', --0.6648714623470195
-	'Halfdane', --0.6035147900615279
-	'Nebuchadnezzar', --0.5729349077899204
-	'Ragnar', --0.5643711101749573
-	'Stangg', --0.40178781345371567
-	'Joven', --0.38987359131680077
-	'Phelddagrif', --0.3756856666006861
-	'Nihiloor', --0.3635631365277714
-	'Thraximundar', --0.36256875649896125
-	'Cromat', --0.3566517971717634
-	'Borborygmos', --0.33053615892553245
-	'Memnarch', --0.308464260646649
-	'Marrow-Gnawer', --0.28273858984133154
-	'Themberchaud', --0.27277306979830496
-	'Atogatog', --0.2559345909516074
-	'Tiamat', --0.24834455553900217
-	'Malfegor', --0.23849053991408836
-	'Johan', --0.2232452797097624
-	'Gallowbraid', --0.1996514967538039
-	'Kaysa', --0.18493044436481998
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Tromokratis', --0.035154155327617835
-	'Morinfen', --0.017733382010513762
-
-Azor's Elocutors
-	'Asmoranomardicadaistinaculdacar', --1.0
-	'Eight-and-a-Half-Tails', --0.9689169798836668
-	'Tiamat', --0.8405620431400417
-	'Cromat', --0.8278703512786362
-	'Malfegor', --0.8230357917765254
-	'Johan', --0.8159593208842426
-	'Kaysa', --0.8153439587790623
-	'Phelddagrif', --0.813286945824289
-	'Marrow-Gnawer', --0.7571077591769776
-	'Morinfen', --0.7517842416024806
-	'Thraximundar', --0.7392401457909875
-	'Gallowbraid', --0.7240626890009801
-	'Borborygmos', --0.7026739386268
-	'Stangg', --0.6608457111972855
-	'Atogatog', --0.6476050396037984
-	'Nihiloor', --0.6322243958141024
-	'Nebuchadnezzar', --0.6008787371249288
-	'Tromokratis', --0.6004846155091275
-	'Themberchaud', --0.5914333956351283
-	'Joven', --0.5253580973287281
-	'Chromium', --0.4915901532281265
-	'Memnarch', --0.47577258419780155
-	'Chandler', --0.4626173899384328
-	'Progenitus', --0.4327901639242096
-	'Ragnar', --0.4095470345412894
-	'Palladia-Mors', --0.40802249094234005
-	'Halfdane', --0.3552547522443456
-	'Elminster', --0.2920454087864244
-	'Taniwha', --0.1402388579629847
-
-Gruesome Encore
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7799354633119207
-	'Progenitus', --0.6619093810103949
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.612960670861977
-	'Chandler', --0.5593315889130931
-	'Ragnar', --0.5367348472672302
-	'Nebuchadnezzar', --0.45754203148124983
-	'Gallowbraid', --0.4219503049330977
-	'Themberchaud', --0.41151182809598075
-	'Phelddagrif', --0.38914474420193546
-	'Halfdane', --0.3512153851536795
-	'Nihiloor', --0.33799708330593964
-	'Cromat', --0.3354007119428657
-	'Memnarch', --0.31365010264294346
-	'Stangg', --0.3013408600902868
-	'Joven', --0.2924051934876006
-	'Thraximundar', --0.2696516572294155
-	'Borborygmos', --0.26879423306960315
-	'Tiamat', --0.24662507879430356
-	'Atogatog', --0.19078971824490154
-	'Marrow-Gnawer', --0.15766436749542898
-	'Johan', --0.15747765970448943
-	'Kaysa', --0.13869783327361493
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Malfegor', --0.08469247637506422
-	'Morinfen', --0.0724276303748037
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Faerie Tauntings
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7799354633119207
-	'Progenitus', --0.6619093810103949
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.612960670861977
-	'Chandler', --0.5593315889130931
-	'Ragnar', --0.5367348472672302
-	'Nebuchadnezzar', --0.45754203148124983
-	'Gallowbraid', --0.4219503049330977
-	'Themberchaud', --0.41151182809598075
-	'Phelddagrif', --0.38914474420193546
-	'Halfdane', --0.3512153851536795
-	'Nihiloor', --0.33799708330593964
-	'Cromat', --0.3354007119428657
-	'Memnarch', --0.31365010264294346
-	'Stangg', --0.3013408600902868
-	'Joven', --0.2924051934876006
-	'Thraximundar', --0.2696516572294155
-	'Borborygmos', --0.26879423306960315
-	'Tiamat', --0.24662507879430356
-	'Atogatog', --0.19078971824490154
-	'Marrow-Gnawer', --0.15766436749542898
-	'Johan', --0.15747765970448943
-	'Kaysa', --0.13869783327361493
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Malfegor', --0.08469247637506422
-	'Morinfen', --0.0724276303748037
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Wanderwine Hub
-	'Progenitus', --1.0
-	'Elminster', --1.0
-	'Chromium', --1.0
-	'Palladia-Mors', --1.0
-	'Taniwha', --0.9085804046645629
-	'Chandler', --0.874998904226271
-	'Ragnar', --0.8662455037480185
-	'Nebuchadnezzar', --0.7808818594368995
-	'Halfdane', --0.7799466337451288
-	'Phelddagrif', --0.6535120754728967
-	'Cromat', --0.607778883949861
-	'Stangg', --0.602681720180574
-	'Nihiloor', --0.5996142143846755
-	'Joven', --0.5848103869752012
-	'Thraximundar', --0.5746349422089639
-	'Memnarch', --0.5449982981279303
-	'Borborygmos', --0.4958042383882986
-	'Marrow-Gnawer', --0.4241078847619976
-	'Atogatog', --0.37294291088591885
-	'Malfegor', --0.35773580987113235
-	'Tiamat', --0.3309965811208959
-	'Johan', --0.31495531940897886
-	'Kaysa', --0.27739566654723
-	'Eight-and-a-Half-Tails', --0.2674118478350225
-	'Tromokratis', --0.12796539276809235
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Themberchaud', --0.0378540983691849
-	'Gallowbraid', --0.0
-	'Morinfen', --0.0
-
-Moorland Haunt
-	'Progenitus', --1.0
-	'Elminster', --1.0
-	'Chromium', --1.0
-	'Palladia-Mors', --1.0
-	'Taniwha', --0.9085804046645629
-	'Chandler', --0.874998904226271
-	'Ragnar', --0.8662455037480185
-	'Nebuchadnezzar', --0.7808818594368995
-	'Halfdane', --0.7799466337451288
-	'Phelddagrif', --0.6535120754728967
-	'Cromat', --0.607778883949861
-	'Stangg', --0.602681720180574
-	'Nihiloor', --0.5996142143846755
-	'Joven', --0.5848103869752012
-	'Thraximundar', --0.5746349422089639
-	'Memnarch', --0.5449982981279303
-	'Borborygmos', --0.4958042383882986
-	'Marrow-Gnawer', --0.4241078847619976
-	'Atogatog', --0.37294291088591885
-	'Malfegor', --0.35773580987113235
-	'Tiamat', --0.3309965811208959
-	'Johan', --0.31495531940897886
-	'Kaysa', --0.27739566654723
-	'Eight-and-a-Half-Tails', --0.2674118478350225
-	'Tromokratis', --0.12796539276809235
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Themberchaud', --0.0378540983691849
-	'Gallowbraid', --0.0
-	'Morinfen', --0.0
-
-Ramunap Excavator
-	'Marrow-Gnawer', --0.9837049274252365
-	'Asmoranomardicadaistinaculdacar', --0.9550260028059127
-	'Kaysa', --0.9162806274750134
-	'Thraximundar', --0.9151275881985873
-	'Cromat', --0.9023297102125424
-	'Eight-and-a-Half-Tails', --0.8981824775019799
-	'Nihiloor', --0.8980539945509641
-	'Malfegor', --0.8945017714639648
-	'Johan', --0.8872127052586264
-	'Borborygmos', --0.882062091240328
-	'Tiamat', --0.8698480153493608
-	'Stangg', --0.8617396179241432
-	'Morinfen', --0.8244694983406385
-	'Memnarch', --0.8040652481767423
-	'Ragnar', --0.8003328452732853
-	'Joven', --0.7889940446172264
-	'Nebuchadnezzar', --0.7630658460721839
-	'Progenitus', --0.7348506334165432
-	'Atogatog', --0.733789359888298
-	'Chromium', --0.7255253281467942
-	'Chandler', --0.7242493417049078
-	'Phelddagrif', --0.721600474322061
-	'Themberchaud', --0.7106059173138852
-	'Palladia-Mors', --0.6885498472861751
-	'Halfdane', --0.6845308392672652
-	'Gallowbraid', --0.6049794467568801
-	'Tromokratis', --0.5795732296881636
-	'Elminster', --0.4877692515660383
-	'Taniwha', --0.013546250958713982
-
-Imoen, Mystic Trickster
-	'Asmoranomardicadaistinaculdacar', --0.9613712246620063
-	'Tiamat', --0.9547011783678443
-	'Kaysa', --0.9078091809614725
-	'Eight-and-a-Half-Tails', --0.8981824775019799
-	'Malfegor', --0.8945017714639648
-	'Johan', --0.8903598638056383
-	'Marrow-Gnawer', --0.8837364259700332
-	'Stangg', --0.8617396179241432
-	'Borborygmos', --0.8483687610089399
-	'Cromat', --0.8477606746491277
-	'Thraximundar', --0.8449087015235464
-	'Nihiloor', --0.8437844849579459
-	'Morinfen', --0.8244694983406385
-	'Nebuchadnezzar', --0.8154128475708375
-	'Joven', --0.7641037747055652
-	'Atogatog', --0.759592417111482
-	'Themberchaud', --0.7433464284868921
-	'Phelddagrif', --0.7328327221367485
-	'Halfdane', --0.7270045639399219
-	'Chandler', --0.7242493417049078
-	'Memnarch', --0.7217633410187859
-	'Palladia-Mors', --0.6885498472861751
-	'Chromium', --0.6752444545295274
-	'Ragnar', --0.6590213129615768
-	'Progenitus', --0.6446849536729717
-	'Gallowbraid', --0.6049794467568801
-	'Tromokratis', --0.5043390699114987
-	'Elminster', --0.44947927944570987
-	'Taniwha', --0.10496584629415075
-
-Daru Warchief
-	'Themberchaud', --1.0
-	'Kaysa', --0.8294872186845343
-	'Asmoranomardicadaistinaculdacar', --0.8143671740262928
-	'Thraximundar', --0.7872290514475573
-	'Eight-and-a-Half-Tails', --0.7680227793468734
-	'Chandler', --0.686957539746841
-	'Joven', --0.6827045366007382
-	'Memnarch', --0.6736476337121562
-	'Borborygmos', --0.6696297067755831
-	'Tiamat', --0.6680091349642712
-	'Morinfen', --0.6574415350202443
-	'Phelddagrif', --0.6397787564602484
-	'Atogatog', --0.6308073078493854
-	'Marrow-Gnawer', --0.6303697073595698
-	'Stangg', --0.6275574860824261
-	'Ragnar', --0.581577926360277
-	'Chromium', --0.581539097395946
-	'Malfegor', --0.575891976039644
-	'Progenitus', --0.5682913964327585
-	'Nebuchadnezzar', --0.5499829206461303
-	'Nihiloor', --0.5219035005257909
-	'Elminster', --0.5206915719828468
-	'Palladia-Mors', --0.5047686777204801
-	'Gallowbraid', --0.48983381233753026
-	'Johan', --0.4841828005584207
-	'Halfdane', --0.4674913443682063
-	'Tromokratis', --0.3767057733555068
-	'Cromat', --0.3762749460923428
-	'Taniwha', --0.2128872728658211
-
-Sanctuary Cat
-	'Chandler', --1.0
-	'Thraximundar', --1.0
-	'Memnarch', --1.0
-	'Nebuchadnezzar', --1.0
-	'Atogatog', --1.0
-	'Phelddagrif', --0.9920734553853341
-	'Stangg', --0.991531870823713
-	'Joven', --0.9855976424350232
-	'Kaysa', --0.9681850519581562
-	'Eight-and-a-Half-Tails', --0.9668308914460387
-	'Chromium', --0.9569240044786548
-	'Borborygmos', --0.9401712981168677
-	'Progenitus', --0.9172615573907217
-	'Ragnar', --0.9110885828410654
-	'Palladia-Mors', --0.8918080068585026
-	'Tiamat', --0.891586172301141
-	'Nihiloor', --0.8915104808313583
-	'Marrow-Gnawer', --0.8877589107753576
-	'Asmoranomardicadaistinaculdacar', --0.8637671562716485
-	'Malfegor', --0.8287088272563197
-	'Halfdane', --0.7958496969025929
-	'Cromat', --0.7674780083557342
-	'Johan', --0.7601489140786263
-	'Morinfen', --0.7297433929482281
-	'Elminster', --0.6759667912263186
-	'Themberchaud', --0.6374140732590952
-	'Tromokratis', --0.4704039746871124
-	'Gallowbraid', --0.382660159125635
-	'Taniwha', --0.11665476967116342
-
-Echoes of the Kin Tree
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.8425661293407142
-	'Progenitus', --0.7836049180378954
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.6872057207216306
-	'Chandler', --0.686766910485124
-	'Ragnar', --0.6167712253277311
-	'Phelddagrif', --0.6024550299985176
-	'Nebuchadnezzar', --0.5642607778895512
-	'Thraximundar', --0.4400825854323584
-	'Halfdane', --0.42873124859144907
-	'Memnarch', --0.4079456031360494
-	'Stangg', --0.40178781345371567
-	'Joven', --0.38987359131680077
-	'Cromat', --0.37643237658740863
-	'Nihiloor', --0.35612251775081566
-	'Borborygmos', --0.3283718238834658
-	'Themberchaud', --0.2962627863969286
-	'Atogatog', --0.2960102617293778
-	'Marrow-Gnawer', --0.28273858984133154
-	'Eight-and-a-Half-Tails', --0.255078274197272
-	'Malfegor', --0.23849053991408836
-	'Tiamat', --0.20093024388230846
-	'Kaysa', --0.18493044436481998
-	'Gallowbraid', --0.1769837058763622
-	'Johan', --0.1595964280800805
-	'Tromokratis', --0.11038831510428343
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-	'Morinfen', --0.017733382010513762
-
-Ghyrson Starn, Kelermorph
-	'Johan', --0.9735320270553568
-	'Borborygmos', --0.9550067625399894
-	'Morinfen', --0.9453057516357106
-	'Tiamat', --0.9396106391361718
-	'Kaysa', --0.9075347778175898
-	'Malfegor', --0.8932457918501027
-	'Eight-and-a-Half-Tails', --0.8847255199216392
-	'Stangg', --0.8617396179241432
-	'Asmoranomardicadaistinaculdacar', --0.8520494127566749
-	'Marrow-Gnawer', --0.8309784953118816
-	'Thraximundar', --0.8168390994896974
-	'Cromat', --0.8091703063196017
-	'Atogatog', --0.7978737231517385
-	'Nihiloor', --0.7954492417684663
-	'Memnarch', --0.7632066185235683
-	'Nebuchadnezzar', --0.7483801767547358
-	'Halfdane', --0.7449906171986359
-	'Phelddagrif', --0.69704291624526
-	'Chromium', --0.6970313323571599
-	'Chandler', --0.6904738086319112
-	'Joven', --0.6855993247146926
-	'Ragnar', --0.6590213129615768
-	'Palladia-Mors', --0.628632877102913
-	'Progenitus', --0.6205167429307045
-	'Gallowbraid', --0.5915964917900564
-	'Tromokratis', --0.5590136644059682
-	'Themberchaud', --0.5439746548513463
-	'Elminster', --0.4896455788301678
-	'Taniwha', --0.10759677230377705
-
-Cult Conscript
-	'Kaysa', --1.0
-	'Stangg', --1.0
-	'Borborygmos', --0.9901948058741759
-	'Chandler', --0.979777101933313
-	'Joven', --0.9751097300883388
-	'Chromium', --0.9654365268315862
-	'Thraximundar', --0.9653946192479597
-	'Nebuchadnezzar', --0.963852080529095
-	'Ragnar', --0.9608957065346381
-	'Palladia-Mors', --0.9465760667115237
-	'Nihiloor', --0.9456209130327247
-	'Tiamat', --0.9142523922032258
-	'Memnarch', --0.8981331611054522
-	'Progenitus', --0.8847016783617836
-	'Eight-and-a-Half-Tails', --0.8837468008275631
-	'Phelddagrif', --0.8383553597067411
-	'Johan', --0.8371134767444955
-	'Halfdane', --0.8277866176429518
-	'Cromat', --0.808794060250134
-	'Morinfen', --0.788988039505103
-	'Marrow-Gnawer', --0.7889789804042562
-	'Elminster', --0.7577137589178592
-	'Asmoranomardicadaistinaculdacar', --0.7513893579715545
-	'Malfegor', --0.7388684584294993
-	'Atogatog', --0.6958139212600338
-	'Themberchaud', --0.6454110988408114
-	'Tromokratis', --0.5129329720690329
-	'Gallowbraid', --0.335497417886658
-	'Taniwha', --0.1259559311217116
-
-Siren of the Silent Song
-	'Kaysa', --0.9075347778175898
-	'Themberchaud', --0.8803300702699317
-	'Tiamat', --0.8316003666213324
-	'Borborygmos', --0.8249267264114096
-	'Morinfen', --0.8067214215156173
-	'Stangg', --0.7991060932731423
-	'Eight-and-a-Half-Tails', --0.7946095182158889
-	'Joven', --0.7801729344299384
-	'Chandler', --0.7696496600540615
-	'Nebuchadnezzar', --0.7559051288821156
-	'Thraximundar', --0.7533284335379569
-	'Asmoranomardicadaistinaculdacar', --0.7513893579715545
-	'Johan', --0.7454034370452791
-	'Nihiloor', --0.7095698351758205
-	'Palladia-Mors', --0.6885498472861751
-	'Chromium', --0.6648990484925137
-	'Memnarch', --0.6615991236241712
-	'Ragnar', --0.6590213129615768
-	'Halfdane', --0.6513547739593513
-	'Marrow-Gnawer', --0.6476096854835907
-	'Malfegor', --0.6196231884724552
-	'Atogatog', --0.5788056013257227
-	'Progenitus', --0.5781409166561077
-	'Elminster', --0.569597360315628
-	'Phelddagrif', --0.5605289508345301
-	'Cromat', --0.5576669734720369
-	'Gallowbraid', --0.5351489146404619
-	'Tromokratis', --0.4201217346285582
-	'Taniwha', --0.21737552645714872
-
-Sanguine Indulgence
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7050222500709689
-	'Progenitus', --0.5537118400293424
-	'Themberchaud', --0.528971313810541
-	'Gallowbraid', --0.5217760533099994
-	'Chromium', --0.499486790556388
-	'Palladia-Mors', --0.4839475611493027
-	'Chandler', --0.4542678679734677
-	'Ragnar', --0.42689796177363404
-	'Nebuchadnezzar', --0.3273950549084331
-	'Phelddagrif', --0.29803138950543556
-	'Nihiloor', --0.24710629917399682
-	'Cromat', --0.24623776264992486
-	'Halfdane', --0.24176260097555116
-	'Memnarch', --0.23653403748128113
-	'Tiamat', --0.20575223066417378
-	'Stangg', --0.2008939067268577
-	'Thraximundar', --0.19872800771193452
-	'Joven', --0.19493679565840039
-	'Borborygmos', --0.18616019333822
-	'Atogatog', --0.13325683481279554
-	'Johan', --0.10498510646965961
-	'Tromokratis', --0.09281123744047452
-	'Kaysa', --0.09246522218240995
-	'Eight-and-a-Half-Tails', --0.08913728261167422
-	'Marrow-Gnawer', --0.08697972003509608
-	'Morinfen', --0.08129432138006058
-	'Malfegor', --0.025069841396542232
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Open the Omenpaths
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7694481023058434
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.553043700678715
-	'Ragnar', --0.5367348472672302
-	'Chandler', --0.5246520336783896
-	'Halfdane', --0.4515882812107423
-	'Phelddagrif', --0.41706492680726104
-	'Nebuchadnezzar', --0.39044092971844974
-	'Borborygmos', --0.36123346692681024
-	'Memnarch', --0.3490101292180036
-	'Gallowbraid', --0.3439947537961445
-	'Cromat', --0.3402537971241297
-	'Nihiloor', --0.32694186198884684
-	'Thraximundar', --0.3042785221371087
-	'Stangg', --0.3013408600902868
-	'Marrow-Gnawer', --0.28095728816132065
-	'Tiamat', --0.25367685836266224
-	'Atogatog', --0.24831852656776282
-	'Malfegor', --0.24234672446622743
-	'Themberchaud', --0.23491897142912008
-	'Joven', --0.2308292177164607
-	'Johan', --0.1861594474913485
-	'Kaysa', --0.13869783327361493
-	'Morinfen', --0.13674816223474898
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-
-Offspring's Revenge
-	'Taniwha', --0.9085804046645629
-	'Gallowbraid', --0.6434515194748994
-	'Elminster', --0.6166893346813335
-	'Themberchaud', --0.5146069320399804
-	'Progenitus', --0.44551429904829
-	'Phelddagrif', --0.37498061415142003
-	'Chromium', --0.3743584881954852
-	'Chandler', --0.3359438874429421
-	'Ragnar', --0.2872605688469427
-	'Nebuchadnezzar', --0.24092094993390128
-	'Palladia-Mors', --0.2402494214003459
-	'Borborygmos', --0.21469316629743124
-	'Memnarch', --0.21195743422612293
-	'Morinfen', --0.20030910160429577
-	'Tiamat', --0.16185756318787176
-	'Atogatog', --0.16183133506652267
-	'Eight-and-a-Half-Tails', --0.1213723502797608
-	'Cromat', --0.10401796563350525
-	'Stangg', --0.10044695336342885
-	'Nihiloor', --0.09450538667207968
-	'Marrow-Gnawer', --0.08519841835508518
-	'Tromokratis', --0.08402269860857006
-	'Thraximundar', --0.07751382893339713
-	'Kaysa', --0.046232611091204974
-	'Joven', --0.03589242205806029
-	'Johan', --0.030800556162450164
-	'Malfegor', --0.028926025948681322
-	'Asmoranomardicadaistinaculdacar', --0.027410254065674315
-	'Halfdane', --0.0
-
-Lavalanche
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7741232053406187
-	'Progenitus', --0.6619093810103949
-	'Chromium', --0.6246150929172909
-	'Ragnar', --0.5958457569930695
-	'Palladia-Mors', --0.553043700678715
-	'Chandler', --0.5241758811840886
-	'Gallowbraid', --0.4664678135985367
-	'Nebuchadnezzar', --0.45754203148124983
-	'Borborygmos', --0.4158189110336523
-	'Halfdane', --0.3512153851536795
-	'Memnarch', --0.3490101292180036
-	'Nihiloor', --0.33799708330593964
-	'Marrow-Gnawer', --0.3265362147309545
-	'Phelddagrif', --0.3192057123319003
-	'Cromat', --0.31713232036715616
-	'Stangg', --0.3013408600902868
-	'Joven', --0.2557194876281219
-	'Themberchaud', --0.2234577328392295
-	'Thraximundar', --0.21206618571000263
-	'Atogatog', --0.21101837392978098
-	'Tiamat', --0.20616440808634187
-	'Johan', --0.19628735571477976
-	'Morinfen', --0.1825757195937815
-	'Malfegor', --0.1481712959057255
-	'Kaysa', --0.14716927978715602
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.0
-
-Wulfgar of Icewind Dale
-	'Asmoranomardicadaistinaculdacar', --0.9735814557241058
-	'Cromat', --0.9597367692026426
-	'Malfegor', --0.9439323919787922
-	'Marrow-Gnawer', --0.9259796064125031
-	'Johan', --0.8918677349833287
-	'Eight-and-a-Half-Tails', --0.882521092393632
-	'Morinfen', --0.87105838128576
-	'Tiamat', --0.8529570813300427
-	'Borborygmos', --0.84512668963446
-	'Kaysa', --0.8238154052926032
-	'Nihiloor', --0.7734839552076946
-	'Phelddagrif', --0.7473973798774255
-	'Gallowbraid', --0.745040263534734
-	'Tromokratis', --0.7405148307722119
-	'Thraximundar', --0.7297728628590867
-	'Stangg', --0.6608457111972855
-	'Atogatog', --0.6229907126222123
-	'Ragnar', --0.5806590742860929
-	'Memnarch', --0.5725188502204477
-	'Chromium', --0.5434463882131957
-	'Progenitus', --0.5229558436677811
-	'Nebuchadnezzar', --0.5027718929265506
-	'Joven', --0.4886723914692494
-	'Halfdane', --0.4450908443691112
-	'Palladia-Mors', --0.39716191416313473
-	'Chandler', --0.38509917602949767
-	'Themberchaud', --0.3591389572611462
-	'Elminster', --0.3321305671128331
-	'Taniwha', --0.0
-
-Wavebreak Hippocamp
-	'Kaysa', --0.9075347778175898
-	'Tiamat', --0.8943118175040161
-	'Johan', --0.863891890860995
-	'Stangg', --0.8617396179241432
-	'Morinfen', --0.8597957951003398
-	'Eight-and-a-Half-Tails', --0.8597117063975428
-	'Asmoranomardicadaistinaculdacar', --0.8520494127566749
-	'Themberchaud', --0.8488433280895912
-	'Thraximundar', --0.8455407699650632
-	'Borborygmos', --0.8266740846830911
-	'Nihiloor', --0.7954492417684663
-	'Joven', --0.7906608467766228
-	'Malfegor', --0.7877475633140664
-	'Atogatog', --0.7849541855247187
-	'Chandler', --0.7679771099826442
-	'Memnarch', --0.7566032944270287
-	'Halfdane', --0.751727670016414
-	'Nebuchadnezzar', --0.7483801767547358
-	'Marrow-Gnawer', --0.7473345214039493
-	'Palladia-Mors', --0.6885498472861751
-	'Cromat', --0.6862705119847775
-	'Chromium', --0.6648990484925137
-	'Ragnar', --0.6590213129615768
-	'Phelddagrif', --0.6305108528515785
-	'Progenitus', --0.6160164507173621
-	'Gallowbraid', --0.6049794467568801
-	'Elminster', --0.49545783680146954
-	'Tromokratis', --0.4874543194644501
-	'Taniwha', --0.12114302326249103
-
-Potion of Healing
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.8425661293407142
-	'Progenitus', --0.7836049180378954
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.6872057207216306
-	'Chandler', --0.686766910485124
-	'Ragnar', --0.6167712253277311
-	'Phelddagrif', --0.6024550299985176
-	'Nebuchadnezzar', --0.5642607778895512
-	'Thraximundar', --0.4400825854323584
-	'Halfdane', --0.42873124859144907
-	'Memnarch', --0.4079456031360494
-	'Stangg', --0.40178781345371567
-	'Joven', --0.38987359131680077
-	'Cromat', --0.37643237658740863
-	'Nihiloor', --0.35612251775081566
-	'Borborygmos', --0.3283718238834658
-	'Themberchaud', --0.2962627863969286
-	'Atogatog', --0.2960102617293778
-	'Marrow-Gnawer', --0.28273858984133154
-	'Eight-and-a-Half-Tails', --0.255078274197272
-	'Malfegor', --0.23849053991408836
-	'Tiamat', --0.20093024388230846
-	'Kaysa', --0.18493044436481998
-	'Gallowbraid', --0.1769837058763622
-	'Johan', --0.1595964280800805
-	'Tromokratis', --0.11038831510428343
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-	'Morinfen', --0.017733382010513762
-
-Bastion Protector
-	'Eight-and-a-Half-Tails', --1.0
-	'Cromat', --0.9904772873465056
-	'Phelddagrif', --0.9892412335043981
-	'Asmoranomardicadaistinaculdacar', --0.982436256871587
-	'Thraximundar', --0.9513063315009905
-	'Malfegor', --0.9365211804693395
-	'Kaysa', --0.9078091809614725
-	'Johan', --0.907669360583459
-	'Tiamat', --0.9072868667111503
-	'Marrow-Gnawer', --0.8984770540976433
-	'Stangg', --0.8617396179241432
-	'Borborygmos', --0.8612057560911105
-	'Nihiloor', --0.83634386618099
-	'Nebuchadnezzar', --0.8067387176704687
-	'Morinfen', --0.799831365657031
-	'Memnarch', --0.7924879810296658
-	'Atogatog', --0.7646133595381095
-	'Chromium', --0.7576576120114403
-	'Progenitus', --0.739350925629886
-	'Joven', --0.7206182284147751
-	'Ragnar', --0.7114214281143509
-	'Chandler', --0.7037971962212838
-	'Tromokratis', --0.6511325746296815
-	'Palladia-Mors', --0.6337817874331544
-	'Themberchaud', --0.6172810559310156
-	'Halfdane', --0.5454839696520652
-	'Gallowbraid', --0.5244111922471768
-	'Elminster', --0.480161807388656
-	'Taniwha', --0.0
-
-Mossfire Valley
-	'Progenitus', --1.0
-	'Elminster', --1.0
-	'Chromium', --1.0
-	'Palladia-Mors', --1.0
-	'Taniwha', --0.9085804046645629
-	'Chandler', --0.874998904226271
-	'Ragnar', --0.8662455037480185
-	'Nebuchadnezzar', --0.7808818594368995
-	'Halfdane', --0.7799466337451288
-	'Phelddagrif', --0.6535120754728967
-	'Cromat', --0.607778883949861
-	'Stangg', --0.602681720180574
-	'Nihiloor', --0.5996142143846755
-	'Joven', --0.5848103869752012
-	'Thraximundar', --0.5746349422089639
-	'Memnarch', --0.5449982981279303
-	'Borborygmos', --0.4958042383882986
-	'Marrow-Gnawer', --0.4241078847619976
-	'Atogatog', --0.37294291088591885
-	'Malfegor', --0.35773580987113235
-	'Tiamat', --0.3309965811208959
-	'Johan', --0.31495531940897886
-	'Kaysa', --0.27739566654723
-	'Eight-and-a-Half-Tails', --0.2674118478350225
-	'Tromokratis', --0.12796539276809235
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Themberchaud', --0.0378540983691849
-	'Gallowbraid', --0.0
-	'Morinfen', --0.0
-
-Last Voyage of the _____
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7050222500709689
-	'Progenitus', --0.5537118400293424
-	'Themberchaud', --0.528971313810541
-	'Gallowbraid', --0.5217760533099994
-	'Chromium', --0.499486790556388
-	'Palladia-Mors', --0.4839475611493027
-	'Chandler', --0.4542678679734677
-	'Ragnar', --0.42689796177363404
-	'Nebuchadnezzar', --0.3273950549084331
-	'Phelddagrif', --0.29803138950543556
-	'Nihiloor', --0.24710629917399682
-	'Cromat', --0.24623776264992486
-	'Halfdane', --0.24176260097555116
-	'Memnarch', --0.23653403748128113
-	'Tiamat', --0.20575223066417378
-	'Stangg', --0.2008939067268577
-	'Thraximundar', --0.19872800771193452
-	'Joven', --0.19493679565840039
-	'Borborygmos', --0.18616019333822
-	'Atogatog', --0.13325683481279554
-	'Johan', --0.10498510646965961
-	'Tromokratis', --0.09281123744047452
-	'Kaysa', --0.09246522218240995
-	'Eight-and-a-Half-Tails', --0.08913728261167422
-	'Marrow-Gnawer', --0.08697972003509608
-	'Morinfen', --0.08129432138006058
-	'Malfegor', --0.025069841396542232
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Demolition Stomper
-	'Tromokratis', --1.0
-	'Asmoranomardicadaistinaculdacar', --0.9749032919266941
-	'Cromat', --0.916986622083326
-	'Eight-and-a-Half-Tails', --0.8961792736940001
-	'Tiamat', --0.8586094859159716
-	'Nihiloor', --0.8320738655982288
-	'Johan', --0.7986444083046679
-	'Malfegor', --0.773895314338229
-	'Kaysa', --0.7691113476878574
-	'Phelddagrif', --0.7262230570509608
-	'Morinfen', --0.7254681601584684
-	'Thraximundar', --0.7164346848610187
-	'Marrow-Gnawer', --0.6864231117166444
-	'Gallowbraid', --0.6303206909824332
-	'Borborygmos', --0.6296991338760353
-	'Stangg', --0.5603987578338561
-	'Atogatog', --0.5391516264451235
-	'Themberchaud', --0.4350410477968322
-	'Joven', --0.42788969949952854
-	'Chromium', --0.4256657806999754
-	'Progenitus', --0.41475830268672864
-	'Ragnar', --0.41171127906665733
-	'Memnarch', --0.4044168896144432
-	'Palladia-Mors', --0.38703932913802297
-	'Nebuchadnezzar', --0.3747118874551733
-	'Halfdane', --0.3356380601909824
-	'Chandler', --0.3151911628188765
-	'Elminster', --0.2630296118431833
-	'Taniwha', --0.08437377530005037
-
-Hair-Strung Koto
-	'Taniwha', --0.9085804046645629
-	'Themberchaud', --0.742611012656545
-	'Gallowbraid', --0.5989544902614111
-	'Elminster', --0.5505207205542904
-	'Progenitus', --0.3508147541136857
-	'Chromium', --0.24923018583458212
-	'Chandler', --0.24461657858851707
-	'Palladia-Mors', --0.2259213417239548
-	'Ragnar', --0.20722419078644172
-	'Thraximundar', --0.14909304510407934
-	'Halfdane', --0.12322992867635599
-	'Phelddagrif', --0.10683194729389843
-	'Tiamat', --0.0857594923401175
-	'Memnarch', --0.08230190715795664
-	'Tromokratis', --0.0752341597766656
-	'Cromat', --0.07280118819221572
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Nihiloor', --0.05426950959301843
-	'Morinfen', --0.05320014603154233
-	'Atogatog', --0.027745610293282794
-	'Eight-and-a-Half-Tails', --0.0
-	'Kaysa', --0.0
-	'Malfegor', --0.0
-	'Borborygmos', --0.0
-	'Marrow-Gnawer', --0.0
-	'Joven', --0.0
-	'Johan', --0.0
-	'Stangg', --0.0
-	'Nebuchadnezzar', --0.0
-
-Alpha Status
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7752603602771448
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.612960670861977
-	'Ragnar', --0.5958457569930695
-	'Chandler', --0.5598077414073938
-	'Halfdane', --0.4515882812107423
-	'Nebuchadnezzar', --0.39044092971844974
-	'Thraximundar', --0.36186399365652155
-	'Themberchaud', --0.3574920443398583
-	'Nihiloor', --0.32694186198884684
-	'Cromat', --0.3220578834422371
-	'Joven', --0.3172954633992618
-	'Memnarch', --0.31365010264294346
-	'Marrow-Gnawer', --0.31202244383620226
-	'Stangg', --0.3013408600902868
-	'Gallowbraid', --0.29947724513070556
-	'Borborygmos', --0.2815954494255376
-	'Phelddagrif', --0.27334006408949896
-	'Malfegor', --0.17886790493556617
-	'Atogatog', --0.17259865029631796
-	'Johan', --0.16760556792792058
-	'Kaysa', --0.14716927978715602
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tiamat', --0.12261854439038922
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.05126007253976472
-	'Morinfen', --0.026600073015771164
-
-Thundermaw Hellkite
-	'Cromat', --1.0
-	'Asmoranomardicadaistinaculdacar', --0.9799266775801995
-	'Tiamat', --0.9387165736701603
-	'Eight-and-a-Half-Tails', --0.936966923599731
-	'Malfegor', --0.9085914855218931
-	'Johan', --0.879818749326357
-	'Phelddagrif', --0.8542293271713239
-	'Tromokratis', --0.8475423327520418
-	'Morinfen', --0.8267495583721898
-	'Marrow-Gnawer', --0.8260111049572998
-	'Borborygmos', --0.8256645213400795
-	'Kaysa', --0.8153439587790623
-	'Nihiloor', --0.8149701170219745
-	'Thraximundar', --0.7297728628590867
-	'Gallowbraid', --0.6705262038570612
-	'Stangg', --0.6608457111972855
-	'Atogatog', --0.6503898777766122
-	'Chromium', --0.5506084073512302
-	'Progenitus', --0.5229558436677811
-	'Ragnar', --0.5215481645602535
-	'Memnarch', --0.518080660233372
-	'Nebuchadnezzar', --0.5048588640279896
-	'Joven', --0.4637821215575882
-	'Halfdane', --0.4450908443691112
-	'Palladia-Mors', --0.4266486914152848
-	'Chandler', --0.38509917602949767
-	'Elminster', --0.3321305671128331
-	'Themberchaud', --0.20933233580269414
-	'Taniwha', --0.06123022728443839
-
-Rift Sower
-	'Marrow-Gnawer', --0.9827600218759797
-	'Asmoranomardicadaistinaculdacar', --0.9456787141113057
-	'Kaysa', --0.8844656794331627
-	'Thraximundar', --0.850225690265165
-	'Eight-and-a-Half-Tails', --0.8393606709648778
-	'Tiamat', --0.8327909855429201
-	'Borborygmos', --0.832455560253405
-	'Nihiloor', --0.8197742841269261
-	'Malfegor', --0.8162177654491739
-	'Memnarch', --0.7937484809369897
-	'Atogatog', --0.7936937367215975
-	'Stangg', --0.7906379640968559
-	'Joven', --0.7889940446172264
-	'Cromat', --0.7854307285819718
-	'Ragnar', --0.7803262290128078
-	'Nebuchadnezzar', --0.7630658460721839
-	'Johan', --0.7421334736362799
-	'Progenitus', --0.7295349783842269
-	'Chandler', --0.7242493417049078
-	'Chromium', --0.7170128057938626
-	'Morinfen', --0.7121504781990411
-	'Themberchaud', --0.7106059173138852
-	'Palladia-Mors', --0.6885498472861751
-	'Halfdane', --0.6845308392672652
-	'Phelddagrif', --0.6741670040649856
-	'Gallowbraid', --0.6049794467568801
-	'Elminster', --0.4877692515660383
-	'Tromokratis', --0.46971164747035155
-	'Taniwha', --0.10047759270282348
-
-Gloom
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7799354633119207
-	'Progenitus', --0.6619093810103949
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.612960670861977
-	'Chandler', --0.5593315889130931
-	'Ragnar', --0.5367348472672302
-	'Nebuchadnezzar', --0.45754203148124983
-	'Gallowbraid', --0.4219503049330977
-	'Themberchaud', --0.41151182809598075
-	'Phelddagrif', --0.38914474420193546
-	'Halfdane', --0.3512153851536795
-	'Nihiloor', --0.33799708330593964
-	'Cromat', --0.3354007119428657
-	'Memnarch', --0.31365010264294346
-	'Stangg', --0.3013408600902868
-	'Joven', --0.2924051934876006
-	'Thraximundar', --0.2696516572294155
-	'Borborygmos', --0.26879423306960315
-	'Tiamat', --0.24662507879430356
-	'Atogatog', --0.19078971824490154
-	'Marrow-Gnawer', --0.15766436749542898
-	'Johan', --0.15747765970448943
-	'Kaysa', --0.13869783327361493
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Malfegor', --0.08469247637506422
-	'Morinfen', --0.0724276303748037
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Ant Queen
-	'Cromat', --0.9818040863181072
-	'Asmoranomardicadaistinaculdacar', --0.9735814557241058
-	'Eight-and-a-Half-Tails', --0.936966923599731
-	'Johan', --0.8612648697629289
-	'Marrow-Gnawer', --0.8570762606321809
-	'Tromokratis', --0.8475423327520418
-	'Malfegor', --0.8451126659912321
-	'Kaysa', --0.8238154052926032
-	'Nihiloor', --0.8149701170219745
-	'Tiamat', --0.807658259697887
-	'Thraximundar', --0.7873583343784994
-	'Borborygmos', --0.7460265038388066
-	'Morinfen', --0.7166014691532115
-	'Phelddagrif', --0.7105044644535619
-	'Stangg', --0.6608457111972855
-	'Gallowbraid', --0.6260086951916223
-	'Ragnar', --0.5806590742860929
-	'Atogatog', --0.574670001505167
-	'Chromium', --0.5506084073512302
-	'Joven', --0.55024836724039
-	'Progenitus', --0.5229558436677811
-	'Nebuchadnezzar', --0.5048588640279896
-	'Palladia-Mors', --0.48656566159854686
-	'Memnarch', --0.48272063365831175
-	'Halfdane', --0.4450908443691112
-	'Chandler', --0.42025488375850195
-	'Elminster', --0.3379428250841351
-	'Themberchaud', --0.33190540871343277
-	'Taniwha', --0.06123022728443839
-
-Fall from Favor
-	'Taniwha', --1.0
-	'Elminster', --0.7369703881568169
-	'Palladia-Mors', --0.612960670861977
-	'Progenitus', --0.5852416973132716
-	'Chromium', --0.5743342193000243
-	'Chandler', --0.5598077414073938
-	'Halfdane', --0.49406200588339894
-	'Ragnar', --0.45453422468136123
-	'Nebuchadnezzar', --0.44278793121710375
-	'Themberchaud', --0.39023255551286484
-	'Stangg', --0.3013408600902868
-	'Gallowbraid', --0.29947724513070556
-	'Joven', --0.2924051934876006
-	'Thraximundar', --0.29164510698148033
-	'Phelddagrif', --0.2845723119041862
-	'Nihiloor', --0.27267235239582843
-	'Cromat', --0.2674888478788225
-	'Borborygmos', --0.2479021191941493
-	'Memnarch', --0.23134819548498683
-	'Marrow-Gnawer', --0.21205394238099867
-	'Tiamat', --0.20747170740887264
-	'Atogatog', --0.19840170751950145
-	'Malfegor', --0.17886790493556617
-	'Johan', --0.1707527264749325
-	'Kaysa', --0.13869783327361493
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.026600073015771164
-	'Tromokratis', --0.026365616495713375
-
-Bountiful Promenade
-	'Progenitus', --1.0
-	'Elminster', --1.0
-	'Chromium', --1.0
-	'Palladia-Mors', --1.0
-	'Taniwha', --0.9085804046645629
-	'Chandler', --0.874998904226271
-	'Ragnar', --0.8662455037480185
-	'Nebuchadnezzar', --0.7808818594368995
-	'Halfdane', --0.7799466337451288
-	'Phelddagrif', --0.6535120754728967
-	'Cromat', --0.607778883949861
-	'Stangg', --0.602681720180574
-	'Nihiloor', --0.5996142143846755
-	'Joven', --0.5848103869752012
-	'Thraximundar', --0.5746349422089639
-	'Memnarch', --0.5449982981279303
-	'Borborygmos', --0.4958042383882986
-	'Marrow-Gnawer', --0.4241078847619976
-	'Atogatog', --0.37294291088591885
-	'Malfegor', --0.35773580987113235
-	'Tiamat', --0.3309965811208959
-	'Johan', --0.31495531940897886
-	'Kaysa', --0.27739566654723
-	'Eight-and-a-Half-Tails', --0.2674118478350225
-	'Tromokratis', --0.12796539276809235
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Themberchaud', --0.0378540983691849
-	'Gallowbraid', --0.0
-	'Morinfen', --0.0
-
-Dauntless Dourbark
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7003471470361935
-	'Progenitus', --0.5672098360757906
-	'Chromium', --0.499486790556388
-	'Ragnar', --0.4860088714994734
-	'Palladia-Mors', --0.4839475611493027
-	'Themberchaud', --0.4749515300544182
-	'Chandler', --0.45474402046776835
-	'Gallowbraid', --0.3993029935076078
-	'Halfdane', --0.3421354970326134
-	'Thraximundar', --0.2909403441390406
-	'Nebuchadnezzar', --0.2602939531456331
-	'Marrow-Gnawer', --0.24133779637586933
-	'Memnarch', --0.23653403748128113
-	'Nihiloor', --0.23605107785690405
-	'Cromat', --0.23289493414929627
-	'Joven', --0.21982706557006162
-	'Stangg', --0.2008939067268577
-	'Borborygmos', --0.1989614096941545
-	'Phelddagrif', --0.1822267093929991
-	'Malfegor', --0.11924526995704418
-	'Johan', --0.11511301469309078
-	'Atogatog', --0.11506576686421197
-	'Kaysa', --0.10093666869595105
-	'Tromokratis', --0.09281123744047452
-	'Eight-and-a-Half-Tails', --0.08913728261167422
-	'Tiamat', --0.08174569626025943
-	'Asmoranomardicadaistinaculdacar', --0.05126007253976472
-	'Morinfen', --0.035466764021028045
-
-Disdainful Stroke
-	'Taniwha', --1.0
-	'Elminster', --0.8118836013977683
-	'Palladia-Mors', --0.7419737805746514
-	'Chromium', --0.6994625216609274
-	'Progenitus', --0.693439238294324
-	'Chandler', --0.6648714623470195
-	'Halfdane', --0.6035147900615279
-	'Nebuchadnezzar', --0.5729349077899204
-	'Ragnar', --0.5643711101749573
-	'Stangg', --0.40178781345371567
-	'Joven', --0.38987359131680077
-	'Phelddagrif', --0.3756856666006861
-	'Nihiloor', --0.3635631365277714
-	'Thraximundar', --0.36256875649896125
-	'Cromat', --0.3566517971717634
-	'Borborygmos', --0.33053615892553245
-	'Memnarch', --0.308464260646649
-	'Marrow-Gnawer', --0.28273858984133154
-	'Themberchaud', --0.27277306979830496
-	'Atogatog', --0.2559345909516074
-	'Tiamat', --0.24834455553900217
-	'Malfegor', --0.23849053991408836
-	'Johan', --0.2232452797097624
-	'Gallowbraid', --0.1996514967538039
-	'Kaysa', --0.18493044436481998
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Tromokratis', --0.035154155327617835
-	'Morinfen', --0.017733382010513762
-
-Expedition Diviner
-	'Johan', --0.8923576860336679
-	'Kaysa', --0.8613021667263849
-	'Tiamat', --0.8534389693738864
-	'Asmoranomardicadaistinaculdacar', --0.8520494127566749
-	'Morinfen', --0.8440243534219891
-	'Eight-and-a-Half-Tails', --0.8401568786158021
-	'Themberchaud', --0.8167477246496513
-	'Thraximundar', --0.8035009214916292
-	'Malfegor', --0.7701443373409196
-	'Stangg', --0.7612926645607144
-	'Borborygmos', --0.7590413750759452
-	'Cromat', --0.7200435959735692
-	'Nihiloor', --0.7045584576365227
-	'Atogatog', --0.6923665737414701
-	'Marrow-Gnawer', --0.6913905020712268
-	'Memnarch', --0.6507305267868458
-	'Joven', --0.6497069026566323
-	'Gallowbraid', --0.6469047315015191
-	'Halfdane', --0.635537833020507
-	'Chandler', --0.6205657954212899
-	'Nebuchadnezzar', --0.6182332001819192
-	'Chromium', --0.571903029996257
-	'Phelddagrif', --0.5690366461248966
-	'Palladia-Mors', --0.5595367375735008
-	'Tromokratis', --0.5502251255740638
-	'Ragnar', --0.5491844274679808
-	'Progenitus', --0.5123192019496524
-	'Elminster', --0.4205446235605182
-	'Taniwha', --0.10759677230377705
-
-Epiphany Storm
-	'Elminster', --0.9192745287877465
-	'Taniwha', --0.9085804046645629
-	'Progenitus', --0.8918024590189475
-	'Chromium', --0.8748716976390971
-	'Palladia-Mors', --0.8110699201040636
-	'Ragnar', --0.7564086182544225
-	'Chandler', --0.7347794755576406
-	'Halfdane', --0.670493849567
-	'Nebuchadnezzar', --0.6507348828640831
-	'Phelddagrif', --0.5992916362002602
-	'Borborygmos', --0.5265015463895765
-	'Cromat', --0.518579695710012
-	'Nihiloor', --0.5087234302527326
-	'Memnarch', --0.5032422595413281
-	'Stangg', --0.5022347668171445
-	'Thraximundar', --0.4461258211720704
-	'Joven', --0.4257660133748604
-	'Marrow-Gnawer', --0.42232658308198673
-	'Atogatog', --0.363384293431975
-	'Malfegor', --0.36159199442327145
-	'Tiamat', --0.33542255462292186
-	'Johan', --0.29114455396100813
-	'Kaysa', --0.23116305545602497
-	'Eight-and-a-Half-Tails', --0.22284320652918535
-	'Gallowbraid', --0.14434325704234063
-	'Tromokratis', --0.11917685393618789
-	'Morinfen', --0.1190147802242352
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Themberchaud', --0.0
-
-Bewilder
-	'Taniwha', --1.0
-	'Elminster', --0.7369703881568169
-	'Palladia-Mors', --0.612960670861977
-	'Progenitus', --0.5852416973132716
-	'Chromium', --0.5743342193000243
-	'Chandler', --0.5598077414073938
-	'Halfdane', --0.49406200588339894
-	'Ragnar', --0.45453422468136123
-	'Nebuchadnezzar', --0.44278793121710375
-	'Themberchaud', --0.39023255551286484
-	'Stangg', --0.3013408600902868
-	'Gallowbraid', --0.29947724513070556
-	'Joven', --0.2924051934876006
-	'Thraximundar', --0.29164510698148033
-	'Phelddagrif', --0.2845723119041862
-	'Nihiloor', --0.27267235239582843
-	'Cromat', --0.2674888478788225
-	'Borborygmos', --0.2479021191941493
-	'Memnarch', --0.23134819548498683
-	'Marrow-Gnawer', --0.21205394238099867
-	'Tiamat', --0.20747170740887264
-	'Atogatog', --0.19840170751950145
-	'Malfegor', --0.17886790493556617
-	'Johan', --0.1707527264749325
-	'Kaysa', --0.1386978055329791
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.026600073015771164
-	'Tromokratis', --0.026365616495713375
-
-Tahngarth, Talruum Hero
-	'Asmoranomardicadaistinaculdacar', --0.9799266775801995
-	'Cromat', --0.9779689218314438
-	'Malfegor', --0.9439323919787922
-	'Tiamat', --0.9387165736701603
-	'Eight-and-a-Half-Tails', --0.882521092393632
-	'Johan', --0.8817398267598974
-	'Morinfen', --0.87105838128576
-	'Phelddagrif', --0.8542293271713239
-	'Marrow-Gnawer', --0.8260111049572998
-	'Kaysa', --0.8153439587790623
-	'Borborygmos', --0.8114333594030716
-	'Nihiloor', --0.7734839552076946
-	'Gallowbraid', --0.745040263534734
-	'Tromokratis', --0.7405148307722119
-	'Thraximundar', --0.7297728628590867
-	'Stangg', --0.6608457111972855
-	'Atogatog', --0.6507363229154951
-	'Memnarch', --0.5725188502204477
-	'Chromium', --0.5434463882131957
-	'Progenitus', --0.5229558436677811
-	'Ragnar', --0.5215481645602535
-	'Nebuchadnezzar', --0.5027718929265506
-	'Joven', --0.4637821215575882
-	'Halfdane', --0.4450908443691112
-	'Palladia-Mors', --0.39716191416313473
-	'Themberchaud', --0.39187946843415267
-	'Chandler', --0.38509917602949767
-	'Elminster', --0.3321305671128331
-	'Taniwha', --0.0
-
-Syr Carah, the Bold
-	'Asmoranomardicadaistinaculdacar', --0.9613712246620063
-	'Morinfen', --0.9277128368865235
-	'Tiamat', --0.9191606330613744
-	'Johan', --0.8817398267598974
-	'Malfegor', --0.8807547300429568
-	'Cromat', --0.8651357585902858
-	'Eight-and-a-Half-Tails', --0.834059008414402
-	'Marrow-Gnawer', --0.8260111049572998
-	'Kaysa', --0.8153439587790623
-	'Borborygmos', --0.8114333594030716
-	'Gallowbraid', --0.7912479885438597
-	'Thraximundar', --0.7445786186882596
-	'Nihiloor', --0.7162724262870779
-	'Phelddagrif', --0.7127377756166419
-	'Themberchaud', --0.673396726677767
-	'Stangg', --0.6608457111972855
-	'Atogatog', --0.659388740944389
-	'Memnarch', --0.6564364419499575
-	'Tromokratis', --0.6335554969658727
-	'Progenitus', --0.5229558436677811
-	'Ragnar', --0.5215481645602535
-	'Chromium', --0.5074010072896344
-	'Nebuchadnezzar', --0.5027718929265506
-	'Joven', --0.46410545698523475
-	'Halfdane', --0.4588882180932298
-	'Chandler', --0.4366185984749239
-	'Palladia-Mors', --0.3706066576775648
-	'Elminster', --0.3321305671128331
-	'Taniwha', --0.0
-
-Hive Mind
-	'Taniwha', --1.0
-	'Themberchaud', --0.742611012656545
-	'Gallowbraid', --0.5989544902614111
-	'Elminster', --0.5122307484339619
-	'Progenitus', --0.2606490743701142
-	'Chandler', --0.24461657858851707
-	'Palladia-Mors', --0.2259213417239548
-	'Chromium', --0.19894931221731538
-	'Halfdane', --0.16570365334901266
-	'Ragnar', --0.1250235682005728
-	'Tiamat', --0.08485316301848328
-	'Thraximundar', --0.0788741584290382
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.05320014603154233
-	'Nebuchadnezzar', --0.052347001498654004
-	'Atogatog', --0.025803057223183327
-	'Johan', --0.013275066770443088
-	'Phelddagrif', --0.011232247814687225
-	'Eight-and-a-Half-Tails', --0.0
-	'Kaysa', --0.0
-	'Cromat', --0.0
-	'Malfegor', --0.0
-	'Borborygmos', --0.0
-	'Marrow-Gnawer', --0.0
-	'Joven', --0.0
-	'Tromokratis', --0.0
-	'Memnarch', --0.0
-	'Nihiloor', --0.0
-	'Stangg', --0.0
-
-Homestead Courage
-	'Elminster', --0.917479342581666
-	'Taniwha', --0.9085804046645629
-	'Progenitus', --0.8918024590189475
-	'Chromium', --0.8748716976390971
-	'Palladia-Mors', --0.8162188304343049
-	'Chandler', --0.7918306314247493
-	'Ragnar', --0.7266081108213275
-	'Nebuchadnezzar', --0.6944077544623679
-	'Phelddagrif', --0.6935683846950172
-	'Halfdane', --0.5381840327695782
-	'Thraximundar', --0.5110062349498393
-	'Stangg', --0.5022347668171445
-	'Joven', --0.48734198914600096
-	'Memnarch', --0.48506166829771175
-	'Cromat', --0.4655953258803498
-	'Nihiloor', --0.44701330188275845
-	'Borborygmos', --0.4110058636148489
-	'Atogatog', --0.3535431451614838
-	'Marrow-Gnawer', --0.3534232373016645
-	'Eight-and-a-Half-Tails', --0.2996469155031092
-	'Malfegor', --0.29811317489261036
-	'Tiamat', --0.24180309201243824
-	'Kaysa', --0.23116305545602497
-	'Johan', --0.2120889813149103
-	'Themberchaud', --0.17880330068236874
-	'Tromokratis', --0.11917685393618789
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-	'Gallowbraid', --0.07715795749946054
-	'Morinfen', --0.008866691005256881
-
-Sleeper's Robe
-	'Taniwha', --1.0
-	'Elminster', --0.8165587044325441
-	'Palladia-Mors', --0.7419737805746514
-	'Chromium', --0.6994625216609274
-	'Progenitus', --0.6799412422478759
-	'Chandler', --0.6643953098527186
-	'Nebuchadnezzar', --0.6400360095527202
-	'Ragnar', --0.5643711101749573
-	'Halfdane', --0.5031418940044651
-	'Stangg', --0.40178781345371567
-	'Joven', --0.38987359131680077
-	'Phelddagrif', --0.38465839941922414
-	'Nihiloor', --0.37461835784486414
-	'Cromat', --0.35176247304359093
-	'Borborygmos', --0.3514282728009862
-	'Gallowbraid', --0.32212455655619604
-	'Memnarch', --0.308464260646649
-	'Themberchaud', --0.2940523423814209
-	'Tiamat', --0.2865915976027991
-	'Thraximundar', --0.2703564200718552
-	'Atogatog', --0.2463800486069082
-	'Marrow-Gnawer', --0.22834901495576185
-	'Johan', --0.2232452797097624
-	'Kaysa', --0.18493044436481998
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Malfegor', --0.1443151113535864
-	'Morinfen', --0.0635609393695463
-	'Tromokratis', --0.035154155327617835
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Saproling Migration
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.8501735735180967
-	'Progenitus', --0.7836049180378954
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.7419737805746514
-	'Ragnar', --0.7056826424866659
-	'Chandler', --0.6648714623470195
-	'Halfdane', --0.5610410653888711
-	'Nebuchadnezzar', --0.5205879062912664
-	'Thraximundar', --0.4327876431740023
-	'Nihiloor', --0.4178326461207898
-	'Joven', --0.414763861228462
-	'Cromat', --0.411220832735178
-	'Stangg', --0.40178781345371567
-	'Memnarch', --0.3907661678046056
-	'Marrow-Gnawer', --0.38270709129653513
-	'Phelddagrif', --0.3644534187859985
-	'Borborygmos', --0.3642294891569207
-	'Themberchaud', --0.24003255862529813
-	'Malfegor', --0.23849053991408836
-	'Atogatog', --0.23013153372842393
-	'Johan', --0.22009812116275052
-	'Gallowbraid', --0.1996514967538039
-	'Kaysa', --0.19340189087836102
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Tiamat', --0.163491392520519
-	'Tromokratis', --0.11038831510428343
-	'Asmoranomardicadaistinaculdacar', --0.05126007253976472
-	'Morinfen', --0.017733382010513762
-
-Chimney Rabble
-	'Asmoranomardicadaistinaculdacar', --0.9613712246620063
-	'Tiamat', --0.9600334811915044
-	'Cromat', --0.9542987078832265
-	'Malfegor', --0.9403773650214786
-	'Johan', --0.9342323799947272
-	'Morinfen', --0.9188461458812661
-	'Marrow-Gnawer', --0.8966957524176324
-	'Borborygmos', --0.8940673991344549
-	'Eight-and-a-Half-Tails', --0.8786276497202391
-	'Kaysa', --0.8615765698702671
-	'Thraximundar', --0.8155022682057406
-	'Nihiloor', --0.8071632104190212
-	'Phelddagrif', --0.803851130313141
-	'Stangg', --0.7612926645607144
-	'Memnarch', --0.7335525071116198
-	'Atogatog', --0.7169216243764951
-	'Gallowbraid', --0.691422240166958
-	'Tromokratis', --0.6423440357977771
-	'Nebuchadnezzar', --0.6329188694993672
-	'Chromium', --0.6325293096505374
-	'Ragnar', --0.6313850500538497
-	'Progenitus', --0.6311533846488335
-	'Halfdane', --0.5683410022713586
-	'Joven', --0.5615738548144349
-	'Themberchaud', --0.5559372409632071
-	'Chandler', --0.5416823194145495
-	'Palladia-Mors', --0.4996197673902387
-	'Elminster', --0.40704378035378497
-	'Taniwha', --0.0
-
-Strefan, Maurer Progenitor
-	'Morinfen', --1.0
-	'Tiamat', --0.937891162391473
-	'Johan', --0.9077644070500838
-	'Borborygmos', --0.8932648366840598
-	'Kaysa', --0.8613021667263849
-	'Eight-and-a-Half-Tails', --0.8401568786158021
-	'Gallowbraid', --0.8138952999693507
-	'Asmoranomardicadaistinaculdacar', --0.8007893402169102
-	'Cromat', --0.787919221090704
-	'Nihiloor', --0.7698831885466342
-	'Memnarch', --0.7683924605198628
-	'Stangg', --0.7612926645607144
-	'Malfegor', --0.7394477283110786
-	'Atogatog', --0.7327288504450323
-	'Thraximundar', --0.7239220002201511
-	'Phelddagrif', --0.7105019938465095
-	'Marrow-Gnawer', --0.7059042729659788
-	'Themberchaud', --0.6827134131490221
-	'Nebuchadnezzar', --0.6329873004460652
-	'Ragnar', --0.6313850500538497
-	'Tromokratis', --0.6254592853507291
-	'Chromium', --0.6221839036135236
-	'Progenitus', --0.5889868856467757
-	'Joven', --0.5881309268854925
-	'Chandler', --0.5849339351979848
-	'Palladia-Mors', --0.4996197673902387
-	'Halfdane', --0.4926912122907876
-	'Elminster', --0.45769744074431995
-	'Taniwha', --0.01617717696833993
-
-Ageless Entity
-	'Asmoranomardicadaistinaculdacar', --0.9735814557241058
-	'Cromat', --0.959773008149551
-	'Eight-and-a-Half-Tails', --0.882521092393632
-	'Malfegor', --0.8804535724481313
-	'Johan', --0.8631859471964693
-	'Marrow-Gnawer', --0.8570762606321809
-	'Kaysa', --0.8238154052926032
-	'Tiamat', --0.807658259697887
-	'Thraximundar', --0.7873583343784994
-	'Nihiloor', --0.7734839552076946
-	'Morinfen', --0.7609102920667822
-	'Tromokratis', --0.7405148307722119
-	'Borborygmos', --0.731795341901799
-	'Phelddagrif', --0.7105044644535619
-	'Gallowbraid', --0.700522754869295
-	'Stangg', --0.6608457111972855
-	'Ragnar', --0.5806590742860929
-	'Atogatog', --0.5750164466440503
-	'Joven', --0.55024836724039
-	'Chromium', --0.5434463882131957
-	'Memnarch', --0.5371588236453874
-	'Progenitus', --0.5229558436677811
-	'Themberchaud', --0.5144525413448913
-	'Nebuchadnezzar', --0.5027718929265506
-	'Palladia-Mors', --0.45707888434639715
-	'Halfdane', --0.4450908443691112
-	'Chandler', --0.42025488375850195
-	'Elminster', --0.3379428250841351
-	'Taniwha', --0.0
-
-Clear
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.8425661293407142
-	'Progenitus', --0.7836049180378954
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.6872057207216306
-	'Chandler', --0.686766910485124
-	'Ragnar', --0.6167712253277311
-	'Phelddagrif', --0.6024550299985176
-	'Nebuchadnezzar', --0.5642607778895512
-	'Thraximundar', --0.4400825854323584
-	'Halfdane', --0.42873124859144907
-	'Memnarch', --0.4079456031360494
-	'Stangg', --0.40178781345371567
-	'Joven', --0.38987359131680077
-	'Cromat', --0.37643237658740863
-	'Nihiloor', --0.35612251775081566
-	'Borborygmos', --0.3283718238834658
-	'Themberchaud', --0.2962627863969286
-	'Atogatog', --0.2960102617293778
-	'Marrow-Gnawer', --0.28273858984133154
-	'Eight-and-a-Half-Tails', --0.255078274197272
-	'Malfegor', --0.23849053991408836
-	'Tiamat', --0.20093024388230846
-	'Kaysa', --0.18493044436481998
-	'Gallowbraid', --0.1769837058763622
-	'Johan', --0.1595964280800805
-	'Tromokratis', --0.11038831510428343
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-	'Morinfen', --0.017733382010513762
-
-Brago, King Eternal
-	'Asmoranomardicadaistinaculdacar', --1.0
-	'Eight-and-a-Half-Tails', --0.9612488920623582
-	'Tiamat', --0.8814348912701717
-	'Malfegor', --0.8759799242065716
-	'Phelddagrif', --0.8747611525509709
-	'Kaysa', --0.8615765698702671
-	'Marrow-Gnawer', --0.8130517785097001
-	'Johan', --0.7874935257115697
-	'Thraximundar', --0.7812799942644216
-	'Morinfen', --0.7766817337451317
-	'Cromat', --0.7720661891212887
-	'Borborygmos', --0.76357038623549
-	'Stangg', --0.7612926645607144
-	'Atogatog', --0.7401926513870465
-	'Themberchaud', --0.7312675898908264
-	'Nebuchadnezzar', --0.728938742596306
-	'Nihiloor', --0.7172113543780665
-	'Gallowbraid', --0.68213740425634
-	'Joven', --0.6663120414487185
-	'Memnarch', --0.6177597693339185
-	'Chandler', --0.6100287044997869
-	'Chromium', --0.5784794111669768
-	'Progenitus', --0.5364874126919197
-	'Palladia-Mors', --0.5222922120289389
-	'Ragnar', --0.5193839200348856
-	'Tromokratis', --0.5069760109589846
-	'Halfdane', --0.4714445892402526
-	'Elminster', --0.366958622027376
-	'Taniwha', --0.10496584629415075
-
-Teferi's Tutelage
-	'Taniwha', --1.0
-	'Elminster', --0.7369703881568169
-	'Palladia-Mors', --0.612960670861977
-	'Progenitus', --0.5852416973132716
-	'Chromium', --0.5743342193000243
-	'Chandler', --0.5598077414073938
-	'Halfdane', --0.49406200588339894
-	'Ragnar', --0.45453422468136123
-	'Nebuchadnezzar', --0.44278793121710375
-	'Themberchaud', --0.39023255551286484
-	'Stangg', --0.3013408600902868
-	'Gallowbraid', --0.29947724513070556
-	'Joven', --0.2924051934876006
-	'Thraximundar', --0.29164510698148033
-	'Phelddagrif', --0.2845723119041862
-	'Nihiloor', --0.27267235239582843
-	'Cromat', --0.2674888478788225
-	'Borborygmos', --0.2479021191941493
-	'Memnarch', --0.23134819548498683
-	'Marrow-Gnawer', --0.21205394238099867
-	'Tiamat', --0.20747170740887264
-	'Atogatog', --0.19840170751950145
-	'Malfegor', --0.17886790493556617
-	'Johan', --0.1707527264749325
-	'Kaysa', --0.13869783327361493
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.026600073015771164
-	'Tromokratis', --0.026365616495713375
-
-Reduce to Memory
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7676529160997628
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Chandler', --0.5817031895454985
-	'Palladia-Mors', --0.5581926110089562
-	'Phelddagrif', --0.5113416753020181
-	'Ragnar', --0.506934339834135
-	'Nebuchadnezzar', --0.4341138013167348
-	'Themberchaud', --0.4137222721114888
-	'Thraximundar', --0.36915893591487764
-	'Memnarch', --0.33082953797438724
-	'Halfdane', --0.31927846441332025
-	'Stangg', --0.3013408600902868
-	'Joven', --0.2924051934876006
-	'Cromat', --0.28726942729446775
-	'Gallowbraid', --0.2768094542532644
-	'Nihiloor', --0.2652317336188727
-	'Borborygmos', --0.24573778415208272
-	'Atogatog', --0.23847737829727178
-	'Marrow-Gnawer', --0.21205394238099867
-	'Eight-and-a-Half-Tails', --0.21050963289143493
-	'Malfegor', --0.17886790493556617
-	'Tiamat', --0.16005739575217867
-	'Kaysa', --0.13869783327361493
-	'Johan', --0.1071038748452507
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-	'Morinfen', --0.026600073015771164
-
-Lifecraft Cavalry
-	'Asmoranomardicadaistinaculdacar', --0.9735814557241058
-	'Cromat', --0.959773008149551
-	'Eight-and-a-Half-Tails', --0.882521092393632
-	'Malfegor', --0.8804535724481313
-	'Johan', --0.8631859471964693
-	'Marrow-Gnawer', --0.8570762606321809
-	'Kaysa', --0.8238154052926032
-	'Tiamat', --0.807658259697887
-	'Thraximundar', --0.7873583343784994
-	'Nihiloor', --0.7734839552076946
-	'Morinfen', --0.7609102920667822
-	'Tromokratis', --0.7405148307722119
-	'Borborygmos', --0.731795341901799
-	'Phelddagrif', --0.7105044644535619
-	'Gallowbraid', --0.700522754869295
-	'Stangg', --0.6608457111972855
-	'Ragnar', --0.5806590742860929
-	'Atogatog', --0.5750164466440503
-	'Joven', --0.55024836724039
-	'Chromium', --0.5434463882131957
-	'Memnarch', --0.5371588236453874
-	'Progenitus', --0.5229558436677811
-	'Themberchaud', --0.5144525413448913
-	'Nebuchadnezzar', --0.5027718929265506
-	'Palladia-Mors', --0.45707888434639715
-	'Halfdane', --0.4450908443691112
-	'Chandler', --0.42025488375850195
-	'Elminster', --0.3379428250841351
-	'Taniwha', --0.0
-
-Rally the Troops
-	'Elminster', --0.917479342581666
-	'Taniwha', --0.9085804046645629
-	'Progenitus', --0.8918024590189475
-	'Chromium', --0.8748716976390971
-	'Palladia-Mors', --0.8162188304343049
-	'Chandler', --0.7918306314247493
-	'Ragnar', --0.7266081108213275
-	'Nebuchadnezzar', --0.6944077544623679
-	'Phelddagrif', --0.6935683846950172
-	'Halfdane', --0.5381840327695782
-	'Thraximundar', --0.5110062349498393
-	'Stangg', --0.5022347668171445
-	'Joven', --0.48734198914600096
-	'Memnarch', --0.48506166829771175
-	'Cromat', --0.4655953258803498
-	'Nihiloor', --0.44701330188275845
-	'Borborygmos', --0.4110058636148489
-	'Atogatog', --0.3535431451614838
-	'Marrow-Gnawer', --0.3534232373016645
-	'Eight-and-a-Half-Tails', --0.2996469155031092
-	'Malfegor', --0.29811317489261036
-	'Tiamat', --0.24180309201243824
-	'Kaysa', --0.23116305545602497
-	'Johan', --0.2120889813149103
-	'Themberchaud', --0.17880330068236874
-	'Tromokratis', --0.11917685393618789
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-	'Gallowbraid', --0.07715795749946054
-	'Morinfen', --0.008866691005256881
-
-Telekinetic Sliver
-	'Themberchaud', --0.9663028138041514
-	'Morinfen', --0.8686624861055967
-	'Kaysa', --0.8613021667263849
-	'Tiamat', --0.8534389693738864
-	'Asmoranomardicadaistinaculdacar', --0.8520494127566749
-	'Eight-and-a-Half-Tails', --0.8151430650917058
-	'Johan', --0.8113993376261652
-	'Thraximundar', --0.7746171204475822
-	'Stangg', --0.7612926645607144
-	'Borborygmos', --0.744040044951708
-	'Malfegor', --0.7281249283355444
-	'Atogatog', --0.7274213020926121
-	'Gallowbraid', --0.7048051951337817
-	'Nihiloor', --0.7045584576365227
-	'Joven', --0.6931924489474226
-	'Memnarch', --0.6794872292653664
-	'Marrow-Gnawer', --0.6766498739436166
-	'Chandler', --0.6629133890430183
-	'Halfdane', --0.6422748858382853
-	'Nebuchadnezzar', --0.6182332001819192
-	'Cromat', --0.5971075626918368
-	'Palladia-Mors', --0.5595367375735008
-	'Ragnar', --0.5491844274679808
-	'Chromium', --0.5397707461316107
-	'Phelddagrif', --0.5393974981550789
-	'Progenitus', --0.5078189097363096
-	'Tromokratis', --0.47866578063254567
-	'Elminster', --0.4205446235605182
-	'Taniwha', --0.12114302326249103
-
-Grozoth
-	'Asmoranomardicadaistinaculdacar', --0.9749032919266941
-	'Gallowbraid', --0.9297979361131381
-	'Tromokratis', --0.8984002237276213
-	'Themberchaud', --0.7874195049405128
-	'Eight-and-a-Half-Tails', --0.7624733497764887
-	'Morinfen', --0.7520682331742395
-	'Tiamat', --0.7350846122039486
-	'Johan', --0.6544418153706216
-	'Kaysa', --0.6304135144142424
-	'Malfegor', --0.5950274094026627
-	'Cromat', --0.5766965860122876
-	'Nihiloor', --0.5051320036093812
-	'Marrow-Gnawer', --0.4743691693356457
-	'Thraximundar', --0.43344484963353497
-	'Borborygmos', --0.381797014681886
-	'Atogatog', --0.364610423078706
-	'Phelddagrif', --0.3572832934822506
-	'Stangg', --0.2590578977435696
-	'Taniwha', --0.17579337063548714
-	'Joven', --0.13548450601192794
-	'Memnarch', --0.09076678697149992
-	'Halfdane', --0.049753432329252736
-	'Nebuchadnezzar', --0.036617959235377556
-	'Chandler', --0.0
-	'Progenitus', --0.0
-	'Elminster', --0.0
-	'Ragnar', --0.0
-	'Chromium', --0.0
-	'Palladia-Mors', --0.0
-
-Tangleroot
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7752603602771448
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.612960670861977
-	'Chandler', --0.5598077414073938
-	'Ragnar', --0.5367348472672302
-	'Halfdane', --0.4515882812107423
-	'Nebuchadnezzar', --0.39044092971844974
-	'Themberchaud', --0.39023255551286484
-	'Phelddagrif', --0.3801720113833974
-	'Thraximundar', --0.36186399365652155
-	'Cromat', --0.34029003607103825
-	'Nihiloor', --0.32694186198884684
-	'Memnarch', --0.31365010264294346
-	'Stangg', --0.3013408600902868
-	'Gallowbraid', --0.29947724513070556
-	'Joven', --0.2924051934876006
-	'Borborygmos', --0.2479021191941493
-	'Marrow-Gnawer', --0.21205394238099867
-	'Tiamat', --0.2083780367305066
-	'Atogatog', --0.20034426058960075
-	'Malfegor', --0.17886790493556617
-	'Johan', --0.15747765970448943
-	'Kaysa', --0.13869783327361493
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.026600073015771164
-
-Minion of the Mighty
-	'Halfdane', --1.0
-	'Chromium', --0.955245182409388
-	'Borborygmos', --0.9417810410226635
-	'Chandler', --0.900699480613911
-	'Ragnar', --0.9002414413665305
-	'Palladia-Mors', --0.8866590965282614
-	'Progenitus', --0.8839014634127769
-	'Memnarch', --0.8449891780445778
-	'Nebuchadnezzar', --0.8417644363380097
-	'Kaysa', --0.8291769975886901
-	'Thraximundar', --0.8270270557606699
-	'Stangg', --0.8222324513338203
-	'Marrow-Gnawer', --0.8158115333483249
-	'Tiamat', --0.796712309754976
-	'Joven', --0.7796920713906779
-	'Phelddagrif', --0.7764232308477315
-	'Nihiloor', --0.7599353522916603
-	'Elminster', --0.7519571669150646
-	'Malfegor', --0.7321804742117033
-	'Eight-and-a-Half-Tails', --0.7077015233723915
-	'Atogatog', --0.7048639033493093
-	'Asmoranomardicadaistinaculdacar', --0.6537872626497981
-	'Cromat', --0.6326878279647007
-	'Johan', --0.6274817828061654
-	'Morinfen', --0.6094351123984632
-	'Themberchaud', --0.3226404338518781
-	'Tromokratis', --0.30891348955563075
-	'Gallowbraid', --0.2875730881889612
-	'Taniwha', --0.2340478284315174
-
-Dakra Mystic
-	'Chandler', --0.9802532544276136
-	'Joven', --0.9751097300883388
-	'Halfdane', --0.9706332383726713
-	'Kaysa', --0.9681850519581493
-	'Nebuchadnezzar', --0.9490979802649492
-	'Palladia-Mors', --0.9465760667115237
-	'Stangg', --0.928898346172712
-	'Thraximundar', --0.9224861710666028
-	'Borborygmos', --0.9196961610117989
-	'Chromium', --0.9066431308613883
-	'Ragnar', --0.8586884676882917
-	'Marrow-Gnawer', --0.8424236497405685
-	'Tiamat', --0.8380419910113542
-	'Eight-and-a-Half-Tails', --0.824924994290461
-	'Memnarch', --0.8055144867077428
-	'Progenitus', --0.8027183396323444
-	'Nihiloor', --0.8020164716985758
-	'Asmoranomardicadaistinaculdacar', --0.7933021418167121
-	'Atogatog', --0.7633302873679325
-	'Malfegor', --0.7547598809752102
-	'Elminster', --0.7147486837627555
-	'Johan', --0.705309311892592
-	'Phelddagrif', --0.6863494571519162
-	'Morinfen', --0.6308414620044731
-	'Themberchaud', --0.6241318262576954
-	'Cromat', --0.6239832145555205
-	'Tromokratis', --0.32783723007455484
-	'Taniwha', --0.30430686820125824
-	'Gallowbraid', --0.2130243580842658
-
-Treetop Scout
-	'Joven', --1.0
-	'Ragnar', --1.0
-	'Thraximundar', --0.9927050577416439
-	'Chandler', --0.9802532544276136
-	'Kaysa', --0.9766564984716902
-	'Chromium', --0.9569240044786548
-	'Borborygmos', --0.9533894912431873
-	'Palladia-Mors', --0.9465760667115237
-	'Marrow-Gnawer', --0.9423921511957718
-	'Stangg', --0.928898346172712
-	'Halfdane', --0.9281595137000146
-	'Nebuchadnezzar', --0.8967509787662952
-	'Progenitus', --0.8928840193759154
-	'Memnarch', --0.8878163938656991
-	'Nihiloor', --0.8562859812915941
-	'Eight-and-a-Half-Tails', --0.824924994290461
-	'Asmoranomardicadaistinaculdacar', --0.7869569199606185
-	'Malfegor', --0.7547598809752102
-	'Tiamat', --0.753188827992871
-	'Elminster', --0.7530386558830838
-	'Atogatog', --0.7375272301447492
-	'Johan', --0.7021621533455802
-	'Cromat', --0.6785522501189348
-	'Phelddagrif', --0.675117209337229
-	'Morinfen', --0.6308414620044731
-	'Themberchaud', --0.5913913150846886
-	'Tromokratis', --0.4030713898512202
-	'Gallowbraid', --0.2130243580842658
-	'Taniwha', --0.2128872728658211
-
-Tatyova, Benthic Druid
-	'Asmoranomardicadaistinaculdacar', --0.9550260028059127
-	'Johan', --0.8764610139669126
-	'Marrow-Gnawer', --0.8570762606321809
-	'Eight-and-a-Half-Tails', --0.834059008414402
-	'Kaysa', --0.8238154052926032
-	'Morinfen', --0.8175647476675452
-	'Malfegor', --0.8172759105122955
-	'Themberchaud', --0.7959697995885059
-	'Tiamat', --0.7871959897674674
-	'Cromat', --0.7741386567161773
-	'Gallowbraid', --0.7467304798784207
-	'Thraximundar', --0.7319452035326314
-	'Borborygmos', --0.731795341901799
-	'Nihiloor', --0.6620029166940596
-	'Stangg', --0.6608457111972855
-	'Atogatog', --0.5817263116028446
-	'Tromokratis', --0.5583213371892073
-	'Nebuchadnezzar', --0.5551188944252042
-	'Joven', --0.5505717026680359
-	'Memnarch', --0.5387745082169408
-	'Halfdane', --0.5013619427658865
-	'Ragnar', --0.49845845170022385
-	'Phelddagrif', --0.4734132134196683
-	'Chandler', --0.47177430620392813
-	'Chromium', --0.45712013367236776
-	'Progenitus', --0.4327901639242096
-	'Palladia-Mors', --0.4305236278608268
-	'Elminster', --0.2996528529638067
-	'Taniwha', --0.09141959533543711
-
-Torch Fiend
-	'Borborygmos', --1.0
-	'Kaysa', --0.9537673889087951
-	'Thraximundar', --0.9290978346381725
-	'Stangg', --0.8995530466365705
-	'Tiamat', --0.880431323641455
-	'Morinfen', --0.8621752623703057
-	'Memnarch', --0.8563771225188503
-	'Ragnar', --0.8510588210410419
-	'Nihiloor', --0.8436749075836891
-	'Marrow-Gnawer', --0.841587253609815
-	'Chromium', --0.8403082244706833
-	'Chandler', --0.8400338257589831
-	'Eight-and-a-Half-Tails', --0.8391781595217259
-	'Malfegor', --0.8369000715421404
-	'Halfdane', --0.8187067295218863
-	'Joven', --0.8160653564879987
-	'Johan', --0.8133027112965249
-	'Asmoranomardicadaistinaculdacar', --0.8026494305113192
-	'Progenitus', --0.7900021334271797
-	'Phelddagrif', --0.7751621876155668
-	'Nebuchadnezzar', --0.7666040021934785
-	'Palladia-Mors', --0.757645986815587
-	'Cromat', --0.7244841961384572
-	'Atogatog', --0.6958098461507891
-	'Elminster', --0.6723131846708305
-	'Themberchaud', --0.5862777278885105
-	'Tromokratis', --0.5041444332371284
-	'Gallowbraid', --0.3573676151266064
-	'Taniwha', --0.1259559311217116
-
-Dega Sanctuary
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7676529160997628
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Chandler', --0.5817031895454985
-	'Palladia-Mors', --0.5581926110089562
-	'Phelddagrif', --0.5113416753020181
-	'Ragnar', --0.506934339834135
-	'Nebuchadnezzar', --0.4341138013167348
-	'Themberchaud', --0.4137222721114888
-	'Thraximundar', --0.36915893591487764
-	'Memnarch', --0.33082953797438724
-	'Halfdane', --0.31927846441332025
-	'Stangg', --0.3013408600902868
-	'Joven', --0.2924051934876006
-	'Cromat', --0.28726942729446775
-	'Gallowbraid', --0.2768094542532644
-	'Nihiloor', --0.2652317336188727
-	'Borborygmos', --0.24573778415208272
-	'Atogatog', --0.23847737829727178
-	'Marrow-Gnawer', --0.21205394238099867
-	'Eight-and-a-Half-Tails', --0.21050963289143493
-	'Malfegor', --0.17886790493556617
-	'Tiamat', --0.16005739575217867
-	'Kaysa', --0.13869783327361493
-	'Johan', --0.1071038748452507
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-	'Morinfen', --0.026600073015771164
-
-Grotesque Mutation
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.854848676552872
-	'Progenitus', --0.7701069219914474
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.7419737805746514
-	'Chandler', --0.6643953098527186
-	'Ragnar', --0.6465717327608266
-	'Nebuchadnezzar', --0.5876890080540662
-	'Phelddagrif', --0.48025809889843535
-	'Halfdane', --0.4606681693318084
-	'Nihiloor', --0.4288878674378826
-	'Cromat', --0.4245636612358066
-	'Stangg', --0.40178781345371567
-	'Memnarch', --0.3907661678046056
-	'Joven', --0.38987359131680077
-	'Borborygmos', --0.3514282728009862
-	'Thraximundar', --0.340575306746896
-	'Gallowbraid', --0.32212455655619604
-	'Themberchaud', --0.2940523423814209
-	'Tiamat', --0.2874979269244333
-	'Atogatog', --0.2483226016770075
-	'Marrow-Gnawer', --0.22834901495576185
-	'Johan', --0.20997021293931922
-	'Kaysa', --0.18493044436481998
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Malfegor', --0.1443151113535864
-	'Tromokratis', --0.11038831510428343
-	'Morinfen', --0.0635609393695463
-	'Asmoranomardicadaistinaculdacar', --0.006345221856093196
-
-Traitorous Blood
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7694481023058434
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.553043700678715
-	'Ragnar', --0.5367348472672302
-	'Chandler', --0.5246520336783896
-	'Halfdane', --0.4515882812107423
-	'Phelddagrif', --0.41706492680726104
-	'Nebuchadnezzar', --0.39044092971844974
-	'Borborygmos', --0.36123346692681024
-	'Memnarch', --0.3490101292180036
-	'Gallowbraid', --0.3439947537961445
-	'Cromat', --0.3402537971241297
-	'Nihiloor', --0.32694186198884684
-	'Thraximundar', --0.3042785221371087
-	'Stangg', --0.3013408600902868
-	'Marrow-Gnawer', --0.28095728816132065
-	'Tiamat', --0.25367685836266224
-	'Atogatog', --0.24831852656776282
-	'Malfegor', --0.24234672446622743
-	'Themberchaud', --0.23491897142912008
-	'Joven', --0.2308292177164607
-	'Johan', --0.1861594474913485
-	'Kaysa', --0.13869783327361493
-	'Morinfen', --0.13674816223474898
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-
-Nissa's Renewal
-	'Taniwha', --0.9085804046645629
-	'Themberchaud', --0.7098705014835383
-	'Gallowbraid', --0.5989544902614111
-	'Elminster', --0.5505207205542904
-	'Progenitus', --0.3508147541136857
-	'Ragnar', --0.26633510051228104
-	'Chromium', --0.24923018583458212
-	'Chandler', --0.24461657858851707
-	'Palladia-Mors', --0.2259213417239548
-	'Thraximundar', --0.14909304510407934
-	'Halfdane', --0.12322992867635599
-	'Marrow-Gnawer', --0.09996850145520356
-	'Memnarch', --0.08230190715795664
-	'Tromokratis', --0.0752341597766656
-	'Cromat', --0.054569035563414574
-	'Nihiloor', --0.05426950959301843
-	'Morinfen', --0.05320014603154233
-	'Asmoranomardicadaistinaculdacar', --0.05126007253976472
-	'Borborygmos', --0.03369333023138826
-	'Joven', --0.02489026991166122
-	'Johan', --0.01012790822343117
-	'Kaysa', --0.008471446513541016
-	'Eight-and-a-Half-Tails', --0.0
-	'Malfegor', --0.0
-	'Tiamat', --0.0
-	'Stangg', --0.0
-	'Nebuchadnezzar', --0.0
-	'Atogatog', --0.0
-	'Phelddagrif', --0.0
-
-Bitter Feud
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.6196216758239401
-	'Gallowbraid', --0.5436462505499484
-	'Themberchaud', --0.46983794285824015
-	'Progenitus', --0.4590122950947381
-	'Chromium', --0.3743584881954852
-	'Ragnar', --0.3170610762800378
-	'Chandler', --0.31452459179913844
-	'Palladia-Mors', --0.2950174812533667
-	'Phelddagrif', --0.2348382174142616
-	'Halfdane', --0.23268271285448458
-	'Borborygmos', --0.19596538746404404
-	'Memnarch', --0.19477799889467912
-	'Tiamat', --0.17193116210240283
-	'Thraximundar', --0.16243122310214744
-	'Cromat', --0.1619278985382481
-	'Morinfen', --0.15448154424526325
-	'Nihiloor', --0.1451602937249611
-	'Marrow-Gnawer', --0.13958799324065488
-	'Atogatog', --0.13325275970355085
-	'Nebuchadnezzar', --0.13014697657281638
-	'Malfegor', --0.12310145450918326
-	'Stangg', --0.10044695336342885
-	'Tromokratis', --0.08402269860857006
-	'Johan', --0.08117434102168888
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Kaysa', --0.046232611091204974
-	'Eight-and-a-Half-Tails', --0.04456864130583711
-	'Joven', --0.03589242205806029
-
-Righteous Charge
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7676529160997628
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Chandler', --0.5817031895454985
-	'Palladia-Mors', --0.5581926110089562
-	'Phelddagrif', --0.5113416753020181
-	'Ragnar', --0.506934339834135
-	'Nebuchadnezzar', --0.4341138013167348
-	'Themberchaud', --0.4137222721114888
-	'Thraximundar', --0.36915893591487764
-	'Memnarch', --0.33082953797438724
-	'Halfdane', --0.31927846441332025
-	'Stangg', --0.3013408600902868
-	'Joven', --0.2924051934876006
-	'Cromat', --0.28726942729446775
-	'Gallowbraid', --0.2768094542532644
-	'Nihiloor', --0.2652317336188727
-	'Borborygmos', --0.24573778415208272
-	'Atogatog', --0.23847737829727178
-	'Marrow-Gnawer', --0.21205394238099867
-	'Eight-and-a-Half-Tails', --0.21050963289143493
-	'Malfegor', --0.17886790493556617
-	'Tiamat', --0.16005739575217867
-	'Kaysa', --0.13869783327361493
-	'Johan', --0.1071038748452507
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.07867032660543903
-	'Morinfen', --0.026600073015771164
-
-Replicating Ring
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.7752603602771448
-	'Progenitus', --0.6754073770568431
-	'Chromium', --0.6246150929172909
-	'Palladia-Mors', --0.612960670861977
-	'Chandler', --0.5598077414073938
-	'Ragnar', --0.5367348472672302
-	'Halfdane', --0.4515882812107423
-	'Nebuchadnezzar', --0.39044092971844974
-	'Themberchaud', --0.39023255551286484
-	'Phelddagrif', --0.3801720113833974
-	'Thraximundar', --0.36186399365652155
-	'Cromat', --0.34029003607103825
-	'Nihiloor', --0.32694186198884684
-	'Memnarch', --0.31365010264294346
-	'Stangg', --0.3013408600902868
-	'Gallowbraid', --0.29947724513070556
-	'Joven', --0.2924051934876006
-	'Borborygmos', --0.2479021191941493
-	'Marrow-Gnawer', --0.21205394238099867
-	'Tiamat', --0.2083780367305066
-	'Atogatog', --0.20034426058960075
-	'Malfegor', --0.17886790493556617
-	'Johan', --0.15747765970448943
-	'Kaysa', --0.13869783327361493
-	'Eight-and-a-Half-Tails', --0.13370592391751124
-	'Tromokratis', --0.10159977627237897
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Morinfen', --0.026600073015771164
-
-"Lifetime" Pass Holder
-	'Kaysa', --1.0
-	'Stangg', --1.0
-	'Borborygmos', --0.9901948058741759
-	'Chandler', --0.979777101933313
-	'Joven', --0.9751097300883388
-	'Chromium', --0.9654365268315862
-	'Thraximundar', --0.9653946192479597
-	'Nebuchadnezzar', --0.963852080529095
-	'Ragnar', --0.9608957065346381
-	'Palladia-Mors', --0.9465760667115237
-	'Nihiloor', --0.9456209130327247
-	'Tiamat', --0.9142523922032258
-	'Memnarch', --0.8981331611054522
-	'Progenitus', --0.8847016783617836
-	'Eight-and-a-Half-Tails', --0.8837468008275631
-	'Phelddagrif', --0.8383553597067411
-	'Johan', --0.8371134767444955
-	'Halfdane', --0.8277866176429518
-	'Cromat', --0.808794060250134
-	'Morinfen', --0.788988039505103
-	'Marrow-Gnawer', --0.7889789804042562
-	'Elminster', --0.7577137589178592
-	'Asmoranomardicadaistinaculdacar', --0.7513893579715545
-	'Malfegor', --0.7388684584294993
-	'Atogatog', --0.6958139212600338
-	'Themberchaud', --0.6454110988408114
-	'Tromokratis', --0.5129329720690329
-	'Gallowbraid', --0.335497417886658
-	'Taniwha', --0.1259559311217116
-
-Greenwood Sentinel
-	'Thraximundar', --0.9866833061575853
-	'Kaysa', --0.9621872109287523
-	'Stangg', --0.9621865712875715
-	'Borborygmos', --0.9430014546458625
-	'Nihiloor', --0.9406095354934275
-	'Marrow-Gnawer', --0.9179876703194857
-	'Memnarch', --0.9160212667466473
-	'Johan', --0.913237285548813
-	'Joven', --0.9130195145174842
-	'Ragnar', --0.9101697307668812
-	'Eight-and-a-Half-Tails', --0.90428034770338
-	'Chandler', --0.8730408309222698
-	'Morinfen', --0.8509291040950824
-	'Tiamat', --0.8503315026156625
-	'Malfegor', --0.8473701982925884
-	'Asmoranomardicadaistinaculdacar', --0.8457041909005817
-	'Chromium', --0.8403082244706833
-	'Cromat', --0.8300024968411331
-	'Nebuchadnezzar', --0.8261801518288985
-	'Halfdane', --0.8187067295218863
-	'Palladia-Mors', --0.8175629569988494
-	'Atogatog', --0.8166840117336407
-	'Progenitus', --0.8143796714419856
-	'Phelddagrif', --0.7103919597333908
-	'Themberchaud', --0.6986433312020245
-	'Elminster', --0.6086610221627495
-	'Tromokratis', --0.5714770180730195
-	'Gallowbraid', --0.5051536983799784
-	'Taniwha', --0.029723427927053913
-
-Tamiyo, the Moon Sage
-	'Taniwha', --1.0
-	'Themberchaud', --0.6251515269419848
-	'Elminster', --0.5871439616749137
-	'Gallowbraid', --0.49912874188450945
-	'Progenitus', --0.36884661535116664
-	'Palladia-Mors', --0.3549344514366291
-	'Chandler', --0.3496802995281425
-	'Chromium', --0.32407761457821843
-	'Halfdane', --0.27515643752714125
-	'Ragnar', --0.2348604536941689
-	'Nebuchadnezzar', --0.1824939780714704
-	'Thraximundar', --0.14979780794651903
-	'Tiamat', --0.12572601114861306
-	'Phelddagrif', --0.10234560251118677
-	'Stangg', --0.10044695336342885
-	'Joven', --0.09746839782920019
-	'Nihiloor', --0.0908907841319428
-	'Cromat', --0.08916294929294097
-	'Atogatog', --0.08333594065528932
-	'Borborygmos', --0.08263403973138311
-	'Memnarch', --0.07711606516166233
-	'Marrow-Gnawer', --0.07068464746033289
-	'Johan', --0.06576762000527289
-	'Malfegor', --0.05962263497852199
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Kaysa', --0.046232611091204974
-	'Eight-and-a-Half-Tails', --0.04456864130583711
-	'Morinfen', --0.04433345502628545
-	'Tromokratis', --0.008788538831904459
-
-Witch's Web
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.8501735735180967
-	'Progenitus', --0.7836049180378954
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.7419737805746514
-	'Ragnar', --0.7056826424866659
-	'Chandler', --0.6648714623470195
-	'Halfdane', --0.5610410653888711
-	'Nebuchadnezzar', --0.5205879062912664
-	'Thraximundar', --0.4327876431740023
-	'Nihiloor', --0.4178326461207898
-	'Joven', --0.414763861228462
-	'Cromat', --0.411220832735178
-	'Stangg', --0.40178781345371567
-	'Memnarch', --0.3907661678046056
-	'Marrow-Gnawer', --0.38270709129653513
-	'Phelddagrif', --0.3644534187859985
-	'Borborygmos', --0.3642294891569207
-	'Themberchaud', --0.24003255862529813
-	'Malfegor', --0.23849053991408836
-	'Atogatog', --0.23013153372842393
-	'Johan', --0.22009812116275052
-	'Gallowbraid', --0.1996514967538039
-	'Kaysa', --0.19340189087836102
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Tiamat', --0.163491392520519
-	'Tromokratis', --0.11038831510428343
-	'Asmoranomardicadaistinaculdacar', --0.05126007253976472
-	'Morinfen', --0.017733382010513762
-
-Vorel of the Hull Clade
-	'Marrow-Gnawer', --0.9827600218759797
-	'Asmoranomardicadaistinaculdacar', --0.9632424572397187
-	'Kaysa', --0.8844656794331627
-	'Eight-and-a-Half-Tails', --0.870192017857169
-	'Malfegor', --0.8573185531703027
-	'Tiamat', --0.8478118582320711
-	'Borborygmos', --0.832455560253405
-	'Nebuchadnezzar', --0.8154128475708375
-	'Atogatog', --0.7917511836514982
-	'Nihiloor', --0.7915325564559459
-	'Stangg', --0.7906379640968559
-	'Joven', --0.7886707091895799
-	'Thraximundar', --0.7800068035901238
-	'Cromat', --0.7791186129314283
-	'Johan', --0.7554085404067231
-	'Halfdane', --0.7132071902158038
-	'Palladia-Mors', --0.7060733815946344
-	'Ragnar', --0.6981256064269388
-	'Chromium', --0.6950951911749486
-	'Chandler', --0.693196977301308
-	'Phelddagrif', --0.6804394257778759
-	'Memnarch', --0.667379631924384
-	'Morinfen', --0.655496022598278
-	'Progenitus', --0.6393692986406554
-	'Gallowbraid', --0.6049794467568801
-	'Themberchaud', --0.5575778764046357
-	'Elminster', --0.44947927944570987
-	'Tromokratis', --0.40590296757307637
-	'Taniwha', --0.1918971880382606
-
-Frenzied Rage
-	'Taniwha', --0.9085804046645629
-	'Elminster', --0.8443613155467947
-	'Progenitus', --0.7836049180378954
-	'Chromium', --0.7497433952781941
-	'Palladia-Mors', --0.6820568103913893
-	'Ragnar', --0.6465717327608266
-	'Chandler', --0.6297157546180151
-	'Halfdane', --0.5610410653888711
-	'Nebuchadnezzar', --0.5205879062912664
-	'Phelddagrif', --0.5081782815037609
-	'Borborygmos', --0.44386750665819336
-	'Cromat', --0.4294167464170707
-	'Memnarch', --0.42612619437966576
-	'Nihiloor', --0.4178326461207898
-	'Stangg', --0.40178781345371567
-	'Thraximundar', --0.37520217165458963
-	'Marrow-Gnawer', --0.3516419356216536
-	'Joven', --0.3282976155456609
-	'Atogatog', --0.305851409999869
-	'Malfegor', --0.30196935944474945
-	'Tiamat', --0.29454970649279205
-	'Gallowbraid', --0.24416900541924286
-	'Johan', --0.23865200072617831
-	'Kaysa', --0.18493044436481998
-	'Eight-and-a-Half-Tails', --0.17827456522334834
-	'Morinfen', --0.1278814712294921
-	'Themberchaud', --0.11745948571455986
-	'Tromokratis', --0.11038831510428343
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-
-Edgin, Larcenous Lutenist
-	'Malfegor', --1.0
-	'Tiamat', --1.0
-	'Johan', --1.0
-	'Borborygmos', --0.9767014388658378
-	'Cromat', --0.9706604689839518
-	'Marrow-Gnawer', --0.9673803998779656
-	'Asmoranomardicadaistinaculdacar', --0.9613712246620063
-	'Eight-and-a-Half-Tails', --0.9231962910260763
-	'Morinfen', --0.9099794548760087
-	'Kaysa', --0.9078091809614725
-	'Stangg', --0.8617396179241432
-	'Nihiloor', --0.8437844849579459
-	'Thraximundar', --0.8162070310481803
-	'Nebuchadnezzar', --0.8154128475708375
-	'Phelddagrif', --0.7993647855304298
-	'Atogatog', --0.7725119547385018
-	'Memnarch', --0.7283666651153254
-	'Halfdane', --0.7202675111221442
-	'Chromium', --0.7073767383941737
-	'Joven', --0.6590422526436351
-	'Ragnar', --0.6590213129615768
-	'Progenitus', --0.6491852458863145
-	'Chandler', --0.6467460403541749
-	'Palladia-Mors', --0.628632877102913
-	'Gallowbraid', --0.5915964917900564
-	'Tromokratis', --0.5758984148530162
-	'Elminster', --0.44366702147440834
-	'Themberchaud', --0.43847775524864685
-	'Taniwha', --0.09141959533543711
-
-Artful Dodge
-	'Taniwha', --1.0
-	'Elminster', --0.8867968146387201
-	'Palladia-Mors', --0.8709868902873257
-	'Chromium', --0.8245908240218304
-	'Progenitus', --0.8016367792753765
-	'Chandler', --0.769935183286645
-	'Halfdane', --0.7129675742396566
-	'Nebuchadnezzar', --0.7030818843627368
-	'Ragnar', --0.6742079956685537
-	'Stangg', --0.5022347668171445
-	'Joven', --0.48734198914600096
-	'Phelddagrif', --0.466799021297186
-	'Nihiloor', --0.45445392065971435
-	'Cromat', --0.44581474646470437
-	'Thraximundar', --0.43349240601644223
-	'Borborygmos', --0.41317019865691557
-	'Memnarch', --0.3855803258083113
-	'Marrow-Gnawer', --0.3534232373016645
-	'Atogatog', --0.3134674743837134
-	'Malfegor', --0.29811317489261036
-	'Tiamat', --0.28921740366913196
-	'Johan', --0.2757378329445922
-	'Kaysa', --0.23116305545602497
-	'Eight-and-a-Half-Tails', --0.22284320652918535
-	'Themberchaud', --0.15531358408374477
-	'Gallowbraid', --0.09982574837690165
-	'Asmoranomardicadaistinaculdacar', --0.05760529439585792
-	'Tromokratis', --0.04394269415952229
-	'Morinfen', --0.008866691005256881
-
-Astral Dragon
-	'Gallowbraid', --1.0
-	'Asmoranomardicadaistinaculdacar', --0.9799266775801995
-	'Themberchaud', --0.8995715096615781
-	'Morinfen', --0.7875103650825533
-	'Tiamat', --0.7698928783259813
-	'Eight-and-a-Half-Tails', --0.7488151684761211
-	'Johan', --0.7088554460389919
-	'Malfegor', --0.7015856675125651
-	'Kaysa', --0.6766461255054472
-	'Tromokratis', --0.6389150544998332
-	'Cromat', --0.6377151247073141
-	'Marrow-Gnawer', --0.5450538167959789
-	'Thraximundar', --0.5043684991510159
-	'Borborygmos', --0.45019989247626135
-	'Phelddagrif', --0.44839664817875013
-	'Nihiloor', --0.4465420932188474
-	'Atogatog', --0.4282208535709156
-	'Stangg', --0.3595048511069984
-	'Joven', --0.23295290384112813
-	'Memnarch', --0.22350872100244412
-	'Nebuchadnezzar', --0.1646779647067545
-	'Halfdane', --0.1592062165073816
-	'Chromium', --0.11778060751322045
-	'Ragnar', --0.1098368854935961
-	'Progenitus', --0.10819754098105246
-	'Chandler', --0.10506372093962543
-	'Taniwha', --0.09141959533543711
-	'Elminster', --0.0749132132409516
-	'Palladia-Mors', --0.0700395552083742
-
+Torens, Fist of the Angels
+	Kentaro, the Smiling Cat: 1
+	Lena, Selfless Champion: 1
+	Pianna, Nomad Captain: 1
+	Keleth, Sunmane Familiar: 1
+	Risona, Asari Commander: 1
+Neyam Shai Murad
+	Nadaar, Selfless Paladin: 1
+	Heliod, God of the Sun: 1
+	Barrowin of Clan Undurr: 1
+	Pang Tong, "Young Phoenix": 1
+	Neyam Shai Murad: 2
+Ancient Crab
+	Charix, the Raging Isle: 8
+	Gyruda, Doom of Depths: 19
+	Sakashima the Impostor: 20
+	Geralf, Visionary Stitcher: 24
+	Sakashima of a Thousand Faces: 24
+Teferi, Mage of Zhalfir
+	Ixidor, Reality Sculptor: 1
+	Prime Speaker Vannifar: 8
+	Inalla, Archmage Ritualist: 8
+	Kadena, Slinking Sorcerer: 8
+	Ioreth of the Healing House: 9
+Whispers of Emrakul
+	Kroxa, Titan of Death's Hunger: 1
+	The Haunt of Hightower: 2
+	Magar of the Magic Strings: 3
+	Tinybones, Trinket Thief: 3
+	Tourach, Dread Cantor: 3
+Wandering Wolf
+	Questing Beast: 1
+	Jasmine Boreal of the Seven: 5
+	Runadi, Behemoth Caller: 6
+	Yedora, Grave Gardener: 6
+	Toski, Bearer of Secrets: 6
+Abyssal Specter
+	Urgoros, the Empty One: 1
+	Crosis, the Purger: 1
+	Asmoranomardicadaistinaculdacar: 5
+	Anje Falkenrath: 7
+	Vito, Thorn of the Dusk Rose: 7
+Dramatic Reversal
+	Kaho, Minamo Historian: 1
+	The Unspeakable: 2
+	Kalamax, the Stormsire: 2
+	Noyan Dar, Roil Shaper: 2
+	Orvar, the All-Form: 3
+Enslaved Horror
+	Cromat: 4
+	Snapdax, Apex of the Hunt: 5
+	Szarekh, the Silent King: 7
+	Otrimi, the Ever-Playful: 7
+	Anrakyr the Traveller: 9
+Alms of the Vein
+	Anje Falkenrath: 3
+	Tourach, Dread Cantor: 4
+	Tinybones, Trinket Thief: 5
+	The Haunt of Hightower: 6
+	Urgoros, the Empty One: 9
+Emeria Angel
+	Radiant, Archangel: 1
+	Sephara, Sky's Blade: 1
+	Avacyn, Guardian Angel: 2
+	Gisela, the Broken Blade: 2
+	Giada, Font of Hope: 3
+Hunted Dragon
+	Zirilan of the Claw: 3
+	Lathliss, Dragon Queen: 5
+	Arni Metalbrow: 5
+	Bladewing the Risen: 6
+	Aegar, the Freezing Flame: 6
+Savior of Ollenbock
+	Katilda, Dawnhart Prime: 1
+	Mavren Fein, Dusk Apostle: 2
+	Lin Sivvi, Defiant Hero: 2
+	Skrelv, Defector Mite: 2
+	Myojin of Blooming Dawn: 2
+Legion Warboss
+	Squee, Dubious Monarch: 1
+	Ardoz, Cobbler of War: 1
+	Baeloth Barrityl, Entertainer: 1
+	Holga, Relentless Rager: 2
+	Muxus, Goblin Grandee: 2
+Dream Stalker
+	Toxrill, the Corrosive: 12
+	Geralf, Visionary Stitcher: 15
+	Minn, Wily Illusionist: 16
+	Mistform Ultimus: 16
+	Arcanis the Omnipotent: 17
+Boros Signet
+	Mishra, Eminent One: 3
+	Glenn, the Voice of Calm: 3
+	Zurgo Helmsmasher: 4
+	Ovika, Enigma Goliath: 4
+	Oros, the Avenger: 4
+Veteran's Armaments
+	Zamriel, Seraph of Steel: 1
+	Catti-brie of Mithral Hall: 1
+	Dalakos, Crafter of Wonders: 2
+	Balan, Wandering Knight: 2
+	Reyav, Master Smith: 2
+Grisly Salvage
+	Legolas, Master Archer: 1
+	The Howling Abomination: 1
+	Sarulf, Realm Eater: 3
+	Purraj of Urborg: 3
+	Anthousa, Setessan Hero: 3
+Mystic Redaction
+	Bruvac the Grandiloquent: 1
+	Zellix, Sanity Flayer: 3
+	Szadek, Lord of Secrets: 7
+	Nebuchadnezzar: 11
+	Mirko Vosk, Mind Drinker: 15
+See Beyond
+	Elminster: 11
+	God-Eternal Kefnet: 15
+	Myra the Magnificent: 16
+	Hidetsugu and Kairi: 16
+	Dralnu, Lich Lord: 16
+Sickleslicer
+	Mirri the Cursed: 13
+	Yargle, Glutton of Urborg: 15
+	Rograkh, Son of Rohgahh: 15
+	Nahiri, Forged in Fury: 16
+	Sram, Senior Edificer: 16
+Tablet of Compleation
+	Myojin of Roaring Blades: 1
+	Latulla, Keldon Overseer: 1
+	Glenn, the Voice of Calm: 1
+	Ovika, Enigma Goliath: 1
+	Eron the Relentless: 2
+Past in Flames
+	Syr Carah, the Bold: 4
+	Aisha of Sparks and Smoke: 6
+	Wort, the Raidmother: 16
+	Vadrik, Astral Archmage: 21
+	Krark, the Thumbless: 25
+Bog Naughty
+	Timothar, Baron of Bats: 2
+	Kalitas, Bloodchief of Ghet: 6
+	Ashling, the Extinguisher: 8
+	Drana, Liberator of Malakir: 8
+	Baron Sengir: 8
+Batwing Brume
+	Livaan, Cultist of Tiamat: 19
+	Feather, the Redeemed: 29
+	Captain Ripley Vance: 30
+	Raff, Weatherlight Stalwart: 32
+	Zethi, Arcane Blademaster: 34
+War Flare
+	Feather, the Redeemed: 5
+	Velomachus Lorehold: 7
+	Godo, Bandit Warlord: 9
+	Livaan, Cultist of Tiamat: 10
+	Kalamax, the Stormsire: 10
+Wrenn's Resolve
+	Neheb, the Eternal: 3
+	Eruth, Tormented Prophet: 4
+	Wort, the Raidmother: 4
+	Magar of the Magic Strings: 5
+	Captain Ripley Vance: 5
+Elephant Guide
+	Kaima, the Fractured Calm: 2
+	Autumn Willow: 6
+	Stangg, Echo Warrior: 6
+	Killian, Ink Duelist: 6
+	Ramses Overdark: 6
+Goblin Charbelcher
+	Slogurk, the Overslime: 34
+	Kurkesh, Onakke Ancient: 41
+	Korlash, Heir to Blackblade: 42
+	Lu Bu, Master-at-Arms: 43
+	Ob Nixilis, the Fallen: 47
+Eyeblight Massacre
+	Shauku, Endbringer: 19
+	Xiahou Dun, the One-Eyed: 57
+	Skithiryx, the Blight Dragon: 63
+	Toshiro Umezawa: 64
+	Akuta, Born of Ash: 66
+Mangara's Equity
+	Daxos the Returned: 9
+	Xenk, Paladin Unbroken: 10
+	Bruna, Light of Alabaster: 15
+	Norika Yamazaki, the Poet: 16
+	Anikthea, Hand of Erebos: 17
+Wirewood Channeler
+	Marwyn, the Nurturer: 1
+	Freyalise, Llanowar's Fury: 1
+	Eladamri, Lord of Leaves: 1
+	Imaryll, Elfhame Elite: 1
+	Numa, Joraga Chieftain: 1
+Dwarven Thaumaturgist
+	Rakka Mar: 4
+	Atogatog: 6
+	Magda, Brazen Outlaw: 7
+	Solphim, Mayhem Dominus: 9
+	Atarka, World Render: 9
+Life and Limb
+	Thrun, the Last Troll: 12
+	Omnath, Locus of Rage: 12
+	Thrun, Breaker of Silence: 16
+	Tatyova, Benthic Druid: 17
+	Molimo, Maro-Sorcerer: 18
+Shefet Dunes
+	Hazezon, Shaper of Sand: 1
+	Nevinyrral, Urborg Tyrant: 9
+	Gimli, Mournful Avenger: 11
+	Kyodai, Soul of Kamigawa: 11
+	Niv-Mizzet Reborn: 11
+Tenement Crasher
+	Kalemne, Disciple of Iroas: 5
+	Heartless Hidetsugu: 10
+	Aegar, the Freezing Flame: 11
+	Arni Metalbrow: 13
+	Feldon of the Third Path: 14
+Formation
+	Commander Eesha: 2
+	Niv-Mizzet, Supreme: 2
+	Shu Yun, the Silent Tempest: 2
+	Raff, Weatherlight Stalwart: 4
+	Neyali, Suns' Vanguard: 4
+Harald Unites the Elves
+	Chisei, Heart of Oceans: 2
+	Nikara, Lair Scavenger: 2
+	Satsuki, the Living Lore: 2
+	Tom Bombadil: 2
+	Aphemia, the Cacophony: 3
+Into the North
+	Kogla and Yidaro: 1
+	Jerrard of the Closed Fist: 1
+	The Lady of the Mountain: 1
+	Wort, the Raidmother: 1
+	Zimone, Quandrix Prodigy: 2
+Ankle Shanker
+	Xantcha, Sleeper Agent: 1
+	Olivia Voldaren: 2
+	Astarion, the Decadent: 2
+	Hidetsugu, Devouring Chaos: 2
+	Fumiko the Lowblood: 2
+Born to Drive
+	Xenk, Paladin Unbroken: 2
+	Light-Paws, Emperor's Voice: 2
+	Norika Yamazaki, the Poet: 2
+	Bruna, Light of Alabaster: 3
+	Uril, the Miststalker: 3
+Implement of Examination
+	Oswald Fiddlebender: 17
+	Kurkesh, Onakke Ancient: 22
+	Visara the Dreadful: 27
+	Slobad, Goblin Tinkerer: 29
+	Myojin of Seeing Winds: 31
+Kor Cartographer
+	Loran of the Third Path: 2
+	Lagrella, the Magpie: 2
+	Roon of the Hidden Realm: 2
+	Reaper King: 2
+	Triad of Fates: 3
+Wand of Wonder
+	Okaun, Eye of Chaos: 2
+	The Space Family Goblinson: 4
+	Farideh, Devil's Chosen: 6
+	Zo-Zu the Punisher: 6
+	Lu Bu, Master-at-Arms: 6
+Starved Rusalka
+	Gyome, Master Chef: 1
+	Dina, Soul Steeper: 2
+	Kodama of the Center Tree: 2
+	Chatterfang, Squirrel General: 3
+	Trelasarra, Moon Dancer: 3
+Forth Eorlingas!
+	Syr Carah, the Bold: 1
+	Velomachus Lorehold: 2
+	Firesong and Sunspeaker: 5
+	Neheb, the Eternal: 7
+	Aisha of Sparks and Smoke: 7
+Dross Hopper
+	Xun Yu, Wei Advisor: 1
+	Chainer, Dementia Master: 1
+	Ebondeath, Dracolich: 2
+	Skithiryx, the Blight Dragon: 2
+	Junji, the Midnight Sky: 2
+Possessed Portal
+	Gavi, Nest Warden: 19
+	The Peregrine Dynamo: 25
+	The Prismatic Piper: 30
+	Ashling the Pilgrim: 31
+	Myojin of Roaring Blades: 32
+Ghostly Flicker
+	Alirios, Enraptured: 1
+	Venser, Shaper Savant: 6
+	Kairi, the Swirling Sky: 7
+	Will Kenrith: 9
+	Kalamax, the Stormsire: 9
+Hope Against Hope
+	Uril, the Miststalker: 2
+	Killian, Ink Duelist: 2
+	Xenk, Paladin Unbroken: 3
+	Light-Paws, Emperor's Voice: 3
+	Norika Yamazaki, the Poet: 3
+The World Spell
+	Satsuki, the Living Lore: 3
+	Tom Bombadil: 3
+	Chisei, Heart of Oceans: 8
+	Aphemia, the Cacophony: 9
+	Glissa Sunslayer: 16
+Whim of Volrath
+	Deekah, Fractal Theorist: 1
+	Lier, Disciple of the Drowned: 1
+	God-Eternal Kefnet: 1
+	Alandra, Sky Dreamer: 1
+	Shu Yun, the Silent Tempest: 1
+Crystal Chimes
+	Kurkesh, Onakke Ancient: 15
+	Oswald Fiddlebender: 20
+	Linessa, Zephyr Mage: 21
+	Myojin of Seeing Winds: 26
+	Sram, Senior Edificer: 32
+Prava of the Steel Legion
+	Emmara Tandris: 4
+	Mavren Fein, Dusk Apostle: 5
+	Brigid, Hero of Kinsbaile: 10
+	Mondrak, Glory Dominus: 11
+	Brimaz, King of Oreskos: 11
+Syphon Flesh
+	Anrakyr the Traveller: 33
+	Maralen of the Mornsong: 42
+	Zhulodok, Void Gorger: 61
+	Szarekh, the Silent King: 63
+	Magar of the Magic Strings: 82
+Abyssal Persecutor
+	Be'lakor, the Dark Master: 2
+	Ob Nixilis, Unshackled: 2
+	Rakdos, the Showstopper: 3
+	Ob Nixilis of the Black Oath: 3
+	Rakdos the Defiler: 6
+Rix Maadi, Dungeon Palace
+	The Raven Man: 2
+	Gwendlyn Di Corci: 3
+	Toluz, Clever Conductor: 8
+	Garth One-Eye: 9
+	Kyodai, Soul of Kamigawa: 9
+Toxicrene
+	Borborygmos and Fblthp: 1
+	Azusa, Lost but Seeking: 1
+	Lord Windgrace: 1
+	Thalia and The Gitrog Monster: 1
+	Mina and Denn, Wildborn: 1
+Stirring Wildwood
+	Child of Alara: 1
+	Archelos, Lagoon Mystic: 2
+	Nevinyrral, Urborg Tyrant: 3
+	Niv-Mizzet, Dracogenius: 3
+	Amareth, the Lustrous: 3
+Atemsis, All-Seeing
+	Oskar, Rubbish Reclaimer: 2
+	Renari, Merchant of Marvels: 2
+	Unesh, Criosphinx Sovereign: 2
+	Cloudhoof Kirin: 5
+	Gavi, Nest Warden: 5
+Voice of the Woods
+	Inga and Esika: 1
+	Alaundo the Seer: 2
+	Yarok, the Desecrated: 4
+	Prime Speaker Vannifar: 4
+	Gabriel Angelfire: 4
+Nevermore
+	Daxos the Returned: 4
+	Zur the Enchanter: 18
+	Norika Yamazaki, the Poet: 20
+	Heliod, God of the Sun: 21
+	Sythis, Harvest's Hand: 22
+Parhelion II
+	Greasefang, Okiba Boss: 1
+	Depala, Pilot Exemplar: 1
+	Sanwell, Avenger Ace: 1
+	Shorikai, Genesis Engine: 2
+	Kotori, Pilot Prodigy: 2
+Forebear's Blade
+	Yargle, Glutton of Urborg: 10
+	Mirri the Cursed: 11
+	Kemba, Kha Regent: 12
+	Sram, Senior Edificer: 15
+	Rograkh, Son of Rohgahh: 16
+Marble Diamond
+	Anya, Merciless Angel: 1
+	Tsabo Tavoc: 1
+	Parnesse, the Subtle Brush: 2
+	Zara, Renegade Recruiter: 2
+	Plargg and Nassari: 2
+Kunoros, Hound of Athreos
+	Snapdax, Apex of the Hunt: 1
+	Sheoldred, Whispering One: 3
+	Cromat: 3
+	Erebos, God of the Dead: 4
+	Ashcoat of the Shadow Swarm: 4
+Merfolk Trickster
+	Svyelun of Sea and Sky: 1
+	Kopala, Warden of Waves: 1
+	Emperor Mihail II: 1
+	Kumena, Tyrant of Orazca: 1
+	Sygg, River Guide: 1
+Bound by Moonsilver
+	Daxos the Returned: 1
+	Norika Yamazaki, the Poet: 1
+	Karona, False God: 3
+	Uril, the Miststalker: 4
+	Killian, Ink Duelist: 4
+Stensia Bloodhall
+	Sol'Kanar the Tainted: 15
+	Garth One-Eye: 16
+	Kyodai, Soul of Kamigawa: 16
+	Lady Evangela: 16
+	Gwendlyn Di Corci: 16
+Glimmervoid
+	Karn, Silver Golem: 3
+	Hope of Ghirapur: 6
+	Tawnos, Solemn Survivor: 6
+	Liberator, Urza's Battlethopter: 6
+	Mishra, Artificer Prodigy: 6
+Bronze Cudgels
+	Sram, Senior Edificer: 8
+	Isamaru, Hound of Konda: 8
+	Rograkh, Son of Rohgahh: 8
+	Kemba, Kha Regent: 9
+	Valduk, Keeper of the Flame: 9
+Thunderous Might
+	Lynde, Cheerful Tormentor: 4
+	Geist of Saint Traft: 5
+	Tahngarth, First Mate: 5
+	Auntie Blyte, Bad Influence: 6
+	Callaphe, Beloved of the Sea: 10
+Time of Ice
+	Chisei, Heart of Oceans: 1
+	Haldan, Avid Arcanist: 2
+	Goldberry, River-Daughter: 4
+	Tuvasa the Sunlit: 4
+	Satsuki, the Living Lore: 4
+Ghost Town
+	Morophon, the Boundless: 12
+	Garth One-Eye: 13
+	Angus Mackenzie: 13
+	Halfdane: 14
+	Gwendlyn Di Corci: 14
+Elspeth's Nightmare
+	Zhang Liao, Hero of Hefei: 1
+	Cao Cao, Lord of Wei: 1
+	Aphemia, the Cacophony: 2
+	Lucius the Eternal: 3
+	Nebuchadnezzar: 3
+Valakut Exploration
+	Zo-Zu the Punisher: 8
+	Laelia, the Blade Reforged: 8
+	Ma Chao, Western Warrior: 17
+	Toggo, Goblin Weaponsmith: 19
+	Auntie Blyte, Bad Influence: 23
+Embolden
+	Sevinne, the Chronoclasm: 22
+	Raff, Weatherlight Stalwart: 28
+	Feather, the Redeemed: 31
+	Zethi, Arcane Blademaster: 36
+	Toshiro Umezawa: 49
+Termagant Swarm
+	Zabaz, the Glimmerwasp: 2
+	Thelon of Havenwood: 2
+	Grakmaw, Skyclave Ravager: 3
+	Rosheen Meanderer: 3
+	Gargos, Vicious Watcher: 3
+Glory-Bound Initiate
+	Liesa, Forgotten Archangel: 7
+	Sigarda, Heron's Grace: 7
+	Felisa, Fang of Silverquill: 9
+	Karlov of the Ghost Council: 11
+	Ayesha Tanaka: 11
+Spectral Deluge
+	The Unspeakable: 15
+	Hidetsugu and Kairi: 18
+	Temmet, Vizier of Naktamun: 22
+	Empress Galina: 27
+	Nael, Avizoa Aeronaut: 27
+Killer Bees
+	Grist, the Hunger Tide: 1
+	Zask, Skittering Swarmlord: 1
+	Jacques le Vert: 4
+	Thalia and The Gitrog Monster: 15
+	Grakmaw, Skyclave Ravager: 16
+Serra Redeemer
+	Kaalia, Zenith Seeker: 2
+	Denry Klin, Editor in Chief: 2
+	Sephara, Sky's Blade: 4
+	Giada, Font of Hope: 5
+	Brimaz, King of Oreskos: 5
+Shoulder to Shoulder
+	Aisha of Sparks and Smoke: 18
+	Tekuthal, Inquiry Dominus: 23
+	Gerrard Capashen: 29
+	Go-Shintai of Shared Purpose: 33
+	Huang Zhong, Shu General: 36
+Blot Out the Sky
+	Kazarov, Sengir Pureblood: 3
+	Maga, Traitor to Mortals: 4
+	Hinata, Dawn-Crowned: 4
+	Magar of the Magic Strings: 6
+	Maralen of the Mornsong: 7
+Femeref Healer
+	Karlov of the Ghost Council: 4
+	Darien, King of Kjeldor: 4
+	The First Sliver: 4
+	Sliver Gravemother: 4
+	Ayesha Tanaka: 4
+Dancing Sword
+	Commander Eesha: 1
+	Huang Zhong, Shu General: 1
+	Yargle, Glutton of Urborg: 2
+	Sram, Senior Edificer: 2
+	Danitha Capashen, Paragon: 2
+Legacy's Allure
+	Tekuthal, Inquiry Dominus: 8
+	Empress Galina: 9
+	Taniwha: 11
+	Chisei, Heart of Oceans: 12
+	Rayne, Academy Chancellor: 13
+Sleep Paralysis
+	Hakim, Loreweaver: 4
+	Rayne, Academy Chancellor: 6
+	Estrid, the Masked: 6
+	Callaphe, Beloved of the Sea: 9
+	Calix, Guided by Fate: 12
+Tolarian Terror
+	Lorthos, the Tidemaker: 2
+	Slinn Voda, the Rising Deep: 2
+	Errant, Street Artist: 4
+	Kenessos, Priest of Thassa: 5
+	Unesh, Criosphinx Sovereign: 5
+Cyclone Summoner
+	Kalemne, Disciple of Iroas: 3
+	Mirko Vosk, Mind Drinker: 4
+	Arixmethes, Slumbering Isle: 5
+	Slinn Voda, the Rising Deep: 5
+	Aegar, the Freezing Flame: 5
+Priest of the Blessed Graf
+	Crovax, Ascendant Hero: 2
+	Lena, Selfless Champion: 5
+	Atogatog: 5
+	Lin Sivvi, Defiant Hero: 6
+	Akroma, Angel of Wrath: 6
+Souls of the Faultless
+	Arcades, the Strategist: 2
+	Gwafa Hazid, Profiteer: 2
+	Skrelv, Defector Mite: 3
+	Hokori, Dust Drinker: 3
+	Geralf, Visionary Stitcher: 5
+Ebonblade Reaper
+	Kyoki, Sanity's Eclipse: 3
+	Kyler, Sigardian Emissary: 4
+	Meren of Clan Nel Toth: 4
+	Sigarda, Champion of Light: 4
+	Isareth the Awakener: 4
+Virulent Swipe
+	Toshiro Umezawa: 12
+	Purraj of Urborg: 15
+	Maralen of the Mornsong: 17
+	Feather, the Redeemed: 23
+	Octavia, Living Thesis: 25
+Mist Dragon
+	Renari, Merchant of Marvels: 13
+	Ojutai, Soul of Winter: 20
+	Empress Galina: 23
+	Cloudhoof Kirin: 24
+	Gimbal, Gremlin Prodigy: 31
+Ancestor Dragon
+	Sivitri, Dragon Master: 1
+	Sylvia Brightspear: 1
+	Ulamog, the Infinite Gyre: 2
+	Regna, the Redeemer: 2
+	Kaalia of the Vast: 2
+Alley Evasion
+	Ardenn, Intrepid Archaeologist: 3
+	Mageta the Lion: 5
+	Lavinia, Azorius Renegade: 6
+	Lieutenant Kirtar: 8
+	Raff, Weatherlight Stalwart: 8
+Shimmerdrift Vale
+	Isu the Abominable: 1
+	Niv-Mizzet Reborn: 24
+	Garth One-Eye: 25
+	Kyodai, Soul of Kamigawa: 26
+	Morophon, the Boundless: 27
+Fire-Lit Thicket
+	Niv-Mizzet Reborn: 13
+	Garth One-Eye: 14
+	Niv-Mizzet, Dracogenius: 14
+	Yidris, Maelstrom Wielder: 14
+	Child of Alara: 17
+Gale's Redirection
+	Tasigur, the Golden Fang: 1
+	Lu Meng, Wu General: 1
+	Vohar, Vodalian Desecrator: 2
+	Atris, Oracle of Half-Truths: 2
+	Saruman of Many Colors: 2
+Thorncaster Sliver
+	Sliver Legion: 2
+	Sliver Hivelord: 3
+	Fumiko the Lowblood: 6
+	Baeloth Barrityl, Entertainer: 13
+	Kari Zev, Skyship Raider: 15
+Urza's Tower
+	Liberator, Urza's Battlethopter: 7
+	Karn, Silver Golem: 11
+	Kess, Dissident Mage: 17
+	Halfdane: 17
+	Hope of Ghirapur: 18
+Celestial Unicorn
+	Lathiel, the Bounteous Dawn: 5
+	Evra, Halcyon Witness: 8
+	Falco Spara, Pactweaver: 10
+	Dina, Soul Steeper: 12
+	Brimaz, Blight of Oreskos: 13
+Murderous Compulsion
+	Magar of the Magic Strings: 1
+	Anje Falkenrath: 2
+	Axelrod Gunnarson: 4
+	Akuta, Born of Ash: 9
+	Vadrok, Apex of Thunder: 10
+Rile
+	Rosnakht, Heir of Rohgahh: 5
+	Eruth, Tormented Prophet: 9
+	Aisha of Sparks and Smoke: 12
+	Jeska, Warrior Adept: 12
+	Vadrik, Astral Archmage: 14
+Vessel of Endless Rest
+	Myojin of Seeing Winds: 9
+	Acererak the Archlich: 12
+	Linessa, Zephyr Mage: 15
+	Obeka, Brute Chronologist: 15
+	Anya, Merciless Angel: 15
+Topplegeist
+	Oyobi, Who Split the Heavens: 1
+	Millicent, Restless Revenant: 1
+	Celestial Kirin: 1
+	Asmira, Holy Avenger: 1
+	Hikari, Twilight Guardian: 1
+Implement of Improvement
+	Oswald Fiddlebender: 8
+	Kokusho, the Evening Star: 9
+	Gandalf the White: 17
+	Crovax the Cursed: 19
+	Valduk, Keeper of the Flame: 21
+Burdened Aerialist
+	Edgin, Larcenous Lutenist: 1
+	Glacian, Powerstone Engineer: 1
+	Teysa Karlov: 1
+	Tasha, the Witch Queen: 1
+	Kyler, Sigardian Emissary: 1
+Spirit Shield
+	Lu Bu, Master-at-Arms: 28
+	Kurkesh, Onakke Ancient: 30
+	Myojin of Seeing Winds: 32
+	Oswald Fiddlebender: 42
+	Vikya, Scorching Stalwart: 50
+Master Warcraft
+	Toshiro Umezawa: 39
+	Feather, the Redeemed: 46
+	Baral, Chief of Compliance: 52
+	Kalamax, the Stormsire: 53
+	Zethi, Arcane Blademaster: 54
+Jade Bearer
+	Nylea, Keen-Eyed: 3
+	Sachi, Daughter of Seshiro: 3
+	Fynn, the Fangbearer: 4
+	Yedora, Grave Gardener: 4
+	Meren of Clan Nel Toth: 5
+You Come to a River
+	Taigam, Ojutai Master: 1
+	Zethi, Arcane Blademaster: 2
+	Jalira, Master Polymorphist: 2
+	Venser, Shaper Savant: 3
+	Talrand, Sky Summoner: 4
+Gnarled Mass
+	Kodama of the South Tree: 2
+	Bounteous Kirin: 2
+	Tolsimir, Friend to Wolves: 3
+	Wulfgar of Icewind Dale: 9
+	Halana and Alena, Partners: 9
+Idol of Oblivion
+	Phage the Untouchable: 19
+	Kami of the Crescent Moon: 21
+	Syr Elenora, the Discerning: 22
+	Sheoldred, the Apocalypse: 24
+	Lu Xun, Scholar General: 24
+Temper
+	Neyali, Suns' Vanguard: 2
+	Hinata, Dawn-Crowned: 3
+	Raff, Weatherlight Stalwart: 6
+	Commander Eesha: 13
+	Huang Zhong, Shu General: 13
+Liliana's Defeat
+	Maralen of the Mornsong: 10
+	Xiahou Dun, the One-Eyed: 20
+	Monoxa, Midway Manager: 28
+	Selenia, Dark Angel: 31
+	Spirit of the Night: 32
+Twinblade Paladin
+	Lathiel, the Bounteous Dawn: 3
+	Inquisitor Greyfax: 5
+	Kongming, "Sleeping Dragon": 5
+	Aryel, Knight of Windgrace: 6
+	Evra, Halcyon Witness: 6
+Seer's Lantern
+	Myojin of Seeing Winds: 8
+	Acererak the Archlich: 10
+	Obeka, Brute Chronologist: 12
+	Linessa, Zephyr Mage: 13
+	Keiga, the Tide Star: 16
+Leering Emblem
+	Valduk, Keeper of the Flame: 3
+	Zamriel, Seraph of Steel: 4
+	Bruenor Battlehammer: 4
+	Rograkh, Son of Rohgahh: 4
+	Huang Zhong, Shu General: 4
+Thorough Investigation
+	Norika Yamazaki, the Poet: 8
+	Daxos the Returned: 10
+	Daxos of Meletis: 15
+	Ghen, Arcanum Weaver: 15
+	Zur the Enchanter: 16
+Sram's Expertise
+	Aisha of Sparks and Smoke: 20
+	Huang Zhong, Shu General: 22
+	Velomachus Lorehold: 23
+	Laurine, the Diversion: 37
+	Xenk, Paladin Unbroken: 53
+Burst of Strength
+	Legolas, Master Archer: 4
+	The Howling Abomination: 8
+	Anthousa, Setessan Hero: 13
+	Sarulf, Realm Eater: 19
+	Mirri, Cat Warrior: 19
+Savage Hunger
+	Autumn Willow: 2
+	Calix, Guided by Fate: 3
+	Mazzy, Truesword Paladin: 4
+	Sigarda, Host of Herons: 4
+	Siona, Captain of the Pyleas: 5
+Canopy Gorger
+	Baru, Wurmspeaker: 3
+	Gilanra, Caller of Wirewood: 13
+	Vorinclex, Voice of Hunger: 19
+	Baru, Fist of Krosa: 20
+	Gwenna, Eyes of Gaea: 22
+Ardenn, Intrepid Archaeologist
+	Preston, the Vanisher: 6
+	Go-Shintai of Life's Origin: 8
+	Danitha, Benalia's Hope: 9
+	Tiana, Ship's Caretaker: 11
+	Elesh Norn, Mother of Machines: 11
+Unholy Grotto
+	Niv-Mizzet Reborn: 9
+	Child of Alara: 13
+	Morophon, the Boundless: 13
+	Sisay, Weatherlight Captain: 13
+	Kenrith, the Returned King: 15
+Wojek Halberdiers
+	Quintorius, Field Historian: 1
+	Torbran, Thane of Red Fell: 2
+	Munda, Ambush Leader: 2
+	Myrel, Shield of Argive: 2
+	Aurelia, Exemplar of Justice: 2
+Ground Rift
+	Rosnakht, Heir of Rohgahh: 7
+	Yuan Shao, the Indecisive: 8
+	Aisha of Sparks and Smoke: 11
+	Lu Bu, Master-at-Arms: 14
+	Ghyrson Starn, Kelermorph: 15
+Practiced Tactics
+	Shu Yun, the Silent Tempest: 5
+	Lavinia, Azorius Renegade: 13
+	Feather, the Redeemed: 14
+	Octavia, Living Thesis: 23
+	Ardenn, Intrepid Archaeologist: 24
+Kogla and Yidaro
+	Gishath, Sun's Avatar: 1
+	Kibo, Uktabi Prince: 2
+	Mishra, Tamer of Mak Fawa: 4
+	Ilharg, the Raze-Boar: 4
+	Zacama, Primal Calamity: 4
+Inferno Fist
+	Lynde, Cheerful Tormentor: 7
+	Auntie Blyte, Bad Influence: 9
+	Tahngarth, First Mate: 13
+	Geist of Saint Traft: 20
+	Bruna, Light of Alabaster: 22
+Kuldotha Forgemaster
+	Karn, Legacy Reforged: 2
+	Saheeli, the Gifted: 2
+	Losheel, Clockwork Scholar: 2
+	Bosh, Iron Golem: 2
+	Lita, Mechanical Engineer: 3
+Undercity Scavenger
+	Yukora, the Prisoner: 1
+	The Scorpion God: 1
+	Hapatra, Vizier of Poisons: 2
+	Whisper, Blood Liturgist: 3
+	Endrek Sahr, Master Breeder: 3
+Goblin Dark-Dwellers
+	Averna, the Chaos Bloom: 2
+	Kaervek the Merciless: 3
+	Urabrask the Hidden: 3
+	Rem Karolus, Stalwart Slayer: 4
+	Ib Halfheart, Goblin Tactician: 5
+Profound Journey
+	Mageta the Lion: 9
+	Reya Dawnbringer: 14
+	Ardenn, Intrepid Archaeologist: 18
+	Velomachus Lorehold: 18
+	Lulu, Loyal Hollyphant: 20
+Forbid
+	Ertai, Wizard Adept: 1
+	Ambassador Laquatus: 1
+	Talrand, Sky Summoner: 1
+	Baral, Chief of Compliance: 1
+	Kairi, the Swirling Sky: 1
+Orcish Settlers
+	Feldon, Ronom Excavator: 3
+	Ob Nixilis, Captive Kingpin: 3
+	Zo-Zu the Punisher: 3
+	Zurgo Bellstriker: 4
+	Ben-Ben, Akki Hermit: 4
+Bhaal's Invoker
+	Raphael, Fiendish Savior: 2
+	Atarka, World Render: 2
+	Thrakkus the Butcher: 6
+	Rith, Liberated Primeval: 6
+	Solphim, Mayhem Dominus: 6
+Boon-Bringer Valkyrie
+	Denry Klin, Editor in Chief: 5
+	Inquisitor Greyfax: 9
+	Akroma, Vision of Ixidor: 11
+	Sylvia Brightspear: 11
+	Rashida Scalebane: 12
+Argoth, Sanctum of Nature
+	Nevinyrral, Urborg Tyrant: 5
+	Garth One-Eye: 5
+	Kyodai, Soul of Kamigawa: 5
+	Niv-Mizzet Reborn: 5
+	Halfdane: 5
+Nahiri, the Unforgiving
+	Ardenn, Intrepid Archaeologist: 2
+	Lae'zel, Vlaakith's Champion: 3
+	Djeru, With Eyes Open: 4
+	The Peregrine Dynamo: 6
+	Hazoret the Fervent: 9
+Elvish Doomsayer
+	The Raven Man: 1
+	Meren of Clan Nel Toth: 1
+	Tinybones, Trinket Thief: 1
+	Tourach, Dread Cantor: 1
+	Elas il-Kor, Sadistic Pilgrim: 1
+Urban Daggertooth
+	Tolsimir, Friend to Wolves: 2
+	Mowu, Loyal Companion: 2
+	Glissa, Herald of Predation: 3
+	Polukranos, Unchained: 3
+	Skullbriar, the Walking Grave: 3
+Havengul Lich
+	The Scarab God: 1
+	Wilhelt, the Rotcleaver: 1
+	Narfi, Betrayer King: 1
+	Anrakyr the Traveller: 2
+	Szarekh, the Silent King: 2
+Bazaar Trader
+	Atsushi, the Blazing Sky: 2
+	Feldon, Ronom Excavator: 2
+	Patron of the Akki: 2
+	Gut, True Soul Zealot: 2
+	Krenko, Mob Boss: 2
+Explosive Vegetation
+	Molimo, Maro-Sorcerer: 1
+	Jerrard of the Closed Fist: 2
+	Edgin, Larcenous Lutenist: 3
+	Kogla and Yidaro: 3
+	Darigaaz Reincarnated: 3
+Aetherworks Marvel
+	Okaun, Eye of Chaos: 12
+	The Space Family Goblinson: 14
+	Farideh, Devil's Chosen: 18
+	Dee Kay, Finder of the Lost: 18
+	Monoxa, Midway Manager: 22
+Cunning Lethemancer
+	Rankle, Master of Pranks: 1
+	Tinybones, Trinket Thief: 2
+	Tourach, Dread Cantor: 2
+	Cao Cao, Lord of Wei: 2
+	Urgoros, the Empty One: 3
+Skaab Ruinator
+	Sevinne, the Chronoclasm: 2
+	Lorthos, the Tidemaker: 6
+	Keiga, the Tide Star: 6
+	Sakashima of a Thousand Faces: 7
+	Braids, Conjurer Adept: 8
+Allied Assault
+	Raff, Weatherlight Stalwart: 27
+	Feather, the Redeemed: 30
+	Zethi, Arcane Blademaster: 35
+	Toshiro Umezawa: 50
+	Kalamax, the Stormsire: 52
+Tenacious Dead
+	Whisper, Blood Liturgist: 1
+	Bontu the Glorified: 1
+	Erebos, Bleak-Hearted: 1
+	Tymaret, the Murder King: 1
+	Kokusho, the Evening Star: 1
+Thicket Basilisk
+	Svella, Ice Shaper: 15
+	Ishkanah, Grafwidow: 17
+	Inga and Esika: 19
+	Arasta of the Endless Web: 19
+	Nikya of the Old Ways: 19
+Necrotic Ooze
+	Snapdax, Apex of the Hunt: 4
+	Szarekh, the Silent King: 5
+	Cromat: 5
+	Otrimi, the Ever-Playful: 6
+	Anrakyr the Traveller: 10
+String of Disappearances
+	Hurkyl, Master Wizard: 1
+	Circu, Dimir Lobotomist: 1
+	Fblthp, the Lost: 2
+	God-Eternal Kefnet: 2
+	Octavia, Living Thesis: 2
+Tendrils of Corruption
+	Toshiro Umezawa: 8
+	Sarulf, Realm Eater: 25
+	Selenia, Dark Angel: 28
+	Shauku, Endbringer: 42
+	Ertai, Wizard Adept: 45
+Wake of Destruction
+	Auntie Blyte, Bad Influence: 13
+	Velomachus Lorehold: 15
+	Aisha of Sparks and Smoke: 17
+	Akroma, Angel of Fury: 35
+	Syr Carah, the Bold: 36
+Selesnya Locket
+	Myojin of Seeing Winds: 3
+	Eron the Relentless: 4
+	Kiyomaro, First to Stand: 4
+	Linessa, Zephyr Mage: 4
+	Myojin of Roaring Blades: 5
+Tyrranax Rex
+	Gishath, Sun's Avatar: 2
+	Sidar Kondo of Jamuraa: 4
+	Zacama, Primal Calamity: 6
+	Baru, Wurmspeaker: 7
+	Vorinclex, Voice of Hunger: 7
+Merciless Executioner
+	Isareth the Awakener: 1
+	Kazarov, Sengir Pureblood: 1
+	Burakos, Party Leader: 3
+	Szarekh, the Silent King: 4
+	Kyoki, Sanity's Eclipse: 4
+Sisay's Ring
+	Acererak the Archlich: 7
+	Myojin of Seeing Winds: 11
+	Linessa, Zephyr Mage: 12
+	Mishra, Eminent One: 14
+	Obeka, Brute Chronologist: 14
+Fracture
+	Raff, Weatherlight Stalwart: 2
+	Neyali, Suns' Vanguard: 3
+	Cho-Manno, Revolutionary: 6
+	Toshiro Umezawa: 7
+	Zethi, Arcane Blademaster: 8
+Immolation
+	Rosnakht, Heir of Rohgahh: 8
+	Auntie Blyte, Bad Influence: 12
+	Stangg, Echo Warrior: 17
+	Aphemia, the Cacophony: 18
+	Lynde, Cheerful Tormentor: 18
+Prying Blade
+	Ardenn, Intrepid Archaeologist: 1
+	Nahiri, Forged in Fury: 1
+	Sram, Senior Edificer: 1
+	Isamaru, Hound of Konda: 1
+	Spirit of the Night: 1
+Everdawn Champion
+	Baldin, Century Herdmaster: 2
+	Odric, Master Tactician: 5
+	Adeline, Resplendent Cathar: 5
+	Tajic, Blade of the Legion: 6
+	Yorion, Sky Nomad: 6
+Vadrok, Apex of Thunder
+	Torbran, Thane of Red Fell: 1
+	Etrata, the Silencer: 1
+	Urabrask, Heretic Praetor: 1
+	Prosper, Tome-Bound: 1
+	Arahbo, Roar of the World: 1
+Thousand-Faced Shadow
+	Higure, the Still Wind: 1
+	Edric, Spymaster of Trest: 1
+	Yuriko, the Tiger's Shadow: 1
+	Rigo, Streetwise Mentor: 2
+	Kopala, Warden of Waves: 2
+Nahiri, Forged in Fury
+	Nogi, Draco-Zealot: 1
+	Kozilek, the Great Distortion: 1
+	Sarkhan, Soul Aflame: 1
+	Nahiri, the Lithomancer: 1
+	Kozilek, Butcher of Truth: 1
+Nissa's Encouragement
+	Masumaro, First to Live: 9
+	Jaheira, Friend of the Forest: 25
+	Codie, Vociferous Codex: 32
+	Fangorn, Tree Shepherd: 33
+	Jerrard of the Closed Fist: 36
+Company Commander
+	Harbin, Vanguard Aviator: 1
+	General Kudro of Drannith: 1
+	Commissar Severina Raine: 2
+	Tajic, Blade of the Legion: 2
+	Breena, the Demagogue: 2
+Maddening Hex
+	Lynde, Cheerful Tormentor: 1
+	Okaun, Eye of Chaos: 5
+	Tarox Bladewing: 6
+	The Space Family Goblinson: 7
+	Lu Bu, Master-at-Arms: 7
+Martyr for the Cause
+	Baird, Argivian Recruiter: 1
+	Yosei, the Morning Star: 1
+	Aron, Benalia's Ruin: 1
+	Myrel, Shield of Argive: 1
+	Brimaz, Blight of Oreskos: 1
+Skyshroud Archer
+	Rocco, Cabaretti Caterer: 1
+	Yisan, the Wanderer Bard: 1
+	Selvala, Explorer Returned: 1
+	Selvala, Heart of the Wilds: 2
+	Marwyn, the Nurturer: 3
+Wormhole Serpent
+	Slinn Voda, the Rising Deep: 9
+	Unesh, Criosphinx Sovereign: 11
+	Thassa, God of the Sea: 13
+	Sun Quan, Lord of Wu: 19
+	Arixmethes, Slumbering Isle: 20
+Emblem of the Warmind
+	Lynde, Cheerful Tormentor: 8
+	Auntie Blyte, Bad Influence: 10
+	Tahngarth, First Mate: 12
+	Light-Paws, Emperor's Voice: 20
+	Xenk, Paladin Unbroken: 21
+Ulvenwald Mysteries
+	Kaima, the Fractured Calm: 10
+	Autumn Willow: 12
+	Thrun, Breaker of Silence: 13
+	Jugan, the Rising Star: 13
+	Stangg, Echo Warrior: 14
+Verity Circle
+	Elrond, Master of Healing: 10
+	Bruvac the Grandiloquent: 10
+	Alhammarret, High Arbiter: 13
+	Hakim, Loreweaver: 15
+	Haldan, Avid Arcanist: 15
+Rise Again
+	Anrakyr the Traveller: 7
+	Zhulodok, Void Gorger: 12
+	Niambi, Esteemed Speaker: 17
+	Reya Dawnbringer: 32
+	Ulamog, the Ceaseless Hunger: 34
+Raking Canopy
+	Thrun, Breaker of Silence: 12
+	Isao, Enlightened Bushi: 19
+	Tuvasa the Sunlit: 22
+	Autumn Willow: 23
+	Thrun, the Last Troll: 27
+Cephalid Retainer
+	Moritte of the Frost: 5
+	Aboshan, Cephalid Emperor: 7
+	Prime Speaker Vannifar: 7
+	Faceless One: 7
+	Gisa and Geralf: 9
+Blood-Chin Fanatic
+	Endrek Sahr, Master Breeder: 1
+	Bontu the Glorified: 2
+	Yukora, the Prisoner: 2
+	Moira, Urborg Haunt: 2
+	Tivash, Gloom Summoner: 3
+Cateran Summons
+	Maralen of the Mornsong: 2
+	Xiahou Dun, the One-Eyed: 4
+	Purraj of Urborg: 26
+	Kagemaro, First to Suffer: 27
+	Kokusho, the Evening Star: 31
+Spy Network
+	God-Eternal Kefnet: 7
+	Octavia, Living Thesis: 7
+	Shu Yun, the Silent Tempest: 10
+	Hidetsugu and Kairi: 10
+	Hurkyl, Master Wizard: 12
+Evernight Shade
+	Ihsan's Shade: 1
+	Vogar, Necropolis Tyrant: 2
+	Venser, Corpse Puppet: 2
+	Erebos, Bleak-Hearted: 3
+	Xun Yu, Wei Advisor: 4
+Treefolk Seedlings
+	Fangorn, Tree Shepherd: 4
+	Varis, Silverymoon Ranger: 18
+	Doran, the Siege Tower: 18
+	Umori, the Collector: 23
+	Arasta of the Endless Web: 23
+Serrated Biskelion
+	Triad of Fates: 1
+	Drafna, Founder of Lat-Nam: 2
+	Graaz, Unstoppable Juggernaut: 2
+	Dee Kay, Finder of the Lost: 2
+	Losheel, Clockwork Scholar: 3
+Knight of Dusk
+	Verrak, Warped Sengir: 1
+	Josu Vess, Lich Knight: 4
+	Chainer, Nightmare Adept: 4
+	Tymaret, Chosen from Death: 4
+	Lorcan, Warlock Collector: 6
+Venerated Loxodon
+	Saint Traft and Rem Karolus: 1
+	Kasla, the Broken Halo: 2
+	Temmet, Vizier of Naktamun: 3
+	Emmara Tandris: 5
+	Hamza, Guardian of Arashin: 6
+Gorilla Warrior
+	Johan: 6
+	Zilortha, Strength Incarnate: 9
+	Tolsimir, Friend to Wolves: 12
+	Gabriel Angelfire: 12
+	Deathleaper, Terror Weapon: 13
+Warmonger's Chariot
+	Yargle, Glutton of Urborg: 6
+	Mirri the Cursed: 7
+	Cao Ren, Wei Commander: 7
+	Dalakos, Crafter of Wonders: 8
+	Zamriel, Seraph of Steel: 9
+Herald of Slaanesh
+	Rakdos, the Showstopper: 2
+	Be'lakor, the Dark Master: 3
+	Drakuseth, Maw of Flames: 7
+	Squee, Dubious Monarch: 8
+	Ganax, Astral Hunter: 9
+Cubwarden
+	Kasla, the Broken Halo: 1
+	Saint Traft and Rem Karolus: 2
+	Emmara Tandris: 6
+	Rin and Seri, Inseparable: 7
+	Kaheera, the Orphanguard: 9
+Wrenn and Realmbreaker
+	Pir, Imaginative Rascal: 1
+	Anthousa, Setessan Hero: 1
+	Djeru, With Eyes Open: 2
+	The Peregrine Dynamo: 2
+	Jolrael, Voice of Zhalfir: 2
+Biomantic Mastery
+	Ulamog, the Ceaseless Hunger: 39
+	Zhulodok, Void Gorger: 41
+	Emrakul, the Promised End: 45
+	Aisha of Sparks and Smoke: 56
+	Kozilek, the Great Distortion: 67
+Surge of Thoughtweft
+	Shu Yun, the Silent Tempest: 3
+	Commander Eesha: 5
+	Raff, Weatherlight Stalwart: 9
+	Lieutenant Kirtar: 10
+	Niv-Mizzet, Supreme: 11
+Sanctum Custodian
+	Lin Sivvi, Defiant Hero: 4
+	Atogatog: 4
+	Daxos, Blessed by the Sun: 6
+	Lena, Selfless Champion: 8
+	Crovax, Ascendant Hero: 8
+Elfhame Wurm
+	Baru, Wurmspeaker: 6
+	Gilanra, Caller of Wirewood: 7
+	Kalemne, Disciple of Iroas: 12
+	Gwenna, Eyes of Gaea: 14
+	Mayael the Anima: 17
+Ranger's Path
+	Molimo, Maro-Sorcerer: 13
+	Gabriel Angelfire: 13
+	Kogla and Yidaro: 15
+	Masumaro, First to Live: 15
+	Sosuke, Son of Seshiro: 17
+Grave Titan
+	Kalemne, Disciple of Iroas: 1
+	Rakdos the Defiler: 4
+	Sauron, the Necromancer: 10
+	Aegar, the Freezing Flame: 12
+	Balthor the Defiled: 14
+Wheel of Misfortune
+	Aisha of Sparks and Smoke: 1
+	Neheb, Dreadhorde Champion: 2
+	Brallin, Skyshark Rider: 3
+	Eruth, Tormented Prophet: 5
+	Rielle, the Everwise: 6
+Feed the Infection
+	Xiahou Dun, the One-Eyed: 2
+	Akuta, Born of Ash: 3
+	Shauku, Endbringer: 5
+	Kagemaro, First to Suffer: 6
+	Visara the Dreadful: 11
+Dense Canopy
+	Eutropia the Twice-Favored: 22
+	Legolas, Master Archer: 26
+	Thrun, Breaker of Silence: 30
+	Stangg, Echo Warrior: 30
+	Kosei, Penitent Warlord: 35
+Workshop Elders
+	Gimbal, Gremlin Prodigy: 3
+	Ognis, the Dragon's Lash: 6
+	Kathril, Aspect Warper: 6
+	Vazi, Keen Negotiator: 6
+	Denry Klin, Editor in Chief: 8
+Miara, Thorn of the Glade
+	Mikaeus, the Unhallowed: 1
+	Fain, the Broker: 1
+	Kalitas, Traitor of Ghet: 1
+	Jadar, Ghoulcaller of Nephalia: 1
+	Tevesh Szat, Doom of Fools: 1
+Gray Merchant of Asphodel
+	Tivash, Gloom Summoner: 1
+	Gisa and Geralf: 1
+	Josu Vess, Lich Knight: 1
+	Tormod, the Desecrator: 1
+	Tymaret, Chosen from Death: 1
+Skirk Shaman
+	Captain Lannery Storm: 2
+	Alena, Kessig Trapper: 2
+	Yuan Shao, the Indecisive: 2
+	Ganax, Astral Hunter: 3
+	Squee, Dubious Monarch: 3
+Yavimaya Elder
+	Surrak and Goreclaw: 1
+	Titania, Protector of Argoth: 1
+	Torens, Fist of the Angels: 2
+	Yarok, the Desecrated: 2
+	Saffi Eriksdotter: 2
+Vorpal Sword
+	Yargle, Glutton of Urborg: 1
+	Mirri the Cursed: 1
+	Commander Greven il-Vec: 1
+	Kemba, Kha Regent: 2
+	Spirit of the Night: 2
+Daze
+	Raff, Weatherlight Stalwart: 1
+	Vohar, Vodalian Desecrator: 1
+	Fblthp, the Lost: 1
+	Vendilion Clique: 1
+	Kefnet the Mindful: 1
+Quest for the Holy Relic
+	Ardenn, Intrepid Archaeologist: 4
+	Danitha, Benalia's Hope: 4
+	Tiana, Ship's Caretaker: 5
+	Commander Eesha: 8
+	Danitha Capashen, Paragon: 8
+Trace of Abundance
+	Siona, Captain of the Pyleas: 1
+	Geist of Saint Traft: 1
+	Zur the Enchanter: 1
+	Sythis, Harvest's Hand: 1
+	Daxos of Meletis: 1
+Vineweft
+	Thrun, the Last Troll: 2
+	Isao, Enlightened Bushi: 2
+	Thrun, Breaker of Silence: 3
+	Mirri, Cat Warrior: 4
+	Stangg, Echo Warrior: 5
+Darksteel Brute
+	Ashling the Pilgrim: 8
+	Akiri, Line-Slinger: 11
+	Tahngarth, Talruum Hero: 12
+	Ayesha Tanaka, Armorer: 15
+	Katsumasa, the Animator: 16
+Lae'zel, Vlaakith's Champion
+	Djeru, With Eyes Open: 3
+	Hama Pashar, Ruin Seeker: 5
+	Denry Klin, Editor in Chief: 7
+	Lae'zel, Vlaakith's Champion: 8
+	Mowu, Loyal Companion: 8
+Gisela, Blade of Goldnight
+	Jared Carthalion, True Heir: 1
+	Aegar, the Freezing Flame: 4
+	Heartless Hidetsugu: 5
+	Zirilan of the Claw: 5
+	Gwafa Hazid, Profiteer: 6
+Cateran Enforcer
+	Captain N'ghathrod: 4
+	Umbris, Fear Manifest: 8
+	Timothar, Baron of Bats: 9
+	Asmodeus the Archfiend: 9
+	Ink-Eyes, Servant of Oni: 13
+Will-o'-the-Wisp
+	Iname, Death Aspect: 2
+	Rohgahh of Kher Keep: 6
+	Rohgahh, Kher Keep Overlord: 7
+	Horobi, Death's Wail: 8
+	Millicent, Restless Revenant: 10
+Blink Dog
+	Malcator, Purity Overseer: 5
+	Celestial Kirin: 10
+	Brigid, Hero of Kinsbaile: 12
+	Urtet, Remnant of Memnarch: 15
+	Lita, Mechanical Engineer: 18
+Midnight Clock
+	Eron the Relentless: 1
+	Alhammarret, High Arbiter: 1
+	Tekuthal, Inquiry Dominus: 1
+	Will Kenrith: 1
+	Myojin of Cryptic Dreams: 1
+Hagra Constrictor
+	Seshiro the Anointed: 1
+	Sakashima of a Thousand Faces: 1
+	Gyruda, Doom of Depths: 2
+	Shisato, Whispering Hunter: 4
+	Sakashima the Impostor: 4
+Almighty Brushwagg
+	Captain Sisay: 5
+	Rocco, Cabaretti Caterer: 6
+	Yisan, the Wanderer Bard: 7
+	Thrasta, Tempest's Roar: 7
+	Syr Faren, the Hengehammer: 7
+Inventors' Fair
+	Hope of Ghirapur: 1
+	Karn, Silver Golem: 1
+	The Peregrine Dynamo: 1
+	Liberator, Urza's Battlethopter: 1
+	Traxos, Scourge of Kroog: 1
+Celestial Dawn
+	Zur the Enchanter: 2
+	Ith, High Arcanist: 2
+	Daxos the Returned: 2
+	Hanna, Ship's Navigator: 2
+	Daxos of Meletis: 4
+Instill Infection
+	Sarulf, Realm Eater: 10
+	Toshiro Umezawa: 11
+	Nikara, Lair Scavenger: 11
+	Tekuthal, Inquiry Dominus: 13
+	Purraj of Urborg: 25
+Kiki-Jiki, Mirror Breaker
+	Sethron, Hurloon General: 4
+	Squee, Dubious Monarch: 6
+	Muxus, Goblin Grandee: 6
+	Krenko, Tin Street Kingpin: 8
+	Wort, Boggart Auntie: 8
+Angler Turtle
+	Slinn Voda, the Rising Deep: 4
+	Kenessos, Priest of Thassa: 6
+	Arixmethes, Slumbering Isle: 9
+	Lorthos, the Tidemaker: 10
+	Kiora, Sovereign of the Deep: 10
+Elvish Aberration
+	Fangorn, Tree Shepherd: 1
+	Vorinclex, Voice of Hunger: 1
+	Jolrael, Mwonvuli Recluse: 1
+	Esix, Fractal Bloom: 2
+	Sapling of Colfenor: 2
+Pyrotechnics
+	Aisha of Sparks and Smoke: 22
+	Auntie Blyte, Bad Influence: 25
+	Syr Carah, the Bold: 44
+	Velomachus Lorehold: 49
+	Zaffai, Thunder Conductor: 54
+Bonder's Ornament
+	Linessa, Zephyr Mage: 2
+	Eron the Relentless: 5
+	Korlash, Heir to Blackblade: 5
+	Kiyomaro, First to Stand: 5
+	Myojin of Seeing Winds: 5
+Krosan Groundshaker
+	Baru, Wurmspeaker: 9
+	Ruxa, Patient Professor: 11
+	Tawnos, the Toymaker: 15
+	Vorinclex, Voice of Hunger: 18
+	Gwenna, Eyes of Gaea: 20
+Obelisk of Jund
+	Myojin of Seeing Winds: 10
+	Obeka, Brute Chronologist: 13
+	Acererak the Archlich: 14
+	Linessa, Zephyr Mage: 14
+	Greven, Predator Captain: 15
+The Wandering Emperor
+	Lae'zel, Vlaakith's Champion: 1
+	Djeru, With Eyes Open: 1
+	Hixus, Prison Warden: 4
+	Commodore Guff: 5
+	Linvala, the Preserver: 6
+Memorial to Genius
+	Kyodai, Soul of Kamigawa: 2
+	Kynaios and Tiro of Meletis: 2
+	Omnath, Locus of All: 3
+	Lotho, Corrupt Shirriff: 3
+	Narset, Enlightened Exile: 3
+Knightly Valor
+	Norika Yamazaki, the Poet: 4
+	Bruna, Light of Alabaster: 5
+	Lynde, Cheerful Tormentor: 5
+	Light-Paws, Emperor's Voice: 6
+	Geist of Saint Traft: 7
+Scrap Trawler
+	Karn, Legacy Reforged: 1
+	Jhoira, Ageless Innovator: 1
+	Drafna, Founder of Lat-Nam: 1
+	Lita, Mechanical Engineer: 1
+	Graaz, Unstoppable Juggernaut: 1
+Scrap Welder
+	Laurine, the Diversion: 1
+	Norin the Wary: 1
+	Kalain, Reclusive Painter: 1
+	Pia Nalaar, Consul of Revival: 1
+	Zurzoth, Chaos Rider: 1
+Phyrexian Slayer
+	Skithiryx, the Blight Dragon: 1
+	Vishgraz, the Doomhive: 1
+	Josu Vess, Lich Knight: 3
+	Ixhel, Scion of Atraxa: 5
+	Crosis, the Purger: 5
+Fireshrieker
+	Mirri the Cursed: 10
+	Rograkh, Son of Rohgahh: 13
+	Sram, Senior Edificer: 14
+	Kemba, Kha Regent: 14
+	Nahiri, Forged in Fury: 15
+Fistful of Force
+	Legolas, Master Archer: 5
+	The Howling Abomination: 11
+	Sarulf, Realm Eater: 14
+	Anthousa, Setessan Hero: 15
+	Iwamori of the Open Fist: 28
+Juvenile Gloomwidow
+	Shelob, Child of Ungoliant: 1
+	Ishkanah, Grafwidow: 1
+	Arasta of the Endless Web: 1
+	Tadeas, Juniper Ascendant: 6
+	Fynn, the Fangbearer: 7
+Cunning Rhetoric
+	Virtus the Veiled: 1
+	Nebuchadnezzar: 1
+	Karona, False God: 1
+	Nefarox, Overlord of Grixis: 2
+	Nekusar, the Mindrazer: 2
+Atla Palani, Nest Tender
+	The Space Family Goblinson: 1
+	Okaun, Eye of Chaos: 1
+	Djeru and Hazoret: 1
+	Tori D'Avenant, Fury Rider: 1
+	Gallia of the Endless Dance: 1
+Cloud Cover
+	Daxos the Returned: 11
+	Zur the Enchanter: 15
+	Norika Yamazaki, the Poet: 19
+	Hanna, Ship's Navigator: 20
+	Zur, Eternal Schemer: 23
+Dazzling Lights
+	Bruvac the Grandiloquent: 4
+	Zellix, Sanity Flayer: 6
+	Octavia, Living Thesis: 6
+	God-Eternal Kefnet: 8
+	Shu Yun, the Silent Tempest: 9
+Dark Tutelage
+	Aphemia, the Cacophony: 6
+	Xiahou Dun, the One-Eyed: 8
+	Go-Shintai of Hidden Cruelty: 9
+	Virtus the Veiled: 10
+	Shauku, Endbringer: 12
+Stench of Decay
+	Toshiro Umezawa: 10
+	Sarulf, Realm Eater: 24
+	Shauku, Endbringer: 43
+	Ertai, Wizard Adept: 46
+	Kalamax, the Stormsire: 48
+Blood Tribute
+	Shauku, Endbringer: 7
+	Selenia, Dark Angel: 7
+	Maga, Traitor to Mortals: 9
+	King Macar, the Gold-Cursed: 15
+	Maralen of the Mornsong: 15
+Jackal Pup
+	Kari Zev, Skyship Raider: 8
+	Garna, Bloodfist of Keld: 9
+	Magda, Brazen Outlaw: 9
+	Ghyrson Starn, Kelermorph: 10
+	Feldon, Ronom Excavator: 10
+Major Teroh
+	Mondrak, Glory Dominus: 3
+	Avacyn, Angel of Hope: 3
+	Soraya the Falconer: 3
+	Gwaihir the Windlord: 4
+	Zuberi, Golden Feather: 5
+Renegade Reaper
+	Vito, Thorn of the Dusk Rose: 1
+	Tivash, Gloom Summoner: 2
+	Ascendant Evincar: 2
+	Tymaret, Chosen from Death: 2
+	Firja, Judge of Valor: 3
+Sen Triplets
+	Imoen, Mystic Trickster: 1
+	Ojutai, Soul of Winter: 1
+	Gisela, Blade of Goldnight: 1
+	Gallowbraid: 1
+	Szadek, Lord of Secrets: 1
+Mer-Ek Nightblade
+	Exava, Rakdos Blood Witch: 2
+	Myojin of Grim Betrayal: 3
+	Gisa and Geralf: 3
+	Ramses, Assassin Lord: 3
+	Narfi, Betrayer King: 4
+Supply Runners
+	Myojin of Blooming Dawn: 4
+	Athreos, Shroud-Veiled: 14
+	Mageta the Lion: 16
+	Denry Klin, Editor in Chief: 17
+	Duke Ulder Ravengard: 17
+Charging Griffin
+	Zeriam, Golden Wind: 1
+	Zuberi, Golden Feather: 2
+	King of the Oathbreakers: 3
+	Oyobi, Who Split the Heavens: 4
+	Lavinia of the Tenth: 4
+Nexus Wardens
+	Samwise Gamgee: 3
+	Arasta of the Endless Web: 4
+	Shelob, Child of Ungoliant: 5
+	Gallia of the Endless Dance: 5
+	Ishkanah, Grafwidow: 6
+Cavalier of Gales
+	Unesh, Criosphinx Sovereign: 3
+	Renari, Merchant of Marvels: 4
+	Kenessos, Priest of Thassa: 4
+	Haakon, Stromgald Scourge: 4
+	Sivitri, Dragon Master: 6
+Nissa, Genesis Mage
+	Carth the Lion: 1
+	Radha, Coalition Warlord: 4
+	Pir, Imaginative Rascal: 4
+	Sam, Loyal Attendant: 6
+	Themberchaud: 7
+Captain's Maneuver
+	Feather, the Redeemed: 1
+	Firesong and Sunspeaker: 3
+	Quintorius, Loremaster: 3
+	Velomachus Lorehold: 4
+	Livaan, Cultist of Tiamat: 4
+Gnarlwood Dryad
+	Fynn, the Fangbearer: 1
+	Rocco, Cabaretti Caterer: 5
+	Captain Sisay: 7
+	Yisan, the Wanderer Bard: 8
+	Thrasta, Tempest's Roar: 8
+Vivien, Monsters' Advocate
+	Djeru, With Eyes Open: 8
+	Carth the Lion: 9
+	Pir, Imaginative Rascal: 16
+	Lae'zel, Vlaakith's Champion: 39
+	Galadriel, Gift-Giver: 43
+Rancid Rats
+	Ink-Eyes, Servant of Oni: 1
+	Ebondeath, Dracolich: 1
+	Patron of the Nezumi: 1
+	Ghoulcaller Gisa: 1
+	The Scarab God: 2
+Aryel, Knight of Windgrace
+	Emmara, Soul of the Accord: 1
+	King Macar, the Gold-Cursed: 1
+	Crovax, Ascendant Hero: 1
+	Wernog, Rider's Chaplain: 1
+	Kitt Kanto, Mayhem Diva: 1
+Elemental Resonance
+	Autumn Willow: 4
+	Thrun, Breaker of Silence: 8
+	Calix, Guided by Fate: 8
+	Killian, Ink Duelist: 8
+	Thrun, the Last Troll: 9
+_____ _____ Rocketship
+	Kotori, Pilot Prodigy: 7
+	Shorikai, Genesis Engine: 12
+	Depala, Pilot Exemplar: 12
+	Sanwell, Avenger Ace: 14
+	Greasefang, Okiba Boss: 15
+Titania's Command
+	Velomachus Lorehold: 1
+	Ikra Shidiqi, the Usurper: 1
+	Codie, Vociferous Codex: 1
+	Firesong and Sunspeaker: 2
+	Niambi, Esteemed Speaker: 2
+Skeletal Changeling
+	Rohgahh, Kher Keep Overlord: 3
+	Ihsan's Shade: 6
+	Karumonix, the Rat King: 7
+	Shirei, Shizo's Caretaker: 7
+	Gix, Yawgmoth Praetor: 7
+Griffin Dreamfinder
+	Lieutenant Kirtar: 1
+	Reya Dawnbringer: 1
+	Zuberi, Golden Feather: 1
+	Lulu, Loyal Hollyphant: 1
+	Niambi, Esteemed Speaker: 1
+Avenging Druid
+	Samwise Gamgee: 1
+	Karametra, God of Harvests: 1
+	Grand Warlord Radha: 1
+	Izoni, Thousand-Eyed: 1
+	Varolz, the Scar-Striped: 1
+Olivia, Mobilized for War
+	Strefan, Maurer Progenitor: 1
+	Anowon, the Ruin Sage: 1
+	Olivia, Mobilized for War: 1
+	Gimli, Counter of Kills: 1
+	Olivia Voldaren: 1
+Glint-Sleeve Siphoner
+	Varragoth, Bloodsky Sire: 1
+	Geth, Thane of Contracts: 1
+	Phage the Untouchable: 1
+	Gonti, Lord of Luxury: 1
+	Ria Ivor, Bane of Bladehold: 1
+Terrarion
+	Oswald Fiddlebender: 4
+	Kokusho, the Evening Star: 5
+	Nazahn, Revered Bladesmith: 11
+	Gnostro, Voice of the Crags: 11
+	Kurkesh, Onakke Ancient: 14
+Myrkul's Edict
+	Monoxa, Midway Manager: 9
+	Magar of the Magic Strings: 12
+	Maga, Traitor to Mortals: 19
+	Maralen of the Mornsong: 20
+	Xiahou Dun, the One-Eyed: 23
+Devouring Tendrils
+	Legolas, Master Archer: 8
+	Wort, the Raidmother: 15
+	Kogla and Yidaro: 19
+	Carth the Lion: 28
+	Maarika, Brutal Gladiator: 28
+Skyclave Shade
+	Ihsan's Shade: 2
+	Kinzu of the Bleak Coven: 2
+	Muldrotha, the Gravetide: 3
+	Ink-Eyes, Servant of Oni: 3
+	Hapatra, Vizier of Poisons: 3
+Strip Mine
+	Tameshi, Reality Architect: 2
+	Tasigur, the Golden Fang: 5
+	Chromium, the Mutable: 6
+	Boris Devilboon: 7
+	Kenrith, the Returned King: 8
+Expunge
+	Toshiro Umezawa: 1
+	Ertai, Wizard Adept: 10
+	Rona, Sheoldred's Faithful: 12
+	Sarulf, Realm Eater: 12
+	Gavi, Nest Warden: 12
+Knollspine Dragon
+	Nogi, Draco-Zealot: 2
+	Lathliss, Dragon Queen: 2
+	Feldon of the Third Path: 2
+	Ilharg, the Raze-Boar: 2
+	Arni Metalbrow: 2
+The Swarmlord
+	Thassa, God of the Sea: 1
+	Lorthos, the Tidemaker: 1
+	Chishiro, the Shattered Blade: 1
+	Slinn Voda, the Rising Deep: 1
+	Renari, Merchant of Marvels: 1
+Rakdos Pit Dragon
+	Kolaghan, the Storm's Fury: 2
+	Rith, Liberated Primeval: 4
+	Wasitora, Nekoru Queen: 5
+	Torbran, Thane of Red Fell: 6
+	Gimli, Counter of Kills: 6
+Mausoleum Turnkey
+	Miara, Thorn of the Glade: 1
+	Demonlord Belzenlok: 1
+	Keskit, the Flesh Sculptor: 1
+	He Who Hungers: 1
+	Moira, Urborg Haunt: 1
+Endless Evil
+	Hakim, Loreweaver: 2
+	Ramses Overdark: 3
+	Callaphe, Beloved of the Sea: 11
+	Kaima, the Fractured Calm: 14
+	Killian, Ink Duelist: 14
+Ominous Seas
+	Tekuthal, Inquiry Dominus: 6
+	Ghen, Arcanum Weaver: 7
+	Callaphe, Beloved of the Sea: 7
+	Syr Elenora, the Discerning: 8
+	Ghost of Ramirez DePietro: 9
+Sibsig Muckdraggers
+	Volrath the Fallen: 1
+	Tormod, the Desecrator: 3
+	Reya Dawnbringer: 4
+	Infernal Kirin: 5
+	Haakon, Stromgald Scourge: 6
+Ray of Command
+	Kalamax, the Stormsire: 1
+	Kairi, the Swirling Sky: 2
+	Orvar, the All-Form: 5
+	The Unspeakable: 6
+	Noyan Dar, Roil Shaper: 8
+Cloak of Mists
+	Callaphe, Beloved of the Sea: 1
+	Geist of Saint Traft: 3
+	Rayne, Academy Chancellor: 4
+	Hakim, Loreweaver: 5
+	Zur the Enchanter: 7
+Shivan Wumpus
+	Alena, Kessig Trapper: 3
+	Ganax, Astral Hunter: 5
+	Rakdos, the Showstopper: 6
+	Mizzix, Replica Rider: 7
+	Laurine, the Diversion: 8
+Tajuru Paragon
+	The Space Family Goblinson: 3
+	Miara, Thorn of the Glade: 3
+	Old Gnawbone: 3
+	Imaryll, Elfhame Elite: 3
+	Zopandrel, Hunger Dominus: 3
+Umara Mystic
+	Mizzix, Replica Rider: 1
+	Donal, Herald of Wings: 2
+	Krark, the Thumbless: 2
+	Kalain, Reclusive Painter: 2
+	Adeliz, the Cinder Wind: 3
+Knight of Meadowgrain
+	Kwende, Pride of Femeref: 1
+	Duke Ulder Ravengard: 1
+	Brigid, Hero of Kinsbaile: 4
+	Syr Gwyn, Hero of Ashvale: 5
+	Icingdeath, Frost Tyrant: 6
+Beacon of Creation
+	Molimo, Maro-Sorcerer: 22
+	Wort, the Raidmother: 24
+	Masumaro, First to Live: 25
+	Anthousa, Setessan Hero: 31
+	Kogla and Yidaro: 32
+Binding the Old Gods
+	Gollum, Patient Plotter: 1
+	Sam, Loyal Attendant: 1
+	Glissa Sunslayer: 1
+	Nefarox, Overlord of Grixis: 1
+	Gimli, Mournful Avenger: 1
+Slayers' Stronghold
+	Child of Alara: 11
+	Kyodai, Soul of Kamigawa: 14
+	Niv-Mizzet Reborn: 15
+	Sisay, Weatherlight Captain: 15
+	Aragorn, the Uniter: 16
+Zagoth Triome
+	Garth One-Eye: 1
+	Jegantha, the Wellspring: 1
+	Kyodai, Soul of Kamigawa: 1
+	Omnath, Locus of All: 1
+	Ramos, Dragon Engine: 1
+Pus Kami
+	Tetzimoc, Primal Death: 1
+	Iname, Life Aspect: 2
+	Reya Dawnbringer: 3
+	Kalitas, Bloodchief of Ghet: 3
+	Volrath the Fallen: 3
+Death of a Thousand Stings
+	The Unspeakable: 11
+	Toshiro Umezawa: 15
+	Cloudhoof Kirin: 18
+	Gallowbraid: 30
+	Kyoki, Sanity's Eclipse: 30
+Meriadoc Brandybuck
+	Gyome, Master Chef: 2
+	Slimefoot, the Stowaway: 2
+	Nemata, Primeval Warden: 3
+	Volo, Guide to Monsters: 4
+	Melira, Sylvok Outcast: 4
+Terror
+	Toshiro Umezawa: 6
+	Sarulf, Realm Eater: 7
+	Purraj of Urborg: 14
+	Vohar, Vodalian Desecrator: 15
+	Ertai, Wizard Adept: 17
+Bitterblade Warrior
+	Ayula, Queen Among Bears: 2
+	Nemata, Primeval Warden: 5
+	Ambassador Blorpityblorpboop: 6
+	Johan: 7
+	Mishra, Claimed by Gix: 8
+Spore Frog
+	Rocco, Cabaretti Caterer: 4
+	Captain Sisay: 6
+	Yisan, the Wanderer Bard: 6
+	Grolnok, the Omnivore: 8
+	Minsc, Beloved Ranger: 8
+Tasigur's Cruelty
+	Tourach, Dread Cantor: 7
+	Tinybones, Trinket Thief: 21
+	Urgoros, the Empty One: 24
+	Cao Cao, Lord of Wei: 24
+	Magar of the Magic Strings: 26
+Reveka, Wizard Savant
+	Sakashima the Impostor: 2
+	Sakashima of a Thousand Faces: 3
+	Go-Shintai of Lost Wisdom: 3
+	Naban, Dean of Iteration: 8
+	Gyruda, Doom of Depths: 8
+Gateway Sneak
+	Tetsuko Umezawa, Fugitive: 3
+	Zndrsplt, Eye of Wisdom: 3
+	Sun Quan, Lord of Wu: 4
+	Imoen, Mystic Trickster: 5
+	Kopala, Warden of Waves: 5
+Aarakocra Sneak
+	Kangee, Aerie Keeper: 1
+	Anowon, the Ruin Thief: 5
+	Rilsa Rael, Kingpin: 7
+	Kangee, Sky Warden: 7
+	Gwaihir the Windlord: 7
+Shipwreck Looter
+	Ramirez DePietro, Pillager: 1
+	Siani, Eye of the Storm: 1
+	Sun Quan, Lord of Wu: 1
+	Tetsuko Umezawa, Fugitive: 2
+	Svyelun of Sea and Sky: 2
+Nazgûl
+	Lazav, Dimir Mastermind: 2
+	Skeleton Ship: 4
+	Dee Kay, Finder of the Lost: 4
+	Venser, Corpse Puppet: 5
+	Skithiryx, the Blight Dragon: 6
+High-Rise Sawjack
+	Rhys the Exiled: 3
+	Freyalise, Llanowar's Fury: 3
+	Lathril, Blade of the Elves: 3
+	Abomination of Llanowar: 3
+	Arasta of the Endless Web: 3
+Zimone, Quandrix Prodigy
+	Brago, King Eternal: 1
+	Tatyova, Benthic Druid: 1
+	Vorel of the Hull Clade: 1
+	Surrak Dragonclaw: 1
+	Bane, Lord of Darkness: 1
+Daru Encampment
+	Garth One-Eye: 12
+	Yidris, Maelstrom Wielder: 12
+	Angus Mackenzie: 12
+	Kyodai, Soul of Kamigawa: 13
+	Lady Evangela: 13
+Funeral Pyre
+	Ardenn, Intrepid Archaeologist: 5
+	Raff, Weatherlight Stalwart: 7
+	Lavinia, Azorius Renegade: 7
+	Shu Yun, the Silent Tempest: 8
+	Lieutenant Kirtar: 9
+Takeno, Samurai General
+	Nagao, Bound by Honor: 3
+	Takeno, Samurai General: 4
+	Risona, Asari Commander: 8
+	Kongming, "Sleeping Dragon": 8
+	Ixidor, Reality Sculptor: 9
+Embereth Paladin
+	Feldon, Ronom Excavator: 1
+	Khorvath Brightflame: 2
+	Kresh the Bloodbraided: 2
+	Munda, Ambush Leader: 3
+	Skyfire Kirin: 4
+Kruphix, God of Horizons
+	Blind Seer: 4
+	Hans Eriksson: 4
+	Ruxa, Patient Professor: 5
+	Merry, Esquire of Rohan: 5
+	Empress Galina: 6
+Gallowbraid
+	Ixhel, Scion of Atraxa: 2
+	Captain N'ghathrod: 5
+	Brimaz, Blight of Oreskos: 5
+	Vishgraz, the Doomhive: 5
+	Glissa, Herald of Predation: 7
+Gold-Forged Sentinel
+	Brion Stoutarm: 3
+	Kamahl, Pit Fighter: 4
+	Kaervek the Merciless: 6
+	Kumano, Master Yamabushi: 6
+	Illuminor Szeras: 7
+Eidolon of the Great Revel
+	Skyfire Kirin: 1
+	Tahngarth, First Mate: 1
+	Magda, Brazen Outlaw: 3
+	Auntie Blyte, Bad Influence: 4
+	Millicent, Restless Revenant: 5
+Enthusiastic Study
+	Tarox Bladewing: 2
+	Godo, Bandit Warlord: 3
+	Vadrik, Astral Archmage: 4
+	Rielle, the Everwise: 4
+	Squee, Goblin Nabob: 4
+Armory Veteran
+	Lovisa Coldeyes: 1
+	Skyfire Kirin: 2
+	Magda, Brazen Outlaw: 2
+	Xantcha, Sleeper Agent: 2
+	Tahngarth, First Mate: 3
+Goblinslide
+	Tarox Bladewing: 4
+	Lu Bu, Master-at-Arms: 9
+	Auntie Blyte, Bad Influence: 14
+	Rosnakht, Heir of Rohgahh: 27
+	Rakka Mar: 32
+Ballyrush Banneret
+	Brigid, Hero of Kinsbaile: 1
+	Mavren Fein, Dusk Apostle: 3
+	Kunoros, Hound of Athreos: 6
+	God-Eternal Oketra: 6
+	Celestial Kirin: 8
+Coppercoat Vanguard
+	Adeline, Resplendent Cathar: 1
+	Mangara of Corondor: 2
+	Odric, Master Tactician: 3
+	Baird, Argivian Recruiter: 3
+	General Kudro of Drannith: 3
+Primalcrux
+	Baru, Wurmspeaker: 27
+	Stonebrow, Krosan Hero: 32
+	Jaheira, Friend of the Forest: 34
+	Thriss, Nantuko Primus: 38
+	Esix, Fractal Bloom: 40
+Field Surgeon
+	Abdel Adrian, Gorion's Ward: 1
+	Karlov of the Ghost Council: 2
+	Darien, King of Kjeldor: 2
+	Felisa, Fang of Silverquill: 2
+	Linden, the Steadfast Queen: 2
+Firedrinker Satyr
+	Gallia of the Endless Dance: 2
+	Tor Wauki the Younger: 2
+	Najal, the Storm Runner: 6
+	Kari Zev, Skyship Raider: 7
+	Ghyrson Starn, Kelermorph: 8
+Dragon Mage
+	Lathliss, Dragon Queen: 1
+	Feldon of the Third Path: 1
+	Bladewing the Risen: 1
+	Ilharg, the Raze-Boar: 1
+	Karrthus, Tyrant of Jund: 1
+Shefet Monitor
+	Oskar, Rubbish Reclaimer: 1
+	Baru, Wurmspeaker: 1
+	Jaheira, Friend of the Forest: 1
+	Ghired, Conclave Exile: 1
+	Kozilek, the Great Distortion: 2
+Kithkin Zealot
+	Liesa, Shroud of Dusk: 2
+	Brigid, Hero of Kinsbaile: 2
+	Kambal, Consul of Allocation: 3
+	Orah, Skyclave Hierophant: 4
+	Daxos, Blessed by the Sun: 4
+Squirrel Sovereign
+	Ayula, Queen Among Bears: 3
+	Nemata, Primeval Warden: 6
+	Ambassador Blorpityblorpboop: 8
+	General Marhault Elsdragon: 11
+	Mishra, Claimed by Gix: 12
+Feeding Frenzy
+	Toshiro Umezawa: 9
+	Sarulf, Realm Eater: 23
+	Shauku, Endbringer: 44
+	Kalamax, the Stormsire: 46
+	Ertai, Wizard Adept: 47
+Unleash the Inferno
+	Sarulf, Realm Eater: 1
+	Tor Wauki: 1
+	Godo, Bandit Warlord: 2
+	Kalamax, the Stormsire: 3
+	Toshiro Umezawa: 4
+The Tabernacle at Pendrell Vale
+	Garth One-Eye: 27
+	Kyodai, Soul of Kamigawa: 37
+	Child of Alara: 37
+	Niv-Mizzet Reborn: 37
+	Kenrith, the Returned King: 41
+Nephalia Drownyard
+	Szadek, Lord of Secrets: 12
+	Kyodai, Soul of Kamigawa: 12
+	Child of Alara: 12
+	Lord Xander, the Collector: 12
+	Kenrith, the Returned King: 13
+Irontread Crusher
+	Greasefang, Okiba Boss: 4
+	Kurkesh, Onakke Ancient: 5
+	Sanwell, Avenger Ace: 5
+	Depala, Pilot Exemplar: 6
+	Karn, Legacy Reforged: 10
+Paradigm Shift
+	Empress Galina: 16
+	Keiga, the Tide Star: 22
+	Hidetsugu and Kairi: 23
+	Taniwha: 32
+	Myra the Magnificent: 33
+Extinguish the Light
+	Toshiro Umezawa: 2
+	Selenia, Dark Angel: 6
+	Sarulf, Realm Eater: 11
+	Baral, Chief of Compliance: 20
+	Ertai, Wizard Adept: 21
+Aether Poisoner
+	Syr Konrad, the Grim: 1
+	Belbe, Corrupted Observer: 2
+	Isareth the Awakener: 2
+	Falthis, Shadowcat Familiar: 2
+	Ramses, Assassin Lord: 2
+Thoughtcutter Agent
+	Arcum Dagsson: 1
+	Aboshan, Cephalid Emperor: 1
+	Sygg, River Cutthroat: 1
+	Grazilaxx, Illithid Scholar: 1
+	Zareth San, the Trickster: 1
+Hexgold Halberd
+	Tahngarth, Talruum Hero: 2
+	Auntie Blyte, Bad Influence: 2
+	Goro-Goro, Disciple of Ryusei: 2
+	Rhuk, Hexgold Nabber: 2
+	Ashling the Pilgrim: 2
+Mesmeric Orb
+	King Macar, the Gold-Cursed: 5
+	Zellix, Sanity Flayer: 7
+	Bruvac the Grandiloquent: 7
+	Glissa Sunseeker: 9
+	The Space Family Goblinson: 11
+Tyrant's Machine
+	Zara, Renegade Recruiter: 17
+	Ayesha Tanaka, Armorer: 20
+	Ukkima, Stalking Shadow: 21
+	Tetsuo, Imperial Champion: 22
+	Mishra, Eminent One: 22
+Erebos, Bleak-Hearted
+	Blim, Comedic Genius: 1
+	Kaervek, the Spiteful: 1
+	Go-Shintai of Hidden Cruelty: 2
+	Infernal Kirin: 2
+	Athreos, God of Passage: 2
+Sapseep Forest
+	Garth One-Eye: 2
+	Razia, Boros Archangel: 2
+	Treva, the Renewer: 2
+	Kenrith, the Returned King: 3
+	Kyodai, Soul of Kamigawa: 3
+Flanking Troops
+	Tajic, Blade of the Legion: 1
+	Loran of the Third Path: 1
+	Rhoda, Geist Avenger: 1
+	Odric, Master Tactician: 1
+	Breena, the Demagogue: 1
+O-Naginata
+	Isamaru, Hound of Konda: 7
+	Valduk, Keeper of the Flame: 8
+	Sram, Senior Edificer: 9
+	Balan, Wandering Knight: 9
+	Rograkh, Son of Rohgahh: 9
+Veteran Armorer
+	Baird, Argivian Recruiter: 2
+	Adeline, Resplendent Cathar: 2
+	God-Eternal Oketra: 3
+	Myrel, Shield of Argive: 3
+	Mangara of Corondor: 3
+Takenuma Bleeder
+	Kothophed, Soul Hoarder: 2
+	Yukora, the Prisoner: 3
+	Erebos, God of the Dead: 3
+	Ink-Eyes, Servant of Oni: 4
+	Mortarion, Daemon Primarch: 4
+Mage Duel
+	Wort, the Raidmother: 10
+	Errant, Street Artist: 14
+	Masumaro, First to Live: 24
+	Molimo, Maro-Sorcerer: 24
+	Anthousa, Setessan Hero: 32
+The Brute
+	Auntie Blyte, Bad Influence: 8
+	Lynde, Cheerful Tormentor: 9
+	Tahngarth, First Mate: 11
+	Light-Paws, Emperor's Voice: 22
+	Xenk, Paladin Unbroken: 23
+Nomad Mythmaker
+	Loran of the Third Path: 4
+	Abdel Adrian, Gorion's Ward: 5
+	Lin Sivvi, Defiant Hero: 5
+	Preston, the Vanisher: 5
+	Lena, Selfless Champion: 6
+Vicious Battlerager
+	Dee Kay, Finder of the Lost: 1
+	Monoxa, Midway Manager: 3
+	The Space Family Goblinson: 10
+	Balthor the Defiled: 11
+	Ihsan's Shade: 13
+Dictate of Erebos
+	Aphemia, the Cacophony: 10
+	Go-Shintai of Hidden Cruelty: 16
+	Lynde, Cheerful Tormentor: 32
+	Ghen, Arcanum Weaver: 36
+	Ramses Overdark: 39
+Lost Legion
+	Iname, Death Aspect: 7
+	Ascendant Evincar: 8
+	Narfi, Betrayer King: 9
+	Gisa and Geralf: 11
+	Skyfire Kirin: 13
+Fungal Sprouting
+	Molimo, Maro-Sorcerer: 23
+	Masumaro, First to Live: 27
+	Kogla and Yidaro: 35
+	Wort, the Raidmother: 38
+	Jerrard of the Closed Fist: 44
+Idyllic Tutor
+	Go-Shintai of Shared Purpose: 14
+	Daxos the Returned: 18
+	Aisha of Sparks and Smoke: 19
+	Gerrard Capashen: 28
+	Norika Yamazaki, the Poet: 29
+City of Traitors
+	Archelos, Lagoon Mystic: 5
+	Narset, Enlightened Master: 6
+	Child of Alara: 8
+	Kenrith, the Returned King: 9
+	Bell Borca, Spectral Sergeant: 9
+Scavenged Brawler
+	Brion Stoutarm: 2
+	Myojin of Roaring Blades: 3
+	Kolaghan, the Storm's Fury: 3
+	Katsumasa, the Animator: 4
+	Ashling the Pilgrim: 4
+Sporocyst
+	The Swarmlord: 1
+	Grakmaw, Skyclave Ravager: 1
+	Rosheen Meanderer: 1
+	Radha, Coalition Warlord: 1
+	Shalai and Hallar: 1
+Ancient Craving
+	Akuta, Born of Ash: 2
+	Xiahou Dun, the One-Eyed: 3
+	Shauku, Endbringer: 6
+	Kagemaro, First to Suffer: 7
+	Visara the Dreadful: 10
+Viashino Heretic
+	Okaun, Eye of Chaos: 3
+	Farideh, Devil's Chosen: 3
+	Zo-Zu the Punisher: 4
+	Monoxa, Midway Manager: 4
+	Rem Karolus, Stalwart Slayer: 5
+Priests of Norn
+	Sidar Kondo of Jamuraa: 5
+	Brimaz, Blight of Oreskos: 7
+	Skrelv, Defector Mite: 13
+	Samwise Gamgee: 16
+	Malcator, Purity Overseer: 16
+Ancient Ziggurat
+	Niv-Mizzet Reborn: 10
+	Kenrith, the Returned King: 12
+	Sol'Kanar the Tainted: 14
+	Child of Alara: 16
+	Sliver Queen: 16
+Fetid Heath
+	Kenrith, the Returned King: 11
+	Lady Evangela: 12
+	Sisay, Weatherlight Captain: 12
+	Yidris, Maelstrom Wielder: 13
+	Niv-Mizzet, Dracogenius: 15
+Izzet Cluestone
+	Linessa, Zephyr Mage: 3
+	Myojin of Roaring Blades: 4
+	Myojin of Seeing Winds: 4
+	Visara the Dreadful: 4
+	Eron the Relentless: 6
+Private Research
+	Rayne, Academy Chancellor: 1
+	Hakim, Loreweaver: 1
+	Callaphe, Beloved of the Sea: 2
+	Chisei, Heart of Oceans: 3
+	Ramses Overdark: 5
+Wing Splicer
+	Malcator, Purity Overseer: 1
+	Ich-Tekik, Salvage Splicer: 5
+	Pia and Kiran Nalaar: 5
+	Padeem, Consul of Innovation: 6
+	Urtet, Remnant of Memnarch: 7
+Hour of Reckoning
+	Temmet, Vizier of Naktamun: 6
+	Kasla, the Broken Halo: 23
+	Saint Traft and Rem Karolus: 24
+	Velomachus Lorehold: 25
+	Ulamog, the Ceaseless Hunger: 30
+Tervigon
+	The Swarmlord: 2
+	Rosheen Meanderer: 2
+	Shisato, Whispering Hunter: 2
+	Gargos, Vicious Watcher: 2
+	Zaxara, the Exemplary: 2
+Golden-Tail Disciple
+	Sythis, Harvest's Hand: 3
+	Daxos the Returned: 3
+	Mogis, God of Slaughter: 3
+	Anikthea, Hand of Erebos: 5
+	Hazezon Tamar: 5
+Incorrigible Youths
+	Heartless Hidetsugu: 1
+	Anje Falkenrath: 1
+	Strefan, Maurer Progenitor: 2
+	Olivia, Mobilized for War: 2
+	Anje, Maid of Dishonor: 2
+Boiling Blood
+	Vadrik, Astral Archmage: 5
+	Godo, Bandit Warlord: 6
+	Livaan, Cultist of Tiamat: 7
+	Feather, the Redeemed: 8
+	Kalamax, the Stormsire: 8
+Jaddi Offshoot
+	Arcades, the Strategist: 3
+	Rosheen Meanderer: 9
+	Trelasarra, Moon Dancer: 11
+	Titania, Protector of Argoth: 12
+	Nissa, Resurgent Animist: 13
+Portent of Betrayal
+	Starke of Rath: 2
+	Aisha of Sparks and Smoke: 2
+	Lu Bu, Master-at-Arms: 5
+	Etali, Primal Storm: 9
+	Syr Carah, the Bold: 12
+Frog Tongue
+	Thrun, Breaker of Silence: 2
+	Thrun, the Last Troll: 3
+	Stangg, Echo Warrior: 3
+	Isao, Enlightened Bushi: 3
+	Tatsunari, Toad Rider: 4
+Widespread Brutality
+	Magar of the Magic Strings: 8
+	Aisha of Sparks and Smoke: 10
+	Syr Carah, the Bold: 11
+	Axelrod Gunnarson: 13
+	The Scorpion God: 14
+Cemetery Puca
+	Atogatog: 1
+	Reaper King: 6
+	Teysa Karlov: 18
+	Sakashima of a Thousand Faces: 23
+	Raphael, Fiendish Savior: 27
+Halls of Mist
+	Monoxa, Midway Manager: 17
+	The Space Family Goblinson: 19
+	Farideh, Devil's Chosen: 23
+	Kros, Defense Contractor: 23
+	Garth One-Eye: 26
+Mass Polymorph
+	Empress Galina: 17
+	The Unspeakable: 20
+	Hidetsugu and Kairi: 25
+	Temmet, Vizier of Naktamun: 28
+	Zhulodok, Void Gorger: 59
+Immobilizing Ink
+	Rayne, Academy Chancellor: 2
+	Callaphe, Beloved of the Sea: 3
+	Hakim, Loreweaver: 6
+	Calix, Guided by Fate: 6
+	Bruna, Light of Alabaster: 8
+Boon Reflection
+	Ghen, Arcanum Weaver: 24
+	Regna, the Redeemer: 27
+	Bruna, Light of Alabaster: 30
+	Lynde, Cheerful Tormentor: 37
+	Light-Paws, Emperor's Voice: 39
+Rob the Archives
+	Syr Carah, the Bold: 2
+	Neheb, the Eternal: 2
+	Wort, the Raidmother: 2
+	Captain Ripley Vance: 2
+	Vadrik, Astral Archmage: 3
+Archmage Emeritus
+	Veyran, Voice of Duality: 2
+	Thassa, Deep-Dwelling: 2
+	Gandalf the Grey: 2
+	Barrin, Tolarian Archmage: 3
+	Rootha, Mercurial Artist: 3
+Mizzix's Mastery
+	Syr Carah, the Bold: 3
+	Mizzix, Replica Rider: 4
+	Aisha of Sparks and Smoke: 5
+	Errant, Street Artist: 7
+	Velomachus Lorehold: 8
+Druid of the Cowl
+	Rhys the Exiled: 1
+	Svella, Ice Shaper: 1
+	Harald, King of Skemfar: 1
+	Kamahl, Fist of Krosa: 1
+	Animar, Soul of Elements: 1
+Leyline of Lightning
+	Auntie Blyte, Bad Influence: 15
+	Zurzoth, Chaos Rider: 42
+	Zo-Zu the Punisher: 46
+	Karona, False God: 49
+	Rakka Mar: 52
+Mind Maggots
+	Sheoldred, Whispering One: 2
+	Skithiryx, the Blight Dragon: 3
+	Grist, the Hunger Tide: 3
+	Edgar Markov: 3
+	Iname, Death Aspect: 4
+Celestial Enforcer
+	Linvala, the Preserver: 2
+	Linden, the Steadfast Queen: 3
+	Orim, Samite Healer: 3
+	Heliod, Sun-Crowned: 3
+	Rhoda, Geist Avenger: 4
+Squee's Revenge
+	Okaun, Eye of Chaos: 4
+	Aisha of Sparks and Smoke: 4
+	Yusri, Fortune's Flame: 7
+	The Space Family Goblinson: 9
+	Vadrik, Astral Archmage: 9
+Dwynen's Elite
+	Dwynen, Gilt-Leaf Daen: 3
+	Rhys the Exiled: 4
+	Freyalise, Llanowar's Fury: 4
+	Ayula, Queen Among Bears: 4
+	Ezuri, Renegade Leader: 5
+Long Road Home
+	Neyali, Suns' Vanguard: 1
+	Mavinda, Students' Advocate: 1
+	Alirios, Enraptured: 2
+	Raff, Weatherlight Stalwart: 3
+	Zethi, Arcane Blademaster: 6
+Dirge Bat
+	Snapdax, Apex of the Hunt: 2
+	Otrimi, the Ever-Playful: 2
+	Cromat: 2
+	Safana, Calimport Cutthroat: 3
+	Kothophed, Soul Hoarder: 4
+Evolutionary Escalation
+	Kosei, Penitent Warlord: 7
+	Legolas, Master Archer: 14
+	Eutropia the Twice-Favored: 20
+	Satsuki, the Living Lore: 25
+	Thelon of Havenwood: 28
+Political Trickery
+	Empress Galina: 11
+	Hidetsugu and Kairi: 15
+	Go-Shintai of Lost Wisdom: 17
+	Bruvac the Grandiloquent: 21
+	Zedruu the Greathearted: 30
+Kaza, Roil Chaser
+	Ghyrson Starn, Kelermorph: 1
+	Donal, Herald of Wings: 1
+	Krark, the Thumbless: 1
+	Melek, Izzet Paragon: 1
+	Kari Zev, Skyship Raider: 1
+Power Matrix
+	Kurkesh, Onakke Ancient: 45
+	Rograkh, Son of Rohgahh: 49
+	Oswald Fiddlebender: 52
+	Myojin of Seeing Winds: 59
+	Jhoira, Weatherlight Captain: 67
+Incite Hysteria
+	Aisha of Sparks and Smoke: 8
+	Yuan Shao, the Indecisive: 10
+	Magar of the Magic Strings: 19
+	Syr Carah, the Bold: 20
+	Neheb, Dreadhorde Champion: 30
+Renegade Freighter
+	Depala, Pilot Exemplar: 2
+	Kotori, Pilot Prodigy: 3
+	Kurkesh, Onakke Ancient: 3
+	Sanwell, Avenger Ace: 4
+	Shorikai, Genesis Engine: 5
+Infernal Medusa
+	Grimgrin, Corpse-Born: 8
+	Geth, Lord of the Vault: 10
+	Razaketh, the Foulblooded: 10
+	Narfi, Betrayer King: 11
+	Hythonia the Cruel: 12
+Sixth Sense
+	Mirri, Cat Warrior: 1
+	Thrun, Breaker of Silence: 1
+	Isao, Enlightened Bushi: 1
+	Tatsunari, Toad Rider: 2
+	Kaima, the Fractured Calm: 3
+Feast of Dreams
+	Toshiro Umezawa: 5
+	Sarulf, Realm Eater: 8
+	Purraj of Urborg: 12
+	Vohar, Vodalian Desecrator: 14
+	Ertai, Wizard Adept: 16
+Mantle of the Ancients
+	Tiana, Ship's Caretaker: 1
+	Bruna, Light of Alabaster: 1
+	Danitha Capashen, Paragon: 1
+	Xenk, Paladin Unbroken: 1
+	Light-Paws, Emperor's Voice: 1
+Rise of the Hobgoblins
+	Lynde, Cheerful Tormentor: 52
+	Calix, Guided by Fate: 70
+	Light-Paws, Emperor's Voice: 78
+	Tuvasa the Sunlit: 83
+	Tatsunari, Toad Rider: 83
+Auriok Champion
+	Celestine, the Living Saint: 1
+	Ayli, Eternal Pilgrim: 1
+	Liesa, Shroud of Dusk: 1
+	Karlov of the Ghost Council: 1
+	Darien, King of Kjeldor: 1
+Qasali Slingers
+	Ishkanah, Grafwidow: 3
+	Kaheera, the Orphanguard: 3
+	Arahbo, Roar of the World: 3
+	Shelob, Child of Ungoliant: 6
+	Fangorn, Tree Shepherd: 8
+Deadbridge Goliath
+	Grist, the Hunger Tide: 2
+	Zask, Skittering Swarmlord: 2
+	Varolz, the Scar-Striped: 7
+	Nemata, Grove Guardian: 12
+	Stonebrow, Krosan Hero: 18
+Lavamancer's Skill
+	Lynde, Cheerful Tormentor: 6
+	Auntie Blyte, Bad Influence: 7
+	Tahngarth, First Mate: 14
+	Xenk, Paladin Unbroken: 20
+	Geist of Saint Traft: 21
+Toggo, Goblin Weaponsmith
+	Raphael, Fiendish Savior: 1
+	Grenzo, Dungeon Warden: 1
+	Rulik Mons, Warren Chief: 1
+	Inferno of the Star Mounts: 2
+	Krenko, Tin Street Kingpin: 2
+Garruk's Harbinger
+	Wulfgar of Icewind Dale: 1
+	Gwenna, Eyes of Gaea: 1
+	Ruxa, Patient Professor: 1
+	Kodama of the South Tree: 1
+	Myojin of Life's Web: 1
+Lunar Frenzy
+	Feather, the Redeemed: 4
+	Rosnakht, Heir of Rohgahh: 6
+	Vadrik, Astral Archmage: 12
+	Livaan, Cultist of Tiamat: 12
+	Godo, Bandit Warlord: 13
+Dazzling Sphinx
+	Unesh, Criosphinx Sovereign: 1
+	Donal, Herald of Wings: 3
+	Averna, the Chaos Bloom: 3
+	Tasha, the Witch Queen: 5
+	Farideh, Devil's Chosen: 5
+The Scarab God
+	Sauron, the Necromancer: 1
+	Taborax, Hope's Demise: 2
+	Gorex, the Tombshell: 2
+	Ulamog, the Ceaseless Hunger: 2
+	Kalitas, Bloodchief of Ghet: 2
+Oni-Cult Anvil
+	Firesong and Sunspeaker: 1
+	Sauron, the Lidless Eye: 1
+	Gallowbraid: 2
+	Magar of the Magic Strings: 2
+	Pia Nalaar: 2
+Burning Sun's Fury
+	Rosnakht, Heir of Rohgahh: 2
+	Feather, the Redeemed: 2
+	Livaan, Cultist of Tiamat: 2
+	Magnus the Red: 3
+	Tarox Bladewing: 3
+Drain Life
+	Magar of the Magic Strings: 11
+	Maga, Traitor to Mortals: 11
+	Erebos, God of the Dead: 19
+	Maralen of the Mornsong: 19
+	Hinata, Dawn-Crowned: 20
+Bitter Ordeal
+	Shauku, Endbringer: 18
+	Xiahou Dun, the One-Eyed: 58
+	Skithiryx, the Blight Dragon: 64
+	Toshiro Umezawa: 65
+	Akuta, Born of Ash: 65
+Smuggler Captain
+	Lorcan, Warlock Collector: 3
+	Tymaret, Chosen from Death: 3
+	Kagemaro, First to Suffer: 4
+	Ramirez DePietro, Pillager: 5
+	Josu Vess, Lich Knight: 5
+Boreal Griffin
+	Zuberi, Golden Feather: 3
+	Isu the Abominable: 3
+	Zeriam, Golden Wind: 5
+	Akroma, Vision of Ixidor: 7
+	Soraya the Falconer: 8
+Catalyst Stone
+	Mishra, Eminent One: 28
+	Rograkh, Son of Rohgahh: 32
+	Jhoira, Weatherlight Captain: 33
+	Ayesha Tanaka, Armorer: 34
+	Sydri, Galvanic Genius: 37
+Shepherd of Heroes
+	Akroma, Vision of Ixidor: 1
+	Lyra Dawnbringer: 1
+	Celestine, the Living Saint: 2
+	Giada, Font of Hope: 2
+	Avacyn, Angel of Hope: 2
+Notorious Assassin
+	Verrak, Warped Sengir: 2
+	Asmoranomardicadaistinaculdacar: 2
+	Chainer, Nightmare Adept: 3
+	Anje Falkenrath: 5
+	Lorcan, Warlock Collector: 5
+Rumbling Baloth
+	Illuna, Apex of Wishes: 3
+	Tawnos, the Toymaker: 4
+	Tolsimir, Friend to Wolves: 4
+	Brokkos, Apex of Forever: 5
+	Wulfgar of Icewind Dale: 8
+Raff, Weatherlight Stalwart
+	Kethis, the Hidden Hand: 1
+	Reveka, Wizard Savant: 1
+	Linvala, Shield of Sea Gate: 1
+	Orvar, the All-Form: 1
+	Sun Ce, Young Conquerer: 1
+Skyhunter Cub
+	Preston, the Vanisher: 3
+	Oyobi, Who Split the Heavens: 9
+	Loran of the Third Path: 13
+	Sigrid, God-Favored: 13
+	Kaheera, the Orphanguard: 13
+Distortion Strike
+	Hidetsugu and Kairi: 2
+	Empress Galina: 12
+	Maeve, Insidious Singer: 16
+	Svyelun of Sea and Sky: 17
+	Kopala, Warden of Waves: 17
+Dismantling Blow
+	Lulu, Loyal Hollyphant: 3
+	Go-Shintai of Shared Purpose: 5
+	Mavinda, Students' Advocate: 5
+	Ellyn Harbreeze, Busybody: 6
+	Wernog, Rider's Chaplain: 9
+Sawback Manticore
+	Mr. Orfeo, the Boulder: 3
+	Sethron, Hurloon General: 3
+	Nikya of the Old Ways: 3
+	Ishkanah, Grafwidow: 4
+	Grothama, All-Devouring: 4
+Demon of Dark Schemes
+	Taborax, Hope's Demise: 1
+	Drana, the Last Bloodchief: 1
+	Rakdos, the Showstopper: 1
+	Ob Nixilis of the Black Oath: 1
+	Abaddon the Despoiler: 1
+Neera, Wild Mage
+	Averna, the Chaos Bloom: 1
+	Faldorn, Dread Wolf Herald: 2
+	Arixmethes, Slumbering Isle: 3
+	Inferno of the Star Mounts: 4
+	Thassa, God of the Sea: 4
+Insatiable Appetite
+	Legolas, Master Archer: 6
+	Sarulf, Realm Eater: 13
+	The Howling Abomination: 13
+	Anthousa, Setessan Hero: 16
+	Multani, Yavimaya's Avatar: 28
+Grismold, the Dreadsower
+	Cazur, Ruthless Stalker: 1
+	Grismold, the Dreadsower: 1
+	Ixhel, Scion of Atraxa: 1
+	Slimefoot, the Stowaway: 1
+	Hapatra, Vizier of Poisons: 1
+Bladehold War-Whip
+	Kemba, Kha Regent: 1
+	Lu Bu, Master-at-Arms: 1
+	Jor Kadeen, First Goldwarden: 2
+	Kumano, Master Yamabushi: 2
+	Tahngarth, Talruum Hero: 3
+Cloakwood Swarmkeeper
+	Selvala, Heart of the Wilds: 1
+	Rocco, Cabaretti Caterer: 2
+	Yisan, the Wanderer Bard: 2
+	Thrasta, Tempest's Roar: 2
+	Fynn, the Fangbearer: 2
+Mirran Crusader
+	Preston, the Vanisher: 2
+	Aryel, Knight of Windgrace: 3
+	Lena, Selfless Champion: 4
+	Munda, Ambush Leader: 4
+	Mavinda, Students' Advocate: 4
+Territorial Allosaurus
+	Varolz, the Scar-Striped: 6
+	Nemata, Grove Guardian: 7
+	Gishath, Sun's Avatar: 10
+	Skanos Dragonheart: 10
+	Ivy, Gleeful Spellthief: 11
+Sheltering Boughs
+	Thrun, the Last Troll: 1
+	Autumn Willow: 1
+	Calix, Guided by Fate: 2
+	Sigarda, Host of Herons: 3
+	Siona, Captain of the Pyleas: 4
+Mortality Spear
+	Sarulf, Realm Eater: 2
+	Toshiro Umezawa: 3
+	Anthousa, Setessan Hero: 10
+	Kalamax, the Stormsire: 13
+	Baral, Chief of Compliance: 19
+Rescue
+	Vendilion Clique: 4
+	Taigam, Ojutai Master: 4
+	Circu, Dimir Lobotomist: 4
+	Naru Meha, Master Wizard: 4
+	Hurkyl, Master Wizard: 5
+Psychic Corrosion
+	Zellix, Sanity Flayer: 1
+	Bruvac the Grandiloquent: 2
+	Szadek, Lord of Secrets: 10
+	Elrond, Master of Healing: 14
+	Arjun, the Shifting Flame: 16
+Dream Tides
+	Tuvasa the Sunlit: 3
+	Estrid, the Masked: 4
+	Go-Shintai of Lost Wisdom: 6
+	Reveka, Wizard Savant: 8
+	Rayne, Academy Chancellor: 8
+Lizard Blades
+	Tahngarth, Talruum Hero: 1
+	Kemba, Kha Enduring: 1
+	Vikya, Scorching Stalwart: 1
+	Subira, Tulzidi Caravanner: 1
+	Atsushi, the Blazing Sky: 1
+Hangarback Walker
+	Meria, Scholar of Antiquity: 1
+	Ich-Tekik, Salvage Splicer: 1
+	Zabaz, the Glimmerwasp: 1
+	Arcum Dagsson: 2
+	Slobad, Iron Goblin: 2
+Tazri, Beacon of Unity
+	Tazri, Beacon of Unity: 1
+	Gandalf, White Rider: 1
+	Opal-Eye, Konda's Yojimbo: 1
+	Go-Shintai of Shared Purpose: 1
+	Gerrard Capashen: 1
+Rundvelt Hordemaster
+	Tuktuk the Explorer: 1
+	Purphoros, God of the Forge: 1
+	Patron of the Akki: 1
+	Krenko, Tin Street Kingpin: 1
+	Gut, True Soul Zealot: 1
+Heightened Awareness
+	Arjun, the Shifting Flame: 15
+	Ghen, Arcanum Weaver: 16
+	Gavi, Nest Warden: 21
+	Zellix, Sanity Flayer: 24
+	Hakim, Loreweaver: 29
+Blossoming Sands
+	Razia, Boros Archangel: 3
+	Child of Alara: 3
+	Ravos, Soultender: 3
+	Willowdusk, Essence Seer: 4
+	Treva, the Renewer: 4
+Jenara, Asura of War
+	Kaalia, Zenith Seeker: 1
+	Dromoka, the Eternal: 1
+	Giada, Font of Hope: 1
+	Jasmine Boreal of the Seven: 1
+	Silumgar, the Drifting Death: 1
+Favor of the Overbeing
+	Lynde, Cheerful Tormentor: 14
+	Geist of Saint Traft: 15
+	Bruna, Light of Alabaster: 18
+	Xenk, Paladin Unbroken: 19
+	Light-Paws, Emperor's Voice: 21
+Invigorating Hot Spring
+	Chishiro, the Shattered Blade: 4
+	Auntie Blyte, Bad Influence: 5
+	Stangg, Echo Warrior: 7
+	Kosei, Penitent Warlord: 8
+	Marhault Elsdragon: 9
+Solid Footing
+	Tiana, Ship's Caretaker: 3
+	Light-Paws, Emperor's Voice: 4
+	Geist of Saint Traft: 6
+	Killian, Ink Duelist: 7
+	Xenk, Paladin Unbroken: 8
+Time to Feed
+	Peregrin Took: 7
+	Masumaro, First to Live: 18
+	Molimo, Maro-Sorcerer: 21
+	Kogla and Yidaro: 26
+	Multani, Yavimaya's Avatar: 35
+Changeling Sentinel
+	Reaper King: 8
+	Atogatog: 12
+	Sakashima of a Thousand Faces: 20
+	Negan, the Cold-Blooded: 21
+	Lita, Mechanical Engineer: 22
+Gimli's Fury
+	Livaan, Cultist of Tiamat: 5
+	Zada, Hedron Grinder: 6
+	Captain Ripley Vance: 6
+	Feather, the Redeemed: 7
+	Vadrik, Astral Archmage: 10
+Ethercaste Knight
+	Tetsuko Umezawa, Fugitive: 1
+	Neyam Shai Murad: 1
+	Major Teroh: 1
+	Aryel, Knight of Windgrace: 1
+	Takeno, Samurai General: 1
+Aven Redeemer
+	Soraya the Falconer: 1
+	Preston, the Vanisher: 1
+	Oyobi, Who Split the Heavens: 3
+	Zeriam, Golden Wind: 3
+	Celestial Kirin: 3
+Cyclonic Rift
+	Zethi, Arcane Blademaster: 4
+	Mizzix of the Izmagnus: 4
+	Venser, Shaper Savant: 4
+	The Unspeakable: 4
+	Talrand, Sky Summoner: 5
+Ignorant Bliss
+	Zada, Hedron Grinder: 1
+	Vadrik, Astral Archmage: 2
+	Rosnakht, Heir of Rohgahh: 3
+	Feather, the Redeemed: 3
+	Captain Ripley Vance: 3
+Carpet of Flowers
+	Thrun, the Last Troll: 14
+	Thrun, Breaker of Silence: 15
+	Stangg, Echo Warrior: 15
+	Radha, Coalition Warlord: 20
+	Isao, Enlightened Bushi: 20
+Aragorn and Arwen, Wed
+	Gilanra, Caller of Wirewood: 1
+	Atalya, Samite Master: 1
+	Hamza, Guardian of Arashin: 1
+	Evra, Halcyon Witness: 1
+	Kodama of the West Tree: 1
+Ichor Rats
+	Skithiryx, the Blight Dragon: 5
+	Xun Yu, Wei Advisor: 8
+	Ghoulcaller Gisa: 8
+	Vishgraz, the Doomhive: 8
+	Torgaar, Famine Incarnate: 9
+Sea Sprite
+	Oona, Queen of the Fae: 1
+	Patron of the Moon: 3
+	Wydwen, the Biting Gale: 4
+	Zareth San, the Trickster: 4
+	Anowon, the Ruin Thief: 4
+Withering Gaze
+	Hidetsugu and Kairi: 12
+	Elrond, Master of Healing: 13
+	Tekuthal, Inquiry Dominus: 24
+	Kairi, the Swirling Sky: 24
+	Alhammarret, High Arbiter: 28
+Dark Favor
+	Aphemia, the Cacophony: 8
+	Ramses Overdark: 10
+	Lynde, Cheerful Tormentor: 10
+	Xenk, Paladin Unbroken: 15
+	Virtus the Veiled: 16
+Chasm Skulker
+	Zndrsplt, Eye of Wisdom: 1
+	Venser, Corpse Puppet: 1
+	Ghost of Ramirez DePietro: 1
+	Teysa Karlov: 2
+	Tekuthal, Inquiry Dominus: 2
+Weldfast Wingsmith
+	Geralf, Visionary Stitcher: 7
+	Captain Vargus Wrath: 8
+	Padeem, Consul of Innovation: 8
+	Glacian, Powerstone Engineer: 9
+	Sai, Master Thopterist: 9
+Thornglint Bridge
+	Kenrith, the Returned King: 1
+	Nevinyrral, Urborg Tyrant: 1
+	Parnesse, the Subtle Brush: 1
+	Tariel, Reckoner of Souls: 1
+	Razia, Boros Archangel: 1
+Temur War Shaman
+	Sachi, Daughter of Seshiro: 2
+	Sapling of Colfenor: 7
+	Bounteous Kirin: 7
+	Neyith of the Dire Hunt: 7
+	Gilanra, Caller of Wirewood: 8
+Psychosis Crawler
+	Adamaro, First to Desire: 5
+	Ormos, Archive Keeper: 12
+	Gerrard Capashen: 13
+	Syr Elenora, the Discerning: 14
+	Nin, the Pain Artist: 14
+Bubbling Muck
+	Maralen of the Mornsong: 9
+	Xiahou Dun, the One-Eyed: 21
+	Kokusho, the Evening Star: 44
+	Hidetsugu and Kairi: 49
+	Spirit of the Night: 52
+Planar Bridge
+	The Peregrine Dynamo: 38
+	Yoshimaru, Ever Faithful: 54
+	Rograkh, Son of Rohgahh: 59
+	Yomiji, Who Bars the Way: 61
+	Karn, Silver Golem: 63
+Celestial Ancient
+	Rashida Scalebane: 1
+	Sylvia Brightspear: 2
+	Ojutai, Soul of Winter: 3
+	Denry Klin, Editor in Chief: 3
+	Horde of Notions: 4
+Warbriar Blessing
+	Kosei, Penitent Warlord: 4
+	Calix, Guided by Fate: 5
+	Tatsunari, Toad Rider: 8
+	Stangg, Echo Warrior: 9
+	Eutropia the Twice-Favored: 9
+Meldweb Curator
+	Geralf, Visionary Stitcher: 6
+	Imoen, Mystic Trickster: 9
+	Sakashima the Impostor: 9
+	Kaza, Roil Chaser: 10
+	Rilsa Rael, Kingpin: 11
+Skitter Eel
+	Tekuthal, Inquiry Dominus: 5
+	Charix, the Raging Isle: 6
+	Myojin of Cryptic Dreams: 6
+	Rilsa Rael, Kingpin: 8
+	Experiment Kraj: 8
+Angelic Armaments
+	Mirri the Cursed: 12
+	Sram, Senior Edificer: 13
+	Nahiri, Forged in Fury: 14
+	Rograkh, Son of Rohgahh: 14
+	Kemba, Kha Regent: 15
+First Day of Class
+	Rosnakht, Heir of Rohgahh: 1
+	Vadrik, Astral Archmage: 1
+	Rielle, the Everwise: 1
+	Squee, Goblin Nabob: 1
+	Quintorius, Loremaster: 1
+Veteran Soldier
+	Geist of Saint Traft: 2
+	Daxos of Meletis: 2
+	Cho-Manno, Revolutionary: 4
+	Xenk, Paladin Unbroken: 5
+	Norika Yamazaki, the Poet: 5
+Subira, Tulzidi Caravanner
+	Kiki-Jiki, Mirror Breaker: 1
+	Inferno of the Star Mounts: 1
+	Captain Lannery Storm: 1
+	Jaxis, the Troublemaker: 1
+	Balthor the Stout: 1
+Mortal's Resolve
+	Legolas, Master Archer: 2
+	Sarulf, Realm Eater: 4
+	Anthousa, Setessan Hero: 4
+	The Howling Abomination: 5
+	Grunn, the Lonely King: 13
+Release to the Wind
+	Ertai, Wizard Adept: 4
+	Baral, Chief of Compliance: 5
+	Kairi, the Swirling Sky: 8
+	Ambassador Laquatus: 9
+	Talrand, Sky Summoner: 11
+Cavern-Hoard Dragon
+	Fumiko the Lowblood: 7
+	Gadrak, the Crown-Scourge: 9
+	Zirilan of the Claw: 9
+	Arni Metalbrow: 11
+	Lathliss, Dragon Queen: 13
+Reinterpret
+	Mizzix of the Izmagnus: 1
+	Godo, Bandit Warlord: 1
+	Gandalf the Grey: 1
+	Ertai, Wizard Adept: 2
+	Blind Seer: 2
