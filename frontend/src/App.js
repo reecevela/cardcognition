@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import DeckOptimizer from './components/DeckOptimizer';
+import DeckAnalyzer from './components/DeckAnalyzer';
 import DevDocs from './components/DevDocs';
 import ContactForm from './components/ContactForm';
 import BackToTopButton from './components/BackToTopButton';
@@ -16,11 +17,12 @@ function App() {
         <Routes>
           <Route path="/" element={(
             <>
-              <HeroSection />
+              {/*<HeroSection />*/}
               <DeckOptimizer />
             </>
           )} />
           <Route path="/commander/:name" element={<DeckOptimizer />} />
+          <Route path="/analyzer" element={<DeckAnalyzer />} />
           <Route path="/docs" element={<DevDocs />} />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>

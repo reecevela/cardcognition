@@ -50,7 +50,7 @@ nav ul {
 
 nav ul li {
   display: inline;
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 nav ul li a {
@@ -156,7 +156,6 @@ nav ul li a {
 .optimizer {
   background-color: #ffffff;
   padding: 2em;
-  margin-top: 2em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -169,7 +168,26 @@ nav ul li a {
   flex-direction: column;
 }
 
-.optimizer #commander, .button-random {
+.optimizer #machine-learning-form {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  height: 3em;
+}
+
+.optimizer #machine-learning-form label {
+  margin-right: 1em;
+}
+
+#machine-learning-form input {
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #000;
+  border-radius: 0.15em;
+  transform: translateY(0.25em)
+}
+
+.optimizer #commander, .button-random, .optimizer input[type="submit"], .optimizer textarea, .optimizer select, #machine-learning-form {
   width: clamp(220px, 90%, 800px);
 }
 
@@ -179,7 +197,7 @@ nav ul li a {
 }
 
 .optimizer input, .optimizer textarea, .optimizer select {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   padding: 0.5em;
   font-size: 1em;
   border: 2px solid #e5e5e5;

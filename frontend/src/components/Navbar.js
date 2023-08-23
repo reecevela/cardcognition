@@ -5,7 +5,8 @@ function Navbar() {
     return (
         <nav>
             <ul>
-                <li><Link to="/">Home</Link></li>
+                <li><Link to="/">Optimizer</Link></li>
+                <li><Link to="/analyzer">Analyzer</Link></li>
                 <li><Link to="/docs">Developers</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
             </ul>

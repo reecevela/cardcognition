@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, Component } from 'react';
 import { useParams } from 'react-router-dom';
+import Card from './Card';
 import useAutocomplete from '../hooks/useAutocomplete';
 import useSuggestions from '../hooks/useSuggestions';
 import useReductions from '../hooks/useReductions';
-import Card from './Card';
 import CommanderFacts from './CommanderFacts';
 
 function DeckOptimizer() {
@@ -12,6 +12,7 @@ function DeckOptimizer() {
     const [decklist, setDecklist] = useState("");
     const [cardCount, setCardCount] = useState(12);
     const [normalizedDecklist, setNormalizedDecklist] = useState("");
+    const [showDeckEntry, setShowDeckEntry] = useState(false);
 
     const { suggestions, isLoading } = useAutocomplete(commander);
     const { suggestions: cardSuggestions, fetchSuggestions } = useSuggestions(commander, 100);
@@ -19,6 +20,7 @@ function DeckOptimizer() {
     const { name: commanderFromUrl } = useParams(); // From the URL
 
     const commanderRef = useRef();
+    const initialized = useRef(false);
 
     const normalizeCardName = name => name.toLowerCase().replace(/[^a-z0-9]/g, '');
     const normalizeDecklist = list => list.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -90,19 +92,44 @@ function DeckOptimizer() {
             commanderRef.current.style.display = "none";
         }
     };
+    
+    const getRandomCommander = async () => {
+        const response = await fetch("https://api.cardcognition.com/random-commander");
+        const data = await response.json();
+        const randomCommander = data.commander_name;
+        setCommander(randomCommander);
+        await fetchSuggestions(randomCommander);
+        await fetchReductions(randomCommander);
+        setCardCount(12);
+        return data;
+    };
 
+    // init
+    useEffect(() => {
+        if (!commanderFromUrl && !initialized.current) {
+            initialized.current = true;
+            getRandomCommander();
+        }
+    }, []);
+    
     return (
         <section className="optimizer">
             <div className="deck-entry">
                 <h2>Deck Optimizer</h2>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="format">Format:</label>
-                    <select name="format" id="format" value={format} onChange={handleFormatChange}>
-                        <option value="commander">Commander</option>
-                        <option value="modern">Modern (Currently Unsupported)</option>
-                        <option value="legacy">Legacy (Currently Unsupported)</option>
-                    </select>
-                    <label htmlFor="commander">Commander:</label>
+                    {
+                        false && "not implemented yet" && (
+                            <>
+                            <label htmlFor="format">Format:</label>
+                            <select name="format" id="format" value={format} onChange={handleFormatChange}>
+                                <option value="commander">Commander</option>
+                                <option value="modern">Modern (Currently Unsupported)</option>
+                                <option value="legacy">Legacy (Currently Unsupported)</option>
+                            </select>
+                            </>
+                        )
+                    }
+                    <label htmlFor="commander">Enter any Commander:</label>
                     <div className="autocomplete">
                         <input 
                             list="commanders" 
@@ -124,31 +151,18 @@ function DeckOptimizer() {
                     <button 
                         type="button"
                         className='button-random'
-                        onClick={() => {
-                            const getRandomCommander = async () => {
-                                const response = await fetch("https://api.cardcognition.com/random-commander");
-                                const data = await response.json();
-                                const randomCommander = data.commander_name;
-                                setCommander(randomCommander);
-                                await fetchSuggestions(randomCommander);
-                                await fetchReductions(randomCommander);
-                                setCardCount(12);
-                                return data;
-                            };
-                            getRandomCommander();
-                        }}
+                        onClick={getRandomCommander}
                     >Pick Random Commander</button>
-                    <label htmlFor="decklist">Enter your deck list: (Optional)</label>
+                    <label htmlFor="decklist">Enter your Decklist: (Optional)</label>
                     <textarea 
                         name="decklist" 
                         id="decklist" 
                         cols="30" 
-                        rows="10" 
+                        rows={showDeckEntry ? 10 : 1} 
                         placeholder="Enter however you'd like: 1x Sol Ring, Sol Ring, 1 Sol Ring (1), etc." 
                         value={decklist} 
-                        onChange={(e) => setDecklist(e.target.value)}
+                        onChange={(e) => {setDecklist(e.target.value); (e.target.value !== "") ? setShowDeckEntry(true) : setShowDeckEntry(false);}}
                     ></textarea>
-                    <input type="submit" value="Generate" />
                 </form>
             </div>
             <div className="commander-facts">
@@ -157,7 +171,7 @@ function DeckOptimizer() {
                 )}
             </div>
             <div className="card-reductions">
-                {reductions.length > 0 && normalizedDecklist.length > 0 && (
+                {reductions.length > 0 && reductions.filter(([name]) => normalizedDecklist.includes(normalizeCardName(name))).length > 0 && (
                     <>
                     <h2>Card Reductions</h2>
                     <p>Here are cards in your deck that are less likely to be included in a {commander} deck than other commanders of the same color identity:</p>
