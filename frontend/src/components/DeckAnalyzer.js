@@ -6,9 +6,9 @@ import useAutocomplete from '../hooks/useAutocomplete';
 function DeckAnalyzer() {
     const [commander, setCommander] = useState("");
     const [card, setCard] = useState("");
-    const [decklist, setDecklist] = useState("");
-    const { suggestions, isLoading } = useAutocomplete(commander);
-    const { cardAutoSuggestions, isCardLoading } = useAutocomplete(card, false);
+    const [decklist, setDecklist] = useState([]);
+    const { suggestions: commanderAutoSuggestions, isLoading: isCommanderLoading } = useAutocomplete(commander);
+    const { suggestions: cardAutoSuggestions, isLoading: isCardLoading } = useAutocomplete(card, false);
 
     const commanderRef = useRef();
     const cardRef = useRef();
@@ -19,7 +19,7 @@ function DeckAnalyzer() {
 
     const handleCommanderInputBlur = async (e) => {
         // Set the commander to the most likely suggestion
-        const commanderSuggestions = suggestions.filter(
+        const commanderSuggestions = commanderAutoSuggestions.filter(
             (suggestion) => suggestion.toLowerCase().startsWith(commander.toLowerCase())
         );
     
@@ -27,21 +27,14 @@ function DeckAnalyzer() {
     
         if (commanderSuggestions.length > 0) {
             finalCommander = commanderSuggestions[0];
-        } else if (suggestions.length > 0) {
-            finalCommander = suggestions[0];
+        } else if (commanderAutoSuggestions.length > 0) {
+            finalCommander = commanderAutoSuggestions[0];
         }
     
         setCommander(finalCommander);
     };
 
-    const handleCommanderChange = (e) => {
-        setCommander(e.target.value);
-    };
-
-    const handleCardChange = (e) => {
-        setCard(e.target.value);
-    };
-
+    
     const handleCardInputBlur = async (e) => {
         // Set the card to the most likely suggestion
         const cardSuggestions = cardAutoSuggestions.filter(
@@ -51,14 +44,22 @@ function DeckAnalyzer() {
         let finalCard = card;
 
         if (cardSuggestions.length > 0) {
-            finalCard = cardAutoSuggestions[0];
-        } else if (suggestions.length > 0) {
+            finalCard = cardSuggestions[0];
+        } else if (cardAutoSuggestions.length > 0) {
             finalCard = cardAutoSuggestions[0];
         }
 
-        setCard(finalCard);
+        setCard("");
 
-        setDecklist(decklist + "\n" + finalCard);
+        setDecklist([...decklist, finalCard]);
+    };
+
+    const handleCommanderChange = (e) => {
+        setCommander(e.target.value);
+    };
+
+    const handleCardChange = (e) => {
+        setCard(e.target.value);
     };
 
     return (
@@ -94,21 +95,15 @@ function DeckAnalyzer() {
                             onKeyDown={(e) => { if (e.keyCode === 13) handleCardInputBlur(e); }}
                         />
                         <datalist id="cards">
-                            {cardAutoSuggestions.map((suggestion, index) => (
+                            {cardAutoSuggestions && cardAutoSuggestions.map((suggestion, index) => (
                                 <option value={suggestion} key={index} />
                             ))}
                         </datalist>
                     </div>
-                    <label htmlFor="decklist">Enter your Decklist:</label>
-                    <textarea 
-                        name="decklist" 
-                        id="decklist" 
-                        cols="30" 
-                        rows="10"
-                        placeholder="Enter however you'd like: 1x Sol Ring, Sol Ring, 1 Sol Ring (1), etc." 
-                        value={decklist} 
-                        onChange={(e) => setDecklist(e.target.value)}
-                    ></textarea>
+                    <label htmlFor="decklist">Your Decklist:</label>
+                    {decklist && decklist.map((card, index) => (
+                        <div key={index} className=''>{card}</div>
+                    ))}
                     <input type="submit" value="Submit" />
                 </form>
             </div>
