@@ -2,10 +2,12 @@ import React, { useState, useRef, useEffect, Component } from 'react';
 import { useParams } from 'react-router-dom';
 import Card from './Card';
 import useAutocomplete from '../hooks/useAutocomplete';
+import formatCommanderName from '../helpers/formatCommanderName';
 
 function DeckAnalyzer() {
     const [commander, setCommander] = useState("");
     const [card, setCard] = useState("");
+    const [cardsData, setCardsData] = useState([]);
     const [decklist, setDecklist] = useState([]);
     const { suggestions: commanderAutoSuggestions, isLoading: isCommanderLoading } = useAutocomplete(commander);
     const { suggestions: cardAutoSuggestions, isLoading: isCardLoading } = useAutocomplete(card, false);
@@ -15,6 +17,42 @@ function DeckAnalyzer() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (commander == "") {
+            return;
+        }
+
+        // const commander = "Urza, Lord High Artificer"
+
+        const formattedCommander = formatCommanderName(commander);
+
+        const cardsInfo = await fetch(`https://localhost:5000/analyze/${encodeURIComponent(formattedCommander)}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: {
+                "values": {
+                    "cards": decklist /*
+                    "cards": [
+                        "Sol Ring",
+                        "Mana Crypt",
+                        "Mana Vault",
+                        "Mox Opal",
+                        "Waste Not",
+                        "Necropotence",
+                        "Lightning Bolt",
+                        "Greater Gargadon",
+                        "Doomsday",
+                        "Honor of the Pure",
+                        "Swords to Plowshares",
+                        "Mystical Tutor",
+                        "Cyclonic Rift", */
+                }
+            }
+        });
+
+        setCardsData(await cardsInfo.json());
     }
 
     const handleCommanderInputBlur = async (e) => {
@@ -107,6 +145,7 @@ function DeckAnalyzer() {
                     <input type="submit" value="Submit" />
                 </form>
             </div>
+            <div>{cardsData}</div>
         </section>
     )
 }

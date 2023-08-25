@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from urllib.parse import urlparse, unquote
 from pathlib import Path
@@ -6,6 +6,17 @@ import psycopg2
 import os
 from dotenv import load_dotenv
 import random
+
+from ml_scripts.card_fetcher import CardsContext
+from ml_scripts.converter import MLConverter
+from ml_scripts.card_embedder import CardEmbedder
+from ml_scripts.card_parser import CardParser
+import joblib
+
+ml_db = CardsContext()
+ml_converter = MLConverter()
+ml_card_embedder = CardEmbedder()
+ml_card_parser = CardParser()
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(os.path.join(BASE_DIR, '.env'))
@@ -266,6 +277,64 @@ def get_card(card_name):
         "prices": data[10],
         "edhrec_rank": data[11]
     }), 200
+
+@app.route('/analyze/<raw_commander_name>', methods=['POST'])
+def analyze(raw_commander_name):
+    print(raw_commander_name)
+    content_type = request.headers.get('Content-Type')
+    print(request)
+    print(request.headers)
+    print(content_type)
+    if (content_type != 'application/json'):
+        return 'Content-Type not supported!'
+    json = request.json
+
+    print(json)
+    
+    cur.execute("""
+        SELECT cmd.card_name
+        FROM edhrec_commanders cmd
+        WHERE cmd.name = %s
+    """, (raw_commander_name,))
+
+    commander_name = cur.fetchone()[0]
+
+    print(cur.fetchone())
+
+    if not commander_name:
+        return jsonify({"error": "Commander not found."}), 404
+    
+    print(commander_name)
+    req_cards = json
+    cards = ml_db.get_related_cards_from_commander_name(commander_name)
+    cards = [card for card in cards if card['card_name'] in req_cards]
+
+    for card_name in req_cards:
+        if card_name not in [card['card_name'] for card in cards]:
+            card = ml_db.get_card_by_name(card_name)
+            if card:
+                cards.append(card)
+
+    embeddings = ml_card_embedder.embed_and_parse_cards(cards, testing=True)
+    formatted_name = ml_converter.sanitize_filename(commander_name)
+    commander_model = joblib.load(f"ml_scripts/cmd_models/{formatted_name}.joblib")
+
+    scores = {card['card_name']: 0 for card in cards}
+    parsed_cards = [ml_card_parser.parse_card(card) for card in cards]
+    
+    for i, card in enumerate(cards):
+        try:
+            if i % 1000 == 0:
+                print(f"Scoring {i} of {len(cards)}")
+            card_embedding = embeddings[i]
+            if card_embedding is None:
+                continue
+            score = round(commander_model.predict([card_embedding])[0], 2)
+            scores[card['card_name']] = score
+        except Exception as e:
+            continue
+    
+    return jsonify({"scores": scores, "parsed_cards": parsed_cards}), 200
     
 
 if __name__ == '__main__':

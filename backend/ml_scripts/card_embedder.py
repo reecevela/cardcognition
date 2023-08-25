@@ -1,7 +1,7 @@
-from card_reducer import CardReducer
-from converter import MLConverter
-from card_fetcher import CardsContext
-from card_parser import CardParser
+from ml_scripts.card_reducer import CardReducer
+from ml_scripts.converter import MLConverter
+from ml_scripts.card_fetcher import CardsContext
+from ml_scripts.card_parser import CardParser
 import json
 import time
 import numpy as np
@@ -19,7 +19,7 @@ class CardEmbedder:
         super_types, card_types, sub_types = self.context.get_all_card_types_and_sub_types()
 
         validation_set = None
-        with open("validation_set.json", "r") as f:
+        with open("ml_scripts/validation_set.json", "r") as f:
             validation_set = json.load(f)
         
         cards = self.context.get_all_cards()
@@ -46,7 +46,7 @@ class CardEmbedder:
 
         self.default_embedding_shape = ""#self.text_embedder(["Legendary Creature — Elf Warrior"]).shape
 
-        with open("config.json", "r") as f:
+        with open("ml_scripts/config.json", "r") as f:
             config = json.load(f)
 
         self.min_count = config.get("min_count", 5)

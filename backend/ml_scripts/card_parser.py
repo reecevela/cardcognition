@@ -1,6 +1,6 @@
 import re
 import json
-from converter import MLConverter
+from ml_scripts.converter import MLConverter
 
 class CardParser:
     def __init__(self):

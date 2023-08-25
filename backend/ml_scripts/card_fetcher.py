@@ -3,7 +3,7 @@ import psycopg2
 import os
 import json
 from dotenv import load_dotenv
-from converter import MLConverter
+from ml_scripts.converter import MLConverter
 
 class CardsContext:
     def __init__(self):
@@ -21,7 +21,7 @@ class CardsContext:
         )
         self.cur = self.conn.cursor()
 
-        with open('config.json', 'r') as f:
+        with open('ml_scripts/config.json', 'r') as f:
             self.config = json.load(f)
 
     # DB Columns and example data but in JSON format for readability:
@@ -118,6 +118,19 @@ class CardsContext:
         """, (self.config['min_num_decks'],))
         return [{'commander_id': row[0], 'card_id': row[1], 'percentage': row[2], 'synergy_score': row[3]} for row in self.cur.fetchall()]
 
+    def get_related_cards_from_commander_name(self, commander_name:str) -> list:
+        self.cur.execute("""
+            SELECT ec.card_id, ec.percentage, ec.num_decks, ec.synergy_score, sc.*
+            FROM edhrec_cards ec
+            INNER JOIN scryfall_cards sc ON ec.card_id = sc.id
+            WHERE ec.commander_id = (
+                SELECT id FROM edhrec_commanders
+                WHERE card_name = %s
+            )
+            AND sc.commander_legal = true
+            ORDER BY ec.card_id ASC;
+        """, (commander_name,))
+        return self.fetch_list_of_dicts(self.cur)
 
     def get_commanders(self) -> list:
         self.cur.execute("""
@@ -206,6 +219,17 @@ class CardsContext:
             WHERE sc.id = ANY(%s)
         """, (commander_ids,))
         return self.fetch_list_of_dicts(self.cur)
+
+    def get_card_by_name(self, card_name:str) -> dict:
+        self.cur.execute("""
+            SELECT * FROM scryfall_cards
+            WHERE card_name = %s
+            AND commander_legal = true
+            ORDER BY id ASC
+        """, (card_name,))
+        if self.cur.rowcount == 0:
+            return None
+        return self.fetch_list_of_dicts(self.cur)[0]
     
     def get_id_by_name(self, card_name:str) -> int:
         self.cur.execute("""
