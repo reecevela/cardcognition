@@ -1,6 +1,9 @@
 import re
 import json
-from ml_scripts.converter import MLConverter
+try:
+    from ml_scripts.converter import MLConverter
+except Exception as e:
+    from converter import MLConverter
 
 class CardParser:
     def __init__(self):
@@ -41,7 +44,10 @@ class CardParser:
             "very_high_cmc": ["cmc:9", "cmc:10", "cmc:11", "cmc:12", "cmc:13", "cmc:14", "cmc:15", "cmc:16", "cmc:17", "cmc:18", "cmc:19", "cmc:20"],
         }
         self.vanilla_keywords = [
-            "Deathtouch", "Defender", "Double strike", "First strike", "Flash", "Flying", "Haste", "Hexproof", "Indestructible", "Lifelink", "Menace", "Reach", "Trample", "Vigilance", "Shroud", "Protection", "Cascade"
+            "deathtouch", "defender", "double strike", "first strike", "flash", "flying", "haste", "hexproof", "indestructible", "lifelink", "menace", "reach", "trample", "vigilance", "shroud", "protection", "cascade", "split second", "flash", "madness", "morph", "megamorph", "miracle"
+        ]
+        self.trigger_keywords = [
+            "when", "at", "whenever"
         ]
         self.card_features = {
             "alternate_casting": ["without paying its mana cost", ["you may pay", "rather than", "cost"], ["cast this spell for", "rather"], ["your library", "onto the battlefield"]],
@@ -117,67 +123,7 @@ class CardParser:
             "evasion": ["CARDNAME can't block"],
             "artifacts_matter": ["nonartifact"],
         }
-        self.initial_verbs = [
-            "Search", "Choose", "Put", "Create", "Return", "Destroy", "Exile", "Sacrifice", "Discard", "Tap", "Untap", "Gain", "Lose", "Draw", "Shuffle", "Scry", "Reveal", "Counter", "You may", "Roll", "Each", "Target", "CARDNAME deals", "Return", "Add", "Each opponen"
-        ]
         self.converter = MLConverter()
-    
-    def parse_abilities(self, oracle_text):
-        abilities = []
-        if oracle_text is None:
-            return abilities
-        # Remove reminder text in parentheses
-        oracle_text = re.sub(r"\([^)]+\)", "", oracle_text)
-        ability_parts = oracle_text.split("\n")
-        for part in ability_parts:
-            costs, _, effects = part.partition(":")
-            costs = re.findall(r"\{[^\}]+\}", costs)
-            if costs and effects:
-                effects_list = [effect.strip() for effect in effects.split(".")]
-                effects_list = [effect for effect in effects_list if effect != "" and effect != " "]
-                abilities.append([costs, effects_list])
-        return abilities
-    
-    def parse_effects(self, oracle_text, type_line:None):
-        effects = []
-
-        if oracle_text is None:
-            return effects
-
-        # Remove reminder text in parentheses
-        oracle_text = re.sub(r"\([^)]+\)", "", oracle_text)
-
-        if oracle_text is None:
-            return effects
-
-        if 'Instant' in type_line or 'Sorcery' in type_line:
-            if "—" in type_line:
-                type_line = type_line.split('—')[1]
-            effects = oracle_text.split('\n')
-            effects = [["CAST", effect.strip()] for effect in effects if effect != "" and effect != " "]
-            return effects
-
-        # Replace "At...," phrases with "OPT,"
-        oracle_text = re.sub(r"At [^,]+,", "OPT,", oracle_text)
-
-        # Define patterns that indicate a triggered effect
-        patterns = [
-            (r"Whenever ([^\.]+), ([^\.]+)\.", 2),
-            (r"When ([^\.]+), ([^\.]+)\.", 2),
-            (r"OPT, ([^\.]+)\.", 1)
-        ]
-
-        for pattern, group_count in patterns:
-            matches = re.findall(pattern, oracle_text)
-            for match in matches:
-                if group_count == 2:
-                    condition, effect = match
-                elif group_count == 1:
-                    condition = "OPT"
-                    effect = match
-                effects.append([condition, effect])
-
-        return effects
     
     def parse_properties(self, card):
         properties = set()
@@ -242,55 +188,113 @@ class CardParser:
         return list(properties)
     
     def parse_card(self, card):
-        abilities = self.parse_abilities(card.get("oracle_text", ""))
-        effects = self.parse_effects(card.get("oracle_text", ""), card.get("type_line", ""))
+        abilities = card["oracle_text"].split("\n")
+
+        keywords = []
+        triggered_abilities = []
+        activated_abilities = []
+        loyalty_abilities = []
+        replacement_effects = []
+        modes = {
+            "count": None,
+            "modes": []
+        }
+        static_abilities = []
+
+        for ability in abilities:
+            ability = ability.lower()
+            first_word = ""
+            i = 0
+            for i in range(len(ability)):
+                if ability[i] == " " or ability[i] == ",":
+                    break
+                first_word += ability[i]
+
+            if first_word in self.vanilla_keywords:
+                keywords = ability.split(", ")
+                continue
+            elif first_word in self.trigger_keywords:
+                out = []
+                if first_word == "at":
+                    # at the beginning of your postcombat main phase,
+                    # -> postcombat main phase
+                    target = " ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[:-1])
+                    if not target.startswith("your"):
+                        out.append(" ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[:2]))
+                        out.append(ability.split(",")[0].split("beginning of ")[1].split(" ")[2:])
+                    else:
+                        out.append(ability.split(",")[0].split("beginning of ")[1].split(" ")[0])
+                        out.append(" ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[1:]))
+                    out.append(", ".join(ability.split(", ")[1:]))
+                elif first_word.startswith("whenever"):
+                    out.append(ability.split(",")[0].replace("whenever ", ""))
+                    out.append(", ".join(ability.split(", ")[1:]))
+                else:
+                    # when CARDNAME enters the battlefield, you may draw a card
+                    # -> CARDNAME enters the battlefield, you may draw a card
+                    out.append(ability.split(",")[0].replace("when ", ""))
+                    out.append(", ".join(ability.split(", ")[1:]))
+                triggered_abilities.append(out)
+                continue
+            elif ability[0] in ["+", "\u2212", "0"]:
+                loyalty_abilities.append(ability)
+                continue
+            elif ":" in ability and ability.index(":") < ability.index("."):
+                activated_abilities.append({"cost": ability.split(":")[0], "effect": ability.split(": ")[1]})
+                continue
+            elif "instead" in ability.lower():
+                replacement_effects.append(ability)
+                continue
+            elif "choose" in ability.lower() and "\u2014" in ability and ability.index("\u2014") > ability.index("choose"):
+                modes['count'] = ability.replace("choose ", "").split(" \u2014")[0]
+                continue
+            elif ability.startswith("\u2022"):
+                modes['modes'].append(ability.replace("\u2022 ", ""))
+                continue
+            else:
+                static_abilities.append(ability)
+                continue
+        
         properties = self.parse_properties(card)
-        return {"name": card.get('card_name'), "abilities": abilities, "effects": effects, "properties": properties}
+        if len(modes['modes']) == 0:
+            modes = None
+        return {"name": card.get('card_name'), "keywords": keywords, "triggered_abilities": triggered_abilities, "activated_abilities": activated_abilities, "loyalty_abilities": loyalty_abilities, "replacement_effects": replacement_effects, "static_abilities": static_abilities, "modes": modes, "properties": properties}
 
 if __name__ == "__main__":
     
     parser = CardParser()
+    from card_fetcher import CardsContext
 
-    card_data = [
-        {
-            "card_name": "Aetherworks Marvel",
-            "oracle_text": "Whenever a permanent you control is put into a graveyard, you get {E} (an energy counter).\n{T}, Pay {E}{E}{E}{E}{E}{E}: Look at the top six cards of your library. You may cast a spell from among them without paying its mana cost. Put the rest on the bottom of your library in a random order.",
-            "cmc": 4,
-            "mana_cost": "{4}",
-            "type_line": "Legendary Artifact"
-        },
-        {
-            "card_name": "Cancel",
-            "oracle_text": "Counter target spell.",
-            "type_line": "Instant",
-            "cmc": 3,
-            "mana_cost": "{1}{U}{U}"
-        },
-        {
-            "card_name": "Lair of the Hydra",
-            "oracle_text": "If you control two or more other lands, CARDNAME enters the battlefield tapped.\n{T}: Add {G}.\n{X}{G}: Until end of turn, CARDNAME becomes an X/X green Hydra creature. It's still a land. X can't be 0.",
-            "type_line": "Land — Forest",
-            "cmc": 0,
-            "mana_cost": ""
-        },
-        {
-            "card_name": "Phyrexian Arena",
-            "oracle_text": "At the beginning of your upkeep, you draw a card and you lose 1 life.",
-            "type_line": "Enchantment",
-            "cmc": 3,
-            "mana_cost": "{1}{B}{B}"
-        }
+    cards_to_parse = [
+        "Acererak the Archlich",
+        "Atraxa, Praetors' Voice",
+        "Baleful Strix",
+        "Aetherworks Marvel",
+        "Lair of the Hydra",
+        "Baba Lysaga, Night Witch",
+        "Chandra, Awakened Inferno",
+        "Teferi, Hero of Dominaria",
+        "Grixis Charm",
+        "Stasis",
+        "Sphinx of the Second Sun",
+        "Gift of Immortality",
+        "Mythos of Nethroi",
+        "Terminus",
+        "Soulherder",
+        "Pact of Negation",
+        "Soulfire Grand Master",
+        "Soulfire Eruption",
+        "Tragic Arrogance",
+        "Preordain",
+        "Wishclaw Talisman",
+        "Wheel of Fortune",
     ]
 
-    parsed_data = [parser.parse_card(card) for card in card_data]
-    print(json.dumps(parsed_data, indent=4))
-
-    from card_fetcher import CardsContext
-    import random
     db = CardsContext()
-    cards = db.get_all_cards()
-    rand_index = random.randint(0, len(cards) - 30)
+    card_data = [db.get_card_by_name(card_name) for card_name in cards_to_parse]
 
-    parsed_data = [[parser.parse_card(card), card.get('oracle_text')] for card in cards[rand_index:rand_index+30]]
+    parsed_data = [parser.parse_card(card) for card in card_data]
+    print(json.dumps(parsed_data, indent=2))
+
     with open("parsed_data.json", "w") as f:
         json.dump(parsed_data, f, indent=2)

@@ -3,7 +3,10 @@ import psycopg2
 import os
 import json
 from dotenv import load_dotenv
-from ml_scripts.converter import MLConverter
+try: 
+    from ml_scripts.converter import MLConverter
+except ModuleNotFoundError:
+    from converter import MLConverter
 
 class CardsContext:
     def __init__(self):
