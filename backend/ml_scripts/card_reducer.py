@@ -61,10 +61,12 @@ class CardReducer:
                     self.seen_properties[property] = 0
                 self.seen_properties[property] += 1
         except Exception as e:
-            print(card)
-            print(e)
+            # print(card)
+            # print(e)
+            pass
 
     def _reduce_card(self, card, min_count=2):
+        return card
         # Filter subtype out if not mentioned min_count times in effects, triggers, or abilities etc
         # Subtypes start with SUB_
         subtypes = [prop for prop in card['properties'] if prop.startswith('SUB_')]

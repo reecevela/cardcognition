@@ -24,8 +24,12 @@ class CardsContext:
         )
         self.cur = self.conn.cursor()
 
-        with open('ml_scripts/config.json', 'r') as f:
-            self.config = json.load(f)
+        try:
+            with open('config.json', 'r') as f:
+                self.config = json.load(f)
+        except:
+            with open('ml_scripts/config.json', 'r') as f:
+                self.config = json.load(f)
 
     # DB Columns and example data but in JSON format for readability:
     # edhrec_commanders table

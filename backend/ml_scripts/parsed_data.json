@@ -1,707 +1,582 @@
 [
-  [
-    {
-      "name": "Avoid Fate",
-      "abilities": [],
-      "effects": [
-        [
-          "CAST",
-          "Counter target instant or Aura spell that targets a permanent you control."
-        ]
+  {
+    "card_name": "Acererak the Archlich",
+    "keywords": [],
+    "triggered_abilities": [
+      [
+        "cardname enters the battlefield",
+        "if you haven't completed tomb of annihilation, return cardname to its owner's hand and venture into the dungeon."
       ],
-      "properties": [
-        "TYP_Instant",
-        "counterspells",
-        "aura",
-        "1cmc",
-        "green"
+      [
+        "cardname attacks",
+        "for each opponent, you create a 2/2 black zombie creature token unless that player sacrifices a creature."
+      ]
+    ],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": null,
+    "properties": [
+      "SUP_Legendary",
+      "high_power",
+      "TYP_Creature",
+      "death",
+      "SUB_Wizard",
+      "combat_trigger",
+      "creatures_matter",
+      "ETB",
+      "SUB_Zombie",
+      "black",
+      "trigger_once",
+      "mid_cmc",
+      "repeat_trigger",
+      "high_toughness"
+    ]
+  },
+  {
+    "card_name": "Atraxa, Praetors' Voice",
+    "keywords": [
+      "flying",
+      "vigilance",
+      "deathtouch",
+      "lifelink"
+    ],
+    "triggered_abilities": [
+      [
+        "your",
+        "end step",
+        "proliferate. (choose any number of permanents and/or players, then give each another counter of each kind already there.)"
+      ]
+    ],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": null,
+    "properties": [
+      "SUB_Horror",
+      "SUP_Legendary",
+      "TYP_Creature",
+      "deathtouch",
+      "blue",
+      "evasion",
+      "vigilance",
+      "white",
+      "mid_toughness",
+      "SUB_Angel",
+      "lifelink",
+      "mid_power",
+      "black",
+      "counters",
+      "mid_cmc",
+      "SUB_Phyrexian",
+      "green"
+    ]
+  },
+  {
+    "card_name": "Baleful Strix",
+    "keywords": [
+      "flying",
+      "deathtouch"
+    ],
+    "triggered_abilities": [
+      [
+        "cardname enters the battlefield",
+        "draw a card."
+      ]
+    ],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": null,
+    "properties": [
+      "TYP_Creature",
+      "deathtouch",
+      "SUB_Bird",
+      "1toughness",
+      "blue",
+      "2cmc",
+      "ETB",
+      "evasion",
+      "TYP_Artifact",
+      "black",
+      "1power",
+      "trigger_once"
+    ]
+  },
+  {
+    "card_name": "Aetherworks Marvel",
+    "keywords": [],
+    "triggered_abilities": [
+      [
+        "a permanent you control is put into a graveyard",
+        "you get {e} (an energy counter)."
+      ]
+    ],
+    "activated_abilities": [
+      {
+        "cost": "{t}, pay {e}{e}{e}{e}{e}{e}",
+        "effect": "look at the top six cards of your library. you may cast a spell from among them without paying its mana cost. put the rest on the bottom of your library in a random order."
+      }
+    ],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": null,
+    "properties": [
+      "SUP_Legendary",
+      "alternate_casting",
+      "TYP_Artifact",
+      "mid_cmc",
+      "repeat_trigger"
+    ]
+  },
+  {
+    "card_name": "Lair of the Hydra",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [
+      {
+        "cost": "{t}",
+        "effect": "add {g}."
+      },
+      {
+        "cost": "{x}{g}",
+        "effect": "until end of turn, cardname becomes an x/x green hydra creature. it's still a land. x can't be 0."
+      }
+    ],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "if you control two or more other lands, cardname enters the battlefield tapped."
+    ],
+    "modes": null,
+    "properties": [
+      "ramp",
+      "lands_matter",
+      "tap",
+      "0cmc",
+      "TYP_Land",
+      "ETB"
+    ]
+  },
+  {
+    "card_name": "Baba Lysaga, Night Witch",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [
+      {
+        "cost": "{t}, sacrifice up to three permanents",
+        "effect": "if there were three or more card types among the sacrificed permanents, each opponent loses 3 life, you gain 3 life, and you draw three cards."
+      }
+    ],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": null,
+    "properties": [
+      "SUB_Human",
+      "SUP_Legendary",
+      "mid_toughness",
+      "TYP_Creature",
+      "card_advantage",
+      "mid_power",
+      "black",
+      "mid_cmc",
+      "SUB_Warlock",
+      "life_gain",
+      "green"
+    ]
+  },
+  {
+    "card_name": "Chandra, Awakened Inferno",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [
+      "+2: each opponent gets an emblem with \"at the beginning of your upkeep, this emblem deals 1 damage to you.\"",
+      "\u22123: cardname deals 3 damage to each non-elemental creature.",
+      "\u2212x: cardname deals x damage to target creature or planeswalker. if a permanent dealt damage this way would die this turn, exile it instead."
+    ],
+    "replacement_effects": [],
+    "static_abilities": [
+      "this spell can't be countered."
+    ],
+    "modes": null,
+    "properties": [
+      "targeted_interaction",
+      "SUP_Legendary",
+      "TYP_Planeswalker",
+      "high_cmc",
+      "red",
+      "protection",
+      "SUB_Chandra",
+      "damage"
+    ]
+  },
+  {
+    "card_name": "Teferi, Hero of Dominaria",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [
+      "+1: draw a card. at the beginning of the next end step, untap up to two lands.",
+      "\u22123: put target nonland permanent into its owner's library third from the top.",
+      "\u22128: you get an emblem with \"whenever you draw a card, exile target permanent an opponent controls.\""
+    ],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": null,
+    "properties": [
+      "targeted_interaction",
+      "SUP_Legendary",
+      "TYP_Planeswalker",
+      "blue",
+      "SUB_Teferi",
+      "high_cmc",
+      "untap",
+      "repeat_trigger",
+      "white"
+    ]
+  },
+  {
+    "card_name": "Grixis Charm",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": {
+      "count": "one",
+      "modes": [
+        "return target permanent to its owner's hand.",
+        "target creature gets -4/-4 until end of turn.",
+        "creatures you control get +2/+0 until end of turn."
       ]
     },
-    "Counter target instant or Aura spell that targets a permanent you control."
-  ],
-  [
-    {
-      "name": "Blade of the Oni",
-      "abilities": [],
-      "effects": [],
-      "properties": [
-        "SUB_Equipment",
-        "menace",
-        "SUB_Demon",
-        "black",
-        "1toughness",
-        "mid_power",
-        "TYP_Artifact",
-        "2cmc",
-        "TYP_Creature"
+    "properties": [
+      "TYP_Instant",
+      "blue",
+      "red",
+      "bounce",
+      "black",
+      "mid_cmc",
+      "power_boost"
+    ]
+  },
+  {
+    "card_name": "Stasis",
+    "keywords": [],
+    "triggered_abilities": [
+      [
+        "your",
+        "upkeep",
+        "sacrifice cardname unless you pay {u}."
       ]
-    },
-    "Menace\nEquipped creature has base power and toughness 5/5, has menace, and is a black Demon in addition to its other colors and types.\nReconfigure {2}{B}{B} ({2}{B}{B}: Attach to target creature you control; or unattach from a creature. Reconfigure only as a sorcery. While attached, this isn't a creature.)"
-  ],
-  [
-    {
-      "name": "Sword of Vengeance",
-      "abilities": [],
-      "effects": [],
-      "properties": [
-        "SUB_Equipment",
-        "mid_cmc",
-        "TYP_Artifact",
-        "power_boost"
+    ],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "players skip their untap steps."
+    ],
+    "modes": null,
+    "properties": [
+      "TYP_Enchantment",
+      "blue",
+      "2cmc"
+    ]
+  },
+  {
+    "card_name": "Sphinx of the Second Sun",
+    "keywords": [
+      "flying"
+    ],
+    "triggered_abilities": [
+      [
+        "your",
+        "postcombat main phase",
+        "there is an additional beginning phase after this phase. (the beginning phase includes the untap, upkeep, and draw steps.)"
       ]
-    },
-    "Equipped creature gets +2/+0 and has first strike, vigilance, trample, and haste.\nEquip {3}"
-  ],
-  [
-    {
-      "name": "Soulless One",
-      "abilities": [],
-      "effects": [],
-      "properties": [
-        "SUB_Zombie",
-        "SUB_Avatar",
-        "black",
-        "TYP_Creature",
-        "mid_cmc"
+    ],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": null,
+    "properties": [
+      "high_power",
+      "TYP_Creature",
+      "card_advantage",
+      "blue",
+      "high_cmc",
+      "combat_trigger",
+      "evasion",
+      "SUB_Sphinx",
+      "high_toughness"
+    ]
+  },
+  {
+    "card_name": "Gift of Immortality",
+    "keywords": [],
+    "triggered_abilities": [
+      [
+        "enchanted creature dies",
+        "return that card to the battlefield under its owner's control. return cardname to the battlefield attached to that creature at the beginning of the next end step."
       ]
-    },
-    "CARDNAME's power and toughness are each equal to the number of Zombies on the battlefield plus the number of Zombie cards in all graveyards."
-  ],
-  [
-    {
-      "name": "Bribery",
-      "abilities": [],
-      "effects": [
-        [
-          "CAST",
-          "Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles."
-        ]
+    ],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "enchant creature"
+    ],
+    "modes": null,
+    "properties": [
+      "death",
+      "aura",
+      "mid_cmc",
+      "trigger_once",
+      "SUB_Aura",
+      "white",
+      "TYP_Enchantment"
+    ]
+  },
+  {
+    "card_name": "Mythos of Nethroi",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "destroy target nonland permanent if it's a creature or if {g}{w} was spent to cast this spell."
+    ],
+    "modes": null,
+    "properties": [
+      "targeted_interaction",
+      "black",
+      "TYP_Instant",
+      "mid_cmc"
+    ]
+  },
+  {
+    "card_name": "Terminus",
+    "keywords": [
+      "miracle {w} (you may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)"
+    ],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "put all creatures on the bottom of their owners' libraries."
+    ],
+    "modes": null,
+    "properties": [
+      "TYP_Sorcery",
+      "card_advantage",
+      "high_cmc",
+      "creatures_matter",
+      "trigger_once",
+      "white"
+    ]
+  },
+  {
+    "card_name": "Soulherder",
+    "keywords": [],
+    "triggered_abilities": [
+      [
+        "a creature is exiled from the battlefield",
+        "put a +1/+1 counter on cardname."
       ],
-      "properties": [
-        "high_cmc",
-        "blue",
-        "creatures_matter",
-        "TYP_Sorcery"
+      [
+        "your",
+        "end step",
+        "you may exile another target creature you control, then return that card to the battlefield under its owner's control."
       ]
-    },
-    "Search target opponent's library for a creature card and put that card onto the battlefield under your control. Then that player shuffles."
-  ],
-  [
-    {
-      "name": "Aphetto Alchemist",
-      "abilities": [
-        [
-          [
-            "{T}"
-          ],
-          [
-            "Untap target artifact or creature"
-          ]
-        ]
-      ],
-      "effects": [],
-      "properties": [
-        "creatures_matter",
-        "SUB_Wizard",
-        "morph",
-        "1power",
-        "untap",
-        "blue",
-        "2toughness",
-        "SUB_Human",
-        "2cmc",
-        "TYP_Creature",
-        "artifacts_matter"
+    ],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [],
+    "modes": null,
+    "properties": [
+      "TYP_Creature",
+      "1toughness",
+      "blue",
+      "1power",
+      "counters",
+      "mid_cmc",
+      "repeat_trigger",
+      "white",
+      "SUB_Spirit"
+    ]
+  },
+  {
+    "card_name": "Pact of Negation",
+    "keywords": [],
+    "triggered_abilities": [
+      [
+        "your",
+        "next upkeep",
+        "pay {3}{u}{u}. if you don't, you lose the game."
       ]
-    },
-    "{T}: Untap target artifact or creature.\nMorph {U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)"
-  ],
-  [
-    {
-      "name": "Team Pennant",
-      "abilities": [],
-      "effects": [],
-      "properties": [
-        "SUB_Equipment",
-        "1cmc",
-        "TYP_Artifact",
-        "power_boost"
-      ]
-    },
-    "Equipped creature gets +1/+1 and has vigilance and trample.\nEquip creature token {1}\nEquip {3}"
-  ],
-  [
-    {
-      "name": "Dragon Blood",
-      "abilities": [
-        [
-          [
-            "{3}",
-            "{T}"
-          ],
-          [
-            "Put a +1/+1 counter on target creature"
-          ]
-        ]
-      ],
-      "effects": [],
-      "properties": [
-        "counters",
-        "mid_cmc",
-        "TYP_Artifact"
-      ]
-    },
-    "{3}, {T}: Put a +1/+1 counter on target creature."
-  ],
-  [
-    {
-      "name": "Conqueror's Galleon // Conqueror's Foothold",
-      "abilities": [],
-      "effects": [],
-      "properties": [
-        "TYP_Artifact",
-        "SUB_//",
-        "SUB_Land",
-        "SUB_Vehicle",
-        "mid_cmc"
-      ]
-    },
-    null
-  ],
-  [
-    {
-      "name": "Satyr Piper",
-      "abilities": [
-        [
-          [
-            "{3}",
-            "{G}"
-          ],
-          [
-            "Target creature must be blocked this turn if able"
-          ]
-        ]
-      ],
-      "effects": [],
-      "properties": [
-        "SUB_Rogue",
-        "2power",
-        "1toughness",
-        "forced_block",
-        "green",
-        "mid_cmc",
-        "TYP_Creature",
-        "SUB_Satyr"
-      ]
-    },
-    "{3}{G}: Target creature must be blocked this turn if able."
-  ],
-  [
-    {
-      "name": "Athreos, Shroud-Veiled",
-      "abilities": [],
-      "effects": [
-        [
-          "a creature with a coin counter on it dies or is put into exile",
-          "return that card to the battlefield under your control"
-        ],
-        [
-          "OPT",
-          "put a coin counter on another target creature"
-        ]
-      ],
-      "properties": [
-        "protection",
-        "high_toughness",
-        "black",
-        "counters",
-        "SUP_Legendary",
-        "mid_power",
-        "SUB_God",
-        "indestructible",
-        "TYP_Enchantment",
-        "death",
-        "high_cmc",
-        "white",
-        "TYP_Creature",
-        "repeat_trigger"
-      ]
-    },
-    "Indestructible\nAs long as your devotion to white and black is less than seven, CARDNAME isn't a creature.\nAt the beginning of your end step, put a coin counter on another target creature.\nWhenever a creature with a coin counter on it dies or is put into exile, return that card to the battlefield under your control."
-  ],
-  [
-    {
-      "name": "Maestros Diabolist",
-      "abilities": [],
-      "effects": [
-        [
-          "CARDNAME attacks, if you don't control a Devil token, create a tapped and attacking 1/1 red Devil creature token with \"When this creature dies",
-          "it deals 1 damage to any target"
-        ],
-        [
-          "this creature dies",
-          "it deals 1 damage to any target"
-        ]
-      ],
-      "properties": [
-        "red",
-        "SUB_Vampire",
-        "deathtouch",
-        "1power",
-        "targeted_interaction",
-        "blue",
-        "damage",
-        "mid_toughness",
-        "combat_trigger",
-        "death",
-        "mid_cmc",
-        "tap",
-        "black",
-        "TYP_Creature",
-        "SUB_Warrior",
-        "repeat_trigger",
-        "trigger_once"
-      ]
-    },
-    "Deathtouch, haste\nWhenever CARDNAME attacks, if you don't control a Devil token, create a tapped and attacking 1/1 red Devil creature token with \"When this creature dies, it deals 1 damage to any target.\""
-  ],
-  [
-    {
-      "name": "Ayumi, the Last Visitor",
-      "abilities": [],
-      "effects": [],
-      "properties": [
-        "SUP_Legendary",
-        "SUB_Spirit",
-        "high_cmc",
-        "green",
-        "TYP_Creature",
-        "high_power",
-        "mid_toughness"
-      ]
-    },
-    "Legendary landwalk (This creature can't be blocked as long as defending player controls a legendary land.)"
-  ],
-  [
-    {
-      "name": "Twisted Image",
-      "abilities": [],
-      "effects": [
-        [
-          "CAST",
-          "Switch target creature's power and toughness until end of turn."
-        ],
-        [
-          "CAST",
-          "Draw a card."
-        ]
-      ],
-      "properties": [
-        "1cmc",
-        "blue",
-        "card_advantage",
-        "TYP_Instant"
-      ]
-    },
-    "Switch target creature's power and toughness until end of turn.\nDraw a card."
-  ],
-  [
-    {
-      "name": "Lux Artillery",
-      "abilities": [],
-      "effects": [
-        [
-          "you cast an artifact creature spell",
-          "it gains sunburst"
-        ],
-        [
-          "OPT",
-          "if there are thirty or more counters among artifacts and creatures you control, CARDNAME deals 10 damage to each opponent"
-        ]
-      ],
-      "properties": [
-        "creatures_matter",
-        "ETB",
-        "TYP_Artifact",
-        "damage",
-        "mid_cmc",
-        "counters",
-        "artifacts_matter",
-        "repeat_trigger"
-      ]
-    },
-    "Whenever you cast an artifact creature spell, it gains sunburst. (It enters the battlefield with a +1/+1 counter on it for each color of mana spent to cast it.)\nAt the beginning of your end step, if there are thirty or more counters among artifacts and creatures you control, CARDNAME deals 10 damage to each opponent."
-  ],
-  [
-    {
-      "name": "Path of Anger's Flame",
-      "abilities": [],
-      "effects": [
-        [
-          "CAST",
-          "Creatures you control get +2/+0 until end of turn."
-        ]
-      ],
-      "properties": [
-        "SUB_Arcane",
-        "red",
-        "TYP_Instant",
-        "mid_cmc"
-      ]
-    },
-    "Creatures you control get +2/+0 until end of turn."
-  ],
-  [
-    {
-      "name": "Hibernation's End",
-      "abilities": [],
-      "effects": [
-        [
-          "you pay CARDNAME's cumulative upkeep, you may search your library for a creature card with mana value equal to the number of age counters on CARDNAME, put it onto the battlefield",
-          "then shuffle"
-        ]
-      ],
-      "properties": [
-        "creatures_matter",
-        "TYP_Enchantment",
-        "death",
-        "high_cmc",
-        "green",
-        "counters",
-        "repeat_trigger"
-      ]
-    },
-    "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nWhenever you pay CARDNAME's cumulative upkeep, you may search your library for a creature card with mana value equal to the number of age counters on CARDNAME, put it onto the battlefield, then shuffle."
-  ],
-  [
-    {
-      "name": "Grim Haruspex",
-      "abilities": [],
-      "effects": [
-        [
-          "another nontoken creature you control dies",
-          "draw a card"
-        ]
-      ],
-      "properties": [
-        "creatures_matter",
-        "SUB_Wizard",
-        "morph",
-        "mid_power",
-        "card_advantage",
-        "2toughness",
-        "death",
-        "SUB_Human",
-        "black",
-        "TYP_Creature",
-        "mid_cmc",
-        "repeat_trigger"
-      ]
-    },
-    "Morph {B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhenever another nontoken creature you control dies, draw a card."
-  ],
-  [
-    {
-      "name": "Devastation",
-      "abilities": [],
-      "effects": [
-        [
-          "CAST",
-          "Destroy all creatures and lands."
-        ]
-      ],
-      "properties": [
-        "red",
-        "TYP_Sorcery",
-        "high_cmc",
-        "board_wipe",
-        "lands_matter"
-      ]
-    },
-    "Destroy all creatures and lands."
-  ],
-  [
-    {
-      "name": "Search Party Captain",
-      "abilities": [],
-      "effects": [
-        [
-          "CARDNAME enters the battlefield",
-          "draw a card"
-        ]
-      ],
-      "properties": [
-        "creatures_matter",
-        "2power",
-        "SUB_Soldier",
-        "ETB",
-        "card_advantage",
-        "2toughness",
-        "combat_trigger",
-        "SUB_Human",
-        "white",
-        "TYP_Creature",
-        "mid_cmc",
-        "trigger_once"
-      ]
-    },
-    "This spell costs {1} less to cast for each creature you attacked with this turn.\nWhen CARDNAME enters the battlefield, draw a card."
-  ],
-  [
-    {
-      "name": "Walk the Plank",
-      "abilities": [],
-      "effects": [
-        [
-          "CAST",
-          "Destroy target non-Merfolk creature."
-        ]
-      ],
-      "properties": [
-        "targeted_interaction",
-        "TYP_Sorcery",
-        "black",
-        "2cmc"
-      ]
-    },
-    "Destroy target non-Merfolk creature."
-  ],
-  [
-    {
-      "name": "Emergent Woodwurm",
-      "abilities": [],
-      "effects": [
-        [
-          "this creature attacks, look at the top X cards of your library",
-          "where X is its power"
-        ]
-      ],
-      "properties": [
-        "counters",
-        "ETB",
-        "mid_power",
-        "combat_trigger",
-        "high_cmc",
-        "green",
-        "SUB_Wurm",
-        "TYP_Creature",
-        "mid_toughness",
-        "repeat_trigger",
-        "trigger_once"
-      ]
-    },
-    "Backup 3 (When this creature enters the battlefield, put three +1/+1 counters on target creature. If that's another creature, it gains the following ability until end of turn.)\nWhenever this creature attacks, look at the top X cards of your library, where X is its power. You may put a permanent card with mana value X or less from among them onto the battlefield. Put the rest on the bottom of your library in a random order."
-  ],
-  [
-    {
-      "name": "Orzhov Basilica",
-      "abilities": [
-        [
-          [
-            "{T}"
-          ],
-          [
-            "Add {W}{B}"
-          ]
-        ]
-      ],
-      "effects": [
-        [
-          "CARDNAME enters the battlefield",
-          "return a land you control to its owner's hand"
-        ]
-      ],
-      "properties": [
-        "ETB",
-        "ramp",
-        "0cmc",
-        "TYP_Land",
-        "tap",
-        "lands_matter",
-        "trigger_once"
-      ]
-    },
-    "CARDNAME enters the battlefield tapped.\nWhen CARDNAME enters the battlefield, return a land you control to its owner's hand.\n{T}: Add {W}{B}."
-  ],
-  [
-    {
-      "name": "Dragonspeaker Shaman",
-      "abilities": [],
-      "effects": [],
-      "properties": [
-        "SUB_Shaman",
-        "2power",
-        "red",
-        "cost_reducer",
-        "2toughness",
-        "SUB_Human",
-        "SUB_Barbarian",
-        "TYP_Creature",
-        "mid_cmc"
-      ]
-    },
-    "Dragon spells you cast cost {2} less to cast."
-  ],
-  [
-    {
-      "name": "Tribute Mage",
-      "abilities": [],
-      "effects": [
-        [
-          "CARDNAME enters the battlefield, you may search your library for an artifact card with mana value 2, reveal that card, put it into your hand",
-          "then shuffle"
-        ]
-      ],
-      "properties": [
-        "2power",
-        "SUB_Wizard",
-        "ETB",
-        "tutor",
-        "card_advantage",
-        "blue",
-        "2toughness",
-        "SUB_Human",
-        "TYP_Creature",
-        "mid_cmc",
-        "artifacts_matter",
-        "trigger_once"
-      ]
-    },
-    "When CARDNAME enters the battlefield, you may search your library for an artifact card with mana value 2, reveal that card, put it into your hand, then shuffle."
-  ],
-  [
-    {
-      "name": "Myr Reservoir",
-      "abilities": [
-        [
-          [
-            "{T}"
-          ],
-          [
-            "Add {C}{C}",
-            "Spend this mana only to cast Myr spells or activate abilities of Myr"
-          ]
-        ],
-        [
-          [
-            "{3}",
-            "{T}"
-          ],
-          [
-            "Return target Myr card from your graveyard to your hand"
-          ]
-        ]
-      ],
-      "effects": [],
-      "properties": [
-        "ramp",
-        "card_advantage",
-        "TYP_Artifact",
-        "recursion",
-        "mid_cmc"
-      ]
-    },
-    "{T}: Add {C}{C}. Spend this mana only to cast Myr spells or activate abilities of Myr.\n{3}, {T}: Return target Myr card from your graveyard to your hand."
-  ],
-  [
-    {
-      "name": "Ayara, First of Locthwain",
-      "abilities": [
-        [
-          [
-            "{T}"
-          ],
-          [
-            "Draw a card"
-          ]
-        ]
-      ],
-      "effects": [
-        [
-          "CARDNAME or another black creature enters the battlefield under your control",
-          "each opponent loses 1 life and you gain 1 life"
-        ]
-      ],
-      "properties": [
-        "SUB_Noble",
-        "2power",
-        "SUP_Legendary",
-        "ETB",
-        "SUB_Elf",
-        "card_advantage",
-        "death",
-        "mid_cmc",
-        "life_gain",
-        "black",
-        "TYP_Creature",
-        "mid_toughness",
-        "repeat_trigger"
-      ]
-    },
-    "Whenever CARDNAME or another black creature enters the battlefield under your control, each opponent loses 1 life and you gain 1 life.\n{T}, Sacrifice another black creature: Draw a card."
-  ],
-  [
-    {
-      "name": "Custodi Soulcaller",
-      "abilities": [],
-      "effects": [
-        [
-          "CARDNAME attacks, return target creature card with mana value X or less from your graveyard to the battlefield",
-          "where X is the number of players you attacked this combat"
-        ]
-      ],
-      "properties": [
-        "creatures_matter",
-        "1power",
-        "SUB_Cleric",
-        "2toughness",
-        "combat_trigger",
-        "power_boost",
-        "recursion",
-        "SUB_Human",
-        "white",
-        "TYP_Creature",
-        "graveyard_matter",
-        "mid_cmc",
-        "repeat_trigger"
-      ]
-    },
-    "Melee (Whenever this creature attacks, it gets +1/+1 until end of turn for each opponent you attacked this combat.)\nWhenever CARDNAME attacks, return target creature card with mana value X or less from your graveyard to the battlefield, where X is the number of players you attacked this combat."
-  ],
-  [
-    {
-      "name": "Relentless Assault",
-      "abilities": [],
-      "effects": [
-        [
-          "CAST",
-          "Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase."
-        ]
-      ],
-      "properties": [
-        "red",
-        "untap",
-        "TYP_Sorcery",
-        "mid_cmc"
-      ]
-    },
-    "Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase."
-  ],
-  [
-    {
-      "name": "Clone",
-      "abilities": [],
-      "effects": [],
-      "properties": [
-        "clone",
-        "0power",
-        "blue",
-        "TYP_Creature",
-        "0toughness",
-        "mid_cmc",
-        "SUB_Shapeshifter"
-      ]
-    },
-    "You may have CARDNAME enter the battlefield as a copy of any creature on the battlefield."
-  ]
+    ],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "counter target spell."
+    ],
+    "modes": null,
+    "properties": [
+      "0cmc",
+      "targeted_interaction",
+      "TYP_Instant",
+      "counterspells"
+    ]
+  },
+  {
+    "card_name": "Soulfire Grand Master",
+    "keywords": [
+      "lifelink"
+    ],
+    "triggered_abilities": [],
+    "activated_abilities": [
+      {
+        "cost": "{2}{u/r}{u/r}",
+        "effect": "the next time you cast an instant or sorcery spell from your hand this turn, put that card into your hand instead of into your graveyard as it resolves."
+      }
+    ],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "instant and sorcery spells you control have lifelink."
+    ],
+    "modes": null,
+    "properties": [
+      "SUB_Human",
+      "TYP_Creature",
+      "sorceries_matter",
+      "card_advantage",
+      "2toughness",
+      "2cmc",
+      "instants_matter",
+      "SUB_Monk",
+      "2power",
+      "white"
+    ]
+  },
+  {
+    "card_name": "Soulfire Eruption",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "choose any number of target creatures, planeswalkers, and/or players. for each of them, exile the top card of your library, then cardname deals damage equal to that card's mana value to that permanent or player. you may play the exiled cards until the end of your next turn."
+    ],
+    "modes": null,
+    "properties": [
+      "targeted_interaction",
+      "TYP_Sorcery",
+      "planeswalkers_matter",
+      "very_high_cmc",
+      "card_advantage",
+      "red",
+      "creatures_matter",
+      "damage"
+    ]
+  },
+  {
+    "card_name": "Tragic Arrogance",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "for each player, you choose from among the permanents that player controls an artifact, a creature, an enchantment, and a planeswalker. then each player sacrifices all other nonland permanents they control."
+    ],
+    "modes": null,
+    "properties": [
+      "TYP_Sorcery",
+      "enchantments_matter",
+      "high_cmc",
+      "creatures_matter",
+      "board_wipe",
+      "artifacts_matter",
+      "white"
+    ]
+  },
+  {
+    "card_name": "Preordain",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "scry 2, then draw a card. (to scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)"
+    ],
+    "modes": null,
+    "properties": [
+      "TYP_Sorcery",
+      "blue",
+      "1cmc"
+    ]
+  },
+  {
+    "card_name": "Wishclaw Talisman",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [
+      {
+        "cost": "{1}, {t}, remove a wish counter from cardname",
+        "effect": "search your library for a card, put it into your hand, then shuffle. an opponent gains control of cardname. activate only during your turn."
+      }
+    ],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "cardname enters the battlefield with three wish counters on it."
+    ],
+    "modes": null,
+    "properties": [
+      "card_advantage",
+      "giveaway_effect",
+      "2cmc",
+      "ETB",
+      "black",
+      "TYP_Artifact",
+      "tutor",
+      "counters"
+    ]
+  },
+  {
+    "card_name": "Wheel of Fortune",
+    "keywords": [],
+    "triggered_abilities": [],
+    "activated_abilities": [],
+    "loyalty_abilities": [],
+    "replacement_effects": [],
+    "static_abilities": [
+      "each player discards their hand, then draws seven cards."
+    ],
+    "modes": null,
+    "properties": [
+      "TYP_Sorcery",
+      "wheel",
+      "card_advantage",
+      "opp_discard",
+      "discard",
+      "red",
+      "mid_cmc"
+    ]
+  }
 ]

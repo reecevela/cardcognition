@@ -1,0 +1,50 @@
+grammar MTG;
+
+// objects
+objects: 'Card' | 'Token' | 'Spell' | 'Ability' | 'Emblem';
+
+// Zones
+zone: 'Hand' | 'Library' | 'Graveyard' | 'Exile' | 'Command' | 'Stack' | 'Battlefield';
+
+// Object Characteristics
+object_characteristics: NAME | MANA_COST | COLOR | CARD_TYPE | SUBTYPE | SUPERTYPE | RULES_TEXT | ABILITIES | POWER | TOUGHNESS | LOYALTY | HAND_MODIFIER | LIFE_MODIFIER;
+
+NAME: 'Name'; // Possibly from a list of official card names
+MANA_COST: 'Mana cost'; // Regular expression to match mana costs
+COLOR: 'White' | 'Blue' | 'Black' | 'Red' | 'Green' | 'Colorless'; // Add more as needed
+CARD_TYPE: 'Artifact' | 'Creature' | 'Enchantment' | 'Land' | 'Planeswalker' | 'Instant' | 'Sorcery';
+// List of known subtypes. Huge list; fill in.
+SUBTYPE: 'Human' | 'Elf' | 'Goblin' | ... ;
+SUPERTYPE: 'Legendary' | 'Basic'; 
+RULES_TEXT: 'Rules text'; // How to capture multi-line or complex text?
+ABILITIES: 'Abilities'; // Another large list; fill in.
+POWER: INT;
+TOUGHNESS: INT;
+LOYALTY: INT;
+HAND_MODIFIER: INT;
+LIFE_MODIFIER: INT;
+
+// Control Specifiers
+control_specifiers: 'You control' | 'An opponent controls' | 'Owned by' | 'Controlled by';
+
+// Card Attributes
+card_attributes: 'Non-token' | 'Token' | 'Legendary' | 'Basic';
+
+// Card States
+card_states: 'Tapped' | 'Untapped' | 'Flipped' | 'Facedown' | 'Transformed';
+
+// Actions & Events
+actions_events: 'Cast' | 'Draw' | 'Discard' | 'Exile' | 'Destroy' | 'Sacrifice' | 'Gain life' | 'Lose life' | 'Attach' | 'Detach' | 'Reveal';
+
+// Targets & Selection
+targets_selection: 'Target creature' | 'Target player' | 'Target spell' | 'Target land' | 'Each' | 'Any' | 'All' | 'One or more' | NUM;
+
+// Special Concepts
+special_concepts: 'Counters' | 'Phase' | 'Turn' | 'Combat';
+
+// Non-Entities
+non_entities: 'Players' | 'Counters' | 'Damage';
+
+// Utility
+NUM: [0-9]+;
+INT: '-'?[0-9]+;

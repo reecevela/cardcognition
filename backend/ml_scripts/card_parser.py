@@ -52,7 +52,7 @@ class CardParser:
         self.card_features = {
             "alternate_casting": ["without paying its mana cost", ["you may pay", "rather than", "cost"], ["cast this spell for", "rather"], ["your library", "onto the battlefield"]],
             "artifacts_matter": [["for each", "artifact"], ["artifact", "you control"], "artifact card", ["you", "cast", "artifact"], ["an artifact", "enters the battlefield"], ["artifact", "cost", "less to cast"], ["artifacts", "you control", "have"]],
-            "aura": ["aura"],
+            "aura": ["aura", "enchanted"],
             "damage": [["deal", "damage", "to"]],
             "blink": [["exile target", "return", "to the battlefield"], ["exile CARDNAME", "return", "to the battlefield"], ["exile any number", "return", "to the battlefield"], ["When", ", exile", "until", "leaves the battlefield"]],
             "board_wipe": ["Destroy all", "Exile all", "Destroy each", "Exile each", "Each player sacrifices", ["CARDNAME", "damage", "to each creature"]],
@@ -188,7 +188,10 @@ class CardParser:
         return list(properties)
     
     def parse_card(self, card):
-        abilities = card["oracle_text"].split("\n")
+        if card.get("oracle_text") is not None:
+            raw_ability_texts = card["oracle_text"].split("\n")
+        else:
+            raw_ability_texts = None
 
         keywords = []
         triggered_abilities = []
@@ -201,64 +204,70 @@ class CardParser:
         }
         static_abilities = []
 
-        for ability in abilities:
-            ability = ability.lower()
-            first_word = ""
-            i = 0
-            for i in range(len(ability)):
-                if ability[i] == " " or ability[i] == ",":
-                    break
-                first_word += ability[i]
+        for ability in raw_ability_texts if raw_ability_texts is not None else []:
+            try:
+                if len(ability) == 0:
+                    continue
+                ability = ability.lower()
+                first_word = ""
+                i = 0
+                for i in range(len(ability)):
+                    if ability[i] == " " or ability[i] == ",":
+                        break
+                    first_word += ability[i]
 
-            if first_word in self.vanilla_keywords:
-                keywords = ability.split(", ")
-                continue
-            elif first_word in self.trigger_keywords:
-                out = []
-                if first_word == "at":
-                    # at the beginning of your postcombat main phase,
-                    # -> postcombat main phase
-                    target = " ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[:-1])
-                    if not target.startswith("your"):
-                        out.append(" ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[:2]))
-                        out.append(ability.split(",")[0].split("beginning of ")[1].split(" ")[2:])
+                if first_word in self.vanilla_keywords:
+                    keywords = ability.split(", ")
+                    continue
+                elif first_word in self.trigger_keywords:
+                    out = []
+                    if first_word == "at":
+                        # at the beginning of your postcombat main phase,
+                        # -> postcombat main phase
+                        target = " ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[:-1])
+                        if not target.startswith("your"):
+                            out.append(" ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[:2]))
+                            out.append(ability.split(",")[0].split("beginning of ")[1].split(" ")[2:])
+                        else:
+                            out.append(ability.split(",")[0].split("beginning of ")[1].split(" ")[0])
+                            out.append(" ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[1:]))
+                        out.append(", ".join(ability.split(", ")[1:]))
+                    elif first_word.startswith("whenever"):
+                        out.append(ability.split(",")[0].replace("whenever ", ""))
+                        out.append(", ".join(ability.split(", ")[1:]))
                     else:
-                        out.append(ability.split(",")[0].split("beginning of ")[1].split(" ")[0])
-                        out.append(" ".join(ability.split(",")[0].split("beginning of ")[1].split(" ")[1:]))
-                    out.append(", ".join(ability.split(", ")[1:]))
-                elif first_word.startswith("whenever"):
-                    out.append(ability.split(",")[0].replace("whenever ", ""))
-                    out.append(", ".join(ability.split(", ")[1:]))
+                        # when CARDNAME enters the battlefield, you may draw a card
+                        # -> CARDNAME enters the battlefield, you may draw a card
+                        out.append(ability.split(",")[0].replace("when ", ""))
+                        out.append(", ".join(ability.split(", ")[1:]))
+                    triggered_abilities.append(out)
+                    continue
+                elif ability[0] in ["+", "\u2212", "0"]:
+                    loyalty_abilities.append(ability)
+                    continue
+                elif ":" in ability:
+                    activated_abilities.append({"cost": ability.split(":")[0], "effect": ability.split(": ")[1]})
+                    continue
+                elif "instead" in ability.lower():
+                    replacement_effects.append(ability)
+                    continue
+                elif "choose" in ability.lower() and "\u2014" in ability and ability.index("\u2014") > ability.index("choose"):
+                    modes['count'] = ability.replace("choose ", "").split(" \u2014")[0]
+                    continue
+                elif ability.startswith("\u2022"):
+                    modes['modes'].append(ability.replace("\u2022 ", ""))
+                    continue
                 else:
-                    # when CARDNAME enters the battlefield, you may draw a card
-                    # -> CARDNAME enters the battlefield, you may draw a card
-                    out.append(ability.split(",")[0].replace("when ", ""))
-                    out.append(", ".join(ability.split(", ")[1:]))
-                triggered_abilities.append(out)
-                continue
-            elif ability[0] in ["+", "\u2212", "0"]:
-                loyalty_abilities.append(ability)
-                continue
-            elif ":" in ability and ability.index(":") < ability.index("."):
-                activated_abilities.append({"cost": ability.split(":")[0], "effect": ability.split(": ")[1]})
-                continue
-            elif "instead" in ability.lower():
-                replacement_effects.append(ability)
-                continue
-            elif "choose" in ability.lower() and "\u2014" in ability and ability.index("\u2014") > ability.index("choose"):
-                modes['count'] = ability.replace("choose ", "").split(" \u2014")[0]
-                continue
-            elif ability.startswith("\u2022"):
-                modes['modes'].append(ability.replace("\u2022 ", ""))
-                continue
-            else:
-                static_abilities.append(ability)
+                    static_abilities.append(ability)
+                    continue
+            except Exception as e:
+                #print(f"Error parsing ability: {ability}, {e}")
                 continue
         
         properties = self.parse_properties(card)
         if len(modes['modes']) == 0:
             modes = None
-        return {"name": card.get('card_name'), "keywords": keywords, "triggered_abilities": triggered_abilities, "activated_abilities": activated_abilities, "loyalty_abilities": loyalty_abilities, "replacement_effects": replacement_effects, "static_abilities": static_abilities, "modes": modes, "properties": properties}
+        return {"card_name": card.get('card_name'), "keywords": keywords, "triggered_abilities": triggered_abilities, "activated_abilities": activated_abilities, "loyalty_abilities": loyalty_abilities, "replacement_effects": replacement_effects, "static_abilities": static_abilities, "modes": modes, "properties": properties}
 
 if __name__ == "__main__":
     
@@ -294,7 +303,6 @@ if __name__ == "__main__":
     card_data = [db.get_card_by_name(card_name) for card_name in cards_to_parse]
 
     parsed_data = [parser.parse_card(card) for card in card_data]
-    print(json.dumps(parsed_data, indent=2))
 
     with open("parsed_data.json", "w") as f:
         json.dump(parsed_data, f, indent=2)
