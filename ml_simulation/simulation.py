@@ -1,5 +1,8 @@
 import random
 from helpers import *
+from zones import Zones
+
+print(Zones.HAND)
 
 grave_bolt = {
     "state": "hand",
