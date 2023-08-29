@@ -1,0 +1,4 @@
+antlr4 -Dlanguage=Python3 Expr.g4
+
+Whenever a creature dies, draw a card.
+
