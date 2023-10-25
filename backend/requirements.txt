@@ -32,5 +32,5 @@ trio==0.22.0
 trio-websocket==0.10.2
 urllib3==1.26.15
 webdriver-manager==3.8.6
-Werkzeug==2.3.4
+Werkzeug==3.0.1
 wsproto==1.2.0
